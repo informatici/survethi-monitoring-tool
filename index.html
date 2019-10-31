@@ -52,7 +52,7 @@ $(document).ready(function(response){
 	function fetch_data(){
 
 		$.ajax({
-			url:"http://127.0.0.1:5000/query",
+			url:"http://127.0.0.1:5000/test",
 			success:function(data,status,xhr)
 			{
 				/* response = data[0].DIS_DESC;
@@ -69,20 +69,26 @@ function show_markers(response) {
 
 	function show_marker(item, index) {
 		if (item.LOC_LAT)
-			new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)]).addTo(mymap);
+			new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)]).addTo(mymap)
+				.bindPopup(getMarkerDescription(item));
+				
+	}
+
+	function getMarkerDescription(item) {
+		return item.LOC_CITY + "<br>" + item.LOC_ADDRESS + "<br>" + item.DIS_DESC
 	}
 
 	/* for (var marker in response) {
 		alert(marker);
 		alert(marker.LOC_LAT);
 		alert(type(marker.LOC_LAT));
-		L.marker([parseFloat(marker.LOC_LAT), parseFloat(marker.LOC_LONG)]).addTo(mymap);
+		L.marker([parseFloat(marker.LOC_LAT), parseFloat(marker.LOC_LONG)]).addTo(mymap)
 			 .bindPopup(marker.DIS_DESC)
 			.openPopup(); 
 	} */
 }
 
-var mymap = L.map('mapid').setView([8.55611, 38.9741666], 11);
+var mymap = L.map('mapid').setView([8.52944, 37.95472], 11);
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
