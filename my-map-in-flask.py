@@ -1,3 +1,4 @@
+from flask_cors import CORS
 from flask import Flask, escape, request, render_template, Response
 from flask import jsonify
 import MySQLdb
@@ -7,6 +8,7 @@ from decimal import Decimal
 import os.path
 
 app = Flask(__name__)
+CORS(app)
 
 # database connection settings
 import MySQLdb
@@ -14,7 +16,7 @@ db=MySQLdb.connect(user="isf",passwd="isf123",db="wolisso",host="localhost")
 
 @app.route('/', methods=['GET'])
 def index():
-    content = get_file('index2.php')
+    content = get_file('index.html')
     return Response(content, mimetype="text/html")
 
 @app.route('/user/<username>')

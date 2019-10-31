@@ -2,5 +2,5 @@
 simplejson # for Decimal datatype
 mysqlclient # for MySQL DB connection
 Flask-JSON # for Flask scaffold
-
+flask_cors # to manage CORS within Flask
 
