@@ -4,6 +4,7 @@ from flask import jsonify
 import MySQLdb
 from datetime import datetime
 from decimal import Decimal
+import json
 
 import os.path
 
@@ -60,6 +61,13 @@ def query(dateFrom=None, dateTo=None):
     cursor.execute(default_query)
     result = cursor.fetchall()
     return jsonify(result)
+
+@app.route('/test')
+def test(dateFrom=None, dateTo=None):
+    # read test file from datasource/ folder
+    with open("datasource/datasource.json") as json_file:
+        json_data = json.load(json_file)
+    return jsonify(json_data)
 
     
 def root_dir():  # pragma: no cover
