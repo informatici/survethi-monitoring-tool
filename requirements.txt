@@ -1,0 +1,6 @@
+# Python modules needed for the application
+simplejson # for Decimal datatype
+mysqlclient # for MySQL DB connection
+Flask-JSON # for Flask scaffold
+
+
