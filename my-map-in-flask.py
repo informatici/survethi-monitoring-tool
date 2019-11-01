@@ -5,7 +5,6 @@ import MySQLdb
 from datetime import datetime
 from decimal import Decimal
 import json
-
 import os.path
 
 app = Flask(__name__)
@@ -31,7 +30,31 @@ def query(dateFrom=None, dateTo=None):
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
                         LEFT JOIN LOCATION ON (PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
-                        WHERE LOC_CITY IN ('Wonchi','Wolisso Rural','Wolisso Town','Goro') AND OPD_DATE_VIS BETWEEN '%s' AND '%s'" % (escape(dateFrom), escape(dateTo))
+                        WHERE LOC_CITY IN ('Wonchi','Wolisso Rural','Wolisso Town','Goro') \
+                        AND OPD_DATE_VIS BETWEEN '%s' AND '%s'" % (escape(dateFrom), escape(dateTo))
+    cursor = db.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute(default_query)
+    result = cursor.fetchall()
+    return jsonify(result)
+
+@app.route('/query_group')
+@app.route('/query_group/<dateFrom>/<dateTo>')
+def query_group(dateFrom=None, dateTo=None):
+    # execute default query on the DB
+    if not dateFrom:
+        dateFrom = '2019-01-01'
+    if not dateTo:
+        dateTo = '2019-12-31'
+    default_query = "SELECT COUNT(*) AS COUNT, INTERNAL.* FROM ( \
+                        SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, LOC_LAT, LOC_LONG FROM OPD \
+                        LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
+                        LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
+                        LEFT JOIN LOCATION ON (PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
+                        WHERE LOC_CITY IN ('Wonchi', 'Wolisso Rural','Wolisso Town','Goro') \
+                        AND OPD_DATE_VIS BETWEEN '%s' AND '%s' \
+                    ) INTERNAL \
+                    GROUP BY OPD_DIS_ID_A, PAT_CITY, PAT_ADDR \
+                    ORDER BY COUNT DESC" % (escape(dateFrom), escape(dateTo))
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
