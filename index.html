@@ -9,6 +9,10 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
 <!-- <link rel="stylesheet" href="../dist/MarkerCluster.css" />
 <link rel="stylesheet" href="../dist/MarkerCluster.Default.css" />
 <script src="../dist/leaflet.markercluster-src.js"></script>
@@ -16,30 +20,14 @@
 <link rel="stylesheet" type="text/css" href="../css/style2.css"> -->
 </head>
 <body>
-	<form method="post">
-		<div class="col-xl-3 col-lg-7" style="width: 69%; margin-left: 17%;">
-			<div class="card">
-				<div class="card-body">
-					<div class="stat-widget-one">
-						<div class="landing-wrapper">
-							<div class="landing">
-								<div>
-									<div id="mapid"
-										style="height: 382px; position: relative; overflow: hidden"
-										class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-										tabindex="0">
-										<div class="leaflet-pane leaflet-map-pane"
-											style="transform: translate3d(0px, 0px, 0px);">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+	<div id="mapid"
+	style="height: 500px; position: relative; overflow: hidden"
+	class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+	tabindex="0">
+		<div class="leaflet-pane leaflet-map-pane"
+			style="transform: translate3d(0px, 0px, 0px);">
 		</div>
-	</form>
+	</div>
 <script type="text/javascript">
 
 var response;
@@ -52,11 +40,9 @@ $(document).ready(function(response){
 	function fetch_data(){
 
 		$.ajax({
-			url:"http://127.0.0.1:5000/test",
+			url:"http://127.0.0.1:5000/query_group",
 			success:function(data,status,xhr)
 			{
-				/* response = data[0].DIS_DESC;
-				alert(response); */
 				show_markers(data);
 			}
 		})
@@ -65,27 +51,41 @@ $(document).ready(function(response){
 
 function show_markers(response) {
 
+	var markersGroup1 = L.markerClusterGroup();
+	// var markersGroup2 = L.markerClusterGroup();
+	// var markersGroup3 = L.markerClusterGroup();
 	response.forEach(show_marker);
+	mymap.addLayer(markersGroup1);
+	// mymap.addLayer(markersGroup2);
+	// mymap.addLayer(markersGroup3);
 
 	function show_marker(item, index) {
-		if (item.LOC_LAT)
-			new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)]).addTo(mymap)
-				.bindPopup(getMarkerDescription(item));
-				
+		
+		if (item.LOC_LAT) {
+
+			var description = getMarkerDescription(item);
+			if (item.OPD_DIS_ID_A == "1567")
+				markersGroup1.addLayer(
+					new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
+						{icon: L.icon({iconUrl: 'static/img/blue_icon.png', iconSize: [32, 32]})}).bindPopup(description));
+			/* else if (item.OPD_DIS_ID_A == "782")
+				markersGroup2.addLayer(
+					new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
+						{icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description));
+			else
+				markersGroup3.addLayer(
+					new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
+						{icon: L.icon({iconUrl: 'static/img/grey_icon.png', iconSize: [32, 32]})}).bindPopup(description)); */
+		}
 	}
 
-	function getMarkerDescription(item) {
-		return item.LOC_CITY + "<br>" + item.LOC_ADDRESS + "<br>" + item.DIS_DESC
+ 	function getMarkerDescription(item) {
+		if (item.COUNT) 
+			return item.COUNT + "<br>" + item.LOC_CITY + "<br>" + item.LOC_ADDRESS + "<br>" + item.DIS_DESC
+		else 
+			return item.LOC_CITY + "<br>" + item.LOC_ADDRESS + "<br>" + item.DIS_DESC
 	}
 
-	/* for (var marker in response) {
-		alert(marker);
-		alert(marker.LOC_LAT);
-		alert(type(marker.LOC_LAT));
-		L.marker([parseFloat(marker.LOC_LAT), parseFloat(marker.LOC_LONG)]).addTo(mymap)
-			 .bindPopup(marker.DIS_DESC)
-			.openPopup(); 
-	} */
 }
 
 var mymap = L.map('mapid').setView([8.52944, 37.95472], 11);
