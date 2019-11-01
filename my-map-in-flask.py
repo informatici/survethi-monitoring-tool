@@ -12,37 +12,12 @@ app = Flask(__name__)
 CORS(app)
 
 # database connection settings
-import MySQLdb
 db=MySQLdb.connect(user="isf",passwd="isf123",db="wolisso",host="localhost")
 
 @app.route('/', methods=['GET'])
 def index():
     content = get_file('index.html')
     return Response(content, mimetype="text/html")
-
-@app.route('/user/<username>')
-def show_user_profile(username):
-    # show the user profile for that user
-    return 'User %s' % escape(username)
-
-@app.route('/post/<int:post_id>')
-def show_post(post_id):
-    # show the post with the given id, the id is an integer
-    return 'Post %d' % post_id
-
-@app.route('/path/<path:subpath>')
-def show_subpath(subpath):
-    # show the subpath after /path/
-    return 'Subpath %s' % escape(subpath)
-
-@app.route('/hello')
-@app.route('/hello/<name>')
-def hello(name=None):
-    if name:
-        return render_template('hello.html', name=name)
-    else:
-        name = request.args.get("name", "Nessuno")
-        return f'Hello, {escape(name)}!'
 
 @app.route('/query')
 @app.route('/query/<dateFrom>/<dateTo>')
