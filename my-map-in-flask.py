@@ -44,7 +44,7 @@ def query_group(dateFrom=None, dateTo=None):
     if not dateFrom:
         dateFrom = '2019-01-01'
     if not dateTo:
-        dateTo = '2019-12-31'
+        dateTo = '2019-01-31'
     default_query = "SELECT COUNT(*) AS COUNT, INTERNAL.* FROM ( \
                         SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, LOC_LAT, LOC_LONG FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
@@ -64,6 +64,13 @@ def query_group(dateFrom=None, dateTo=None):
 def test(dateFrom=None, dateTo=None):
     # read test file from datasource/ folder
     with open("datasource/datasource.json") as json_file:
+        json_data = json.load(json_file)
+    return jsonify(json_data)
+
+@app.route('/test_group')
+def test_group(dateFrom=None, dateTo=None):
+    # read test file from datasource/ folder
+    with open("datasource/datasource_group.json") as json_file:
         json_data = json.load(json_file)
     return jsonify(json_data)
 
