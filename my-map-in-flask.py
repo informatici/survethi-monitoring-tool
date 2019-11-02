@@ -9,9 +9,12 @@ import os.path
 
 app = Flask(__name__)
 CORS(app)
+db = MySQLdb
 
-# database connection settings
-db=MySQLdb.connect(user="isf",passwd="isf123",db="wolisso",host="localhost")
+def createDBconnection():
+    # database connection settings
+    global db
+    db = MySQLdb.connect(user="isf",passwd="isf123",db="wolisso",host="localhost")
 
 @app.route('/', methods=['GET'])
 def index():
@@ -21,6 +24,7 @@ def index():
 @app.route('/query')
 @app.route('/query/<dateFrom>/<dateTo>')
 def query(dateFrom=None, dateTo=None):
+    createDBconnection()
     # execute default query on the DB
     if not dateFrom:
         dateFrom = '2019-01-01'
@@ -40,6 +44,7 @@ def query(dateFrom=None, dateTo=None):
 @app.route('/query_group')
 @app.route('/query_group/<dateFrom>/<dateTo>')
 def query_group(dateFrom=None, dateTo=None):
+    createDBconnection()
     # execute default query on the DB
     if not dateFrom:
         dateFrom = '2019-01-01'
