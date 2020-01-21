@@ -1,5 +1,10 @@
 # survethi-monitoring-tool
 
+![survethi-monitoring-tool](https://github.com/informatici/survethi-monitoring-tool/blob/master/mockups/images/SurvethiMonitoringTool-4-change-filter.png)
+
+![survethi-analysis](https://github.com/informatici/survethi-monitoring-tool/blob/master/mockups/images/SurvethiMonitoringTool-5-analysis-1-week.png)
+
+
 ## First install Flask
 > pip install Flask
 
