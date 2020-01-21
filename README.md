@@ -24,3 +24,28 @@
  * Debug mode: off
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
+
+## API (draft)
+
+Home (returns index.html) 
+```
+'/'
+```
+
+Query by dates (needs [OpenHospital](https://github.com/informatici/openhospital) DB)
+```
+/query (default values = '2019-01-01'/'2019-12-31'
+/query/<dateFrom>/<dateTo>
+```
+
+Query Grouped (just a different query)
+```
+/query_group
+/query_group/<dateFrom>/<dateTo>
+```
+   
+Fixed datasets
+```
+/test (uses datasource/datasource.json)
+/test_group (uses datasource/datasource_group.json)
+```
