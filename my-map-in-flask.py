@@ -29,7 +29,7 @@ def query(dateFrom=None, dateTo=None):
     if not dateFrom:
         dateFrom = '2019-01-01'
     if not dateTo:
-        dateTo = '2019-01-31'
+        dateTo = '2019-12-31'
     default_query = "SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, LOC_LAT, LOC_LONG FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
