@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-table.min.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title>{{title}}</title>
+    <!-- <p>Hello {{ name }}!!!</p> -->
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="m-1 btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-primary">Today</button>
+                            <button type="button" class="btn">1-3 Days</button>
+                            <button type="button" class="btn">1 week</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="custom-select custom-select-lg mt-1">
+                            <option value="1">1min</option>
+                            <option value="5">5min</option>
+                            <option value="15">15min</option>
+                            <option value="30" selected="true">30min</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-1">
+                    {{ main_map|safe }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="m-1">
+                    Main Filter
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2>DataTable</h2>
+        <div class="row">
+            <div class="col">
+                <table
+                    data-toggle="table"
+                    data-pagination="true"
+                    data-search="true">
+                    <thead>
+                        <tr>
+                            <th data-sortable="true" data-field="count">Count</th>
+                            <th data-sortable="true" data-field="disease">Disease</th>
+                            <th data-sortable="true" data-field="woreda">Woreda</th>
+                            <th data-sortable="true" data-field="kebele">Kebele</th>
+                        </tr>
+                    </thead>
+                    {% for item in main_table %}
+                        <tr>
+                            <td>{{item.COUNT}}</td>
+                            <td>{{item.DIS_DESC}}</td>
+                            <td>{{item.LOC_CITY}}</td>
+                            <td>{{item.LOC_ADDRESS}}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="col-sm-1">
+                {{ empty_space }}
+            </div>
+        </div>
+
+
+
+
+        <hr>
+        <div class="row">
+            <div class="col">
+                Secondary Map
+            </div>
+            <div class="col">
+                Secondary Filter
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/bootstrap-table.min.js') }}"></script>
+</body>
+</html>

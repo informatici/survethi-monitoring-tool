@@ -8,8 +8,13 @@ import json
 import os.path
 
 app = Flask(__name__)
+
 CORS(app)
 db = MySQLdb
+
+@app.before_request
+def before_request():
+    app.jinja_env.cache = {}
 
 def createDBconnection():
     # database connection settings
@@ -18,8 +23,19 @@ def createDBconnection():
 
 @app.route('/', methods=['GET'])
 def index():
-    content = get_file('index.html')
-    return Response(content, mimetype="text/html")
+    content_map = get_file('map.html')
+    content_data = test_group(return_json=True)
+    #content_main_map_menu = get_file('map.html')
+
+    #return Response(content, mimetype="text/html")
+    return render_template('base.html', 
+        title='Survethi Monitoring Tool', 
+        name='Alessandro',
+        #main_map_menu=content_main_map_menu,
+        main_map=content_map,
+        #main_filter=content_map,
+        main_table=content_data,
+    )
 
 @app.route('/query')
 @app.route('/query/<dateFrom>/<dateTo>')
@@ -29,7 +45,7 @@ def query(dateFrom=None, dateTo=None):
     if not dateFrom:
         dateFrom = '2019-01-01'
     if not dateTo:
-        dateTo = '2019-12-31'
+        dateTo = '2020-12-31'
     default_query = "SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, LOC_LAT, LOC_LONG FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
@@ -66,18 +82,24 @@ def query_group(dateFrom=None, dateTo=None):
     return jsonify(result)
 
 @app.route('/test')
-def test(dateFrom=None, dateTo=None):
+def test(dateFrom=None, dateTo=None, return_json=False):
     # read test file from datasource/ folder
     with open("datasource/datasource.json") as json_file:
         json_data = json.load(json_file)
-    return jsonify(json_data)
+    if return_json:
+        return json_data
+    else:
+        return jsonify(json_data)
 
 @app.route('/test_group')
-def test_group(dateFrom=None, dateTo=None):
+def test_group(dateFrom=None, return_json=False):
     # read test file from datasource/ folder
     with open("datasource/datasource_group.json") as json_file:
         json_data = json.load(json_file)
-    return jsonify(json_data)
+    if return_json:
+        return json_data
+    else:
+        return jsonify(json_data)
 
     
 def root_dir():  # pragma: no cover
@@ -94,5 +116,3 @@ def get_file(filename):  # pragma: no cover
         return open(src).read()
     except IOError as exc:
         return str(exc)
-
-
