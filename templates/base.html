@@ -6,35 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/bootstrap-table.min.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="{{ url_for('static', filename='favicon.ico') }}" rel="shortcut icon" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <title>{{title}}</title>
-    <!-- <p>Hello {{ name }}!!!</p> -->
 
+    <!-- leaflet stylesheet and code -->
+    <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 </head>
+
+
+<!-- statuses of the page -->
+<script type="text/javascript">
+
+    var parameters = {
+        dateFrom: '2020-01-01',
+        dateTo: '2020-01-31',
+        center: [45.0485851,12.0318443],
+        max_zoom: 18,
+        initial_zoom: 11,
+        refresh_interval: 5,
+        refresh: false,
+    }
+
+</script>
+
+
+
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <div class="row">
-                    <div class="col">
+                    <div class="col col-5">
                         <div class="m-1 btn-group" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-primary">Today</button>
                             <button type="button" class="btn">1-3 Days</button>
                             <button type="button" class="btn">1 week</button>
                         </div>
                     </div>
-                    <div class="col-sm-2">
-                        <select class="custom-select custom-select-lg mt-1">
-                            <option value="1">1min</option>
-                            <option value="5">5min</option>
-                            <option value="15">15min</option>
-                            <option value="30" selected="true">30min</option>
+                    <div class="col"></div>
+                    <div class="col col-sm">
+                        <button id="button_refresh" type="button" class="btn btn-outline-success mt-1 float-right">Refreshing</button>
+                    </div>
+                    <div class="col col-sm">
+                        <select id="select_interval" class="custom-select mt-1 float-left">
+                            <option value="{{refresh_intervals[0]}}" selected="true">{{refresh_intervals[0]}}min</option>
+                            {% for interval in refresh_intervals[1:] %}
+                                <option value="{{interval}}">{{interval}}min</option>
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
                 <div class="m-1">
-                    {{ main_map|safe }}
+                    <div id="mapid"
+                        style="height: 300px; position: relative; overflow: hidden"
+                        class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+                        tabindex="0">
+                            <div class="leaflet-pane leaflet-map-pane"
+                                style="transform: translate3d(0px, 0px, 0px);">
+                            </div>
+                        </div>
                 </div>
             </div>
             <div class="col">
@@ -52,7 +85,9 @@
                 <table
                     data-toggle="table"
                     data-pagination="true"
-                    data-search="true">
+                    data-page-size="5"
+                    data-page-list="[5,10,20,50,All]"
+                    data-search="false">
                     <thead>
                         <tr>
                             <th data-sortable="true" data-field="count">Count</th>
@@ -71,7 +106,7 @@
                     {% endfor %}
                 </table>
             </div>
-            <div class="col-sm-1">
+            <div class="col">
                 {{ empty_space }}
             </div>
         </div>
@@ -92,5 +127,83 @@
 
 
     <script src="{{ url_for('static', filename='js/bootstrap-table.min.js') }}"></script>
+
+    <script>
+        var mymap = L.map('mapid').setView(parameters.center, parameters.initial_zoom);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: parameters.zoom,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1Ijoibmljb3B1bnppIiwiYSI6ImNqamU5aHhrZzRqZWMzcW80ZjE3dWNwZnoifQ.6X2-0SFwNzx_mjXrk9cysw'
+        }).addTo(mymap);
+    </script>
+
+
+<!-- events and functions of the page -->
+<script type="text/javascript">
+    
+    /**
+     * (event) Refresh button click event
+     */
+    $('#button_refresh').click(function(){
+        parameters.refresh = !parameters.refresh;
+        $(this).toggleClass('btn-outline-success');
+        $(this).toggleClass('btn-danger');
+        if (!parameters.refresh) {
+            //parameters.refresh = false;
+            $(this).html('Stopped');
+        } else {
+            //parameters.refresh = true;
+            $(this).html('Refreshing');
+            if (myTimeout) clearTimeout(myTimeout);
+            myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
+        }
+    });
+
+    /**
+     * (event) Selection interval event
+     */
+    $('#select_interval').on('change', function() {
+        parameters.refresh_interval = this.value * 60; // minutes
+        if (myTimeout) clearTimeout(myTimeout);
+        myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
+    });
+
+    /**
+     * (function) initialize components
+     */
+    function initialize(){
+        var button_refresh = $('#button_refresh');
+        if (!parameters.refresh) {
+            button_refresh.removeClass('btn-outline-success');
+            button_refresh.addClass('btn-danger');
+            button_refresh.html('Stopped');
+        } else {
+            button_refresh.addClass('btn-outline-success');
+            button_refresh.removeClass('btn-danger');
+            button_refresh.html('Refreshing');
+        }
+        parameters.refresh_interval = $('#select_interval').val() * 60; // minutes
+    }
+
+    /**
+     * (function) Refresh function
+     */
+     function refresh() {
+        if (parameters.refresh) {
+            alert('Refresh!');
+            myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
+        }
+    }
+
+    // Starts from here (main)
+    $(document).ready(function (response) {
+
+        initialize();
+        myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
+    });
+
+</script>
+
 </body>
 </html>

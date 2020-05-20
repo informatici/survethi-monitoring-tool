@@ -21,20 +21,25 @@ def createDBconnection():
     global db
     db = MySQLdb.connect(user="isf",passwd="isf123",db="wolisso",host="localhost")
 
+def getRefreshIntervals():
+    # define refresh interval in minutes, default as first element
+    return ['1','5','15','30']
+
 @app.route('/', methods=['GET'])
 def index():
     content_map = get_file('map.html')
     content_data = test_group(return_json=True)
+    content_refresh_intervals=getRefreshIntervals()
     #content_main_map_menu = get_file('map.html')
 
     #return Response(content, mimetype="text/html")
     return render_template('base.html', 
         title='Survethi Monitoring Tool', 
-        name='Alessandro',
         #main_map_menu=content_main_map_menu,
         main_map=content_map,
         #main_filter=content_map,
         main_table=content_data,
+        refresh_intervals=content_refresh_intervals
     )
 
 @app.route('/query')
@@ -49,9 +54,9 @@ def query(dateFrom=None, dateTo=None):
     default_query = "SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, LOC_LAT, LOC_LONG FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
-                        LEFT JOIN LOCATION ON (PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
-                        WHERE LOC_CITY IN ('Wonchi','Wolisso Rural','Wolisso Town','Goro') \
-                        AND OPD_DATE_VIS BETWEEN '%s' AND '%s'" % (escape(dateFrom), escape(dateTo))
+                        LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
+                        WHERE LOC_CITY IN('Wonchi','Wolisso Rural','Wolisso Town','Goro') \
+                        AND OPD_DATE_VIS BETWEEN '%s' AND '%s'" %(escape(dateFrom), escape(dateTo))
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
@@ -66,16 +71,16 @@ def query_group(dateFrom=None, dateTo=None):
         dateFrom = '2019-01-01'
     if not dateTo:
         dateTo = '2019-01-31'
-    default_query = "SELECT COUNT(*) AS COUNT, INTERNAL.* FROM ( \
+    default_query = "SELECT COUNT(*) AS COUNT, INTERNAL.* FROM( \
                         SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, LOC_LAT, LOC_LONG FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
-                        LEFT JOIN LOCATION ON (PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
-                        WHERE LOC_CITY IN ('Wonchi', 'Wolisso Rural','Wolisso Town','Goro') \
+                        LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
+                        WHERE LOC_CITY IN('Wonchi', 'Wolisso Rural','Wolisso Town','Goro') \
                         AND OPD_DATE_VIS BETWEEN '%s' AND '%s' \
                     ) INTERNAL \
                     GROUP BY OPD_DIS_ID_A, PAT_CITY, PAT_ADDR \
-                    ORDER BY COUNT DESC" % (escape(dateFrom), escape(dateTo))
+                    ORDER BY COUNT DESC" %(escape(dateFrom), escape(dateTo))
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
