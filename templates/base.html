@@ -17,10 +17,9 @@
     <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" rel="stylesheet" />
     <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" rel="stylesheet" />
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-    
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    
+    <script src="./static/js/leaflet-heat.js"></script>
     
 </head>
 
@@ -37,6 +36,9 @@
         refresh_interval: 5,
         refresh: false,
     }
+
+    var layerGroup = new L.featureGroup();
+    var mapController = new L.control.layers();
 
 </script>
 
@@ -231,18 +233,29 @@
 
     function show_markers(data) {
 
+        layerGroup.clearLayers();
+        mymap.removeControl(mapController);
+
         var markersGroup1 = L.markerClusterGroup();
+        var markerArray = [];
 
         data.forEach(show_marker);
 
-        mymap.addLayer(markersGroup1);
-        mymap.flyToBounds(markersGroup1.getBounds().pad(10))
+        var heatLayer = L.heatLayer(markerArray, {radius: 50})
+        mapController = L.control.layers(null, {"heatLayer": heatLayer});
+
+        layerGroup.addLayer(markersGroup1);
+        layerGroup.addLayer(heatLayer);
+        layerGroup.addTo(mymap);
+        mymap.addControl(mapController);
+
+        mymap.flyToBounds(markersGroup1.getBounds().pad(10));
 
         function show_marker(item, index) {
             
             if (item.LOC_LAT) {
 
-                //markerArray.push([item.LOC_LAT, item.LOC_LONG]);
+                markerArray.push([item.LOC_LAT, item.LOC_LONG]);
 
                 var description = getMarkerDescription(item);
                 if (item.OPD_DIS_ID_A == "1567")
