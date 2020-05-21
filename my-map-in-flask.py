@@ -27,8 +27,8 @@ def getRefreshIntervals():
 
 @app.route('/', methods=['GET'])
 def index():
-    content_map = get_file('map.html')
-    content_data = test_group(return_json=True)
+    #content_map = get_file('map.html')
+    #content_data = test_group(return_json=True)
     content_refresh_intervals=getRefreshIntervals()
     #content_main_map_menu = get_file('map.html')
 
@@ -36,9 +36,9 @@ def index():
     return render_template('base.html', 
         title='Survethi Monitoring Tool', 
         #main_map_menu=content_main_map_menu,
-        main_map=content_map,
+        #main_map=content_map,
         #main_filter=content_map,
-        main_table=content_data,
+        #main_table=content_data,
         refresh_intervals=content_refresh_intervals
     )
 

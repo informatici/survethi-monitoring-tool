@@ -96,27 +96,29 @@
         <div class="row">
             <div class="col">
                 <table
+                    id="table_primary"
                     data-toggle="table"
                     data-pagination="true"
+                    data-ajax="ajaxRequest"
                     data-page-size="5"
                     data-page-list="[5,10,20,50,All]"
                     data-search="false">
                     <thead>
                         <tr>
-                            <th data-sortable="true" data-field="count">Count</th>
-                            <th data-sortable="true" data-field="disease">Disease</th>
-                            <th data-sortable="true" data-field="woreda">Woreda</th>
-                            <th data-sortable="true" data-field="kebele">Kebele</th>
+                            <th data-sortable="true" data-field="COUNT">Count</th>
+                            <th data-sortable="true" data-field="DIS_DESC">Disease</th>
+                            <th data-sortable="true" data-field="LOC_CITY">Woreda</th>
+                            <th data-sortable="true" data-field="LOC_ADDRESS">Kebele</th>
                         </tr>
                     </thead>
-                    {% for item in main_table %}
+                    <!-- {% for item in main_table %}
                         <tr>
                             <td>{{item.COUNT}}</td>
                             <td>{{item.DIS_DESC}}</td>
                             <td>{{item.LOC_CITY}}</td>
                             <td>{{item.LOC_ADDRESS}}</td>
                         </tr>
-                    {% endfor %}
+                    {% endfor %} -->
                 </table>
             </div>
             <div class="col">
@@ -216,6 +218,14 @@
             fetch_data()
             myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
         }
+    }
+
+    // your custom ajax request here
+    function ajaxRequest(params) {
+        var url = 'http://127.0.0.1:5000/test_group'
+        $.get(url+ '?' + $.param(params.data)).then(function (res) {
+            params.success(res)
+        })
     }
 
     function fetch_data(){
