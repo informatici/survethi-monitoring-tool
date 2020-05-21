@@ -17,8 +17,8 @@
     <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" rel="stylesheet" />
     <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" rel="stylesheet" />
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
     <script src="./static/js/leaflet-heat.js"></script>
     
 </head>
@@ -28,8 +28,8 @@
 <script type="text/javascript">
 
     var parameters = {
-        dateFrom: '2020-01-01',
-        dateTo: '2020-01-31',
+        dateFrom: '2020-05-01',
+        dateTo: '2020-05-01',
         center: [45.0485851,12.0318443],
         max_zoom: 18,
         initial_zoom: 11,
@@ -39,6 +39,8 @@
 
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
+
+    
 
 </script>
 
@@ -80,7 +82,9 @@
                             <div class="leaflet-pane leaflet-map-pane"
                                 style="transform: translate3d(0px, 0px, 0px);">
                             </div>
-                        </div>
+                            <div id="map-loading-indicator" class="notloading">Loading...</div>
+                    </div>
+                    
                 </div>
             </div>
             <div class="col">
@@ -90,8 +94,6 @@
             </div>
         </div>
 
-
-
         <h2>DataTable</h2>
         <div class="row">
             <div class="col">
@@ -99,10 +101,11 @@
                     id="table_primary"
                     data-toggle="table"
                     data-pagination="true"
-                    data-ajax="ajaxRequest"
                     data-page-size="5"
+                    data-url=""
                     data-page-list="[5,10,20,50,All]"
-                    data-search="false">
+                    data-search="false"
+                    >
                     <thead>
                         <tr>
                             <th data-sortable="true" data-field="COUNT">Count</th>
@@ -111,14 +114,6 @@
                             <th data-sortable="true" data-field="LOC_ADDRESS">Kebele</th>
                         </tr>
                     </thead>
-                    <!-- {% for item in main_table %}
-                        <tr>
-                            <td>{{item.COUNT}}</td>
-                            <td>{{item.DIS_DESC}}</td>
-                            <td>{{item.LOC_CITY}}</td>
-                            <td>{{item.LOC_ADDRESS}}</td>
-                        </tr>
-                    {% endfor %} -->
                 </table>
             </div>
             <div class="col">
@@ -140,9 +135,23 @@
         </div>
     </div>
 
-
+    <!-- Bootstrap Table stylesheets and code -->
+    <link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
     <script src="{{ url_for('static', filename='js/bootstrap-table.min.js') }}"></script>
-
+    <style type="text/css">
+        #mapid { position: relative; }
+        .notloading { display: none; }
+        .loading {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background-color: white; border: solid 1px black; padding: 0.1em 1em 0.1em 1em;
+            font-family: Verdana,Arial,'Lucida Grande',Sans-Serif;
+        }
+    </style>
     <script>
         var mymap = L.map('mapid').setView(parameters.center, parameters.initial_zoom);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -157,13 +166,6 @@
 <!-- events and functions of the page -->
 <script type="text/javascript">
     
-     /**
-     * (event) Update button click event
-     */
-     $('#button_update').click(function(){
-        fetch_data();
-    });
-
     /**
      * (event) Refresh button click event
      */
@@ -210,41 +212,88 @@
     }
 
     /**
+     * (event) Update button click event
+     */
+     $('#button_update').click(function(){
+        refresh(true);
+    });
+
+    /**
      * (function) Refresh function
      */
-     function refresh() {
-        if (parameters.refresh) {
-            alert('Refresh!');
-            fetch_data()
+     function refresh(refresh) {
+        if (refresh || parameters.refresh) {
+            //alert('Refresh!');
+            var newUrl = get_url();
+            fetch_data(newUrl);
             myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
         }
     }
 
-    // your custom ajax request here
-    function ajaxRequest(params) {
-        var url = 'http://127.0.0.1:5000/test_group'
-        $.get(url+ '?' + $.param(params.data)).then(function (res) {
-            params.success(res)
-        })
+    /**
+     * (function) build the url with parameters
+     */
+    function get_url() {
+        var query =  'http://127.0.0.1:5000/query_group';
+        return query;
     }
 
-    function fetch_data(){
+    /**
+     * (function) update table from URL
+     */ 
+    function update_table(newUrl) {
+        var myTable = $('#table_primary');
+        myTable.bootstrapTable('refresh', {url: newUrl});
+        myTable.bootstrapTable('resetView');
+        myTable.bootstrapTable('resetSearch');
+    }
 
+    /**
+     * (function) update table with data
+     */
+    function update_table_data(data) {
+        var myTable = $('#table_primary');
+        myTable.bootstrapTable('load', data)
+        myTable.bootstrapTable('resetView');
+        myTable.bootstrapTable('resetSearch');
+    }
+
+    /**
+     * (sync) fetch data from URL
+     */
+    function fetch_data(newUrl) {
+        $('#map-loading-indicator').attr("class", "loading");
+        $('#table_primary').bootstrapTable('showLoading');
         $.ajax({
-            url:"http://127.0.0.1:5000/test_group",
+            url: newUrl,
             success:function(data,status,xhr)
             {
-                console.log(data[0]);
-                alert(JSON.stringify(data[0]));
+                //console.log(data[0]);
+                //alert(JSON.stringify(data[0]));
                 show_markers(data);
+                update_table_data(data);
+            },
+            complete: function(){
+                $('#map-loading-indicator').attr("class", "notloading");
+                $('#table_primary').bootstrapTable('hideLoading')
             }
         })
     }
 
-    function show_markers(data) {
-
+    /**
+     * (function) clean map removing layers and controllers
+     */
+    function cleanMap() {
         layerGroup.clearLayers();
         mymap.removeControl(mapController);
+    }
+
+    /**
+     * (function) update map adding layers and controllers
+     */
+    function show_markers(data) {
+
+        cleanMap();
 
         var markersGroup1 = L.markerClusterGroup();
         var markerArray = [];
@@ -268,11 +317,11 @@
                 markerArray.push([item.LOC_LAT, item.LOC_LONG]);
 
                 var description = getMarkerDescription(item);
-                if (item.OPD_DIS_ID_A == "1567")
+                if (item.OPD_DIS_ID_A == "424")
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
                             {icon: L.icon({iconUrl: 'static/img/blue_icon.png', iconSize: [32, 32]})}).bindPopup(description));
-                else if (item.OPD_DIS_ID_A == "782")
+                else if (item.OPD_DIS_ID_A == "461")
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
                             {icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description));
