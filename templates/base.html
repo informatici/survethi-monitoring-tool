@@ -259,11 +259,23 @@
     }
 
     /**
+     * (function) show loading indicators
+     */
+    function setLoading(loading) {
+        if (loading) {
+            $('#map-loading-indicator').attr("class","loading");
+            $('#table_primary').bootstrapTable('showLoading');
+        } else {
+            $('#map-loading-indicator').attr("class","notloading");
+            $('#table_primary').bootstrapTable('hideLoading')
+        }
+    }
+
+    /**
      * (sync) fetch data from URL
      */
     function fetch_data(newUrl) {
-        $('#map-loading-indicator').attr("class", "loading");
-        $('#table_primary').bootstrapTable('showLoading');
+        setLoading(true);
         $.ajax({
             url: newUrl,
             success:function(data,status,xhr)
@@ -274,9 +286,8 @@
                 update_table_data(data);
             },
             complete: function(){
-                $('#map-loading-indicator').attr("class", "notloading");
-                $('#table_primary').bootstrapTable('hideLoading')
-            }
+                setLoading(false);
+            }    
         })
     }
 
@@ -325,10 +336,6 @@
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
                             {icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description));
-                /* else
-                    markersGroup3.addLayer(
-                        new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
-                            {icon: L.icon({iconUrl: 'static/img/grey_icon.png', iconSize: [32, 32]})}).bindPopup(description)); */
             }
         }
 
