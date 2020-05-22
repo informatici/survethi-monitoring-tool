@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col col-5">
+        <div id="time-range-selector" class="m-1 btn-group" role="group" aria-label="Basic example">
+            <button id="today" type="button" class="btn btn-primary">Today</button>
+            <button id="3days" type="button" class="btn">1-3 Days</button>
+            <button id="1week" type="button" class="btn">1 week</button>
+        </div>
+    </div>
+    <div class="col"></div>
+    <div class="col col-sm">
+        <button id="button_update" type="button" class="btn btn-success mt-1 float-right">Update</button>
+    </div>
+    <div class="col col-sm">
+        <button id="button_refresh" type="button" class="btn btn-outline-success mt-1 float-right">Refreshing</button>
+    </div>
+    <div class="col col-sm">
+        <select id="select_interval" class="custom-select mt-1 float-left">
+            <option value="{{refresh_intervals[0]}}" selected="true">{{refresh_intervals[0]}}min</option>
+            {% for interval in refresh_intervals[1:] %}
+                <option value="{{interval}}">{{interval}}min</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
