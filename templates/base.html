@@ -8,6 +8,7 @@
     <link href="{{ url_for('static', filename='css/bootstrap-table.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='favicon.ico') }}" rel="shortcut icon" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/lodash.min.js') }}"></script>
 
     <title>{{title}}</title>
 
@@ -36,6 +37,8 @@
         refresh: false,
     }
 
+    var disease_list = [];
+
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
 
@@ -58,7 +61,7 @@
                 {% include "map.html" %}
             </div>
             <div class="col">
-                Disease list 
+                {% include "disease_list.html" %}
             </div>
         </div>
 
@@ -99,6 +102,12 @@
         z-index: 9999;
         background-color: white; border: solid 1px black; padding: 0.1em 1em 0.1em 1em;
         font-family: Verdana,Arial,'Lucida Grande',Sans-Serif;
+    }
+    .list-group{
+        max-height: 300px;
+        margin-bottom: 10px;
+        overflow-y:auto;
+        -webkit-overflow-scrolling: touch;
     }
 </style>
 <script>
@@ -167,7 +176,7 @@
             $('#table_primary').bootstrapTable('hideLoading')
         }
     }
-
+    
     /**
      * (sync) fetch data from URL
      */
@@ -181,11 +190,13 @@
                 //alert(JSON.stringify(data[0]));
                 if (data.length > 0) {
                     show_markers(data);
+                    update_table_data(data);
+                    update_disease_list();                  
                 } else {
-                    console.log(data);
                     cleanMap();
+                    update_table_data(data);
+                    clean_disease_list();
                 }
-                update_table_data(data);
             },
             complete: function(){
                 setLoading(false);
@@ -213,6 +224,7 @@
 
         var markersGroup1 = L.markerClusterGroup();
         var markerArray = [];
+        disease_list = [];
 
         data.forEach(show_marker);
 
@@ -224,7 +236,6 @@
         layerGroup.addTo(mymap);
         mymap.addControl(mapController);
 
-        console.log(markersGroup1.getChil);
         mymap.flyToBounds(markersGroup1.getBounds().pad(10));
 
         function show_marker(item, index) {
@@ -232,16 +243,21 @@
             if (item.LOC_LAT) {
 
                 markerArray.push([item.LOC_LAT, item.LOC_LONG]);
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT});
 
                 var description = getMarkerDescription(item);
-                if (item.OPD_DIS_ID_A == "424")
+                markersGroup1.addLayer(
+                    new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)]).bindPopup(description)
+                );
+
+                /* if (item.OPD_DIS_ID_A == "424")
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
                             {icon: L.icon({iconUrl: 'static/img/blue_icon.png', iconSize: [32, 32]})}).bindPopup(description));
                 else if (item.OPD_DIS_ID_A == "461")
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
-                            {icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description));
+                            {icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description)); */
             }
         }
 

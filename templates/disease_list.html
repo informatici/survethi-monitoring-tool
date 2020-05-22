@@ -1,0 +1,55 @@
+<ul id="dynamic-list" class="list-group"></ul>
+<script type="text/javascript">
+
+    /**
+     * (function) add disease to list
+     */
+    function addItemDisease(item, index){
+        //console.log(item);
+        var ul = document.getElementById("dynamic-list");
+        var li = document.createElement("li");
+        //var icon = document.createElement("img");
+        var span = document.createElement("span");
+        
+        // icon.setAttribute('src',item.icon.icon.options.iconUrl);
+        // icon.setAttribute('height',16);
+        // icon.setAttribute('width',16);
+        li.setAttribute('id',item.id);
+        li.setAttribute('class',"list-group-item list-group-item-action d-flex justify-content-between align-items-start py-1");
+        span.setAttribute('class',"badge badge-primary badge-pill ml-auto p-2");
+
+        span.appendChild(document.createTextNode(item.count));
+        //li.appendChild(icon);
+        li.appendChild(document.createTextNode(item.desc));
+        li.appendChild(span);
+        ul.appendChild(li);
+    }
+    /*
+        * (function) update disease list
+        */
+    function update_disease_list() {
+        summarize_and_sort_list()
+        clean_disease_list();
+        disease_list.forEach(addItemDisease);
+    }
+
+    /*
+        * (function) clean disease list
+        */
+    function clean_disease_list() {
+        $('#dynamic-list').empty();
+    }
+
+    /*
+        * (function) sum up 'count' with the same disease 'id'
+        * and return sorted totals (reverse)
+        */ 
+    function summarize_and_sort_list() {
+        unique_list = _.uniqBy(disease_list, 'id');
+        unique_list.forEach(function(item, index) {
+            this_disease_list = _.filter(disease_list, ['id', item.id]);
+            item.count = _.sumBy(this_disease_list, 'count');
+        });
+        disease_list = _.sortBy(unique_list, 'count').reverse();
+    }
+</script>
