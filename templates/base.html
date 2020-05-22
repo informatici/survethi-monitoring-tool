@@ -23,13 +23,12 @@
     
 </head>
 
-
 <!-- statuses of the page -->
 <script type="text/javascript">
 
     var parameters = {
-        dateFrom: '2020-05-01',
-        dateTo: '2020-05-01',
+        dateFrom: new Date(),
+        dateTo: new Date(),
         center: [45.0485851,12.0318443],
         max_zoom: 18,
         initial_zoom: 11,
@@ -39,8 +38,6 @@
 
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
-
-    
 
 </script>
 
@@ -235,6 +232,9 @@
      */
     function get_url() {
         var query =  'http://127.0.0.1:5000/query_group';
+        query = query.concat('/').concat(parameters.dateFrom.toISOString().split('T')[0]);
+        query = query.concat('/').concat(parameters.dateTo.toISOString().split('T')[0]);
+        console.log(query);
         return query;
     }
 
@@ -280,14 +280,22 @@
             url: newUrl,
             success:function(data,status,xhr)
             {
-                //console.log(data[0]);
+                //console.log(data);
                 //alert(JSON.stringify(data[0]));
-                show_markers(data);
+                if (data.length > 0) {
+                    show_markers(data);
+                } else {
+                    console.log(data);
+                    cleanMap();
+                }
                 update_table_data(data);
             },
             complete: function(){
                 setLoading(false);
-            }    
+            },
+            error: function(){
+                console.log('error');
+            }
         })
     }
 
@@ -319,6 +327,7 @@
         layerGroup.addTo(mymap);
         mymap.addControl(mapController);
 
+        console.log(markersGroup1.getChil);
         mymap.flyToBounds(markersGroup1.getBounds().pad(10));
 
         function show_marker(item, index) {
