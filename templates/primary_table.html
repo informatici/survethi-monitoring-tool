@@ -1,0 +1,42 @@
+<table
+    id="table_primary"
+    data-toggle="table"
+    data-pagination="true"
+    data-page-size="5"
+    data-url=""
+    data-page-list="[5,10,20,50,All]"
+    data-search="false"
+    >
+    <thead>
+        <tr>
+            <th data-sortable="true" data-field="COUNT">Count</th>
+            <th data-sortable="true" data-field="DIS_DESC">Disease</th>
+            <th data-sortable="true" data-field="LOC_CITY">Woreda</th>
+            <th data-sortable="true" data-field="LOC_ADDRESS">Kebele</th>
+        </tr>
+    </thead>
+</table>
+
+<script type="text/javascript">
+
+    /**
+     * (function) update table from URL
+     */ 
+     function update_table(newUrl) {
+        var myTable = $('#table_primary');
+        myTable.bootstrapTable('refresh', {url: newUrl});
+        myTable.bootstrapTable('resetView');
+        myTable.bootstrapTable('resetSearch');
+    }
+
+    /**
+     * (function) update table with data
+     */
+    function update_table_data(data) {
+        var myTable = $('#table_primary');
+        myTable.bootstrapTable('load', data)
+        myTable.bootstrapTable('resetView');
+        myTable.bootstrapTable('resetSearch');
+    }
+
+</script>

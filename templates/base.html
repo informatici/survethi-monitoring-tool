@@ -47,79 +47,30 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <div class="row">
-                    <div class="col col-5">
-                        <div id="time-range-selector" class="m-1 btn-group" role="group" aria-label="Basic example">
-                            <button id="today" type="button" class="btn btn-primary">Today</button>
-                            <button id="3days" type="button" class="btn">1-3 Days</button>
-                            <button id="1week" type="button" class="btn">1 week</button>
-                        </div>
-                    </div>
-                    <div class="col"></div>
-                    <div class="col col-sm">
-                        <button id="button_update" type="button" class="btn btn-success mt-1 float-right">Update</button>
-                    </div>
-                    <div class="col col-sm">
-                        <button id="button_refresh" type="button" class="btn btn-outline-success mt-1 float-right">Refreshing</button>
-                    </div>
-                    <div class="col col-sm">
-                        <select id="select_interval" class="custom-select mt-1 float-left">
-                            <option value="{{refresh_intervals[0]}}" selected="true">{{refresh_intervals[0]}}min</option>
-                            {% for interval in refresh_intervals[1:] %}
-                                <option value="{{interval}}">{{interval}}min</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                </div>
-                <div class="m-1">
-                    <div id="mapid"
-                        style="height: 300px; position: relative; overflow: hidden"
-                        class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-                        tabindex="0">
-                            <div class="leaflet-pane leaflet-map-pane"
-                                style="transform: translate3d(0px, 0px, 0px);">
-                            </div>
-                            <div id="map-loading-indicator" class="notloading">Loading...</div>
-                    </div>
-                    
-                </div>
+                {% include "time_selectors.html" %}
             </div>
             <div class="col">
-                <div class="m-1">
-                    Main Filter
-                </div>
+                Main Filter
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% include "map.html" %}
+            </div>
+            <div class="col">
+                Disease list 
             </div>
         </div>
 
         <h2>DataTable</h2>
         <div class="row">
             <div class="col">
-                <table
-                    id="table_primary"
-                    data-toggle="table"
-                    data-pagination="true"
-                    data-page-size="5"
-                    data-url=""
-                    data-page-list="[5,10,20,50,All]"
-                    data-search="false"
-                    >
-                    <thead>
-                        <tr>
-                            <th data-sortable="true" data-field="COUNT">Count</th>
-                            <th data-sortable="true" data-field="DIS_DESC">Disease</th>
-                            <th data-sortable="true" data-field="LOC_CITY">Woreda</th>
-                            <th data-sortable="true" data-field="LOC_ADDRESS">Kebele</th>
-                        </tr>
-                    </thead>
-                </table>
+                {% include "primary_table.html" %}
             </div>
             <div class="col">
                 {{ empty_space }}
             </div>
         </div>
-
-
-
 
         <hr>
         <div class="row">
@@ -131,85 +82,38 @@
             </div>
         </div>
     </div>
+</body>
 
-    <!-- Bootstrap Table stylesheets and code -->
-    <link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
-    <script src="{{ url_for('static', filename='js/bootstrap-table.min.js') }}"></script>
-    <style type="text/css">
-        #mapid { position: relative; }
-        .notloading { display: none; }
-        .loading {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            background-color: white; border: solid 1px black; padding: 0.1em 1em 0.1em 1em;
-            font-family: Verdana,Arial,'Lucida Grande',Sans-Serif;
-        }
-    </style>
-    <script>
-        var mymap = L.map('mapid').setView(parameters.center, parameters.initial_zoom);
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: parameters.max_zoom,
-            id: 'mapbox.streets',
-            accessToken: 'pk.eyJ1Ijoibmljb3B1bnppIiwiYSI6ImNqamU5aHhrZzRqZWMzcW80ZjE3dWNwZnoifQ.6X2-0SFwNzx_mjXrk9cysw'
-        }).addTo(mymap);
-    </script>
-
+<!-- Bootstrap Table stylesheets and code -->
+<link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/bootstrap-table.min.js') }}"></script>
+<style type="text/css">
+    #mapid { position: relative; }
+    .notloading { display: none; }
+    .loading {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        background-color: white; border: solid 1px black; padding: 0.1em 1em 0.1em 1em;
+        font-family: Verdana,Arial,'Lucida Grande',Sans-Serif;
+    }
+</style>
+<script>
+    var mymap = L.map('mapid').setView(parameters.center, parameters.initial_zoom);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: parameters.max_zoom,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1Ijoibmljb3B1bnppIiwiYSI6ImNqamU5aHhrZzRqZWMzcW80ZjE3dWNwZnoifQ.6X2-0SFwNzx_mjXrk9cysw'
+    }).addTo(mymap);
+</script>
 
 <!-- events and functions of the page -->
 <script type="text/javascript">
     
-    /**
-     * (event) Refresh button click event
-     */
-    $('#time-range-selector button').click(function() {
-        $(this).addClass('btn-primary').siblings().removeClass('btn-primary');
-        // "today"
-        parameters.dateFrom = new Date();
-        parameters.dateTo = new Date();
-        if (this.id == "3days") {
-            var date = new Date();
-            parameters.dateFrom.setDate(date.getDate() - 3);
-        }
-        if (this.id == "1week") {
-            var date = new Date();
-            parameters.dateFrom.setDate(date.getDate() - 7);
-        }
-        //alert(parameters.dateFrom + " " + parameters.dateTo);
-        refresh(true);
-    });
-
-    /**
-     * (event) Refresh button click event
-     */
-    $('#button_refresh').click(function(){
-        parameters.refresh = !parameters.refresh;
-        $(this).toggleClass('btn-outline-success');
-        $(this).toggleClass('btn-danger');
-        if (!parameters.refresh) {
-            //parameters.refresh = false;
-            $(this).html('Stopped');
-        } else {
-            //parameters.refresh = true;
-            $(this).html('Refreshing');
-            if (myTimeout) clearTimeout(myTimeout);
-            myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
-        }
-    });
-
-    /**
-     * (event) Selection interval event
-     */
-    $('#select_interval').on('change', function() {
-        parameters.refresh_interval = this.value * 60; // minutes
-        if (myTimeout) clearTimeout(myTimeout);
-        myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
-    });
-
     /**
      * (function) initialize components
      */
@@ -227,13 +131,6 @@
         parameters.refresh_interval = $('#select_interval').val() * 60; // minutes
         mymap.addControl(new L.Control.Fullscreen());
     }
-
-    /**
-     * (event) Update button click event
-     */
-     $('#button_update').click(function(){
-        refresh(true);
-    });
 
     /**
      * (function) Refresh function
@@ -256,26 +153,6 @@
         query = query.concat('/').concat(parameters.dateTo.toISOString().split('T')[0]);
         console.log(query);
         return query;
-    }
-
-    /**
-     * (function) update table from URL
-     */ 
-    function update_table(newUrl) {
-        var myTable = $('#table_primary');
-        myTable.bootstrapTable('refresh', {url: newUrl});
-        myTable.bootstrapTable('resetView');
-        myTable.bootstrapTable('resetSearch');
-    }
-
-    /**
-     * (function) update table with data
-     */
-    function update_table_data(data) {
-        var myTable = $('#table_primary');
-        myTable.bootstrapTable('load', data)
-        myTable.bootstrapTable('resetView');
-        myTable.bootstrapTable('resetSearch');
     }
 
     /**
@@ -386,5 +263,5 @@
 
 </script>
 
-</body>
+
 </html>
