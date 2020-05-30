@@ -1,0 +1,98 @@
+<select id="main_filter" 
+    class="selectpicker mt-1"
+    title="Choose the diseases to be shown..." 
+    data-style="btn-info"
+    data-width="auto"
+    data-header="Select the diseases to be shown..."
+    data-actions-box="true"
+    multiple 
+    data-live-search="true"
+    liveSearchNormalize="true"
+    liveSearchStyle="contains"
+    data-selected-text-format="count">
+</select>
+
+<script type="text/javascript">
+
+    /*
+     * (function) Make option item for the filter
+     */
+    function main_filter_make_option(value, text) {
+        return '<option value="'+value+'">'+text.substring(0, 50)+'</option>';
+    }
+
+    /*
+     * (function) Make option 'disabled' item (title) for the filter
+     */
+     function main_filter_make_option_selected(value, text) {
+        return '<option selected value="'+value+'">'+text.substring(0, 50)+'</option>';
+    }
+
+    /*
+     * (function) Reset the main filter
+     */
+    function reset_main_filter() {
+        main_filter = $(".selectpicker");
+        main_filter.find('option').remove().end();
+        all_diseases_count = diseases.length;
+        who_diseases_count = who_diseases.length;
+
+        //TODO: add pre-set filters
+        // main_filter.append(main_filter_make_option('Clear','Clear all'));
+        // main_filter.append(main_filter_make_option('All','Select all ('+all_diseases_count+')'));
+        // main_filter.append(main_filter_make_option('WHO','WHO Priority Diseases ('+who_diseases_count+')'));
+        // main_filter.append(main_filter_make_option('TopTen','Top Ten Diseases (10)'));
+        main_filter.append('<option id="data-divider" data-divider="true"></option>');
+        // main_filter.append(main_filter_make_option('Selected','Selected ('+disease_list_filter+')'));
+        
+        diseases.forEach(function (item, index) {
+            main_filter.append(main_filter_make_option(item.DIS_ID_A,item.DIS_DESC));
+            //console.log(item);
+        });
+        main_filter.selectpicker('refresh');
+    }
+    
+    /*
+     * (event) when the change the filter selection
+     */
+    $('.selectpicker').on("changed.bs.select", function(e, clickedIndex, newValue, oldValue) {
+        var selected = $('.selectpicker').val();
+        // var lastSelected = $(this).find('option').eq(clickedIndex).val();
+        // console.log('selected : ' + selected); //Get the multiple values selected in an array
+        // console.log(selected.length); //Length of the array
+        // console.log('last : ' + lastSelected);
+
+        disease_list_filter = selected;
+        console.log('disease_list_filter : ' + disease_list_filter);
+        
+        // udpate_main_filter();
+        // refresh(true);
+    });
+
+    /*
+     * (event) when the dropdown disappear the filtering can start
+     */
+    $('.selectpicker').on("hidden.bs.select", function(e, clickedIndex, newValue, oldValue) {
+        udpate_main_filter();
+        refresh(true);
+    });
+
+    /*
+     * (function) Update main filter
+     */
+    function udpate_main_filter() {
+        reset_main_filter();
+        main_filter = $(".selectpicker");
+        if (disease_list_filter.length > 0) {
+            selected_options = filterFastDisease(diseases,disease_list_filter);
+            console.log('selected_options : ' + selected_options);
+            selected_options.forEach(function (item, index) {
+                main_filter.find('[value="'+item.DIS_ID_A+'"]').remove();
+                main_filter.find('[id="data-divider"]').before(main_filter_make_option_selected(item.DIS_ID_A,item.DIS_DESC));
+            });
+            main_filter.selectpicker('refresh');
+        } else {
+            reset_main_filter();
+        }
+    }
+</script>
