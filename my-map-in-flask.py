@@ -93,6 +93,29 @@ def query_group(dateFrom=None, dateTo=None):
     result = cursor.fetchall()
     return jsonify(result)
 
+@app.route('/diseases')
+def diseases():
+    createDBconnection()
+    # execute default query on the DB
+    default_query = "SELECT * FROM DISEASE \
+                    ORDER BY DIS_DESC"
+    #print(default_query)                
+    cursor = db.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute(default_query)
+    result = cursor.fetchall()
+    return jsonify(result)
+
+@app.route('/test_diseases')
+def test_diseases(dateFrom=None, dateTo=None, return_json=False):
+    # read test file from datasource/ folder
+    with open("datasource/diseases.json") as json_file:
+        json_data = json.load(json_file)
+    if return_json:
+        return json_data
+    else:
+        return jsonify(json_data)
+
+
 @app.route('/test')
 def test(dateFrom=None, dateTo=None, return_json=False):
     # read test file from datasource/ folder
