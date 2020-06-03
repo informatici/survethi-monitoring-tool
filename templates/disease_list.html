@@ -47,8 +47,12 @@
     function summarize_and_sort_list() {
         unique_list = _.uniqBy(disease_list, 'id');
         unique_list.forEach(function(item, index) {
+            
             this_disease_list = _.filter(disease_list, ['id', item.id]);
-            item.count = _.sumBy(this_disease_list, 'count');
+            sum = _.sumBy(this_disease_list, 'count');
+            
+            objIndex = unique_list.findIndex((obj => obj.id == item.id));
+            unique_list[objIndex].count = sum;
         });
         disease_list = _.sortBy(unique_list, 'count').reverse();
     }
