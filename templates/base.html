@@ -297,19 +297,21 @@
         layerGroup.addTo(mymap);
         mymap.addControl(mapController);
 
-        mymap.flyToBounds(markersGroup1.getBounds().pad(10));
+        mymap.flyToBounds(markersGroup1.getBounds());//.pad(10));
 
         function show_marker(item, index) {
-            
+
             if (item.LOC_LAT) {
 
                 markerArray.push([item.LOC_LAT, item.LOC_LONG]);
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT});
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
 
+                console.log(JSON.stringify(item));
                 var description = getMarkerDescription(item);
                 markersGroup1.addLayer(
                     new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)]).bindPopup(description)
                 );
+                console.log(JSON.stringify(item));
 
                 /* if (item.OPD_DIS_ID_A == "424")
                     markersGroup1.addLayer(
@@ -319,6 +321,8 @@
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
                             {icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description)); */
+            } else {
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
             }
         }
 

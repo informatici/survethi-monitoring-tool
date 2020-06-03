@@ -9,19 +9,24 @@
         var ul = document.getElementById("dynamic-list");
         var li = document.createElement("li");
         //var icon = document.createElement("img");
-        var span = document.createElement("span");
+        var span_sum = document.createElement("span");
+        var span_unknown = document.createElement("span");
         
         // icon.setAttribute('src',item.icon.icon.options.iconUrl);
         // icon.setAttribute('height',16);
         // icon.setAttribute('width',16);
         li.setAttribute('id',item.id);
         li.setAttribute('class',"list-group-item list-group-item-action d-flex justify-content-between align-items-start py-1");
-        span.setAttribute('class',"badge badge-primary badge-pill ml-auto p-2");
+        span_sum.setAttribute('class',"badge badge-success badge-pill ml-auto p-2 float-xs-right");
+        span_unknown.setAttribute('class',"badge badge-warning badge-pill ml-auto p-2 float-xs-right");
 
-        span.appendChild(document.createTextNode(item.count));
+        span_sum.appendChild(document.createTextNode(item.count));
+        span_unknown.appendChild(document.createTextNode(item.unknown));
         //li.appendChild(icon);
         li.appendChild(document.createTextNode(item.desc));
-        li.appendChild(span);
+        li.appendChild(span_unknown);
+        li.appendChild(span_sum);
+
         ul.appendChild(li);
     }
     /*
@@ -47,12 +52,14 @@
     function summarize_and_sort_list() {
         unique_list = _.uniqBy(disease_list, 'id');
         unique_list.forEach(function(item, index) {
-            
+
             this_disease_list = _.filter(disease_list, ['id', item.id]);
             sum = _.sumBy(this_disease_list, 'count');
+            sum_unknown = _.sumBy(this_disease_list, 'unknown');
             
             objIndex = unique_list.findIndex((obj => obj.id == item.id));
             unique_list[objIndex].count = sum;
+            unique_list[objIndex].unknown = sum_unknown;
         });
         disease_list = _.sortBy(unique_list, 'count').reverse();
     }
