@@ -195,7 +195,7 @@
      * (function) build the url with parameters
      */
     function get_url() {
-        var query =  'http://127.0.0.1:5000/query_group';
+        var query =  'query_group';
         query = query.concat('/').concat(parameters.dateFrom.toISOString().split('T')[0]);
         query = query.concat('/').concat(parameters.dateTo.toISOString().split('T')[0]);
         console.log(query);
@@ -221,7 +221,7 @@
     function fetch_diseases() {
         setLoading(true);
         $.ajax({
-            url: 'http://127.0.0.1:5000/diseases',
+            url: 'diseases',
             success:function(data,status,xhr)
             {
                 diseases = data;

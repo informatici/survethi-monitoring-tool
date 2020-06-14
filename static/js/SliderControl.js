@@ -179,7 +179,6 @@ L.Control.SliderControl = L.Control.extend({
                         if(_options.markers[i]) map.removeLayer(_options.markers[i]);
                     }
                     if(_options.range){
-                        console.log('range!');
                         // jquery ui using range
                         for (i = ui.values[0]; i <= ui.values[1]; i++){
                            if(_options.markers[i]) {
@@ -189,7 +188,6 @@ L.Control.SliderControl = L.Control.extend({
                            }
                         }
                     }else if(_options.follow > 0){
-                        console.log('follow!');
                         for (i = ui.value - _options.follow + 1; i <= ui.value ; i++) {
                             if(_options.markers[i]) {
                                 markers.push(_options.markers[i]);
@@ -198,14 +196,11 @@ L.Control.SliderControl = L.Control.extend({
                             }
                         }
                     }else if(_options.sameDate){
-						console.log('sameDate!');
                         var currentDate;
                         if (_options.markers[ui.value].feature !== undefined) {
                             currentDate = _options.markers[ui.value].feature.properties[_options.timeAttribute].substring(0,10);
-                            console.log('feature date : ' + currentDate);
                         } else {
                             currentDate = _options.markers[ui.value].options.timeAttribute.substring(0,10);
-                            console.log('options date : ' + currentDate);
                         }
                         for (i = _options.minValue; i <= _options.maxValue; i++) {
                             if(_options.markers[i].feature.properties[_options.timeAttribute].substring(0,10) == currentDate){
@@ -214,7 +209,6 @@ L.Control.SliderControl = L.Control.extend({
                             }
                         }
                     }else{
-                        console.log('nothing!');
                         for (i = _options.minValue; i <= ui.value ; i++) {
                             if(_options.markers[i]) {
                                 markers.push(_options.markers[i]);

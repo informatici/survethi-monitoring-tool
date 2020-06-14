@@ -10,8 +10,12 @@ import json
 import os.path
 
 app = Flask(__name__)
-
+if app.config["ENV"] == "production":
+    app.config.from_object("config.ProductionConfig")
+else:
+    app.config.from_object("config.DevelopmentConfig")
 CORS(app)
+
 db = MySQLdb
 
 default_position = [8.55611, 38.9741666] #WolisoTown, Kebele 01
@@ -23,7 +27,11 @@ def before_request():
 def createDBconnection():
     # database connection settings
     global db
-    db = MySQLdb.connect(user="isf",passwd="isf123",db="wolisso",host="localhost")
+    db = MySQLdb.connect(
+        user=app.config["DB_USERNAME"],
+        passwd=app.config["DB_PASSWORD"],
+        db=app.config["DB_NAME"],
+        host=app.config["DB_HOST"])
 
 def getRefreshIntervals():
     # define refresh interval in minutes, default as first element
@@ -31,21 +39,9 @@ def getRefreshIntervals():
 
 @app.route('/', methods=['GET'])
 def index():
-    #content_map = get_file('map.html')
-    #content_data = test_group(return_json=True)
-    #content_main_map_menu = get_file('map.html')
-
-    content_refresh_intervals=getRefreshIntervals()
-
-    #return Response(content, mimetype="text/html")
     return render_template('base.html', 
         title='Survethi Monitoring Tool', 
-        #main_map_menu=content_main_map_menu,
-        #main_map=content_map,
-        #main_filter=content_map,
-        #main_table=content_data,
-
-        refresh_intervals=content_refresh_intervals
+        refresh_intervals=getRefreshIntervals()
     )
 
 @app.route('/query')

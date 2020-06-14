@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  tool:
+    image: tool
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000
+
+    network_mode: "host"
