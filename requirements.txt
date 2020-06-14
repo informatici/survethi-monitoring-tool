@@ -4,4 +4,4 @@ mysqlclient # for MySQL DB connection
 Flask-JSON # for Flask scaffold
 flask_cors # to manage CORS within Flask
 geojson # for secondary map
-csv # for secondary map
+gunicorn # for docker
