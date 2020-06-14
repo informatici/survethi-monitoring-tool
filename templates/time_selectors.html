@@ -1,3 +1,4 @@
+<!doctype html>
 <div class="row">
     <div class="col">
         <div id="time-range-selector" class="m-1 btn-group" role="group" aria-label="Basic example">
@@ -15,7 +16,7 @@
             data-style="mt-1"
             data-on="Refreshing" data-off="Stopped" 
             data-onstyle="success"
-            data-onstyle="danger">
+            data-offstyle="danger">
         <select id="select_interval" class="custom-select mt-1 w-25">
             <option value="{{refresh_intervals[0]}}" selected="true">{{refresh_intervals[0]}}min</option>
             {% for interval in refresh_intervals[1:] %}
