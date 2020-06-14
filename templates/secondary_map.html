@@ -1,0 +1,101 @@
+<div id="secondary_mapid"
+    style="height: 600px; position: relative; overflow: hidden"
+    class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    tabindex="0">
+        <div class="leaflet-pane leaflet-map-pane"
+            style="transform: translate3d(0px, 0px, 0px);">
+        </div>
+        <div id="map-loading-indicator" class="notloading">Loading...</div>
+</div>
+<script>
+    var sliderControl = null;
+    var mySecondaryMap = L.map('secondary_mapid').setView(parameters.center, parameters.initial_zoom);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mySecondaryMap);
+
+    /**
+     * (function) update secondary map adding layers and controllers
+     */
+    function showmarkerepoch(data) {
+
+        console.log(data);
+
+        layerGroup.clearLayers();
+
+        var markersGroup1 = L.markerClusterGroup();
+        data.forEach(show_marker);
+
+        layerGroup.addLayer(markersGroup1);
+        layerGroup.addTo(mySecondaryMap);
+
+        mySecondaryMap.flyToBounds(markersGroup1.getBounds());
+
+        function show_marker(item, index) {
+
+            console.log(item);
+
+            if (item.LOC_LAT) {
+
+                markersGroup1.addLayer(
+                    new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)])
+                );
+
+            } else {
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
+            }
+        }
+    }
+
+    /**
+     * (sync) fetch diseases
+     */
+    function fetch_epoch_data() {
+        $.ajax({
+            url: 'http://127.0.0.1:5000/query_epoch_json',
+            success:function(json,status,xhr)
+            {
+                //var boundLayter = showMarkerEpoch(json);
+                var testlayer = L.geoJson(json);
+
+                //For a Range-Slider use the range property:
+                //Check at URL: https://github.com/dwilhelm89/LeafletSlider/blob/master/SliderControl.js
+                sliderControl = L.control.sliderControl({
+                    //position: "topright",
+                    layer: testlayer,
+                    //follow: 1,
+                    //range: true,
+                    //min: 0,
+                    //max: 500,
+                    //values: [ 75, 300 ],
+                    //isEpoch: true,
+                    //startTimeIdx: 0,    // where to start looking for a timestring
+                    //timeStrLength: 19,  // the size of  yyyy-mm-dd hh:mm:ss - if millis are present this will be larger
+                    timeAttribute: "epoch",
+                    //alwaysShowDate : true,
+                    //showAllOnStart: true,
+                    //step: 5,
+                    sameDate: true,
+                });
+
+                mySecondaryMap.invalidateSize();
+                mySecondaryMap.flyToBounds(testlayer, 10);
+
+                //Make sure to add the slider to the map ;-)
+                mySecondaryMap.addControl(sliderControl);
+                //And initialize the slider
+                sliderControl.startSlider();
+            },
+            complete: function(){
+                //$('#leaflet-slider').html(options.markers[ui.value].feature.properties.time.substr(0, 19));
+
+            },
+            error: function(){
+                console.log('error');
+            }
+        })
+    }
+
+
+</script>
+

@@ -7,4 +7,13 @@
         </div>
         <div id="map-loading-indicator" class="notloading">Loading...</div>
 </div>
+<script>
+    var mymap = L.map('mapid').setView(parameters.center, parameters.initial_zoom);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: parameters.max_zoom,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1Ijoibmljb3B1bnppIiwiYSI6ImNqamU5aHhrZzRqZWMzcW80ZjE3dWNwZnoifQ.6X2-0SFwNzx_mjXrk9cysw'
+    }).addTo(mymap);
+</script>
 

@@ -2,6 +2,8 @@ from flask_cors import CORS
 from flask import Flask, escape, request, render_template, Response
 from flask import jsonify
 import MySQLdb
+import csv
+from geojson import Feature, FeatureCollection, Point
 from datetime import datetime
 from decimal import Decimal
 import json
@@ -89,7 +91,86 @@ def query_group(dateFrom=None, dateTo=None):
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
+    #TODO: cursor to be closed? cursor.close()
     return jsonify(result)
+
+@app.route('/query_epoch')
+@app.route('/query_epoch/<dateFrom>/<dateTo>')
+def query_epoch(dateFrom=None, dateTo=None):
+    createDBconnection()
+    # execute default query on the DB
+    if not dateFrom:
+        dateFrom = '2019-01-01'
+    if not dateTo:
+        dateTo = '2019-12-31'
+    default_query = "SELECT OPD_DIS_ID_A, OPD_DATE, LOC_LAT, LOC_LONG \
+                        FROM OPD \
+                        LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
+                        LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
+                        WHERE OPD_DATE_VIS BETWEEN '%s' AND '%s' \
+                        ORDER BY OPD_DATE " %(escape(dateFrom), escape(dateTo))
+    #print(default_query)                
+    cursor = db.cursor()
+    cursor.execute(default_query)
+    result = cursor.fetchall()
+
+    # CSV
+    with open('datasource/epoch.csv', 'w', newline='') as csvfile:
+        column_names = list()
+        for i in cursor.description:
+            column_names.append(i[0])
+
+        writer = csv.writer(csvfile, delimiter=',')
+        writer.writerow(column_names)
+        writer.writerows(result)
+
+    #cursor.close()
+    #TODO: cursor to be closed? cursor.close()
+    return jsonify('Done')
+
+@app.route('/query_epoch_json')
+def query_epoch_json():
+    # GeoJSON
+    features = []
+    with open('datasource/epoch.csv', newline='') as csvfile:
+
+        reader = csv.reader(csvfile, delimiter=',')
+        next(reader, None)  # skip the headers
+        for disease, date, latitude, longitude in reader:
+
+            if latitude == '': 
+                next(reader, None) # skip empty geopositions
+
+            try:    
+                latitude, longitude = map(float, (latitude, longitude))
+                features.append(
+                    Feature(
+                        geometry = Point((longitude, latitude)),
+                        properties = {
+                            'disease': disease,
+                            'epoch': date
+                        }
+                    )
+                )
+            except:
+                #print(disease, date, latitude, longitude)
+                pass
+
+    collection = FeatureCollection(features)
+    with open("datasource/epoch.json", "w") as geojsonfile:
+        geojsonfile.write('%s' % collection)
+
+    with open("datasource/epoch.json") as json_file:
+        json_data = json.load(json_file)
+    
+    return jsonify(json_data)
+
+@app.route('/query_epoch_json_static')
+def query_epoch_json_static():
+    with open("datasource/epoch.json") as json_file:
+        json_data = json.load(json_file)
+    
+    return jsonify(json_data)
 
 @app.route('/diseases')
 def diseases():
