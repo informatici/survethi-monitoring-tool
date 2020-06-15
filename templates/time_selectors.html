@@ -61,7 +61,7 @@
     $(function() {
         $('#toggle_refresh').change(function() {
             parameters.refresh = !parameters.refresh;
-            console.log(parameters.refresh)
+           // console.log(parameters.refresh)
             if (parameters.refresh) {
                 if (myTimeout) clearTimeout(myTimeout);
                 myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
