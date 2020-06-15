@@ -8,8 +8,9 @@
     data-actions-box="true"
     multiple 
     data-live-search="true"
-    liveSearchNormalize="true"
-    liveSearchStyle="contains"
+    data-live-search-normalize="true"
+    data-live-search-style="contains"
+    data-live-search-placeholder="type disease number or part of the name..."
     data-selected-text-format="count">
 </select>
 
@@ -34,6 +35,9 @@
      */
     function reset_main_filter() {
         main_filter = $(".selectpicker");
+        main_filter.liveSearchNormalize = true;
+        main_filter.liveSearchStyle = "contains";
+        main_filter.liveSearchPlaceholder = "CIAO";
         main_filter.find('option').remove().end();
         all_diseases_count = diseases.length;
         who_diseases_count = who_diseases_list.length;
@@ -66,7 +70,7 @@
         if (selected == "WHO") disease_list_filter = who_diseases_list
         //else if (selectred == "TopTen") disease_list_filter
         else disease_list_filter = selected;
-        console.log('disease_list_filter : ' + disease_list_filter);
+        //console.log('disease_list_filter : ' + disease_list_filter);
         
         // udpate_main_filter();
         // refresh(true);
@@ -88,7 +92,7 @@
         main_filter = $(".selectpicker");
         if (disease_list_filter.length > 0) {
             selected_options = filterFastDisease(diseases,disease_list_filter);
-            console.log('selected_options : ' + selected_options);
+            //console.log('selected_options : ' + selected_options);
             selected_options.forEach(function (item, index) {
                 main_filter.find('[value="'+item.DIS_ID_A+'"]').remove();
                 main_filter.find('[id="data-divider"]').before(main_filter_make_option_selected(item.DIS_ID_A,item.DIS_DESC));
