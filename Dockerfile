@@ -16,6 +16,9 @@ ENV PYTHONDONTWRITEBYTECODE 1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED 1
 
+# Set development, production or testing
+ENV FLASK_ENV development
+
 WORKDIR /app
 ADD . /app
 

@@ -31,7 +31,8 @@ def createDBconnection():
         user=app.config["DB_USERNAME"],
         passwd=app.config["DB_PASSWORD"],
         db=app.config["DB_NAME"],
-        host=app.config["DB_HOST"])
+        host=app.config["DB_HOST"],
+        port=app.config["DB_PORT"])
 
 def getRefreshIntervals():
     # define refresh interval in minutes, default as first element

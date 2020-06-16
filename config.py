@@ -2,6 +2,7 @@ class Config(object):
     DEBUG = False
     TESTING = False
     DB_HOST = "localhost"
+    DB_PORT = 3306
     DB_NAME = "production-db"
     DB_USERNAME = "username"
     DB_PASSWORD = "password"
@@ -13,6 +14,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
 
     DB_HOST = "localhost"
+    DB_PORT = 3306
     DB_NAME = "development-db"
     DB_USERNAME = "username"
     DB_PASSWORD = "password"
@@ -21,6 +23,7 @@ class TestingConfig(Config):
     TESTING = True
 
     DB_HOST = "localhost"
+    DB_PORT = 3306
     DB_NAME = "testing-db"
     DB_USERNAME = "username"
     DB_PASSWORD = "password"
