@@ -1,12 +1,12 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.8-buster
+FROM python:3.8-slim
 
 EXPOSE 5000
 
 # Install mysql client (used by python library)
 RUN apt-get update \
-    && apt-get install --no-install-recommends -y libmariadb-dev-compat libmariadb-dev \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get install --no-install-recommends -y gcc libmariadb-dev-compat libmariadb-dev \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install pip requirements
 ADD requirements.txt .
