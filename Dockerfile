@@ -4,7 +4,9 @@ FROM python:3.8-buster
 EXPOSE 5000
 
 # Install mysql client (used by python library)
-RUN apt-get update && apt-get install -y libmariadb-dev-compat libmariadb-dev nano
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y libmariadb-dev-compat libmariadb-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install pip requirements
 ADD requirements.txt .
