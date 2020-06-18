@@ -1,0 +1,78 @@
+<!doctype html>
+<div class="row">
+    <div class="col-6">
+        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+            <i class="fa fa-calendar"></i>&nbsp;
+            <span></span> <i class="fa fa-caret-down"></i>
+        </div>
+    </div>
+    <div class="col">
+        <button id="button_update2" type="button" class="btn btn-outline-success">Update</button>
+    </div>
+    <!-- <div class="col">
+        <input id="toggle_range"
+                type="checkbox"
+                data-toggle="toggle"
+                data-on="Range" data-off="Dates" 
+                data-onstyle="success"
+                data-offstyle="default">
+    </div> -->
+</div>
+<script type="text/javascript">
+    $(function() {
+
+        var start = parametersSecondMap.dateFrom;
+        var end = parametersSecondMap.dateTo;
+            
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            autoApply: true,
+            autoUpdateInput: true,
+            linkedCalendars: false,
+            alwaysShowCalendars: true,
+            ranges: {
+                'Last 15 Days': [moment().subtract(14, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+                'Last 3 Months': [moment().subtract(2, 'month').startOf('month'), moment().endOf('month')],
+                'Last 6 Months': [moment().subtract(5, 'month').startOf('month'), moment().endOf('month')],
+                'This Year': [moment().startOf('year'), moment().endOf('year')],
+                'Last Year': [moment().subtract(1, 'year').startOf('year'), moment().subtract(1, 'year').endOf('year')],
+            },
+        }, function(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            console.log(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            parametersSecondMap.dateFrom = start;
+            parametersSecondMap.dateTo = end;
+            refresh_second_map();
+        });
+
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        
+    });
+</script>
+<script type="text/javascript">
+
+    /*
+     * (event) Refresh button toggle event
+     */
+     $(function() {
+        $('#toggle_range').change(function() {
+            parametersSecondMap.range = !parametersSecondMap.range;
+            console.log(parametersSecondMap.range)
+            sliderControl.options.update({
+                    range: parametersSecondMap.range,
+                });
+        })
+    })
+
+    /**
+     * (event) Update button click event
+     */
+    $('#button_update2').click(function(){
+        refresh_second_map(true);
+    });
+
+</script>

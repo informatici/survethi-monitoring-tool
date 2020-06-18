@@ -1,68 +1,177 @@
 <!doctype html>
 <div id="secondary_mapid"
-    style="height: 600px; position: relative; overflow: hidden"
+    style="height: 400px; position: relative; overflow: hidden"
     class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
     tabindex="0">
         <div class="leaflet-pane leaflet-map-pane"
             style="transform: translate3d(0px, 0px, 0px);">
         </div>
-        <div id="map-loading-indicator" class="notloading">Loading...</div>
+        <div id="second-map-loading-indicator" class="notloading">Loading...</div>
 </div>
 <script>
+
+    var parametersSecondMap = {
+        dateFrom: moment(),
+        dateTo: moment(),
+        center: [8.55611, 38.9741666],
+        max_zoom: 18,
+        initial_zoom: 1,
+        range: true,
+    }
+
+    var cached_dateFrom;
+    var cached_dateTo;
+    getRangeLimitFromDatasource()
+
+    /**
+     * (sync) fetch data from URL
+     */
+     function getRangeLimitFromDatasource() {
+        setLoadingReportrange(true);
+        $.ajax({
+            url: 'query_epoch_range',
+            success:function(range,status,xhr)
+            {
+                console.log('...receiving...');
+                console.log(range);
+                cached_dateFrom = range['min'] || moment()
+                cached_dateTo = range['max'] || moment()
+                console.log(cached_dateFrom, cached_dateTo);
+            },
+            complete: function(){
+                setLoadingReportrange(false);
+            },
+            error: function(){
+                console.log('error');
+            }
+        })
+    }
+
     var sliderControl = null;
-    var mySecondaryMap = L.map('secondary_mapid').setView(parameters.center, parameters.initial_zoom);
+    var mySecondaryMap = L.map('secondary_mapid').setView(parametersSecondMap.center, parametersSecondMap.initial_zoom);
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(mySecondaryMap);
+    mySecondaryMap.addControl(new L.Control.Fullscreen());
 
     /**
-     * (function) update secondary map adding layers and controllers
+     * (function) build the url with parameters
+     * starting from a base url
      */
-    function showmarkerepoch(data) {
+    function get_url_epoch(base_url) {
+        var query = base_url;
+        query = query.concat('/').concat(parametersSecondMap.dateFrom.format().split('T')[0]);
+        query = query.concat('/').concat(parametersSecondMap.dateTo.format().split('T')[0]);
+        console.log(query);
+        return query;
+    }
 
-        //console.log(data);
+    /**
+     * (function) Refresh function
+     */
+    function refresh_second_map(refresh) {
+        //alert('Refresh!');
+        var newUrl = get_url_epoch('query_epoch');
+        
+        if (refresh) 
+            fetch_data_epoch(newUrl);
+        else 
+            lazy_fetch_data_epoch(newUrl);
+    }
 
-        layerGroup.clearLayers();
+    /**
+     * (function) Try to optimize queries on the DB
+     */
+    function lazy_fetch_data_epoch(newUrl) {
+        date_from = parametersSecondMap.dateFrom;
+        date_to = parametersSecondMap.dateTo;
 
-        var markersGroup1 = L.markerClusterGroup();
-        data.forEach(show_marker);
 
-        layerGroup.addLayer(markersGroup1);
-        layerGroup.addTo(mySecondaryMap);
+        if (date_from.isBefore(cached_dateFrom) || date_to.isAfter(cached_dateTo)) {
+            console.log('new range data: need refresh...');
 
-        mySecondaryMap.flyToBounds(markersGroup1.getBounds());
+            if (date_from.isBefore(cached_dateFrom))
+                cached_dateFrom = date_from;
 
-        function show_marker(item, index) {
-
-            //console.log(item);
-
-            if (item.LOC_LAT) {
-
-                markersGroup1.addLayer(
-                    new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)])
-                );
-
-            } else {
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
-            }
+            if (date_to.isAfter(cached_dateTo))
+                cached_dateTo = date_to;
+                
+            fetch_data_epoch(newUrl);
+        } else {
+            console.log('range already fetched: just show!')
+            newUrl = get_url_epoch('query_epoch_json')
+            show_epoch_data(newUrl);
         }
+    }
+
+    /**
+     * (function) show loading indicators
+     */
+    function setLoadingSecondMap(loading) {
+        if (loading) {
+            $('#second-map-loading-indicator').attr("class","loading");
+        } else {
+            $('#second-map-loading-indicator').attr("class","notloading");
+        }
+    }
+
+    /**
+     * (function) show loading indicators
+     */
+     function setLoadingReportrange(loading) {
+        if (loading) {
+            console.log('Loading range...');
+        } else {
+            console.log('...complete!');            
+        }
+    }
+
+    /**
+     * (sync) fetch data from URL
+     */
+    function fetch_data_epoch(newUrl) {
+        setLoadingSecondMap(true);
+        $.ajax({
+            url: newUrl,
+            success:function(data,status,xhr)
+            {
+                console.log('...receiving...');
+            },
+            complete: function(){
+                setLoadingSecondMap(false);
+                getRangeLimitFromDatasource();
+                newUrl = get_url_epoch('query_epoch_json')
+                show_epoch_data(newUrl);
+            },
+            error: function(){
+                console.log('error');
+            }
+        })
     }
 
     /**
      * (sync) fetch diseases
      */
-    function fetch_epoch_data() {
+    function show_epoch_data(newUrl) {
         $.ajax({
-            url: 'query_epoch_json',
+            url: newUrl, //convert fetched data to geojson
             success:function(json,status,xhr)
             {
+                if (sliderControl != null) sliderControl.remove();
+
                 //var boundLayter = showMarkerEpoch(json);
-                var testlayer = L.geoJson(json);
+                try {
+                    var testlayer = L.geoJson(json);
+                }
+                catch (e) {
+                    console.log('malformed geojson');
+                }
+                //console.log(testlayer);
 
                 //For a Range-Slider use the range property:
                 //Check at URL: https://github.com/dwilhelm89/LeafletSlider/blob/master/SliderControl.js
                 sliderControl = L.control.sliderControl({
-                    //position: "topright",
+                    position: "bottomleft",
                     layer: testlayer,
                     //follow: 1,
                     //range: true,

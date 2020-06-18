@@ -35,6 +35,12 @@
     <script src="{{url_for('static', filename='js/SliderControl.js') }}"></script>
     <!-- Include this library for mobile touch support  -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <!-- Date pickers -->
+    <link href="{{url_for('static', filename='css/daterangepicker.css') }}" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/660b9c8da8.js" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/moment.min.js') }}"></script>
+    <script src="{{url_for('static', filename='js/daterangepicker.js') }}"></script>
+
 
     <!-- Other libraries -->
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
@@ -47,7 +53,7 @@
     var parameters = {
         dateFrom: new Date(),
         dateTo: new Date(),
-        center: [45.0485851,12.0318443],
+        center: [8.55611, 38.9741666],
         max_zoom: 18,
         initial_zoom: 11,
         refresh_interval: 5,
@@ -68,6 +74,7 @@
 
 <body>
     <div class="container-fluid">
+        <h1>Survethi Monitoring Tool v0.1</h1>
         <div class="row">
             <div class="col">
                 {% include "time_selectors.html" %}
@@ -96,12 +103,32 @@
         </div>
 
         <hr>
+        <hr>
+        <hr>
+
+        <h1>Time Report</h1>
+        <div class="row">
+            <div class="col">
+                {% include "time_selectors2.html" %}
+            </div>
+            <div class="col">
+                secondary_filter.html
+            </div>
+        </div>
         <div class="row">
             <div class="col">
                 {% include "secondary_map.html" %}
             </div>
             <div class="col">
-                Secondary Filter
+                graphs.html
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% include "controls.html" %}
+            </div>
+            <div class="col">
+                {{ empty_space }}
             </div>
         </div>
     </div>
@@ -151,8 +178,8 @@
             button_refresh.html('Refreshing');
         }
         parameters.refresh_interval = $('#select_interval').val() * 60; // minutes
-        mymap.addControl(new L.Control.Fullscreen());
-        fetch_epoch_data();
+        var newUrl = get_url_epoch('query_epoch_json')
+        show_epoch_data(newUrl);
     }
 
     /*
@@ -182,7 +209,7 @@
     /**
      * (function) Refresh function
      */
-     function refresh(refresh) {
+    function refresh(refresh) {
         if (refresh || parameters.refresh) {
             //alert('Refresh!');
             var newUrl = get_url();
@@ -190,6 +217,8 @@
             myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
         }
     }
+
+    
 
     /**
      * (function) build the url with parameters
@@ -214,7 +243,7 @@
             $('#table_primary').bootstrapTable('hideLoading')
         }
     }
-    
+
     /**
      * (sync) fetch diseases
      */

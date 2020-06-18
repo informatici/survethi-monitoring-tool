@@ -4,7 +4,7 @@ from flask import jsonify
 import MySQLdb
 import csv
 from geojson import Feature, FeatureCollection, Point
-from datetime import datetime
+import datetime
 from decimal import Decimal
 import json
 import os.path
@@ -107,7 +107,7 @@ def query_epoch(dateFrom=None, dateTo=None):
                         FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
-                        WHERE OPD_DATE_VIS BETWEEN '%s' AND '%s' \
+                        WHERE OPD_DATE BETWEEN '%s' AND '%s' \
                         ORDER BY OPD_DATE " %(escape(dateFrom), escape(dateTo))
     #print(default_query)                
     cursor = db.cursor()
@@ -126,35 +126,65 @@ def query_epoch(dateFrom=None, dateTo=None):
 
     #cursor.close()
     #TODO: cursor to be closed? cursor.close()
-    return jsonify('Done')
+    return dateFrom, dateTo
+
+@app.route('/query_epoch_range')
+def query_epoch_range():
+    
+    range = {'min': None, 'max': None}
+    try:
+        with open('datasource/epoch.csv', newline='') as csvfile:
+            reader = csv.reader(csvfile, delimiter=',')
+            next(reader, None)  # skip the headers
+            for disease, date, latitude, longitude in reader:
+                if not range['min'] or date < range['min']:
+                    range['min'] = date
+
+                if not range['max'] or date > range['max']:
+                    range['max'] = date
+
+    except:
+        print('Warning: epoch parsing data: empty datasource (needs query)')
+        
+    return range
 
 @app.route('/query_epoch_json')
-def query_epoch_json():
+@app.route('/query_epoch_json/<dateFrom>/<dateTo>')
+def query_epoch_json(dateFrom=None, dateTo=None):
     # GeoJSON
     features = []
-    with open('datasource/epoch.csv', newline='') as csvfile:
+    try:
+        with open('datasource/epoch.csv', newline='') as csvfile:
+            print('==> dateFrom = %s dateTo = %s', dateFrom, dateTo)
+            reader = csv.reader(csvfile, delimiter=',')
+            next(reader, None)  # skip the headers
+            for disease, date, latitude, longitude in reader:
 
-        reader = csv.reader(csvfile, delimiter=',')
-        next(reader, None)  # skip the headers
-        for disease, date, latitude, longitude in reader:
+                if latitude == '':
+                    continue  # skip empty geopositions
 
-            if latitude == '': 
-                next(reader, None) # skip empty geopositions
+                if dateFrom and dateTo:
+                    if date < dateFrom or date > dateTo:
+                        continue # skip dates out of range (if any)
 
-            try:    
-                latitude, longitude = map(float, (latitude, longitude))
-                features.append(
-                    Feature(
-                        geometry = Point((longitude, latitude)),
-                        properties = {
-                            'disease': disease,
-                            'epoch': date
-                        }
+                try:    
+                    latitude, longitude = map(float, (latitude, longitude))
+                    features.append(
+                        Feature(
+                            geometry = Point((longitude, latitude)),
+                            properties = {
+                                'disease': disease,
+                                'epoch': date
+                            }
+                        )
                     )
-                )
-            except:
-                #print(disease, date, latitude, longitude)
-                pass
+                except:
+                    #print(disease, date, latitude, longitude)
+                    pass
+    except:
+        print('Warning: GeoJSON parsing data: empty datasource (needs query)')
+        json_data = ""
+
 
     collection = FeatureCollection(features)
     with open("datasource/epoch.json", "w") as geojsonfile:
