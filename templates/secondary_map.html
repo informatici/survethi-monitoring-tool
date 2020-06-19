@@ -62,7 +62,7 @@
         var query = base_url;
         query = query.concat('/').concat(parametersSecondMap.dateFrom.format().split('T')[0]);
         query = query.concat('/').concat(parametersSecondMap.dateTo.format().split('T')[0]);
-        console.log(query);
+        //console.log(query);
         return query;
     }
 
@@ -166,35 +166,41 @@
                 catch (e) {
                     console.log('malformed geojson');
                 }
-                //console.log(testlayer);
 
-                //For a Range-Slider use the range property:
-                //Check at URL: https://github.com/dwilhelm89/LeafletSlider/blob/master/SliderControl.js
-                sliderControl = L.control.sliderControl({
-                    position: "bottomleft",
-                    layer: testlayer,
-                    //follow: 1,
-                    //range: true,
-                    //min: 0,
-                    //max: 500,
-                    //values: [ 75, 300 ],
-                    //isEpoch: true,
-                    //startTimeIdx: 0,    // where to start looking for a timestring
-                    //timeStrLength: 19,  // the size of  yyyy-mm-dd hh:mm:ss - if millis are present this will be larger
-                    timeAttribute: "epoch",
-                    //alwaysShowDate : true,
-                    //showAllOnStart: true,
-                    //step: 5,
-                    sameDate: true,
-                });
+                if (Object.keys(testlayer._layers).length === 0)
+                    // no data
+                    console.log('malformed layer');
 
-                mySecondaryMap.invalidateSize();
-                mySecondaryMap.flyToBounds(testlayer, 10);
+                else {
 
-                //Make sure to add the slider to the map ;-)
-                mySecondaryMap.addControl(sliderControl);
-                //And initialize the slider
-                sliderControl.startSlider();
+                    //For a Range-Slider use the range property:
+                    //Check at URL: https://github.com/dwilhelm89/LeafletSlider/blob/master/SliderControl.js
+                    sliderControl = L.control.sliderControl({
+                        position: "bottomleft",
+                        layer: testlayer,
+                        //follow: 1,
+                        //range: true,
+                        //min: 0,
+                        //max: 500,
+                        //values: [ 75, 300 ],
+                        //isEpoch: true,
+                        //startTimeIdx: 0,    // where to start looking for a timestring
+                        //timeStrLength: 19,  // the size of  yyyy-mm-dd hh:mm:ss - if millis are present this will be larger
+                        timeAttribute: "epoch",
+                        //alwaysShowDate : true,
+                        //showAllOnStart: true,
+                        //step: 5,
+                        sameDate: true,
+                    });
+
+                    mySecondaryMap.invalidateSize();
+                    mySecondaryMap.flyToBounds(testlayer, 10);
+
+                    //Make sure to add the slider to the map ;-)
+                    mySecondaryMap.addControl(sliderControl);
+                    //And initialize the slider
+                    sliderControl.startSlider();
+                }
             },
             complete: function(){
                 //$('#leaflet-slider').html(options.markers[ui.value].feature.properties.time.substr(0, 19));
