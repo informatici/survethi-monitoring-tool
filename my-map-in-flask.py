@@ -155,7 +155,7 @@ def query_epoch_json(dateFrom=None, dateTo=None):
     features = []
     try:
         with open('datasource/epoch.csv', newline='') as csvfile:
-            print('==> dateFrom = %s dateTo = %s', dateFrom, dateTo)
+            
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
             for disease, date, latitude, longitude in reader:
