@@ -33,10 +33,10 @@
             success:function(range,status,xhr)
             {
                 console.log('...receiving...');
-                console.log(range);
+                //console.log(range);
                 cached_dateFrom = range['min'] || moment()
                 cached_dateTo = range['max'] || moment()
-                console.log(cached_dateFrom, cached_dateTo);
+                //console.log(cached_dateFrom, cached_dateTo);
             },
             complete: function(){
                 setLoadingReportrange(false);
@@ -139,7 +139,7 @@
             },
             complete: function(){
                 setLoadingSecondMap(false);
-                getRangeLimitFromDatasource();
+                //getRangeLimitFromDatasource();
                 newUrl = get_url_epoch('query_epoch_json')
                 show_epoch_data(newUrl);
             },
