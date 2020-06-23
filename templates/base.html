@@ -177,6 +177,7 @@
             button_refresh.html('Refreshing');
         }
         parameters.refresh_interval = $('#select_interval').val() * 60; // minutes
+        refresh(true);
         var newUrl = get_url_epoch('query_epoch_json')
         show_epoch_data(newUrl);
     }
@@ -324,8 +325,12 @@
         layerGroup.addTo(mymap);
         mymap.addControl(mapController);
 
+        if (Object.keys(markersGroup1.getBounds()).length === 0)
+            console.log('Main Map: nothing to display');
+        else {
         mymap.invalidateSize();
         mymap.flyToBounds(markersGroup1.getBounds());//.pad(10));
+        }
 
         function show_marker(item, index) {
 
@@ -334,12 +339,12 @@
                 markerArray.push([item.LOC_LAT, item.LOC_LONG]);
                 disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
 
-                console.log(JSON.stringify(item));
+                //console.log(JSON.stringify(item));
                 var description = getMarkerDescription(item);
                 markersGroup1.addLayer(
                     new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)]).bindPopup(description)
                 );
-                console.log(JSON.stringify(item));
+                //console.log(JSON.stringify(item));
 
                 /* if (item.OPD_DIS_ID_A == "424")
                     markersGroup1.addLayer(
