@@ -9,24 +9,27 @@
         //console.log(item);
         var ul = document.getElementById("dynamic-list");
         var li = document.createElement("li");
-        //var icon = document.createElement("img");
-        var span_sum = document.createElement("span");
-        var span_unknown = document.createElement("span");
+        var span_totals = document.createElement("span");
+        var span_sum = document.createElement("div");
+        var span_unknown = document.createElement("div");
         
-        // icon.setAttribute('src',item.icon.icon.options.iconUrl);
-        // icon.setAttribute('height',16);
-        // icon.setAttribute('width',16);
         li.setAttribute('id',item.id);
         li.setAttribute('class',"list-group-item list-group-item-action d-flex justify-content-between align-items-start py-1");
+                
         span_sum.setAttribute('class',"badge badge-success badge-pill ml-auto p-2 float-xs-right");
         span_unknown.setAttribute('class',"badge badge-warning badge-pill ml-auto p-2 float-xs-right");
 
-        span_sum.appendChild(document.createTextNode(item.count));
-        span_unknown.appendChild(document.createTextNode(item.unknown));
-        //li.appendChild(icon);
+        if (item.unknown > 0)
+            span_unknown.appendChild(document.createTextNode(item.unknown));
+            span_totals.appendChild(span_unknown);
+        if (item.count > 0)
+            span_sum.appendChild(document.createTextNode(item.count));
+            span_totals.appendChild(span_sum);
+
         li.appendChild(document.createTextNode(item.desc));
-        li.appendChild(span_unknown);
-        li.appendChild(span_sum);
+        // li.appendChild(span_unknown);
+        // li.appendChild(span_sum);
+        li.appendChild(span_totals);
 
         ul.appendChild(li);
     }
