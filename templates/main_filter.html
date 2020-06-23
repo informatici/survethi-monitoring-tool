@@ -36,10 +36,7 @@
      * (function) Reset the main filter
      */
     function reset_main_filter() {
-        main_filter = $(".selectpicker");
-        main_filter.liveSearchNormalize = true;
-        main_filter.liveSearchStyle = "contains";
-        main_filter.liveSearchPlaceholder = "CIAO";
+        main_filter = $("#main_filter");
         main_filter.find('option').remove().end();
         all_diseases_count = diseases.length;
         who_diseases_count = who_diseases_list.length;
@@ -62,8 +59,8 @@
     /*
      * (event) when the change the filter selection
      */
-    $('.selectpicker').on("changed.bs.select", function(e, clickedIndex, newValue, oldValue) {
-        var selected = $('.selectpicker').val();
+    $('#main_filter').on("changed.bs.select", function(e, clickedIndex, newValue, oldValue) {
+        var selected = $('#main_filter').val();
         // var lastSelected = $(this).find('option').eq(clickedIndex).val();
         // console.log('selected : ' + selected); //Get the multiple values selected in an array
         // console.log(selected.length); //Length of the array
@@ -81,7 +78,7 @@
     /*
      * (event) when the dropdown disappear the filtering can start
      */
-    $('.selectpicker').on("hidden.bs.select", function(e, clickedIndex, newValue, oldValue) {
+    $('#main_filter').on("hidden.bs.select", function(e, clickedIndex, newValue, oldValue) {
         udpate_main_filter();
         refresh(true);
     });
@@ -91,7 +88,7 @@
      */
     function udpate_main_filter() {
         reset_main_filter();
-        main_filter = $(".selectpicker");
+        main_filter = $("#main_filter");
         if (disease_list_filter.length > 0) {
             selected_options = filterFastDisease(diseases,disease_list_filter);
             //console.log('selected_options : ' + selected_options);
