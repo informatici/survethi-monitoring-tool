@@ -7,6 +7,7 @@
     data-url=""
     data-page-list="[5,10,20,50,All]"
     data-search="false"
+    data-undefined-text=""
     >
     <thead>
         <tr>
@@ -16,6 +17,7 @@
             <th data-sortable="true" data-field="PAT_ADDR">Kebele</th>
             <!-- <th data-sortable="true" data-field="LOC_LAT">Latitude</th>
             <th data-sortable="true" data-field="LOC_LONG">Longitude</th> -->
+            <th id="location" data-sortable="true" data-field="LOC_OK" data-cell-style="cellStyle" data-width="1">L</th>
         </tr>
     </thead>
 </table>
@@ -30,6 +32,8 @@
         myTable.bootstrapTable('refresh', {url: newUrl});
         myTable.bootstrapTable('resetView');
         myTable.bootstrapTable('resetSearch');
+        //console.log(myTable.bootstrapTable("getData"));
+        
     }
 
     /**
@@ -40,6 +44,26 @@
         myTable.bootstrapTable('load', data)
         myTable.bootstrapTable('resetView');
         myTable.bootstrapTable('resetSearch');
+        tippy('#table_primary', {
+            content: "Data with applied filters",
+        });
+    }
+
+    function cellStyle(value, row, index) {
+        
+        //console.log(row);
+
+        if (row['LOC_OK'] == 1) {
+            return {
+                css: { color: '#2ECC40' },
+                classes: 'bg-green'
+            }  
+        }
+
+        return {
+            css: { color: '#FFDC00' },
+            classes: 'bg-yellow'
+        }
     }
 
 </script>
