@@ -149,6 +149,37 @@
         })
     }
 
+    var mapLayerGroups = [];
+
+    /*
+     * Appy secondary_filter
+     */
+    function applySecondaryFilter(feature) {
+        
+        var town = feature.properties.town;
+        var kebele = feature.properties.kebele;
+        var disease = feature.properties.disease;
+
+        var filter_town = town_selected.length > 0;
+        var filter_kebele = kebele_selected.length > 0;
+        var filter_disease = secondary_disease_list_filter.length > 0;
+
+        var ok = true;
+
+        if (filter_town)
+            ok = ok && town_selected.indexOf(town) >= 0;
+
+        if (filter_kebele)
+            ok = ok && kebele_selected.indexOf(kebele) >= 0;
+
+        if (filter_disease)
+            ok = ok && secondary_disease_list_filter.indexOf(disease) >= 0;
+
+        if (ok) console.log(town, kebele, disease, ' --> ',ok);
+        //if (!ok) console.log(town, kebele, disease, ' --> ',ok);
+        return ok;
+    }
+
     /**
      * (sync) fetch diseases
      */
@@ -159,11 +190,17 @@
             {
                 if (sliderControl != null) sliderControl.remove();
 
-                //var boundLayter = showMarkerEpoch(json);
+                console.log(json);
                 try {
-                    var testlayer = L.geoJson(json);
+                    console.log('applying filter...');
+                    console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
+                    console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
+                    console.log('- diseases : ' + (secondary_disease_list_filter.length > 0 ? secondary_disease_list_filter : 'All'));
+                    var testlayer = L.geoJson(json, {filter: applySecondaryFilter});
+                    console.log(Object.keys(testlayer._layers).length);
                 }
                 catch (e) {
+                    console.log(e);     
                     console.log('malformed geojson');
                 }
 

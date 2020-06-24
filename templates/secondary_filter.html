@@ -1,0 +1,212 @@
+<!doctype html>
+<select id="zone_filter" class="selectpicker mt-1">
+    <option>South West Shoa Zone</option>
+</select>
+
+<select id="woreda_filter" class="selectpicker mt-1">
+    <option>All</option>
+</select>
+  
+<select id="town_filter" 
+    class="selectpicker mt-1"
+    title="Choose the towns to be shown..." 
+    data-style="btn-info"
+    data-width="auto"
+    data-header="Select the towns to be shown..."
+    data-actions-box="true"
+    multiple 
+    data-live-search="true"
+    data-live-search-normalize="true"
+    data-live-search-style="contains"
+    data-live-search-placeholder="type the town or part of its name..."
+    data-selected-text-format="count">
+    <option>Wolisso Town</option>
+</select>
+
+<select id="kebele_filter" 
+    class="selectpicker mt-1"
+    title="Choose the kebeles to be shown..." 
+    data-style="btn-info"
+    data-width="auto"
+    data-header="Select the kebeles to be shown..."
+    data-actions-box="true"
+    multiple 
+    data-live-search="true"
+    data-live-search-normalize="true"
+    data-live-search-style="contains"
+    data-live-search-placeholder="type the kebele or part of its name..."
+    data-selected-text-format="count">
+    <option>Kebele 01</option>
+</select>
+
+<select id="secondary_filter" 
+    class="selectpicker mt-1"
+    title="Choose the diseases to be shown..." 
+    data-style="btn-info"
+    data-width="auto"
+    data-header="Select the diseases to be shown..."
+    data-actions-box="true"
+    multiple 
+    data-live-search="true"
+    data-live-search-normalize="true"
+    data-live-search-style="contains"
+    data-live-search-placeholder="type disease number or part of the name..."
+    data-selected-text-format="count">
+</select>
+
+<script type="text/javascript">
+
+    var secondary_disease_list_filter = []
+    var town_selected = [];
+    var kebele_selected = [];
+    var chained_filters = true;
+    
+    //var who_diseases_list = [461,112,115,1024,156,489,871,952,361,156,366,999,887,123];
+
+    /*
+     * (function) Make option item for the filter
+     */
+    function secondary_filter_make_option(value, text) {
+        return '<option value="'+value+'">'+text.substring(0, 50)+'</option>';
+    }
+
+    /*
+     * (function) Make option 'disabled' item (title) for the filter
+     */
+     function secondary_filter_make_option_selected(value, text) {
+        return '<option selected value="'+value+'">'+text.substring(0, 50)+'</option>';
+    }
+
+    /*
+     * (function) Make option item for a generic filter
+     */
+     function filter_make_option(value) {
+        return '<option value="'+value+'">'+value+'</option>';
+    }
+    
+    /*
+     * (function) Reset the town filter
+     */
+    function reset_town_filter() {
+        woreda_filter = $("#woreda_filter");
+        town_filter = $("#town_filter");
+
+        town_filter.find('option').remove().end();
+        
+        var woreda_selected = woreda_filter.val();
+        //console.log('woreda_selected : ', woreda_selected);
+
+        if (woreda_selected == 'All') {
+
+            town_list = _.uniqBy(locations, 'LOC_CITY');
+            //console.log('town_list : ', town_list);
+
+            town_list.forEach(function (item, index) {
+                town_filter.append(filter_make_option(item['LOC_CITY']));
+            });
+        }
+        //town_filter.selectpicker('val', 'All');
+        town_filter.selectpicker('refresh');
+        reset_kebele_filter();
+    }
+
+    /*
+     * (event) when the change the town filter selection
+     */
+     $('#town_filter').on("hidden.bs.select", function(e, clickedIndex, newValue, oldValue) {
+        town_filter = $("#town_filter");
+        town_selected = town_filter.val();
+        //console.log('town_selected : ', town_selected);
+
+        reset_kebele_filter();
+        refresh_second_map(); 
+    });
+
+    /*
+     * (function) Reset the kebele filter
+     */
+     function reset_kebele_filter() {
+        kebele_filter = $("#kebele_filter");
+
+        kebele_filter.find('option').remove().end();
+
+        kebelesByTown = filterFast(locations, town_selected, 'LOC_CITY');
+        //console.log('kebelesByTown : ', kebelesByTown);
+
+        kebele_list = _.uniqBy(kebelesByTown, 'LOC_ADDRESS');
+        //console.log('kebele_list : ', kebele_list);
+
+        kebele_list.forEach(function (item, index) {
+            kebele_filter.append(filter_make_option(item['LOC_ADDRESS']));
+        });
+
+        kebele_filter.selectpicker('refresh');
+    }
+
+    /*
+     * (event) when the change the town filter selection
+     */
+     $('#kebele_filter').on("hidden.bs.select", function(e, clickedIndex, newValue, oldValue) {
+        kebele_filter = $("#kebele_filter");
+        kebele_selected = kebele_filter.val();
+        //console.log('kebele_selected : ', kebele_selected);
+
+        refresh_second_map();
+    });
+
+
+    /*
+     * (function) Reset the main filter
+     */
+    function reset_secondary_filter() {
+        secondary_filter = $("#secondary_filter");
+        secondary_filter.find('option').remove().end();
+        all_diseases_count = diseases.length;
+        who_diseases_count = who_diseases_list.length;
+
+        secondary_filter.append(secondary_filter_make_option('WHO','WHO Priority Diseases ('+who_diseases_count+')'));
+        secondary_filter.append('<option id="data-divider" data-divider="true"></option>');
+        
+        diseases.forEach(function (item, index) {
+            secondary_filter.append(secondary_filter_make_option(item.DIS_ID_A,item.DIS_DESC));
+            //console.log(item);
+        });
+        secondary_filter.selectpicker('refresh');
+    }
+    
+    /*
+     * (event) when the change the filter selection
+     */
+    $('#secondary_filter').on("changed.bs.select", function(e, clickedIndex, newValue, oldValue) {
+        var selected = $('#secondary_filter').val();
+        if (selected == "WHO") secondary_disease_list_filter = who_diseases_list
+        else secondary_disease_list_filter = selected;
+
+        //console.log('secondary_disease_list_filter : ' + secondary_disease_list_filter);
+    });
+
+    /*
+     * (event) when the dropdown disappear the filtering can start
+     */
+    $('#secondary_filter').on("hidden.bs.select", function(e, clickedIndex, newValue, oldValue) {
+        setTimeout( udpate_secondary_filter(), 0 ); //TODO: improve asynchronous update
+        refresh_second_map();
+    });
+
+    /*
+     * (function) Update main filter
+     */
+    function udpate_secondary_filter() {
+        reset_secondary_filter();
+        secondary_filter = $("#secondary_filter");
+        if (secondary_disease_list_filter.length > 0) {
+            selected_options = filterFastDisease(diseases, secondary_disease_list_filter);
+            //console.log('selected_options : ' + selected_options);
+            selected_options.forEach(function (item, index) {
+                secondary_filter.find('[value="'+item.DIS_ID_A+'"]').remove();
+                secondary_filter.find('[id="data-divider"]').before(secondary_filter_make_option_selected(item.DIS_ID_A,item.DIS_DESC));
+            });
+            secondary_filter.selectpicker('refresh');
+        } 
+    }
+</script>

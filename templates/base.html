@@ -63,6 +63,7 @@
     var diseases = [];
     var disease_list = [];
     var disease_list_filter = []; //[461,424];
+    var locations = [];
 
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
@@ -100,25 +101,27 @@
                 {{ empty_space }}
             </div>
         </div>
+    </div>
 
         <hr>
         <hr>
         <hr>
 
+    <div class="container-fluid">
         <h1>Time Report</h1>
         <div class="row">
-            <div class="col">
+            <div class="col-6">
                 {% include "time_selectors2.html" %}
             </div>
-            <div class="col">
-                <!-- secondary_filter.html -->
+            <div class="col-6">
+                {% include "secondary_filter.html" %} 
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col-6">
                 {% include "secondary_map.html" %}
             </div>
-            <div class="col">
+            <div class="col-6">
                 <!-- graphs.html -->
             </div>
         </div>
@@ -134,6 +137,10 @@
 </body>
 
 <!-- Bootstrap Table stylesheets and code -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<!-- <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script> -->
+<!-- <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/export/bootstrap-table-export.min.js"></script> -->
 <link href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css" rel="stylesheet">
 <link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
 <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
@@ -167,6 +174,7 @@
      */
     function initialize(){
         fetch_diseases();
+        fetch_locations();
         var button_refresh = $('#button_refresh');
         if (!parameters.refresh) {
             button_refresh.removeClass('btn-outline-success');
@@ -181,6 +189,18 @@
         refresh(true);
         var newUrl = get_url_epoch('query_epoch_json')
         show_epoch_data(newUrl);
+    }
+
+    /*
+     * (function) fast filter, thanks to:
+     * https://stackoverflow.com/a/32377529/5309541
+     */ 
+     function filterFast(data, ids, field) {
+        if (ids.length == 0) return data;
+        var index = ids.reduce(function(a,b) {a[b] = 1; return a;}, {});
+        return data.filter(function(item) {
+            return index[item[field]] === 1;
+        });
     }
 
     /*
@@ -255,6 +275,30 @@
                 diseases = data;
                 //console.log(diseases);
                 reset_main_filter();
+                reset_secondary_filter();
+            },
+            complete: function(){
+                setLoading(false);
+            },
+            error: function(){
+                console.log('error');
+            }
+        })
+    }
+
+    /**
+     * (sync) fetch locations
+     */
+     function fetch_locations() {
+        setLoading(true);
+        $.ajax({
+            url: 'locations',
+            success:function(data,status,xhr)
+            {
+                locations = data;
+                //console.log(locations);
+                reset_town_filter();
+                //reset_kebele_filter();
             },
             complete: function(){
                 setLoading(false);
@@ -282,7 +326,7 @@
                     show_markers(filtered_data);
                     update_table_data(filtered_data);
                     resetMainFilterTotals();
-                    update_disease_list();                  
+                    update_disease_list();
                     updateMainFilterTotals();
                 } else {
                     cleanMap();
@@ -332,8 +376,8 @@
         if (Object.keys(markersGroup1.getBounds()).length === 0)
             console.log('Main Map: nothing to display');
         else {
-        mymap.invalidateSize();
-        mymap.flyToBounds(markersGroup1.getBounds());//.pad(10));
+            mymap.invalidateSize();
+            mymap.flyToBounds(markersGroup1.getBounds());//.pad(10));
         }
 
         function show_marker(item, index) {

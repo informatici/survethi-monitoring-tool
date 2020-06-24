@@ -103,7 +103,7 @@ def query_epoch(dateFrom=None, dateTo=None):
         dateFrom = '2019-01-01'
     if not dateTo:
         dateTo = '2019-12-31'
-    default_query = "SELECT OPD_DIS_ID_A, OPD_DATE, LOC_LAT, LOC_LONG \
+    default_query = "SELECT OPD_DIS_ID_A, OPD_DATE, LOC_CITY, LOC_ADDRESS, LOC_LAT, LOC_LONG \
                         FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
@@ -136,7 +136,7 @@ def query_epoch_range():
         with open('datasource/epoch.csv', newline='') as csvfile:
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
-            for disease, date, latitude, longitude in reader:
+            for disease, date, city, address, latitude, longitude in reader:
                 if not range['min'] or date < range['min']:
                     range['min'] = date
 
@@ -158,7 +158,7 @@ def query_epoch_json(dateFrom=None, dateTo=None):
             
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
-            for disease, date, latitude, longitude in reader:
+            for disease, date, city, address, latitude, longitude in reader:
 
                 if latitude == '':
                     continue  # skip empty geopositions
@@ -174,7 +174,9 @@ def query_epoch_json(dateFrom=None, dateTo=None):
                             geometry = Point((longitude, latitude)),
                             properties = {
                                 'disease': disease,
-                                'epoch': date
+                                'epoch': date,
+                                'town' : city,
+                                'kebele' : address,
                             }
                         )
                     )
