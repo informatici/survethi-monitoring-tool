@@ -281,11 +281,14 @@
                 if (filtered_data.length > 0) {
                     show_markers(filtered_data);
                     update_table_data(filtered_data);
+                    resetMainFilterTotals();
                     update_disease_list();                  
+                    updateMainFilterTotals();
                 } else {
                     cleanMap();
                     update_table_data(filtered_data);
                     clean_disease_list();
+                    resetMainFilterTotals();
                 }
             },
             complete: function(){

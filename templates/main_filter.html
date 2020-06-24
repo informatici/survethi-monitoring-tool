@@ -1,22 +1,68 @@
 <!doctype html>
-<select id="main_filter" 
-    class="selectpicker mt-1"
-    title="Choose the diseases to be shown..." 
-    data-style="btn-info"
-    data-width="auto"
-    data-header="Select the diseases to be shown..."
-    data-actions-box="true"
-    multiple 
-    data-live-search="true"
-    data-live-search-normalize="true"
-    data-live-search-style="contains"
-    data-live-search-placeholder="type disease number or part of the name..."
-    data-selected-text-format="count">
-</select>
+<div class="row">
+    <div class="col">
+        <select id="main_filter" 
+            class="selectpicker mt-1"
+            title="Choose the diseases to be shown..." 
+            data-style="btn-info"
+            data-width="auto"
+            data-header="Select the diseases to be shown..."
+            data-actions-box="true"
+            multiple 
+            data-live-search="true"
+            data-live-search-normalize="true"
+            data-live-search-style="contains"
+            data-live-search-placeholder="type disease number or part of the name..."
+            data-selected-text-format="count">
+        </select>
+    </div>
+    <div class="col text-right">
+            <div id="total_unknown" class="badge badge-warning badge-pill ml-auto p-2 float-xs-right"></div>
+            <div id="total_known" class="badge badge-success badge-pill ml-auto p-2 float-xs-right"></div>
+    </div>
+</div>
 
 <script type="text/javascript">
 
     var who_diseases_list = [461,112,115,1024,156,489,871,952,361,156,366,999,887,123];
+    var main_filter_total_known = 0;
+    var main_filter_total_unknown = 0;
+    var first_known_badge;
+    var first_unknown_badge;
+
+    function updateMainFilterTotals() {
+        var total_known = document.getElementById("total_known");
+        var total_unknown = document.getElementById("total_unknown");
+        //console.log('first_known_badge : ', first_known_badge);
+        //console.log('first_unknown_badge : ', first_unknown_badge);
+        $('#total_known').empty();
+        $('#total_unknown').empty();
+        total_known.appendChild(document.createTextNode(main_filter_total_known));
+        total_unknown.appendChild(document.createTextNode(main_filter_total_unknown));
+        $("#total_known").position({
+            my:        "center",
+            at:        "center",
+            of:        first_known_badge,
+            collision: "fit"
+        });
+        $("#total_known").css('top', 10);
+        $("#total_unknown").position({
+            my:        "center",
+            at:        "center",
+            of:        first_unknown_badge,
+            collision: "fit"
+        });
+        $("#total_unknown").css('top', 10);
+    }
+
+    function resetMainFilterTotals() {
+        $('#total_known').empty();
+        $('#total_unknown').empty();
+        main_filter_total_known = 0;
+        main_filter_total_unknown = 0;
+        first_known_badge = undefined;
+        first_unknown_badge = undefined;
+    }
 
     /*
      * (function) Make option item for the filter
