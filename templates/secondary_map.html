@@ -175,7 +175,7 @@
         if (filter_disease)
             ok = ok && secondary_disease_list_filter.indexOf(disease) >= 0;
 
-        if (ok) console.log(town, kebele, disease, ' --> ',ok);
+        //if (ok) console.log(town, kebele, disease, ' --> ',ok);
         //if (!ok) console.log(town, kebele, disease, ' --> ',ok);
         return ok;
     }
@@ -190,17 +190,17 @@
             {
                 if (sliderControl != null) sliderControl.remove();
 
-                console.log(json);
+                //console.log(json);
                 try {
-                    console.log('applying filter...');
-                    console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
-                    console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
-                    console.log('- diseases : ' + (secondary_disease_list_filter.length > 0 ? secondary_disease_list_filter : 'All'));
+                    //console.log('applying filter...');
+                    //console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
+                    //console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
+                    //console.log('- diseases : ' + (secondary_disease_list_filter.length > 0 ? secondary_disease_list_filter : 'All'));
                     var testlayer = L.geoJson(json, {filter: applySecondaryFilter});
-                    console.log(Object.keys(testlayer._layers).length);
+                    //console.log(Object.keys(testlayer._layers).length);
                 }
                 catch (e) {
-                    console.log(e);     
+                    //console.log(e);     
                     console.log('malformed geojson');
                 }
 
