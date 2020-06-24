@@ -1,0 +1,4652 @@
+[
+  {
+    "LOC_ADDRESS": "Abuna Ginde Beret", 
+    "LOC_CITY": "Abuna Ginde Beret", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Adama", 
+    "LOC_CITY": "Adama", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Adis Ababa", 
+    "LOC_CITY": "Adis Ababa", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Boter", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "D/Mango", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 01", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 02", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 03", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 04", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kelecha", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sebeta", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Shebha", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Yesira", 
+    "LOC_CITY": "Alem Gena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Abado Holei", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Abuye Jebilal", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ajamo Kura", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ajo Baha", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ajo Jidu", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ajo Lita", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ali Bebo", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Arbaseden Kura", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Aroji Ejersa", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ashutei Gambela", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Berei Tirtira", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bereida Chilalo", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bero Muri Yaa", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Biro Selan", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Cheha Kesei", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dire Aroji", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dunkeka", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gemborei Aliye", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gindo", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Guilt Bola", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gutei Itiya", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Hudad 01", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Hudad 02", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Hudad 03", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "I/Kersa", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jefit Itiya", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jibat Kuchulo", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Korit", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Robeyi", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kaba Leku", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kechema", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kechemei Jirein", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kenessa", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kerssa Kilei", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kono Kulit", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Korra", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kota", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kura Bole", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Lefito Tsigei", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Meri Sekela", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Moko Ujuba Kota", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mugno Jila", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "S/Abuke Gala", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "S/Mere", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Shonkei Hudad 09", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sobo", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "T/Lemen", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tiro", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tiro Ilala", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tsega Lafto", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tumi", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tumi Bino Sombo", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Wechileli Dobi", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Wele Kelo", 
+    "LOC_CITY": "Amaya", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ambo", 
+    "LOC_CITY": "Ambo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Asendabo", 
+    "LOC_CITY": "Asendabo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "A.Bune", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Asgori", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Awash Bune", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "B/Gefere", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Batu", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Batu Chirecha", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bebeli", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bebeli Debegna", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Becho Town", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bessa", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Boji Geferei", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Deka Guda", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "G/Badada", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gna gololei", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Insilalei Keta", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jeto", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kara Sedeik", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kobo", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Lencha Keshemei", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mendei Tufissa", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "S/Chirecha", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Shankur", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sodo Liben", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Soyoma", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tullu Bollo", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tulu Rada", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Urago Tedei", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Woserbi Abeti", 
+    "LOC_CITY": "Becho", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Chandi", 
+    "LOC_CITY": "Chandi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Cheha", 
+    "LOC_CITY": "Cheha", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dano", 
+    "LOC_CITY": "Dano", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Belchi Kenchera", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Beshi Kiltu", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Burka Gode", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Busa", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bussa 01", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "D/Sedden", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dawo Kera", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dawo Seden", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dema   Jeluma", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dere Ilanso", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dima Jeliwan", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dimtu Aba", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gombissa Kusaye", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gora Roge", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jabodedi", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jidukaa", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kechema", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kelecho Gerbi", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kenchera Alito", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kerssa Adeyi Galutei", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kerssa Bombi", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kishaw", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mekeit Suntarei", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Nano Gebreil", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Reche", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Rechei Kusho", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "S/Haribu", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Seiderei Harbu", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tajib Gora Sakeyo", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tute", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tutei Kunchei", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ulma Busa", 
+    "LOC_CITY": "Dawo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ginchi", 
+    "LOC_CITY": "Dendi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Deneba", 
+    "LOC_CITY": "Deneba", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Alengo tulu", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Amdo Kuncho", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Asgori", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bantu Alito", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bilbil", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bile", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bili", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "D/Logo", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dugda Lugo", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Golole Kiltu", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Goro Kurkurfa", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jedu", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jigdu Mida", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Kita", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Keta", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Keta Andode", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Keta Asgori", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kule Gefersa", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "M/Satayi", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mulo satayi", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sembo Goro", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Simbo Goro", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Talgo Buti", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tulu Mangura", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "W/Kelena", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Warersso Kolina", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Wasarbi Basi", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Woserbi Nado", 
+    "LOC_CITY": "Elu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Enmur", 
+    "LOC_CITY": "Enmur", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gibei", 
+    "LOC_CITY": "Gibei", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ginde Beret", 
+    "LOC_CITY": "Ginde Beret", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Abado Bukassa", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 37.3, 
+    "LOC_DIST_ID_B": 3.6, 
+    "LOC_GEO_POS_NAME": "ABADO BUKASSA HP", 
+    "LOC_LAT": 8.38958, 
+    "LOC_LONG": 37.776, 
+    "LOC_REFERENCE_OTHER_NAME": "WAYU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Abadu", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Adami Wadeissa", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 25.2, 
+    "LOC_DIST_ID_B": 3.1, 
+    "LOC_GEO_POS_NAME": "ADAMI WEDEISSA HP", 
+    "LOC_LAT": 8.38037, 
+    "LOC_LONG": 37.8778, 
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Addis Alem", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bekisei", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 20.4, 
+    "LOC_DIST_ID_B": 6.6, 
+    "LOC_GEO_POS_NAME": "BEKISSEI HP", 
+    "LOC_LAT": 8.40163, 
+    "LOC_LONG": 37.9653, 
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Burka Bido", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 29.9, 
+    "LOC_DIST_ID_B": 22.3, 
+    "LOC_GEO_POS_NAME": "BURKA BIDO HC e HP", 
+    "LOC_LAT": 8.45321, 
+    "LOC_LONG": 37.8258, 
+    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+  }, 
+  {
+    "LOC_ADDRESS": "Chancho Soyoma", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 18.5, 
+    "LOC_DIST_ID_B": 7.5, 
+    "LOC_GEO_POS_NAME": "CHANCHO SOYOMA HP", 
+    "LOC_LAT": 8.41309, 
+    "LOC_LONG": 37.9038, 
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Charandis", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Chirecha", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Chirecha tedira", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 13.5, 
+    "LOC_DIST_ID_B": 4.7, 
+    "LOC_GEO_POS_NAME": "CHIRECHA TEDIRA HP", 
+    "LOC_LAT": 8.47112, 
+    "LOC_LONG": 37.9181, 
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dembel Dildilla", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 22.9, 
+    "LOC_DIST_ID_B": 2.9, 
+    "LOC_GEO_POS_NAME": "DEMBEL DILDILLA HP", 
+    "LOC_LAT": 8.40966, 
+    "LOC_LONG": 37.8643, 
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dembi Kono", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 17.4, 
+    "LOC_DIST_ID_B": 3.6, 
+    "LOC_GEO_POS_NAME": "DEMBI KONO HP", 
+    "LOC_LAT": 8.44838, 
+    "LOC_LONG": 37.8978, 
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dibidiba Abado", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 18.7, 
+    "LOC_DIST_ID_B": 11.3, 
+    "LOC_GEO_POS_NAME": "DIBIDIBA ABADO HP", 
+    "LOC_LAT": 8.51026, 
+    "LOC_LONG": 37.8352, 
+    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+  }, 
+  {
+    "LOC_ADDRESS": "Didibe", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dogema Dembi", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 31.0, 
+    "LOC_DIST_ID_B": 6.6, 
+    "LOC_GEO_POS_NAME": "DOGMA DEMBI HP", 
+    "LOC_LAT": 8.46868, 
+    "LOC_LONG": 37.8611, 
+    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+  }, 
+  {
+    "LOC_ADDRESS": "Finchere", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Finchir Amba", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 31.7, 
+    "LOC_DIST_ID_B": 3.4, 
+    "LOC_GEO_POS_NAME": "FINCHER AMBA HP", 
+    "LOC_LAT": 8.35382, 
+    "LOC_LONG": 37.7985, 
+    "LOC_REFERENCE_OTHER_NAME": "WAYU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Fugo Oda Mela", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 32.6, 
+    "LOC_DIST_ID_B": 5.2, 
+    "LOC_GEO_POS_NAME": "FUGO ODA MELA HP", 
+    "LOC_LAT": 8.42647, 
+    "LOC_LONG": 37.7951, 
+    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+  }, 
+  {
+    "LOC_ADDRESS": "Galiye Rogda", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 44.4, 
+    "LOC_DIST_ID_B": 10.1, 
+    "LOC_GEO_POS_NAME": "GALYIE ROGDA HP", 
+    "LOC_LAT": 8.37831, 
+    "LOC_LONG": 37.697, 
+    "LOC_REFERENCE_OTHER_NAME": "WAYU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Gambeilla Goro", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 23.9, 
+    "LOC_DIST_ID_B": 1.8, 
+    "LOC_GEO_POS_NAME": "GAMBELA GORO HP", 
+    "LOC_LAT": 8.38482, 
+    "LOC_LONG": 37.8576, 
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Goro Town", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 22.2, 
+    "LOC_DIST_ID_B": 0.0, 
+    "LOC_GEO_POS_NAME": "GORO TOWN HP", 
+    "LOC_LAT": 8.39555, 
+    "LOC_LONG": 37.8662, 
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Gosana Chirecha", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gurura town", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 13.8, 
+    "LOC_DIST_ID_B": 0.0, 
+    "LOC_GEO_POS_NAME": "GURURA TOWN HP", 
+    "LOC_LAT": 8.4409, 
+    "LOC_LONG": 37.9233, 
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Keinteiro Bido", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 27.9, 
+    "LOC_DIST_ID_B": 7.9, 
+    "LOC_GEO_POS_NAME": "KEINTEIRO BIDO HP", 
+    "LOC_LAT": 8.44986, 
+    "LOC_LONG": 37.8457, 
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Leimen Abado", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Leman Abu", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 15.9, 
+    "LOC_DIST_ID_B": 4.1, 
+    "LOC_GEO_POS_NAME": "LEMAN ABU HP", 
+    "LOC_LAT": 8.42979, 
+    "LOC_LONG": 37.9547, 
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Serano", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sinano", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sinano Ameya", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 32.0, 
+    "LOC_DIST_ID_B": 2.3, 
+    "LOC_GEO_POS_NAME": "SINANO AMEYA HP", 
+    "LOC_LAT": 8.46206, 
+    "LOC_LONG": 37.8101, 
+    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+  }, 
+  {
+    "LOC_ADDRESS": "Sololia Kote Abote", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 18.0, 
+    "LOC_DIST_ID_B": 7.1, 
+    "LOC_GEO_POS_NAME": "SOLOLIA KOTE ABOTEI HP", 
+    "LOC_LAT": 8.42014, 
+    "LOC_LONG": 37.9753, 
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Wayu", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": 35.0, 
+    "LOC_DIST_ID_B": 1.8, 
+    "LOC_GEO_POS_NAME": "WAYU HP", 
+    "LOC_LAT": 8.37304, 
+    "LOC_LONG": 37.7661, 
+    "LOC_REFERENCE_OTHER_NAME": "WAYU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Widibe", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gunchirei", 
+    "LOC_CITY": "Gunchirei", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Holeta", 
+    "LOC_CITY": "Holeta", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jeldu", 
+    "LOC_CITY": "Jeldu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Chora Botor", 
+    "LOC_CITY": "Jimma", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Sogola", 
+    "LOC_CITY": "Jimma", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sokoru", 
+    "LOC_CITY": "Jimma", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kabena", 
+    "LOC_CITY": "Kabena", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Adadi", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Alga Delat", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Arifeta", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Awash Felte", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Baye Giche", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Chancho Robe", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Cheleb Titu", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Chobo Misdo", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Damota daskekelo", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Denbi Roge", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dewel Deira", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Godeiti Wanber", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Goro Gebreil", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gutu Urji", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Harbu Wanbera", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Hawa Dangago", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Hawa Wayu", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ilala Seden", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ilala Wako", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kaso Mamei", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kersa Warko", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Korei Sabi", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kusaye Bode", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kusaye Tiro", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Lemen 01", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mazoria Golba", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Muti Alibo", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Muti Dayui", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Taa Gola", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tuka Godeti", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tumei Wato", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Worabo Haro", 
+    "LOC_CITY": "Kersa Malima", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kokir Gedebano", 
+    "LOC_CITY": "Kokir Gedebano", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Limmu", 
+    "LOC_CITY": "Limmu", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Checha", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Condo", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Darge", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Degag", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dibo", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jirra Gemechu", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Denke", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "M/Korke", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "M/Silase", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Nono Town", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Silke Amba", 
+    "LOC_CITY": "Nono", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Other", 
+    "LOC_CITY": "Other", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sebeta", 
+    "LOC_CITY": "Sebeta", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "A/Boru", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Abelite", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Adadi Borale", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Aderei Kotebei", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ajo", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Alei Abeba", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Alga Woserbi", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Balekese", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Chulule", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "D/Gidano", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Detu", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ebisa", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ello", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Fissewo", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "G/Dalota", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "G/Kistama", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gedebano", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gerbo", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Godei Dula", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Harbu Chululei", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ireinsso Alei Abeyi", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ireinsso chewa Daregot", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kesht", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kokir", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "L/Gedano", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Legey", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "M/Seriti", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Molohun", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mudena Iba", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mudena Ibayu", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Ogu", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "R/Kusho", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tenocha", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tolei Belekeisi", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tolei Dalota", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Urago", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Wonchene", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Yimer Amba", 
+    "LOC_CITY": "Seden Sodo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Serbo", 
+    "LOC_CITY": "Serbo", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "A/Wayo", 
+    "LOC_CITY": "Sodo Dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Badu Sonbo", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Becheki", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Burkuke Robelei", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Cheka", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gala Mulicha", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Galiye", 
+    "LOC_CITY": "Sodo Dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gara Geteissa", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gatira Sutel", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gegno Golem", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Guyei", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Haro Oma", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Haya Woredi", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kechema Dawei", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Langano", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Lemen", 
+    "LOC_CITY": "Sodo Dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mariami Sirei", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Meja Kimita", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Odo leka", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Seden Muchicheta", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Terei 01", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Terei Shino", 
+    "LOC_CITY": "Sodo dachi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sokoru", 
+    "LOC_CITY": "Sokoru", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Teji", 
+    "LOC_CITY": "Teji", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tolay", 
+    "LOC_CITY": "Tolay", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "A/S/Gichila", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "A/Solole", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Alei", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Alengo Tullu", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Alenu Shenkora", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bantu", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bantu Boda", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Batu", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bege", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Besi Abukeiku", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Besi Bilda", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Bili Malima", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dawa Bisei", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Dokat", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Golole Temssa", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gonen Bubissa", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Habibe", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jewaro", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jewaro Kora", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/A/Leka", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Mariyam", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kura Luku", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "L/Boter", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "M/S Botonei", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "M/Sole", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "M/T/cherfa", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Shancho", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Sobo", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "T/Yaya", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tulu teji", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tumei Wayu", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Weserbi", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Woserbi Migridi", 
+    "LOC_CITY": "Tole", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Abeshegei", 
+    "LOC_CITY": "Walga", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Fite", 
+    "LOC_CITY": "Walga", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Jejeba", 
+    "LOC_CITY": "Walga", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kulit", 
+    "LOC_CITY": "Walga", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Abado Jewe", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 29.9, 
+    "LOC_DIST_ID_B": 9.0, 
+    "LOC_GEO_POS_NAME": "ABADO JEWE HP", 
+    "LOC_LAT": 8.75782, 
+    "LOC_LONG": 37.9867, 
+    "LOC_REFERENCE_OTHER_NAME": "DESE JEBO HC E HP"
+  }, 
+  {
+    "LOC_ADDRESS": "Abado Lemen", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 11.1, 
+    "LOC_DIST_ID_B": 3.5, 
+    "LOC_GEO_POS_NAME": "ABADO LEMEN HP", 
+    "LOC_LAT": 8.51512, 
+    "LOC_LONG": 37.8939, 
+    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Adami Gotu", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 10.2, 
+    "LOC_DIST_ID_B": 7.41559, 
+    "LOC_GEO_POS_NAME": "ADAMI GOTU HP", 
+    "LOC_LAT": 8.61632, 
+    "LOC_LONG": 38.031, 
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Ale Koya", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 22.2, 
+    "LOC_DIST_ID_B": 16.7, 
+    "LOC_GEO_POS_NAME": "ALE KOYA HP", 
+    "LOC_LAT": 8.70084, 
+    "LOC_LONG": 38.079, 
+    "LOC_REFERENCE_OTHER_NAME": "DESE JEBO HC E HP"
+  }, 
+  {
+    "LOC_ADDRESS": "Beda Keiro", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 32.2, 
+    "LOC_DIST_ID_B": 5.4, 
+    "LOC_GEO_POS_NAME": "BEDA KERO HP", 
+    "LOC_LAT": 8.55615, 
+    "LOC_LONG": 38.1092, 
+    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP"
+  }, 
+  {
+    "LOC_ADDRESS": "Bedeisa Koricha", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 3.8, 
+    "LOC_DIST_ID_B": 10.6607, 
+    "LOC_GEO_POS_NAME": "BEDESA KORCHA HP", 
+    "LOC_LAT": 8.52964, 
+    "LOC_LONG": 37.9548, 
+    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Birbirsa Kenteiro", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 14.8, 
+    "LOC_DIST_ID_B": 6.7, 
+    "LOC_GEO_POS_NAME": "BIRBISA KENTERO HP", 
+    "LOC_LAT": 8.43744, 
+    "LOC_LONG": 37.992, 
+    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Bukasa Keta", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 12.5, 
+    "LOC_DIST_ID_B": 3.2, 
+    "LOC_GEO_POS_NAME": "BUKASA KETA HP", 
+    "LOC_LAT": 8.46436, 
+    "LOC_LONG": 37.988, 
+    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Chefe Mekana", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 12.8, 
+    "LOC_DIST_ID_B": 5.2, 
+    "LOC_GEO_POS_NAME": "CHEFE MEKANA HP", 
+    "LOC_LAT": 8.51515, 
+    "LOC_LONG": 37.8785, 
+    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Chirech Wonberi", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 7.7, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": "CHIRECH WOMBERI HP", 
+    "LOC_LAT": 8.49517, 
+    "LOC_LONG": 37.9225, 
+    "LOC_REFERENCE_OTHER_NAME": "CHIRECH WOMBERI"
+  }, 
+  {
+    "LOC_ADDRESS": "Dembali Keta", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 6.4, 
+    "LOC_DIST_ID_B": 3.91146, 
+    "LOC_GEO_POS_NAME": "DEMBELI KETA HP", 
+    "LOC_LAT": 8.59562, 
+    "LOC_LONG": 37.9908, 
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Derare Ebicha", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 22.3, 
+    "LOC_DIST_ID_B": 3.39358, 
+    "LOC_GEO_POS_NAME": "DERAREI EBICHA HP", 
+    "LOC_LAT": 8.43294, 
+    "LOC_LONG": 38.0887, 
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dese Jebo", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 21.0, 
+    "LOC_DIST_ID_B": 21.0, 
+    "LOC_GEO_POS_NAME": "DESE JEBO HC E HP", 
+    "LOC_LAT": 8.6948, 
+    "LOC_LONG": 38.0234, 
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+  }, 
+  {
+    "LOC_ADDRESS": "Dildila Mangura", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 19.3, 
+    "LOC_DIST_ID_B": 0.0120151, 
+    "LOC_GEO_POS_NAME": "DILDILA MANGURA HP", 
+    "LOC_LAT": 8.45408, 
+    "LOC_LONG": 38.0812, 
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dilela Town", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 13.6, 
+    "LOC_DIST_ID_B": 0.0, 
+    "LOC_GEO_POS_NAME": "DILELA TOWN HP", 
+    "LOC_LAT": 8.64119, 
+    "LOC_LONG": 38.0496, 
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dire Duleti", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 0.0, 
+    "LOC_DIST_ID_B": 12.1, 
+    "LOC_GEO_POS_NAME": "DIRE DULETI HP AND HC", 
+    "LOC_LAT": 8.4815, 
+    "LOC_LONG": 38.0052, 
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+  }, 
+  {
+    "LOC_ADDRESS": "Doyo Kora", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 21.2, 
+    "LOC_DIST_ID_B": 7.9, 
+    "LOC_GEO_POS_NAME": "DOYO KORA HP", 
+    "LOC_LAT": 8.64343, 
+    "LOC_LONG": 38.1186, 
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Fodu Gora", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 5.3, 
+    "LOC_DIST_ID_B": 12.1402, 
+    "LOC_GEO_POS_NAME": "FODU GORA HP", 
+    "LOC_LAT": 8.50621, 
+    "LOC_LONG": 37.9717, 
+    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Gadu Kistana", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 38.2, 
+    "LOC_DIST_ID_B": 2.2, 
+    "LOC_GEO_POS_NAME": "GADU KISTANE HP", 
+    "LOC_LAT": 8.50784, 
+    "LOC_LONG": 38.1418, 
+    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Gurura Baka", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 8.5, 
+    "LOC_DIST_ID_B": 11.8, 
+    "LOC_GEO_POS_NAME": "GURURA BAKA HP", 
+    "LOC_LAT": 8.47561, 
+    "LOC_LONG": 37.9557, 
+    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Gute Godeti", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 7.8, 
+    "LOC_DIST_ID_B": 10.6251, 
+    "LOC_GEO_POS_NAME": "GUTE GODEITI HP", 
+    "LOC_LAT": 8.59126, 
+    "LOC_LONG": 37.9634, 
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Ilala Kersa", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 30.2, 
+    "LOC_DIST_ID_B": 8.8, 
+    "LOC_GEO_POS_NAME": "ILALA KERSA HP", 
+    "LOC_LAT": 8.44426, 
+    "LOC_LONG": 38.1587, 
+    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Jelisa Cheka", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 19.0, 
+    "LOC_DIST_ID_B": 3.69497, 
+    "LOC_GEO_POS_NAME": "JELISSA CHEKA HP", 
+    "LOC_LAT": 8.47275, 
+    "LOC_LONG": 38.0769, 
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "K/Alemu", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Bedasa", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Bedeko", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "K/Birbrisa", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Karo Simela", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 22.6, 
+    "LOC_DIST_ID_B": 22.6, 
+    "LOC_GEO_POS_NAME": "KARO SIMELA HC E HP", 
+    "LOC_LAT": 8.58295, 
+    "LOC_LONG": 38.089, 
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+  }, 
+  {
+    "LOC_ADDRESS": "Kegnera Lebu", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 33.6, 
+    "LOC_DIST_ID_B": 5.6, 
+    "LOC_GEO_POS_NAME": "KENGERA LEBU HP", 
+    "LOC_LAT": 8.47063, 
+    "LOC_LONG": 38.1789, 
+    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Kegnra", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kile", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 16.6, 
+    "LOC_DIST_ID_B": 4.64616, 
+    "LOC_GEO_POS_NAME": "KILE HP", 
+    "LOC_LAT": 8.47435, 
+    "LOC_LONG": 38.0561, 
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Kono Lefe Arba", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 18.4, 
+    "LOC_DIST_ID_B": 6.47272, 
+    "LOC_GEO_POS_NAME": "KONO LAFE ARBA HP", 
+    "LOC_LAT": 8.45302, 
+    "LOC_LONG": 38.0377, 
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Korke", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Korra", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kume", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "L/Anchbe", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Leman", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 20.0, 
+    "LOC_DIST_ID_B": 20.0, 
+    "LOC_GEO_POS_NAME": "LEMEN HC", 
+    "LOC_LAT": 8.59671, 
+    "LOC_LONG": 37.8481, 
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+  }, 
+  {
+    "LOC_ADDRESS": "Leman Abu", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 15.9, 
+    "LOC_DIST_ID_B": 4.1, 
+    "LOC_GEO_POS_NAME": "LEMAN ABU HP", 
+    "LOC_LAT": 8.42979, 
+    "LOC_LONG": 37.9547, 
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Leman Ayitu", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 7.2, 
+    "LOC_DIST_ID_B": 2.65761, 
+    "LOC_GEO_POS_NAME": "LEMEN AYETU HP", 
+    "LOC_LAT": 8.53359, 
+    "LOC_LONG": 38.02, 
+    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Maru ", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Maru Babali", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 15.6, 
+    "LOC_DIST_ID_B": 2.3, 
+    "LOC_GEO_POS_NAME": "MARU BABELI HP", 
+    "LOC_LAT": 8.65029, 
+    "LOC_LONG": 38.0392, 
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Maru Fekei", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 14.7, 
+    "LOC_DIST_ID_B": 6.0, 
+    "LOC_GEO_POS_NAME": "MARU FAKE HP", 
+    "LOC_LAT": 8.60098, 
+    "LOC_LONG": 38.0509, 
+    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP"
+  }, 
+  {
+    "LOC_ADDRESS": "Obi", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Obi Koji", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 3.0, 
+    "LOC_DIST_ID_B": 0.00283398, 
+    "LOC_GEO_POS_NAME": "OBI KOJI HP", 
+    "LOC_LAT": 8.56712, 
+    "LOC_LONG": 37.991, 
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "S/Koke", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "S/Yabet", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Senkelei Alei Mariyam", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 18.7, 
+    "LOC_DIST_ID_B": 5.4, 
+    "LOC_GEO_POS_NAME": "SENKELEI ALEI MARIAM HP", 
+    "LOC_LAT": 8.67465, 
+    "LOC_LONG": 38.0751, 
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Sodo Gerbo", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 25.8, 
+    "LOC_DIST_ID_B": 3.2, 
+    "LOC_GEO_POS_NAME": "SODO GERBO HP", 
+    "LOC_LAT": 8.47209, 
+    "LOC_LONG": 38.1323, 
+    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Sombo Yabeta", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 26.5, 
+    "LOC_DIST_ID_B": 3.4, 
+    "LOC_GEO_POS_NAME": "SENBO YABETA HP", 
+    "LOC_LAT": 8.58255, 
+    "LOC_LONG": 38.1062, 
+    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP"
+  }, 
+  {
+    "LOC_ADDRESS": "Sonkola", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tobe", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tolay", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Tombe Anchebi", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 0.0, 
+    "LOC_DIST_ID_B": 6.91892, 
+    "LOC_GEO_POS_NAME": "TOMBE ANCHEBI HP E HC", 
+    "LOC_LAT": 8.54362, 
+    "LOC_LONG": 38.0311, 
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+  }, 
+  {
+    "LOC_ADDRESS": "Walu Soma", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 10.6, 
+    "LOC_DIST_ID_B": 8.19322, 
+    "LOC_GEO_POS_NAME": "WOLUSSOMA HP", 
+    "LOC_LAT": 8.63202, 
+    "LOC_LONG": 37.981, 
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Warabu Bariyu", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 18.6, 
+    "LOC_DIST_ID_B": 5.3, 
+    "LOC_GEO_POS_NAME": "WORABU BERIYU HP", 
+    "LOC_LAT": 8.61519, 
+    "LOC_LONG": 38.0755, 
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Waranen Megnako", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 13.9, 
+    "LOC_DIST_ID_B": 6.6, 
+    "LOC_GEO_POS_NAME": "WORANE MEGNAKO HP", 
+    "LOC_LAT": 8.4752, 
+    "LOC_LONG": 38.0388, 
+    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Wolisoma", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": 10.6, 
+    "LOC_DIST_ID_B": 8.19322, 
+    "LOC_GEO_POS_NAME": "WOLUSSOMA HP", 
+    "LOC_LAT": 8.63202, 
+    "LOC_LONG": 37.981, 
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Yaya", 
+    "LOC_CITY": "Wolisso Rural", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 01", 
+    "LOC_CITY": "Wolisso Town", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 02", 
+    "LOC_CITY": "Wolisso Town", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 03", 
+    "LOC_CITY": "Wolisso Town", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 04", 
+    "LOC_CITY": "Wolisso Town", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 05", 
+    "LOC_CITY": "Wolisso Town", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 06", 
+    "LOC_CITY": "Wolisso Town", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 07", 
+    "LOC_CITY": "Wolisso Town", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 08", 
+    "LOC_CITY": "Wolisso Town", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "A/Becho", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Acheber", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Berio", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Emdibir", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Enge", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Eza", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gumer", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gunchure", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Gurura", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 01", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kebele 02", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Mihur", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Walga", 
+    "LOC_CITY": "Wolkite", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Wollega", 
+    "LOC_CITY": "Wollega", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Azer Kereinssa", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 24.4, 
+    "LOC_DIST_ID_B": 4.62856, 
+    "LOC_GEO_POS_NAME": "AZER KEREINSSA HP", 
+    "LOC_LAT": 8.72201, 
+    "LOC_LONG": 37.9205, 
+    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Belbela Bulbula", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 12.9, 
+    "LOC_DIST_ID_B": 1.68797, 
+    "LOC_GEO_POS_NAME": "BELBELA BULBULLA HP", 
+    "LOC_LAT": 8.60246, 
+    "LOC_LONG": 37.9087, 
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Chebo Sanseleti", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 32.2, 
+    "LOC_DIST_ID_B": 2.7, 
+    "LOC_GEO_POS_NAME": "CHEBO SENSELETI HP", 
+    "LOC_LAT": 8.73679, 
+    "LOC_LONG": 37.8465, 
+    "LOC_REFERENCE_OTHER_NAME": "SELAM GATIRO HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Chitu town", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 11.3, 
+    "LOC_DIST_ID_B": 0.0116149, 
+    "LOC_GEO_POS_NAME": "CHITU TOWN HP", 
+    "LOC_LAT": 8.60576, 
+    "LOC_LONG": 37.9207, 
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dae Wendimtu", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 18.3, 
+    "LOC_DIST_ID_B": 2.90489, 
+    "LOC_GEO_POS_NAME": "DAE WONDIMTU HP", 
+    "LOC_LAT": 8.67434, 
+    "LOC_LONG": 37.9591, 
+    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Damu Degelei", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 24.4, 
+    "LOC_DIST_ID_B": 4.65158, 
+    "LOC_GEO_POS_NAME": "DAMU DEGELEI HP", 
+    "LOC_LAT": 8.72794, 
+    "LOC_LONG": 37.9548, 
+    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Degoye Galiye", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 23.7, 
+    "LOC_DIST_ID_B": 3.5, 
+    "LOC_GEO_POS_NAME": "DEGOYE GALYE HP", 
+    "LOC_LAT": 8.56336, 
+    "LOC_LONG": 37.8351, 
+    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dimtu Godeti", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 17.1, 
+    "LOC_DIST_ID_B": 5.91119, 
+    "LOC_GEO_POS_NAME": "DIMTU GODETI HP", 
+    "LOC_LAT": 8.60961, 
+    "LOC_LONG": 37.8789, 
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dulelei Bilacha", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 21.5, 
+    "LOC_DIST_ID_B": 5.0, 
+    "LOC_GEO_POS_NAME": "DULELE BILACHA HP", 
+    "LOC_LAT": 8.63799, 
+    "LOC_LONG": 37.8568, 
+    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Dulelei kori", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 19.8, 
+    "LOC_DIST_ID_B": 0.0122624, 
+    "LOC_GEO_POS_NAME": "DULELE KORI HP", 
+    "LOC_LAT": 8.69178, 
+    "LOC_LONG": 37.9447, 
+    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Echa Dibdiba", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 23.9, 
+    "LOC_DIST_ID_B": 6.5, 
+    "LOC_GEO_POS_NAME": "ECHA DIBDIBA HP", 
+    "LOC_LAT": 8.53316, 
+    "LOC_LONG": 37.8495, 
+    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Fite wato", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 22.4, 
+    "LOC_DIST_ID_B": 1.9, 
+    "LOC_GEO_POS_NAME": "FITE WATO HP", 
+    "LOC_LAT": 8.68283, 
+    "LOC_LONG": 37.8916, 
+    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Haro Beseka", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 14.8, 
+    "LOC_DIST_ID_B": 4.39007, 
+    "LOC_GEO_POS_NAME": "HARO BESEKA HP", 
+    "LOC_LAT": 8.6265, 
+    "LOC_LONG": 37.9047, 
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Haro Kono", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 22.3, 
+    "LOC_DIST_ID_B": 10.1, 
+    "LOC_GEO_POS_NAME": "HARO KONO HP", 
+    "LOC_LAT": 8.55436, 
+    "LOC_LONG": 37.8593, 
+    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Haro Wonchi", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 36.9, 
+    "LOC_DIST_ID_B": 2.5, 
+    "LOC_GEO_POS_NAME": "HARO WONCHI HP", 
+    "LOC_LAT": 8.789, 
+    "LOC_LONG": 37.8768, 
+    "LOC_REFERENCE_OTHER_NAME": "HARO WONCHI"
+  }, 
+  {
+    "LOC_ADDRESS": "Hazar  ", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Hazar Kerensa", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Hono Fare", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Kurfo Gutei", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 22.7, 
+    "LOC_DIST_ID_B": 4.4, 
+    "LOC_GEO_POS_NAME": "KURFO GUTE HP", 
+    "LOC_LAT": 8.67974, 
+    "LOC_LONG": 37.8795, 
+    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Leman Ayitu", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 7.2, 
+    "LOC_DIST_ID_B": 2.65761, 
+    "LOC_GEO_POS_NAME": "LEMEN AYETU HP", 
+    "LOC_LAT": 8.53359, 
+    "LOC_LONG": 38.02, 
+    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC"
+  }, 
+  {
+    "LOC_ADDRESS": "M/Kube", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "M/Walga", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Meiti Walga", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 8.0, 
+    "LOC_DIST_ID_B": 3.32472, 
+    "LOC_GEO_POS_NAME": "METI WALGA HP", 
+    "LOC_LAT": 8.58753, 
+    "LOC_LONG": 37.9377, 
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Merga Abiye", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Meti", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Odo Fura", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 44.8, 
+    "LOC_DIST_ID_B": 5.4, 
+    "LOC_GEO_POS_NAME": "Odo Fura", 
+    "LOC_LAT": 8.79722, 
+    "LOC_LONG": 37.8125, 
+    "LOC_REFERENCE_OTHER_NAME": "HARO WONCHI"
+  }, 
+  {
+    "LOC_ADDRESS": "Senkolei Kake", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 17.1, 
+    "LOC_DIST_ID_B": 6.76704, 
+    "LOC_GEO_POS_NAME": "SENKOLEI KAKEI HP", 
+    "LOC_LAT": 8.64683, 
+    "LOC_LONG": 37.9, 
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Shegeg Gefere", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 30.1, 
+    "LOC_DIST_ID_B": 10.368, 
+    "LOC_GEO_POS_NAME": "SHEGEG GEFERE HP", 
+    "LOC_LAT": 8.76261, 
+    "LOC_LONG": 37.924, 
+    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Sokole Kaki", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Toleka Lema", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null
+  }, 
+  {
+    "LOC_ADDRESS": "Weldo Talfam", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 29.9, 
+    "LOC_DIST_ID_B": 5.7, 
+    "LOC_GEO_POS_NAME": "WELDO TALFAM HP", 
+    "LOC_LAT": 8.73862, 
+    "LOC_LONG": 37.8777, 
+    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Werabu Bariyu", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 18.6, 
+    "LOC_DIST_ID_B": 5.3, 
+    "LOC_GEO_POS_NAME": "WORABU BERIYU HP", 
+    "LOC_LAT": 8.61519, 
+    "LOC_LONG": 38.0755, 
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+  }, 
+  {
+    "LOC_ADDRESS": "Worabu Massi", 
+    "LOC_CITY": "Wonchi", 
+    "LOC_DIST_ID_A": 25.4, 
+    "LOC_DIST_ID_B": 3.5, 
+    "LOC_GEO_POS_NAME": "WORABU MASSI HP", 
+    "LOC_LAT": 8.70629, 
+    "LOC_LONG": 37.8803, 
+    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC"
+  }
+]

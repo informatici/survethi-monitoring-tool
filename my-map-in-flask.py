@@ -215,9 +215,31 @@ def diseases():
     return jsonify(result)
 
 @app.route('/test_diseases')
-def test_diseases(dateFrom=None, dateTo=None, return_json=False):
+def test_diseases(return_json=False):
     # read test file from datasource/ folder
     with open("datasource/diseases.json") as json_file:
+        json_data = json.load(json_file)
+    if return_json:
+        return json_data
+    else:
+        return jsonify(json_data)
+
+@app.route('/locations')
+def locations():
+    createDBconnection()
+    # execute default query on the DB
+    default_query = "SELECT * FROM LOCATION \
+                    ORDER BY LOC_CITY, LOC_ADDRESS"
+    #print(default_query)                
+    cursor = db.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute(default_query)
+    result = cursor.fetchall()
+    return jsonify(result)
+
+@app.route('/test_locations')
+def test_locations(return_json=False):
+    # read test file from datasource/ folder
+    with open("datasource/locations.json") as json_file:
         json_data = json.load(json_file)
     if return_json:
         return json_data
