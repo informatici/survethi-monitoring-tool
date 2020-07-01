@@ -1,0 +1,178 @@
+<!doctype html>
+<canvas id="numberOfCases"></canvas>
+<canvas id="numberOfCasesCumulative"></canvas>
+<script>
+    var ctx = document.getElementById('numberOfCases').getContext('2d');
+    var default_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
+    var default_y = new Array(default_x.length).fill(0);
+    var numberOfCases = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: default_x,
+                datasets: [{
+                    label: 'Number of Cases',
+                    data: default_y,
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    var ctx2 = document.getElementById('numberOfCasesCumulative').getContext('2d');
+    var numberOfCasesCumulative = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: default_x,
+                datasets: [{
+                    label: 'Number of Cases Cumulative',
+                    data: default_y,
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    /*
+    * (function) update all charts
+    */
+    function updateCharts() {
+
+        updateNumberOfCasesChart();
+        updateNumberofCasesCumulativeChart();
+    }
+
+    /*
+    * (function) creates an array of dates 
+    */ 
+    function getDates(startDate, stopDate) {
+        var dateArray = [];
+        var currentDate = moment(startDate);
+        var stopDate = moment(stopDate);
+        while (currentDate <= stopDate) {
+            dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
+            currentDate = moment(currentDate).add(1, 'days');
+        }
+        return dateArray;
+    }
+
+    /*
+     * (function) creates an array of values over an array of dates
+     * reducing the global array 'second_data_set'
+     */ 
+    function getValues(dateArray) {
+        var valueArray = new Array(dateArray.length).fill(0);
+        //console.log('dateArray : ' + dateArray);
+        //console.log('valueArray : ' + valueArray);
+        
+        for (var i = 0; i < second_data_set.length; i++) {
+            var element = second_data_set[i];
+            //console.log(element);
+
+            var date = element.date;
+            var index = dateArray.indexOf(date);
+            if (index > -1) {
+                value = valueArray[index];
+                valueArray[index] = value + 1; 
+                //console.log(date + ' --> ' + index + ' = ' + value);
+            } else {
+                console.log('error: date out of range? ' + date);
+            }
+        }
+        return valueArray;
+    }
+
+    /*
+    * (function) update numberOfCases chart
+    */
+    function updateNumberOfCasesChart() {
+        console.log('updating Number of Cases graph...');
+        //console.log('second_data_set : ' + second_data_set);
+
+        var label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
+        var value_y = getValues(label_x);
+
+        removeData(numberOfCases);
+        setData(numberOfCases, label_x, value_y);
+    }
+
+    /*
+     * (function) set new data to specified chart
+     */
+    function setData(chart, label, data) {
+        chart.data.labels = label;
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data = data;
+        });
+        chart.update();
+    }
+
+    /*
+     * (function) remove all data from specified chart
+     */
+    function removeData(chart) {
+        chart.data.labels.pop();
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.pop();
+        });
+        chart.update();
+    }
+
+    /*
+     * (function) creates an array of values over an array of dates
+     * reducing the global array 'second_data_set'
+     */ 
+    function getValuesCumulative(dateArray) {
+        var valueArray = new Array(dateArray.length).fill(0);
+        //console.log('dateArray : ' + dateArray);
+        //console.log('valueArray : ' + valueArray);
+        
+        for (var i = 0; i < second_data_set.length; i++) {
+            var element = second_data_set[i];
+            //console.log(element);
+
+            var date = element.date;
+            var index = dateArray.indexOf(date);
+            if (index > -1) {
+                value = valueArray[index];
+                valueArray[index] = value + 1; 
+                //console.log(date + ' --> ' + index + ' = ' + value);
+            } else {
+                console.log('error: date out of range? ' + date);
+            }
+        }
+        return valueArray;
+    }
+
+    /*
+    * (function) update numberOfCasesCumulative chart
+    */
+    function updateNumberofCasesCumulativeChart() {
+        console.log('updating Number of Cases Cumulative graph...');
+        //console.log('second_data_set : ' + second_data_set);
+
+        var label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
+        var value_y = getValues(label_x);
+        //console.log(value_y);
+        var value_y_c = [];
+        value_y.reduce(function(a,b,i) { return value_y_c[i] = a + b; },0);
+        //console.log(value_y_c);
+
+        removeData(numberOfCasesCumulative);
+        setData(numberOfCasesCumulative, label_x, value_y_c)
+    }
+
+</script>

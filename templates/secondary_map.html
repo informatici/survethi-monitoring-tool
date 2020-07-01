@@ -19,9 +19,10 @@
         range: true,
     }
 
+    var second_data_set = [];
     var cached_dateFrom;
     var cached_dateTo;
-    getRangeLimitFromDatasource()
+    getRangeLimitFromDatasource();
 
     /**
      * (sync) fetch data from URL
@@ -177,6 +178,12 @@
 
         //if (ok) console.log(town, kebele, disease, ' --> ',ok);
         //if (!ok) console.log(town, kebele, disease, ' --> ',ok);
+        if (ok) {
+            var date = feature.properties.epoch.substr(0,10);
+            var object = jQuery.extend({'value' : 0, 'date' : date}, feature.properties);
+            //console.log(object);
+            second_data_set.push(object);
+        }
         return ok;
     }
 
@@ -190,8 +197,8 @@
             {
                 if (sliderControl != null) sliderControl.remove();
 
-                //console.log(json);
                 try {
+                    second_data_set = []; //empty for graph
                     //console.log('applying filter...');
                     //console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
                     //console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
@@ -237,6 +244,7 @@
                     mySecondaryMap.addControl(sliderControl);
                     //And initialize the slider
                     sliderControl.startSlider();
+                    updateCharts();
                 }
             },
             complete: function(){
@@ -248,7 +256,6 @@
             }
         })
     }
-
 
 </script>
 
