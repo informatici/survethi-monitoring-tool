@@ -198,7 +198,7 @@
         reset_secondary_filter();
         secondary_filter = $("#secondary_filter");
         if (secondary_disease_list_filter.length > 0) {
-            selected_options = filterFastDisease(diseases, secondary_disease_list_filter);
+            selected_options = filterFast(diseases, secondary_disease_list_filter, 'DIS_ID_A');
             //console.log('selected_options : ' + selected_options);
             selected_options.forEach(function (item, index) {
                 secondary_filter.find('[value="'+item.DIS_ID_A+'"]').remove();

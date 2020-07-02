@@ -214,30 +214,6 @@
         });
     }
 
-    /*
-     * (function) fast filter, thanks to:
-     * https://stackoverflow.com/a/32377529/5309541
-     */ 
-    function filterFastData(data, ids) {
-        if (ids.length == 0) return data;
-        var index = ids.reduce(function(a,b) {a[b] = 1; return a;}, {});
-        return data.filter(function(item) {
-            return index[item.OPD_DIS_ID_A] === 1;
-        });
-    }
-
-    /*
-     * (function) fast filter, thanks to:
-     * https://stackoverflow.com/a/32377529/5309541
-     */ 
-     function filterFastDisease(data, ids) {
-        if (ids.length == 0) return data;
-        var index = ids.reduce(function(a,b) {a[b] = 1; return a;}, {});
-        return data.filter(function(item) {
-            return index[item.DIS_ID_A] === 1;
-        });
-    }
-
     /**
      * (function) Refresh function
      */
@@ -331,7 +307,7 @@
             {
                 //console.log(data);
                 //alert(JSON.stringify(data[0]));
-                filtered_data = filterFastData(data, disease_list_filter);
+                filtered_data = filterFast(data, disease_list_filter, 'OPD_DIS_ID_A');
                 //console.log(filtered_data);
                 if (filtered_data.length > 0) {
                     show_markers(filtered_data);
