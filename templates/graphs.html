@@ -1,6 +1,29 @@
 <!doctype html>
-<canvas id="numberOfCases"></canvas>
-<canvas id="numberOfCasesCumulative"></canvas>
+<div class="container-fluid">
+    <div class="chart-container">
+        <canvas id="numberOfCases"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="numberOfCasesCumulative"></canvas>
+    </div>
+</div>
+<style>
+
+    canvas {
+        border: 1px dotted red;
+        width: 100%;
+        height: auto;
+    }
+    
+    .chart-container {
+        position: relative;
+        margin: auto;
+        height: 200px;
+        /* width: 40vw; */
+        border: 1px dotted red;
+    }
+
+</style>
 <script>
     var ctx = document.getElementById('numberOfCases').getContext('2d');
     var default_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
@@ -15,6 +38,8 @@
                 }]
             },
             options: {
+                responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     yAxes: [{
                         ticks: {
@@ -36,6 +61,8 @@
                 }]
             },
             options: {
+                responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     yAxes: [{
                         ticks: {
