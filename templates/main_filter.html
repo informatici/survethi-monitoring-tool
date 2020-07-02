@@ -37,22 +37,26 @@
         //console.log('first_unknown_badge : ', first_unknown_badge);
         $('#total_known').empty();
         $('#total_unknown').empty();
-        total_known.appendChild(document.createTextNode(main_filter_total_known));
-        total_unknown.appendChild(document.createTextNode(main_filter_total_unknown));
-        $("#total_known").position({
-            my:        "center",
-            at:        "center",
-            of:        first_known_badge,
-            collision: "fit"
-        });
-        $("#total_known").css('top', 10);
-        $("#total_unknown").position({
-            my:        "center",
-            at:        "center",
-            of:        first_unknown_badge,
-            collision: "fit"
-        });
-        $("#total_unknown").css('top', 10);
+        if (main_filter_total_known > 0) {
+            total_known.appendChild(document.createTextNode(main_filter_total_known));
+            $("#total_known").position({
+                my:        "center",
+                at:        "center",
+                of:        first_known_badge,
+                collision: "fit"
+            });
+            $("#total_known").css('top', 10);
+        }
+        if (main_filter_total_unknown > 0) {
+            total_unknown.appendChild(document.createTextNode(main_filter_total_unknown));
+            $("#total_unknown").position({
+                my:        "center",
+                at:        "center",
+                of:        first_unknown_badge,
+                collision: "fit"
+            });
+            $("#total_unknown").css('top', 10);
+        }
     }
 
     function resetMainFilterTotals() {
