@@ -54,6 +54,7 @@
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(mySecondaryMap);
     mySecondaryMap.addControl(new L.Control.Fullscreen());
+    new L.HistoryControl({}).addTo(mySecondaryMap);
 
     /**
      * (function) build the url with parameters
