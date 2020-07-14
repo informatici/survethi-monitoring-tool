@@ -199,6 +199,7 @@
             button_refresh.removeClass('btn-danger');
             button_refresh.html('Refreshing');
         }
+        var toggle_range = $('#toggle_range');
         parameters.refresh_interval = $('#select_interval').val() * 60; // minutes
         refresh(true);
         var newUrl = get_url_epoch('query_epoch_json')

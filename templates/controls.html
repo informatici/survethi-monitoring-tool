@@ -5,19 +5,38 @@
                 type="checkbox"
                 data-toggle="toggle"
                 data-on="Range" data-off="Dates" 
-                data-onstyle="success"
-                data-offstyle="default">
+                data-onstyle="danger"
+                data-offstyle="primary"
+                disable>
     </div>
 </div>
 <script type="text/javascript">
+
+    /**
+     * (event) initialize toggle button
+     */
+     $(function() {
+        $('#toggle_range').prop('checked', parametersSecondMap.range).change();
+    })
 
     /*
      * (event) Refresh button toggle event
      */
      $(function() {
         $('#toggle_range').change(function() {
-            parameters2.range = !parameters2.range;
-            console.log(parameters2.range);
-        });
+            parametersSecondMap.range = !parametersSecondMap.range;
+            console.log(parametersSecondMap.range);
+            refresh_second_map(false);
+            
+        })
     })
+
+    function enableDatesRangeToogle(enable) {
+        if (enable) {
+            $('#toggle_range').bootstrapToggle('enable')
+        } else {
+            $('#toggle_range').bootstrapToggle('disable')
+        }
+
+    }
 </script>

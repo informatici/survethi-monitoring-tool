@@ -9,14 +9,6 @@
     <div class="col">
         <button id="button_update2" type="button" class="m-1 btn btn-outline-success">Update</button>
     </div>
-    <!-- <div class="col">
-        <input id="toggle_range"
-                type="checkbox"
-                data-toggle="toggle"
-                data-on="Range" data-off="Dates" 
-                data-onstyle="success"
-                data-offstyle="default">
-    </div> -->
 </div>
 <script type="text/javascript">
     $(function() {
@@ -54,19 +46,6 @@
     });
 </script>
 <script type="text/javascript">
-
-    /*
-     * (event) Refresh button toggle event
-     */
-     $(function() {
-        $('#toggle_range').change(function() {
-            parametersSecondMap.range = !parametersSecondMap.range;
-            console.log(parametersSecondMap.range)
-            sliderControl.options.update({
-                    range: parametersSecondMap.range,
-                });
-        })
-    })
 
     /**
      * (event) Update button click event
