@@ -177,6 +177,7 @@ def query_epoch_json(dateFrom=None, dateTo=None):
                                 'epoch': date,
                                 'town' : city,
                                 'kebele' : address,
+                                'time': date.replace(" ", "T") + '.000Z' #ISO8601 format
                             }
                         )
                     )

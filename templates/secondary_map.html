@@ -48,8 +48,19 @@
         })
     }
 
-    var sliderControl = null;
-    var mySecondaryMap = L.map('secondary_mapid').setView(parametersSecondMap.center, parametersSecondMap.initial_zoom);
+    var mySecondaryMap = L.map('secondary_mapid', {
+        timeDimension: true,
+        timeDimensionControl: true,
+        timeDimensionControlOptions: {
+            timeSliderDragUpdate: true,
+            //loopButton: true,
+            //autoPlay: true,
+            playerOptions: {
+                transitionTime: 1000,
+                loop: true
+            }
+        },
+    }).setView(parametersSecondMap.center, parametersSecondMap.initial_zoom);
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(mySecondaryMap);
@@ -196,8 +207,7 @@
             url: newUrl, //convert fetched data to geojson
             success:function(json,status,xhr)
             {
-                if (sliderControl != null) sliderControl.remove();
-
+                //console.log(json);
                 try {
                     second_data_set = []; //empty for graph
                     //console.log('applying filter...');
@@ -212,39 +222,23 @@
                     console.log('malformed geojson');
                 }
 
-                if (Object.keys(testlayer._layers).length === 0)
+                if (Object.keys(testlayer._layers).length === 0) {
                     // no data
                     console.log('Secondary Map: nothing to display!');
 
-                else {
+                } else {
 
-                    //For a Range-Slider use the range property:
-                    //Check at URL: https://github.com/dwilhelm89/LeafletSlider/blob/master/SliderControl.js
-                    sliderControl = L.control.sliderControl({
-                        position: "bottomleft",
-                        layer: testlayer,
-                        //follow: 1,
-                        //range: true,
-                        //min: 0,
-                        //max: 500,
-                        //values: [ 75, 300 ],
-                        //isEpoch: true,
-                        //startTimeIdx: 0,    // where to start looking for a timestring
-                        //timeStrLength: 19,  // the size of  yyyy-mm-dd hh:mm:ss - if millis are present this will be larger
-                        timeAttribute: "epoch",
-                        alwaysShowDate : true,
-                        //showAllOnStart: true,
-                        //step: 5,
-                        sameDate: true,
-                    });
-
+                    L.timeDimension.layer.geoJson(testlayer, {
+                        updateTimeDimension: true,
+                        duration: 'P1D',
+                        updateTimeDimensionMode: 'replace',
+                        waitForReady: true,
+                        addlastPoint: true,
+                    }).addTo(mySecondaryMap);
+                    
                     mySecondaryMap.invalidateSize();
                     mySecondaryMap.flyToBounds(testlayer, 10);
 
-                    //Make sure to add the slider to the map ;-)
-                    mySecondaryMap.addControl(sliderControl);
-                    //And initialize the slider
-                    sliderControl.startSlider();
                     updateCharts();
                 }
             },
@@ -257,6 +251,11 @@
             }
         })
     }
+
+    mySecondaryMap.timeDimension.on('timeload', function(data) {
+        console.log('Update slider and charts');
+        
+    })
 
 </script>
 
