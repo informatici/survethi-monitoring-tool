@@ -65,6 +65,13 @@
                     console.log(event);
                 }
             },
+            exporting: {
+                buttons: {
+                    contextButton: {
+                        menuItems: ['viewFullscreen','downloadPNG', 'downloadXLS']
+                    }
+                }
+            },
             series: [{
                 name: 'Total',
                 data: default_y
@@ -104,6 +111,13 @@
                 click: function (e) {
                     console.log('clicked');
                     console.log(e);
+                }
+            },
+            exporting: {
+                buttons: {
+                    contextButton: {
+                        menuItems: ['viewFullscreen','downloadPNG', 'downloadXLS']
+                    }
                 }
             },
             series: [{
