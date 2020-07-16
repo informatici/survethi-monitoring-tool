@@ -1,10 +1,10 @@
 <!doctype html>
 <div class="container-fluid">
     <div class="chart-container">
-        <canvas id="numberOfCases"></canvas>
+        <div id="numberOfCases" style="width:100%; height:200px;"></div>
     </div>
     <div class="chart-container">
-        <canvas id="numberOfCasesCumulative"></canvas>
+        <div id="numberOfCasesCumulative" style="width:100%; height:200px;"></div>
     </div>
 </div>
 <style>
@@ -23,52 +23,93 @@
 
 </style>
 <script>
-    var ctx = document.getElementById('numberOfCases').getContext('2d');
     var default_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
     var default_y = new Array(default_x.length).fill(0);
-    var numberOfCases = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: default_x,
-                datasets: [{
-                    label: 'Number of Cases',
-                    data: default_y,
+    var label_x = [];
+    var value_y = [];
+    var numberOfCases = Highcharts.chart('numberOfCases', {
+        chart: {
+                type: 'line'
+            },
+            legend: {
+                align: 'right',
+                verticalAlign: 'top',
+                layout: 'vertical',
+                x: 0,
+                y: 100
+            },
+            title: {
+                text: 'Number of Cases'
+            },
+            xAxis: {
+                categories: default_x,
+                plotLines: [{
+                    color: 'red', // Color value
+                    //dashStyle: 'longdashdot', // Style of the plot line. Default to solid
+                    value: 0, // Value of where the line will appear
+                    width: 2, // Width of the line
                 }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
+            yAxis: {
+                title: {
+                    text: 'Cases'
                 }
-            }
+            },
+            events: {
+                click: function (event) {
+                    console.log('clicked');
+                    console.log(event);
+                },
+                load: function (event) {
+                    console.log('loaded');
+                    console.log(event);
+                }
+            },
+            series: [{
+                name: 'Total',
+                data: default_y
+            }],
+
         });
 
-    var ctx2 = document.getElementById('numberOfCasesCumulative').getContext('2d');
-    var numberOfCasesCumulative = new Chart(ctx2, {
-            type: 'bar',
-            data: {
-                labels: default_x,
-                datasets: [{
-                    label: 'Number of Cases Cumulative',
-                    data: default_y,
+    var numberOfCasesCumulative = Highcharts.chart('numberOfCasesCumulative', {
+        chart: {
+                type: 'column'
+            },
+            legend: {
+                align: 'right',
+                verticalAlign: 'top',
+                layout: 'vertical',
+                x: 0,
+                y: 100
+            },
+            title: {
+                text: 'Number of Cases Cumulative'
+            },
+            xAxis: {
+                categories: default_x,
+                plotLines: [{
+                    color: 'red', // Color value
+                    //dashStyle: 'longdashdot', // Style of the plot line. Default to solid
+                    value: 0, // Value of where the line will appear
+                    width: 2, // Width of the line 
                 }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
+            yAxis: {
+                title: {
+                    text: 'Cases'
                 }
-            }
+            },
+            events: {
+                click: function (e) {
+                    console.log('clicked');
+                    console.log(e);
+                }
+            },
+            series: [{
+                name: 'Total',
+                data: default_y
+            }]
         });
 
     /*
@@ -78,6 +119,14 @@
 
         updateNumberOfCasesChart();
         updateNumberofCasesCumulativeChart();
+    }
+
+    /*
+     * (function) update all charts plotlines
+     */
+    function updateChartsPlotLines(value) {
+        updateChartLines(numberOfCases, value);
+        updateChartLines(numberOfCasesCumulative, value);
     }
 
     /*
@@ -127,33 +176,34 @@
         console.log('updating Number of Cases graph...');
         //console.log('second_data_set : ' + second_data_set);
 
-        var label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
-        var value_y = getValues(label_x);
+        label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
+        value_y = getValues(label_x);
 
-        removeData(numberOfCases);
-        setData(numberOfCases, label_x, value_y);
+        numberOfCases.update({
+            xAxis: {
+                categories: label_x,
+            },
+            series: [{
+                name: 'Total',
+                data: value_y,
+            }]
+        });
     }
 
     /*
      * (function) set new data to specified chart
      */
-    function setData(chart, label, data) {
-        chart.data.labels = label;
-        chart.data.datasets.forEach((dataset) => {
-            dataset.data = data;
-        });
-        chart.update();
-    }
+    function updateChartLines(chart, newValue) {
 
-    /*
-     * (function) remove all data from specified chart
-     */
-    function removeData(chart) {
-        chart.data.labels.pop();
-        chart.data.datasets.forEach((dataset) => {
-            dataset.data.pop();
-        });
-        chart.update();
+        //console.log(chart);
+        //console.log(chart.xAxis[0].categories);
+
+        var index = _.indexOf(chart.xAxis[0].categories, newValue);
+        //console.log(newValue + '->' + index);
+        if (index > -1) {
+            chart.xAxis[0].plotLinesAndBands[0].options.value = index;
+            chart.xAxis[0].update();
+        }
     }
 
     /*
@@ -196,8 +246,15 @@
         value_y.reduce(function(a,b,i) { return value_y_c[i] = a + b; },0);
         //console.log(value_y_c);
 
-        removeData(numberOfCasesCumulative);
-        setData(numberOfCasesCumulative, label_x, value_y_c)
+        numberOfCasesCumulative.update({
+            xAxis: {
+                categories: label_x,
+            },
+            series: [{
+                name: 'Total',
+                data: value_y_c,
+            }]
+        });
     }
 
 </script>

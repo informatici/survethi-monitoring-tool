@@ -254,7 +254,9 @@
 
     mySecondaryMap.timeDimension.on('timeload', function(data) {
         console.log('Update slider and charts');
-        
+        var date = new Date(data.time).toISOString().split('T')[0]
+        //console.log(date);
+        updateChartsPlotLines(date);
     })
 
 </script>
