@@ -176,8 +176,8 @@
         console.log('updating Number of Cases graph...');
         //console.log('second_data_set : ' + second_data_set);
 
-        label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
-        value_y = getValues(label_x);
+        var label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
+        var value_y = getValues(label_x);
 
         numberOfCases.update({
             xAxis: {
