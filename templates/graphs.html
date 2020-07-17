@@ -27,9 +27,36 @@
     var default_y = new Array(default_x.length).fill(0);
     var label_x = [];
     var value_y = [];
+
+    /*
+     * (event) click on a graph (in general)
+     */
+    var clickOnGraphEvent = function (e) {
+            //console.log('clicked!');
+            var value = e.xAxis[0].axis.categories[Math.round(e.xAxis[0].value)];
+            //console.log('date: ' + value);
+            updateChartsPlotLines(value);
+            mySecondaryMap.timeDimension.setCurrentTime(new Date(value).getTime());
+        }
+    
+    /*
+     * (event) click on a serie
+     */
+    var clickOnSerieEvent = function (e) {
+            //console.log('clicked!');
+            //console.log(e);
+            var value = e.point.category;
+            //console.log('date: ' + value);
+            updateChartsPlotLines(value);
+            mySecondaryMap.timeDimension.setCurrentTime(new Date(value).getTime());
+        }
+
     var numberOfCases = Highcharts.chart('numberOfCases', {
         chart: {
-                type: 'line'
+                type: 'line',
+                events: {
+                    click: clickOnGraphEvent,
+                },
             },
             legend: {
                 align: 'right',
@@ -55,16 +82,6 @@
                     text: 'Cases'
                 }
             },
-            events: {
-                click: function (event) {
-                    console.log('clicked');
-                    console.log(event);
-                },
-                load: function (event) {
-                    console.log('loaded');
-                    console.log(event);
-                }
-            },
             exporting: {
                 buttons: {
                     contextButton: {
@@ -76,12 +93,23 @@
                 name: 'Total',
                 data: default_y
             }],
+            plotOptions: {
+                series: {
+                    cursor: 'pointer',
+                    events: {
+                        click: clickOnSerieEvent,
+                    }
+                }
+            },
 
         });
 
     var numberOfCasesCumulative = Highcharts.chart('numberOfCasesCumulative', {
         chart: {
-                type: 'column'
+                type: 'column',
+                events: {
+                    click: clickOnGraphEvent,
+                },
             },
             legend: {
                 align: 'right',
@@ -107,12 +135,6 @@
                     text: 'Cases'
                 }
             },
-            events: {
-                click: function (e) {
-                    console.log('clicked');
-                    console.log(e);
-                }
-            },
             exporting: {
                 buttons: {
                     contextButton: {
@@ -123,7 +145,15 @@
             series: [{
                 name: 'Total',
                 data: default_y
-            }]
+            }],
+            plotOptions: {
+                series: {
+                    cursor: 'pointer',
+                    events: {
+                        click: clickOnSerieEvent,
+                    }
+                }
+            },
         });
 
     /*
