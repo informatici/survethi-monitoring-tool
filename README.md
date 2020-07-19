@@ -46,35 +46,35 @@ Home (returns index.html)
 
 Query by dates (retrieve data for Real Time map) 
 ```
-/query (default values = '2019-01-01'/'2019-12-31'
+/query (default values = '2019-01-01'/'2019-12-31')
 /query/<dateFrom>/<dateTo>
 ```
 
 Query Grouped (just a different query)
 ```
-/query_group (default values = '2019-01-01'/'2019-12-31'
+/query_group (default values = '2019-01-01'/'2019-12-31')
 /query_group/<dateFrom>/<dateTo>
 ```
 
 Query Epoch (retrieve data for Historical Map)
 ```
-/query_epoch (default values = '2019-01-01'/'2019-12-31'
+/query_epoch (default values = '2019-01-01'/'2019-12-31')
 /query_epoch/<dateFrom>/<dateTo>
 ```
 
 Query Epoch Range (get the last available date range from historical data)
 ```
-/query_epoch_range (default values = '2019-01-01'/'2019-12-31'
+/query_epoch_range (default values = '2019-01-01'/'2019-12-31')
 ```
 
 Query Epoch JSON (no query, just convert previous retrieved data to JSON)
 ```
-/query_epoch_json_static (default values = '2019-01-01'/'2019-12-31'
+/query_epoch_json_static (default values = '2019-01-01'/'2019-12-31')
 ```
 
 Query Epoch GeoJSON (no query, just convert previous retrieved data to GeoJSON)
 ```
-/query_epoch_json (default values = '2019-01-01'/'2019-12-31'
+/query_epoch_json (default values = '2019-01-01'/'2019-12-31')
 ```
 
 Diseases (returns the list of available diseases)
