@@ -57,7 +57,7 @@
             //autoPlay: true,
             playerOptions: {
                 transitionTime: 1000,
-                loop: true
+                loop: false
             }
         },
     }).setView(parametersSecondMap.center, parametersSecondMap.initial_zoom);
@@ -164,10 +164,12 @@
 
     var mapLayerGroups = [];
 
+    var counter = 0;
     /*
      * Appy secondary_filter
      */
     function applySecondaryFilter(feature) {
+        //console.log(counter, feature);
         
         var town = feature.properties.town;
         var kebele = feature.properties.kebele;
@@ -192,13 +194,15 @@
         //if (!ok) console.log(town, kebele, disease, ' --> ',ok);
         if (ok) {
             var date = feature.properties.epoch.substr(0,10);
-            var object = jQuery.extend({'value' : 0, 'date' : date}, feature.properties);
+            var object = jQuery.extend({'date' : date}, feature.properties);
             //console.log(object);
             second_data_set.push(object);
         }
+        //console.log(second_data_set);
+        counter = counter + 1;
         return ok;
     }
-
+ 
     /**
      * (sync) fetch diseases
      */
@@ -207,14 +211,15 @@
             url: newUrl, //convert fetched data to geojson
             success:function(json,status,xhr)
             {
-                //console.log(json);
+                //console.log(json.features);
                 try {
-                    second_data_set = []; //empty for graph
+                    second_data_set = new Array(); //empty for graph
+                    counter = 0;
                     //console.log('applying filter...');
                     //console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
                     //console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
                     //console.log('- diseases : ' + (secondary_disease_list_filter.length > 0 ? secondary_disease_list_filter : 'All'));
-                    var testlayer = L.geoJson(json, {filter: applySecondaryFilter});
+                    var testlayer = L.geoJson(json.features, {filter: applySecondaryFilter});
                     //console.log(Object.keys(testlayer._layers).length);
                 }
                 catch (e) {
@@ -225,25 +230,27 @@
                 if (Object.keys(testlayer._layers).length === 0) {
                     // no data
                     console.log('Secondary Map: nothing to display!');
+                    //enableDatesRangeToogle(false);
+                    //FIX-ME: empty timeDimension below
+                    updateCharts();
 
                 } else {
 
                     L.timeDimension.layer.geoJson(testlayer, {
-                        updateTimeDimension: true,
+                        updateTimeDimension: true, //FIX-ME: it creates ghost data
                         duration: 'P1D',
                         updateTimeDimensionMode: 'replace',
                         waitForReady: true,
                         addlastPoint: true,
                     }).addTo(mySecondaryMap);
-                    
+
                     mySecondaryMap.invalidateSize();
                     mySecondaryMap.flyToBounds(testlayer, 10);
-
+                    
                     updateCharts();
                 }
             },
             complete: function(){
-                //$('#leaflet-slider').html(options.markers[ui.value].feature.properties.time.substr(0, 19));
 
             },
             error: function(){

@@ -80,7 +80,7 @@
             yAxis: {
                 title: {
                     text: 'Cases'
-                }
+                },
             },
             exporting: {
                 buttons: {
@@ -91,6 +91,7 @@
             },
             series: [{
                 name: 'Total',
+                color: '#000000',
                 data: default_y
             }],
             plotOptions: {
@@ -133,7 +134,7 @@
             yAxis: {
                 title: {
                     text: 'Cases'
-                }
+                },
             },
             exporting: {
                 buttons: {
@@ -192,25 +193,56 @@
      * reducing the global array 'second_data_set'
      */ 
     function getValues(dateArray) {
-        var valueArray = new Array(dateArray.length).fill(0);
-        //console.log('dateArray : ' + dateArray);
+        var valueArray = new Array();
+        //console.log('dateArray : ', dateArray);
         //console.log('valueArray : ' + valueArray);
-        
-        for (var i = 0; i < second_data_set.length; i++) {
-            var element = second_data_set[i];
-            //console.log(element);
 
-            var date = element.date;
-            var index = dateArray.indexOf(date);
-            if (index > -1) {
-                value = valueArray[index];
-                valueArray[index] = value + 1; 
-                //console.log(date + ' --> ' + index + ' = ' + value);
-            } else {
-                console.log('error: date out of range? ' + date);
-            }
-        }
+        valueArray = _.map(dateArray, function(date) {
+            casesInDate = _.filter(second_data_set, ['date',date]);
+            //console.log('casesInDate : ', casesInDate);
+            return casesInDate.length;
+        });
+        //console.log('valueArray : ', valueArray);
+        //console.log('total : ', _.sum(valueArray));
+        
         return valueArray;
+    }
+
+    /*
+     * (function) creates an array of arrays over an array of dates
+     * reducing the global array 'second_data_set' into different series,
+     * one for each disease
+     */ 
+     function getSeries(dateArray) {
+        var seriesArray = new Array();
+        //console.log('second_data_set : ', second_data_set);
+
+        diseaseArray = _.groupBy(second_data_set, 'disease');
+        //console.log('diseaseArray : ', diseaseArray);
+
+        //var isolate_disease = '218';
+
+        _.forEach(diseaseArray, function(thisDisease) {
+            //if (thisDisease[0].disease == isolate_disease) console.log(thisDisease);
+            thisSerie = _.map(dateArray, function(date) {
+                //if (thisDisease[0].disease == isolate_disease) console.log(date)
+                thisCount = _.countBy(thisDisease, function(disease) {
+                    //if (thisDisease[0].disease == isolate_disease) console.log(disease.date == date);
+                    return disease.date == date;
+                });
+                //if (thisDisease[0].disease == isolate_disease) console.log(thisCount);
+                return thisCount.true || 0
+            });
+            //if (thisDisease[0].disease == isolate_disease) console.log(thisSerie);
+            total = _.sum(thisSerie);
+            seriesArray.push({'disease': thisDisease[0].disease, 'serie': thisSerie, 'total': total});
+        })
+        //console.log(seriesArray);
+        var sortedArray = _.reverse(_.sortBy(seriesArray, 'total'));
+        //console.log('sorted : ' , sortedArray);
+        var topTen = _.slice(sortedArray, 0, 10);
+        //console.log('topTen : ' , topTen);
+        return topTen;
     }
 
     /*
@@ -222,16 +254,28 @@
 
         var label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
         var value_y = getValues(label_x);
+        var topTen = getSeries(label_x);
 
+        while(numberOfCases.series.length > 1) { //remove all except the first
+            numberOfCases.series[1].remove(true);
+        }
         numberOfCases.update({
             xAxis: {
                 categories: label_x,
             },
             series: [{
-                name: 'Total',
+                name: 'Total (' + _.sum(value_y) + ')',
                 data: value_y,
             }]
-        });
+        })
+        if (topTen.length > 1) { //if more than one disease
+            for (i = 0; i < topTen.length; i++) {
+                numberOfCases.addSeries({
+                    name: topTen[i].disease + ' (' + topTen[i].total + ') ',
+                    data: topTen[i].serie,
+                });
+            }
+        } 
     }
 
     /*
