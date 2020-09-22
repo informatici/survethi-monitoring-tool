@@ -86,7 +86,25 @@
                 buttons: {
                     contextButton: {
                         menuItems: ['viewFullscreen','downloadPNG', 'downloadXLS']
-                    }
+                    },
+                    showButton: {
+                        text: 'Show All',
+                        onclick: function () {
+                            var series = numberOfCases.series;
+                            series.forEach(function(serie) {
+                                serie.show();
+                            });
+                        }
+                    },
+                    hideButton: {
+                        text: 'Hide',
+                        onclick: function () {
+                            var series = numberOfCases.series;
+                            series.forEach(function(serie) {
+                                serie.hide();
+                            });
+                        }
+                    },
                 }
             },
             series: [{
@@ -102,7 +120,7 @@
                     }
                 }
             },
-
+            
         });
 
     var numberOfCasesCumulative = Highcharts.chart('numberOfCasesCumulative', {
@@ -140,7 +158,25 @@
                 buttons: {
                     contextButton: {
                         menuItems: ['viewFullscreen','downloadPNG', 'downloadXLS']
-                    }
+                    },
+                    showButton: {
+                        text: 'Show All',
+                        onclick: function () {
+                            var series = numberOfCasesCumulative.series;
+                            series.forEach(function(serie) {
+                                serie.show();
+                            });
+                        }
+                    },
+                    hideButton: {
+                        text: 'Hide',
+                        onclick: function () {
+                            var series = numberOfCasesCumulative.series;
+                            series.forEach(function(serie) {
+                                serie.hide();
+                            });
+                        }
+                    },
                 }
             },
             series: [{
@@ -329,10 +365,20 @@
 
         var label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
         var value_y = getValues(label_x);
+        var topTen = getSeries(label_x);
         //console.log(value_y);
+        //console.log(topTen);
         var value_y_c = [];
+        var topTen_c = [];
         value_y.reduce(function(a,b,i) { return value_y_c[i] = a + b; },0);
+        topTen.forEach(function(item, index) {
+            //console.log(item);
+            var serie = []
+            item.serie.reduce(function(a,b,i) {return serie[i] = a + b; }, 0 );
+            topTen_c[index] = {'disease': item.disease, 'serie': serie, 'total': item.total };
+        });
         //console.log(value_y_c);
+        //console.log(topTen_c);
 
         numberOfCasesCumulative.update({
             xAxis: {
@@ -343,6 +389,14 @@
                 data: value_y_c,
             }]
         });
+        if (topTen.length > 1) { //if more than one disease
+            for (i = 0; i < topTen.length; i++) {
+                numberOfCasesCumulative.addSeries({
+                    name: topTen_c[i].disease + ' (' + topTen_c[i].total + ') ',
+                    data: topTen_c[i].serie,
+                });
+            }
+        } 
     }
 
 </script>
