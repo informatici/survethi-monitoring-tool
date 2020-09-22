@@ -195,8 +195,9 @@
         if (ok) {
             var date = feature.properties.epoch.substr(0,10);
             var object = jQuery.extend({'date' : date}, feature.properties);
+            //console.log("2");
             //console.log(object);
-            second_data_set.push(object);
+            if (updating) second_data_set.push(object);
         }
         //console.log(second_data_set);
         counter = counter + 1;
@@ -206,6 +207,7 @@
     /**
      * (sync) fetch diseases
      */
+    var updating = false; // workaround to bound applySecondaryFilter to only one run
     function show_epoch_data(newUrl) {
         $.ajax({
             url: newUrl, //convert fetched data to geojson
@@ -214,13 +216,15 @@
                 //console.log(json.features);
                 try {
                     second_data_set = new Array(); //empty for graph
+                    updating = true;
                     counter = 0;
                     //console.log('applying filter...');
                     //console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
                     //console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
                     //console.log('- diseases : ' + (secondary_disease_list_filter.length > 0 ? secondary_disease_list_filter : 'All'));
                     var testlayer = L.geoJson(json.features, {filter: applySecondaryFilter});
-                    //console.log(Object.keys(testlayer._layers).length);
+                    updating = false;
+                    //console.log("1>" + Object.keys(testlayer._layers).length);
                 }
                 catch (e) {
                     //console.log(e);     
@@ -231,13 +235,12 @@
                     // no data
                     console.log('Secondary Map: nothing to display!');
                     //enableDatesRangeToogle(false);
-                    //FIX-ME: empty timeDimension below
                     updateCharts();
 
                 } else {
 
                     L.timeDimension.layer.geoJson(testlayer, {
-                        updateTimeDimension: true, //FIX-ME: it creates ghost data
+                        updateTimeDimension: true,
                         duration: 'P1D',
                         updateTimeDimensionMode: 'replace',
                         waitForReady: true,
