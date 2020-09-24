@@ -63,9 +63,9 @@
     }
 
     /*
-        * (function) sum up 'count' with the same disease 'id'
-        * and return sorted totals (reverse)
-        */ 
+     * (function) sum up 'count' with the same disease 'id'
+     * and return sorted totals (reverse)
+     */ 
     function summarize_and_sort_list() {
         unique_list = _.uniqBy(disease_list, 'id');
         unique_list.forEach(function(item, index) {
@@ -78,6 +78,10 @@
             unique_list[objIndex].count = sum;
             unique_list[objIndex].unknown = sum_unknown;
         });
-        disease_list = _.sortBy(unique_list, 'count').reverse();
+        // disease_list = _.sortBy(unique_list, 'count').reverse();
+        disease_list = _.orderBy(unique_list, [
+                            function (item) { return item.count; },
+                            function (item) { return item.unknown; }
+                            ], ["desc", "desc"]);
     }
 </script>
