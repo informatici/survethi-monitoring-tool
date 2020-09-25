@@ -49,12 +49,21 @@
         }
         if (main_filter_total_unknown > 0) {
             total_unknown.appendChild(document.createTextNode(main_filter_total_unknown));
-            $("#total_unknown").position({
-                my:        "center",
-                at:        "center",
-                of:        first_unknown_badge,
-                collision: "fit"
-            });
+            if (main_filter_total_known > 0) {
+                $("#total_unknown").position({
+                    my:        "right",
+                    at:        "left",
+                    of:        first_known_badge,
+                    collision: "fit"
+                });
+            } else {
+                $("#total_unknown").position({
+                    my:        "center",
+                    at:        "center",
+                    of:        first_unknown_badge,
+                    collision: "fit"
+                });
+            }
             $("#total_unknown").css('top', 10);
         }
     }
