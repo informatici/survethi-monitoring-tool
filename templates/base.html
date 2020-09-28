@@ -52,6 +52,10 @@
     <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>  
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
+    <!-- Shapes -->
+    <script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+    <script src="{{url_for('static', filename='js/leaflet.shpfile.js') }}"></script>
+
     <!-- Other libraries -->
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     
@@ -70,11 +74,13 @@
         refresh: false,
     }
 
+    var shpfile;
     var diseases = [];
     var disease_list = [];
     var disease_list_filter = []; //[461,424];
     var locations = [];
 
+    var geoshapes = new L.geoJson();
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
 
@@ -216,6 +222,34 @@
     }
 
     /*
+     * (function) get shape file with Ethiopian's regions
+     */ 
+    function load_shapefile() {
+        //shpfile = new L.Shapefile("{{url_for('static', filename='shapes/Ethiopia_admin_WGS84.zip') }}", {
+        //shpfile = new L.Shapefile("{{url_for('static', filename='shapes/ethiopiaworeda.zip') }}", {
+        //shpfile = new L.Shapefile("{{url_for('static', filename='shapes/places.zip') }}", {
+        //shpfile = new L.Shapefile("{{url_for('static', filename='shapes/Ethiopia_AdminBoundaries-shp.zip') }}", {
+        shpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
+			onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+					// we add our property for counting
+                    feature.properties.hitCount=0;
+				}
+			}
+        });
+        console.log(shpfile);
+        console.log(shpfile._layers);
+
+        // shpfile.addTo(mymap);
+        shpfile.once("data:loaded", function() {
+             console.log("finished loaded shapefile");
+             show_markers(filtered_data);
+        });
+        return shpfile;
+    }
+
+    /*
      * (function) fast filter, thanks to:
      * https://stackoverflow.com/a/32377529/5309541
      */ 
@@ -323,7 +357,8 @@
                 filtered_data = filterFast(data, disease_list_filter, 'OPD_DIS_ID_A');
                 //console.log(filtered_data);
                 if (filtered_data.length > 0) {
-                    show_markers(filtered_data);
+                    load_shapefile();
+                    //show_markers(filtered_data); deferred to load_shapefile().once()
                     update_table_data(filtered_data);
                     resetMainFilterTotals();
                     update_disease_list();
@@ -350,6 +385,7 @@
     function cleanMap() {
         layerGroup.clearLayers();
         mymap.removeControl(mapController);
+        geoshapes.clearLayers();
     }
 
     /**
@@ -358,7 +394,7 @@
     function show_markers(data) {
 
         cleanMap();
-
+        
         var markersGroup1 = L.markerClusterGroup();
         var markerArray = [];
         disease_list = [];
@@ -372,6 +408,7 @@
         layerGroup.addLayer(heatLayer);
         layerGroup.addTo(mymap);
         mymap.addControl(mapController);
+        addShapeFile();
 
         if (Object.keys(markersGroup1.getBounds()).length === 0)
             console.log('Main Map: nothing to display');
@@ -381,6 +418,23 @@
         }
 
         function show_marker(item, index) {
+
+            if (item.LOC_CITY) {
+            
+                Object.values(shpfile._layers).forEach(function(thisFeature) {
+                        
+                    feature = thisFeature.feature;
+
+                    // counting by Woreda
+                    //TODO: change to RK_CODE (kebele) that must be available in LOCATION table
+                    var woreda = feature.properties.W_NAME;
+
+                    if (item.LOC_CITY.toUpperCase() === woreda.toUpperCase()) {
+                        feature.properties.hitCount+=1;
+                        //console.log(feature);
+                    }
+                });
+            }
 
             if (item.LOC_LAT) {
 
@@ -414,6 +468,70 @@
                 return item.LOC_CITY + "<br>" + item.LOC_ADDRESS + "<br>" + item.DIS_DESC
         }
 
+    }
+
+    function addShapeFile() {
+        var shapes = {"type":"FeatureCollection","features":[]}
+
+        Object.values(shpfile._layers).forEach(function(thisFeature) {
+                        
+            feature = thisFeature.feature;
+
+            if (feature.properties.hitCount > 0) {
+                //console.log(feature);
+                shapes.features.push(feature);
+            }
+        });
+        console.log(shapes);
+
+        geoshapes = L.geoJson(shapes, {
+            style: style,
+            onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    layer.bindPopup(
+                    "<b>Count: " + feature.properties.hitCount + "</b><br />" +
+                    "<br />" +
+                    "Kebele CODE: " + feature.properties.RK_CODE + "<br />" +
+                    "Kebele: " + feature.properties.RK_NAME + "<br />" +
+                    "Woreda: " + feature.properties.W_NAME + "<br />" +
+                    "Region: " + feature.properties.R_NAME + "<br />" +
+                    "Zone: " + feature.properties.Z_NAME + "<br />", {
+						maxHeight: 200
+                    });
+				}
+			}
+        }).addTo(mymap);
+        console.log(geoshapes);
+    }
+
+    /*
+     * (function) color sequence for geoshapes 
+     * https://colorbrewer2.org 
+     */
+    function getColor(d) {
+        return d > 30 ? '#800026' :
+            d > 25  ? '#BD0026' :
+            d > 20  ? '#E31A1C' :
+            d > 15  ? '#FC4E2A' :
+            d > 10   ? '#FD8D3C' :
+            d > 5   ? '#FEB24C' :
+            d > 1   ? '#FED976' :
+                        '#FFEDA0';
+    }
+
+    /*
+     * (function) style sequence for geoshapes
+     */
+    function style(feature) {
+        return {
+            fillColor: getColor(feature.properties.hitCount),
+            weight: 0.5,
+            opacity: 1,
+            color: 'white',
+            //dashArray: '3',
+            fillOpacity: 0.7
+        };
     }
 
     // Starts from here (main)
