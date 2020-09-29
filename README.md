@@ -6,7 +6,26 @@ Tool in Flask + Bootstrap (Python, Javascript) to show in real time and historic
 
 Data are collected from phisicians in real-time, the tool queries the DB with a refresh rate for aggregated data (patients' details are never exposed!) and shows on the map the total numbers with geo-positions (provenance declared by the patients) and grouped by disease.
 
-Historical data are meant for long term studies and comparations and are lazily (or on demand, but not automatically) queried by the DB, with filtering on provenance and diseases.  
+Historical data are meant for long term studies and comparations and are lazily (or on demand, but not automatically) queried by the DB, with filtering on provenance and diseases.
+
+## included softwares
+
+- Bootstrap 4.1.3 
+  
+  (+Toggle, +Select, +Popper.js, +tippy-bundle 6, +colors-css 2.2.0, +bootstrap-table 1.17.1, +bootstrap-table-export)
+
+- jQuery 3.5.1
+
+  (+ui 1.12.1, +touch-pouch 0.2.2, +tableExport)
+
+- Leaflet 1.5.1
+
+  (+MarkerCluser 1.4.1, +Fullscreen 1.0.1, +heat, +history, +TimeDimension 1.1.1, +shpfile)
+
+- HighCharts (+exporting, +offline-exporting, +export-data)
+- DaterangePicker (+FontAwesome)
+- Moment.js
+- Lodash 4.17.15
 
 ![survethi-monitoring-tool](https://github.com/informatici/survethi-monitoring-tool/blob/master/mockups/images/SurvethiMonitoringTool-4-change-filter.png)
 
