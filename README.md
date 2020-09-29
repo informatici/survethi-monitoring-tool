@@ -27,24 +27,26 @@ Historical data are meant for long term studies and comparations and are lazily 
 - Moment.js
 - Lodash 4.17.15
 
+## the initial idea
+
 ![survethi-monitoring-tool](https://github.com/informatici/survethi-monitoring-tool/blob/master/mockups/images/SurvethiMonitoringTool-4-change-filter.png)
 
 ![survethi-analysis](https://github.com/informatici/survethi-monitoring-tool/blob/master/mockups/images/SurvethiMonitoringTool-5-analysis-1-week.png)
 
-## First install Flask (requires Python 3)
+## first install Flask (requires Python 3)
 > pip install Flask
 
-### Install dependencies
+### install dependencies
 > python -m pip install -r requirements.txt
 
-### Set Flask config.py
+### set Flask config.py
 (edit with any text editor)
 
-### Set Flask Environment Variable
+### set Flask Environment Variable
 > export FLASK_APP=my-map-in-flask.py
 > export FLASK_ENV=development ### optional
 
-## Run the application
+## run the application
 > flask run
 ```
  * Serving Flask app "my-map-in-flask.py"
@@ -106,7 +108,7 @@ Locations (returns the list of available locations)
 /locations
 ```
 
-## Fixed datasets (for testing)
+## static datasets (for testing)
 ```
 /test (uses datasource/datasource.json)
 /test_group (uses datasource/datasource_group.json)
