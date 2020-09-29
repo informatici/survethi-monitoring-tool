@@ -394,7 +394,7 @@
     function show_markers(data) {
 
         cleanMap();
-        
+
         var markersGroup1 = L.markerClusterGroup();
         var markerArray = [];
         disease_list = [];
@@ -414,7 +414,7 @@
             console.log('Main Map: nothing to display');
         else {
             mymap.invalidateSize();
-            mymap.flyToBounds(markersGroup1.getBounds());//.pad(10));
+            mymap.flyToBounds(geoshapes.getBounds());//.pad(10));
         }
 
         function show_marker(item, index) {
