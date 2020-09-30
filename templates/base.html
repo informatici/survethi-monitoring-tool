@@ -202,6 +202,7 @@
      * (function) initialize components
      */
     function initialize(){
+        load_secondaryShapefile(); //we load in memory the shapefile only for the secondmap
         fetch_diseases();
         fetch_locations();
         var button_refresh = $('#button_refresh');
@@ -482,7 +483,7 @@
                 shapes.features.push(feature);
             }
         });
-        console.log(shapes);
+        //console.log(shapes);
 
         geoshapes = L.geoJson(shapes, {
             style: style,
@@ -502,7 +503,7 @@
 				}
 			}
         }).addTo(mymap);
-        console.log(geoshapes);
+        //console.log(geoshapes);
     }
 
     /*

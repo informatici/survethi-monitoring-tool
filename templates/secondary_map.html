@@ -20,9 +20,40 @@
     }
 
     var second_data_set = [];
+    var second_shape_data_set = [];
     var cached_dateFrom;
     var cached_dateTo;
     getRangeLimitFromDatasource();
+
+    var secondaryShpfile;
+    var testlayer = L.geoJson();
+
+    /*
+     * (function) get shape file with Ethiopian's regions
+     */ 
+     function load_secondaryShapefile() {
+        //secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/Ethiopia_admin_WGS84.zip') }}", {
+        //secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/ethiopiaworeda.zip') }}", {
+        //secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/places.zip') }}", {
+        //secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/Ethiopia_AdminBoundaries-shp.zip') }}", {
+        secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
+			onEachFeature: function(feature, layer) {
+                //console.log(feature);
+                if (feature.properties) {
+					// we add our property for counting
+                    feature.properties.hitCount=0;
+				}
+			}
+        });
+        console.log(secondaryShpfile);
+        console.log(secondaryShpfile._layers);
+
+        //secondaryShpfile.addTo(mymap);
+        secondaryShpfile.once("data:loaded", function() {
+             console.log("finished loaded secondaryShpfile");
+        });
+        return secondaryShpfile;
+    }
 
     /**
      * (sync) fetch data from URL
@@ -166,11 +197,15 @@
 
     var counter = 0;
     /*
-     * Appy secondary_filter
+     * Apply secondary_filter
      */
     function applySecondaryFilter(feature) {
         //console.log(counter, feature);
-        
+
+        if (feature.geometry.type == 'Polygon' ||
+            feature.geometry.type == 'MultiPolygon')
+            return true; //skip shapes
+
         var town = feature.properties.town;
         var kebele = feature.properties.kebele;
         var disease = feature.properties.disease;
@@ -198,6 +233,22 @@
             //console.log("2");
             //console.log(object);
             if (updating) second_data_set.push(object);
+
+            Object.values(secondaryShpfile._layers).forEach(function(thisFeature) {
+                        
+                var shape = thisFeature.feature;
+
+                //TODO: change to RK_CODE (kebele) that must be available in LOCATION table
+                var rk_name = shape.properties.RK_NAME;
+
+                //adding shapes of kebele
+                //TODO: improve with a map 
+                if (kebele.toUpperCase() === rk_name.toUpperCase()) {
+                    var object = jQuery.extend(true, {'properties': {'time': feature.properties.time}}, shape);
+                    second_shape_data_set.push(object); //we add the features later
+                    //console.log(object);
+                }
+            });
         }
         //console.log(second_data_set);
         counter = counter + 1;
@@ -216,13 +267,15 @@
                 //console.log(json.features);
                 try {
                     second_data_set = new Array(); //empty for graph
+                    second_shape_data_set = new Array();
                     updating = true;
                     counter = 0;
                     //console.log('applying filter...');
                     //console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
                     //console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
                     //console.log('- diseases : ' + (secondary_disease_list_filter.length > 0 ? secondary_disease_list_filter : 'All'));
-                    var testlayer = L.geoJson(json.features, {filter: applySecondaryFilter});
+                    testlayer = L.geoJson(json.features, {filter: applySecondaryFilter});
+                    
                     updating = false;
                     //console.log("1>" + Object.keys(testlayer._layers).length);
                 }
@@ -235,10 +288,9 @@
                     // no data
                     console.log('Secondary Map: nothing to display!');
                     //enableDatesRangeToogle(false);
-                    updateCharts();
-
                 } else {
-
+                    //add selected shapes
+                    testlayer.addData(second_shape_data_set);
                     L.timeDimension.layer.geoJson(testlayer, {
                         updateTimeDimension: true,
                         duration: 'P1D',
@@ -249,9 +301,10 @@
 
                     mySecondaryMap.invalidateSize();
                     mySecondaryMap.flyToBounds(testlayer, 10);
-                    
-                    updateCharts();
                 }
+
+                updateCharts();
+
             },
             complete: function(){
 
