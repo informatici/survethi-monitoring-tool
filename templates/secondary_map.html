@@ -239,11 +239,12 @@
                 var shape = thisFeature.feature;
 
                 //TODO: change to RK_CODE (kebele) that must be available in LOCATION table
+                var w_name = shape.properties.W_NAME;
                 var rk_name = shape.properties.RK_NAME;
 
                 //adding shapes of kebele
                 //TODO: improve with a map 
-                if (kebele.toUpperCase() === rk_name.toUpperCase()) {
+                if (town.toUpperCase() === w_name.toUpperCase()) {
                     var object = jQuery.extend(true, {'properties': {'time': feature.properties.time}}, shape);
                     second_shape_data_set.push(object); //we add the features later
                     //console.log(object);
@@ -274,7 +275,7 @@
                     //console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
                     //console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
                     //console.log('- diseases : ' + (secondary_disease_list_filter.length > 0 ? secondary_disease_list_filter : 'All'));
-                    testlayer = L.geoJson(json.features, {filter: applySecondaryFilter});
+                    testlayer = L.geoJson(json.features, {filter: applySecondaryFilter, style: style2});
                     
                     updating = false;
                     //console.log("1>" + Object.keys(testlayer._layers).length);
@@ -291,6 +292,8 @@
                 } else {
                     //add selected shapes
                     testlayer.addData(second_shape_data_set);
+
+                    //add timeDimension data
                     L.timeDimension.layer.geoJson(testlayer, {
                         updateTimeDimension: true,
                         duration: 'P1D',
@@ -313,6 +316,20 @@
                 console.log('error');
             }
         })
+    }
+
+    /*
+     * (function) style sequence for geoshapes
+     */
+     function style2(feature) {
+        return {
+            fillColor: '#FFEDA0',
+            weight: 0.5,
+            opacity: 1,
+            color: 'white',
+            //dashArray: '3',
+            fillOpacity: 0.7
+        };
     }
 
     mySecondaryMap.timeDimension.on('timeload', function(data) {
