@@ -74,3 +74,9 @@ UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Town' WHERE OPD_PAT_CITY = 'Wolisso town'
 UPDATE LOCATION SET LOC_CITY = 'Sodo Dachi' WHERE LOC_CITY = 'Sodo dachi';
 UPDATE PATIENT SET PAT_CITY = 'Sodo Dachi' WHERE PAT_CITY = 'Sodo dachi';
 UPDATE OPD SET OPD_PAT_CITY = 'Sodo Dachi' WHERE OPD_PAT_CITY = 'Sodo dachi';
+
+-- Chitu Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Chitu Town' WHERE (LOC_CITY = 'Wonchi') and (LOC_ADDRESS = 'Chitu town');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Chitu Town' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Chitu town';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Chitu Town' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Chitu town';
+

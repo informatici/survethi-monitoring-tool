@@ -420,17 +420,16 @@
 
         function show_marker(item, index) {
 
-            if (item.LOC_CITY) {
+            if (item.LOC_RK_CODE > 0) {
             
                 Object.values(shpfile._layers).forEach(function(thisFeature) {
                         
                     feature = thisFeature.feature;
 
                     // counting by Woreda
-                    //TODO: change to RK_CODE (kebele) that must be available in LOCATION table
-                    var woreda = feature.properties.W_NAME;
+                    var rk_code = feature.properties.RK_CODE;
 
-                    if (item.LOC_CITY.toUpperCase() === woreda.toUpperCase()) {
+                    if (item.LOC_RK_CODE == rk_code) {
                         feature.properties.hitCount+=1;
                         //console.log(feature);
                     }

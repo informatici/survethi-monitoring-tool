@@ -238,13 +238,12 @@
                         
                 var shape = thisFeature.feature;
 
-                //TODO: change to RK_CODE (kebele) that must be available in LOCATION table
-                var w_name = shape.properties.W_NAME;
-                var rk_name = shape.properties.RK_NAME;
+                //var w_name = shape.properties.W_NAME;
+                var rk_code = shape.properties.RK_CODE;
+                
 
                 //adding shapes of kebele
-                //TODO: improve with a map 
-                if (town.toUpperCase() === w_name.toUpperCase()) {
+                if (feature.properties.RK_CODE == rk_code) {
                     var object = jQuery.extend(true, {'properties': {'time': feature.properties.time}}, shape);
                     second_shape_data_set.push(object); //we add the features later
                     //console.log(object);

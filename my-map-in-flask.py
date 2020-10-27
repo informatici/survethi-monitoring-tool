@@ -58,7 +58,7 @@ def query(dateFrom=None, dateTo=None):
     if not dateTo:
         dateTo = '2020-05-01'
     default_query = "SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, \
-                        LOC_LAT, LOC_LONG FROM OPD \
+                        LOC_LAT, LOC_LONG, LOC_RK_CODE FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
@@ -79,7 +79,7 @@ def query_group(dateFrom=None, dateTo=None):
         dateTo = '2020-05-01'
     default_query = "SELECT COUNT(*) AS COUNT, INTERNAL.* FROM( \
                         SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, \
-                        LOC_LAT, LOC_LONG, IF(LOC_LAT IS NULL, 0, 1) AS LOC_OK FROM OPD \
+                        LOC_LAT, LOC_LONG, LOC_RK_CODE, IF(LOC_LAT IS NULL, 0, 1) AS LOC_OK FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
@@ -103,7 +103,7 @@ def query_epoch(dateFrom=None, dateTo=None):
         dateFrom = '2019-01-01'
     if not dateTo:
         dateTo = '2019-12-31'
-    default_query = "SELECT OPD_DIS_ID_A, OPD_DATE, LOC_CITY, LOC_ADDRESS, LOC_LAT, LOC_LONG \
+    default_query = "SELECT OPD_DIS_ID_A, OPD_DATE, LOC_CITY, LOC_ADDRESS, LOC_LAT, LOC_LONG, LOC_RK_CODE \
                         FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
@@ -158,7 +158,7 @@ def query_epoch_json(dateFrom=None, dateTo=None):
             
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
-            for disease, date, city, address, latitude, longitude in reader:
+            for disease, date, city, address, latitude, longitude, rk_code in reader:
 
                 if latitude == '':
                     continue  # skip empty geopositions
@@ -177,7 +177,8 @@ def query_epoch_json(dateFrom=None, dateTo=None):
                                 'epoch': date,
                                 'town' : city,
                                 'kebele' : address,
-                                'time': date.replace(" ", "T") + '.000Z' #ISO8601 format
+                                'time': date.replace(" ", "T") + '.000Z', #ISO8601 format
+                                'RK_CODE': rk_code
                             }
                         )
                     )
