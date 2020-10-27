@@ -415,7 +415,7 @@
             console.log('Main Map: nothing to display');
         else {
             mymap.invalidateSize();
-            mymap.flyToBounds(geoshapes.getBounds());//.pad(10));
+            mymap.flyToBounds(hitGeoshapes.getBounds());//.pad(10));
         }
 
         function show_marker(item, index) {
@@ -471,6 +471,7 @@
     }
 
     function addShapeFile() {
+        var hitShapes = {"type":"FeatureCollection","features":[]}
         var shapes = {"type":"FeatureCollection","features":[]}
 
         Object.values(shpfile._layers).forEach(function(thisFeature) {
@@ -479,21 +480,22 @@
 
             if (feature.properties.hitCount > 0) {
                 //console.log(feature);
+                hitShapes.features.push(feature);
+            } else {
                 shapes.features.push(feature);
             }
         });
-        //console.log(shapes);
+        //console.log(hitShapes);
 
-        geoshapes = L.geoJson(shapes, {
+        hitGeoshapes = L.geoJson(hitShapes, {
             style: style,
             onEachFeature: function(feature, layer) {
                 //console.log(feature);
 				if (feature.properties) {
                     layer.bindPopup(
-                    "<b>Count: " + feature.properties.hitCount + "</b><br />" +
+                    "<b>" + feature.properties.RK_NAME + ": " + feature.properties.hitCount + "</b><br />" +
                     "<br />" +
-                    "Kebele CODE: " + feature.properties.RK_CODE + "<br />" +
-                    "Kebele: " + feature.properties.RK_NAME + "<br />" +
+                    "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
                     "Woreda: " + feature.properties.W_NAME + "<br />" +
                     "Region: " + feature.properties.R_NAME + "<br />" +
                     "Zone: " + feature.properties.Z_NAME + "<br />", {
@@ -502,11 +504,28 @@
 				}
 			}
         }).addTo(mymap);
-        //console.log(geoshapes);
+        //console.log(hitGeoshapes);
+        geoshapes = L.geoJson(shapes, {
+            style: style,
+            onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    layer.bindPopup(
+                    "<b>" + feature.properties.RK_NAME + ": " + feature.properties.hitCount + "</b><br />" +
+                    "<br />" +
+                    "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
+                    "Woreda: " + feature.properties.W_NAME + "<br />" +
+                    "Region: " + feature.properties.R_NAME + "<br />" +
+                    "Zone: " + feature.properties.Z_NAME + "<br />", {
+						maxHeight: 200
+                    });
+				}
+			}
+        }).addTo(mymap);
     }
 
     /*
-     * (function) color sequence for geoshapes 
+     * (function) color sequence for hitGeoshapes 
      * https://colorbrewer2.org 
      */
     function getColor(d) {
@@ -517,7 +536,15 @@
             d > 10   ? '#FD8D3C' :
             d > 5   ? '#FEB24C' :
             d > 1   ? '#FED976' :
-                        '#FFEDA0';
+            d = 1   ? '#FFEDA0' :
+                        null;
+    }
+
+    /*
+     * (function) color opacity for hitGeoshapes 
+     */
+     function getOpacity(d) {
+        return d > 0 ? 0.5 : 0.1;
     }
 
     /*
@@ -530,7 +557,7 @@
             opacity: 1,
             color: 'white',
             //dashArray: '3',
-            fillOpacity: 0.7
+            fillOpacity: getOpacity(feature.properties.hitCount),
         };
     }
 

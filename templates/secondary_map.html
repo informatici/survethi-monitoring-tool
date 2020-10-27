@@ -20,7 +20,7 @@
     }
 
     var second_data_set = [];
-    var second_shape_data_set = [];
+    var hitsecond_shape_data_set = [];
     var cached_dateFrom;
     var cached_dateTo;
     getRangeLimitFromDatasource();
@@ -32,23 +32,27 @@
      * (function) get shape file with Ethiopian's regions
      */ 
      function load_secondaryShapefile() {
-        //secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/Ethiopia_admin_WGS84.zip') }}", {
-        //secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/ethiopiaworeda.zip') }}", {
-        //secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/places.zip') }}", {
-        //secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/Ethiopia_AdminBoundaries-shp.zip') }}", {
         secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
+            style: style,
 			onEachFeature: function(feature, layer) {
                 //console.log(feature);
                 if (feature.properties) {
-					// we add our property for counting
-                    feature.properties.hitCount=0;
+					layer.bindPopup(
+                    "<b>" + feature.properties.RK_NAME + "</b><br />" +
+                    "<br />" +
+                    "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
+                    "Woreda: " + feature.properties.W_NAME + "<br />" +
+                    "Region: " + feature.properties.R_NAME + "<br />" +
+                    "Zone: " + feature.properties.Z_NAME + "<br />", {
+						maxHeight: 200
+                    });
 				}
 			}
         });
         console.log(secondaryShpfile);
         console.log(secondaryShpfile._layers);
 
-        //secondaryShpfile.addTo(mymap);
+        secondaryShpfile.addTo(mySecondaryMap);
         secondaryShpfile.once("data:loaded", function() {
              console.log("finished loaded secondaryShpfile");
         });
@@ -274,7 +278,22 @@
                     //console.log('- towns : ' + (town_selected.length > 0 ? town_selected : 'All'));
                     //console.log('- kebeles : ' + (kebele_selected.length > 0 ? kebele_selected : 'All'));
                     //console.log('- diseases : ' + (secondary_disease_list_filter.length > 0 ? secondary_disease_list_filter : 'All'));
-                    testlayer = L.geoJson(json.features, {filter: applySecondaryFilter, style: style2});
+                    testlayer = L.geoJson(json.features, {filter: applySecondaryFilter, 
+                        style: style2,
+                        onEachFeature: function(feature, layer) {
+                        //console.log(feature);
+                        if (feature.properties) {
+                            layer.bindPopup(
+                            "<b>" + feature.properties.RK_NAME + "</b><br />" +
+                            "<br />" +
+                            "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
+                            "Woreda: " + feature.properties.W_NAME + "<br />" +
+                            "Region: " + feature.properties.R_NAME + "<br />" +
+                            "Zone: " + feature.properties.Z_NAME + "<br />", {
+                                maxHeight: 200
+                            });
+                        }
+                    }});
                     
                     updating = false;
                     //console.log("1>" + Object.keys(testlayer._layers).length);
