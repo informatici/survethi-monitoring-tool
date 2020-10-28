@@ -43,9 +43,16 @@ Historical data are meant for long term studies and comparations and are lazily 
 (edit with any text editor)
 
 ### set Flask Environment Variable
-> export FLASK_APP=my-map-in-flask.py
-> export FLASK_ENV=development ### optional
-
+For Linux
+```bash
+export FLASK_APP=my-map-in-flask.py
+export FLASK_ENV=development ### optional
+```
+For Windows
+```bash
+set FLASK_APP=my-map-in-flask.py
+set FLASK_ENV=development
+```
 ## run the application
 > flask run
 ```
