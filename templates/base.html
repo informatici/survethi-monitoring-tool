@@ -81,7 +81,7 @@
     var locations = [];
 
     var geoshapes = new L.geoJson();
-    var geoshapes = new L.geoJson();
+    var hitGeoshapes = new L.geoJson();
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
     var legenda = L.control({position: 'bottomright'});
@@ -421,7 +421,7 @@
         layerGroup.clearLayers();
         mymap.removeControl(mapController);
         mymap.removeControl(legenda);
-        geoshapes.clearLayers();
+        hitGeoshapes.clearLayers();
     }
 
     /**
@@ -522,13 +522,12 @@
         Object.values(shpfile._layers).forEach(function(thisFeature) {
                         
             feature = thisFeature.feature;
+            shapes.features.push(feature);
 
             if (feature.properties.hitCount > 0) {
                 //console.log(feature);
                 hitShapes.features.push(feature);
-            } else {
-                shapes.features.push(feature);
-            }
+            } 
         });
         //console.log(hitShapes);
 
@@ -546,7 +545,7 @@
         }).addTo(mymap);
         //console.log(hitGeoshapes);
         geoshapes = L.geoJson(shapes, {
-            style: style,
+            style: emptyStyle,
             onEachFeature: function(feature, layer) {
                 //console.log(feature);
 				if (feature.properties) {
@@ -583,7 +582,7 @@
     }
 
     /*
-     * (function) style sequence for geoshapes
+     * (function) style sequence for hitGeoshapes
      */
     function style(feature) {
         return {
@@ -593,6 +592,20 @@
             color: 'white',
             //dashArray: '3',
             fillOpacity: getOpacity(feature.properties.hitCount),
+        };
+    }
+
+    /*
+     * (function) style sequence for geoshapes
+     */
+     function emptyStyle(feature) {
+        return {
+            fillColor: getColor(0),
+            weight: 0.5,
+            opacity: 1,
+            color: 'white',
+            //dashArray: '3',
+            fillOpacity: getOpacity(0),
         };
     }
 
