@@ -236,7 +236,7 @@
     }
 
     /*
-     * (function) get shape file with Ethiopian's regions
+     * (function) get shape file with Ethiopian regions
      */ 
     function load_shapefile() {
         shpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
@@ -392,12 +392,22 @@
                 filtered_data = filterFast(data, disease_list_filter, 'OPD_DIS_ID_A');
                 //console.log(filtered_data);
                 if (filtered_data.length > 0) {
-                    load_shapefile();
                     //show_markers(filtered_data); deferred to load_shapefile().once()
-                    update_table_data(filtered_data);
-                    resetMainFilterTotals();
-                    update_disease_list();
-                    updateMainFilterTotals();
+                    var promise = new Promise(function(resolve, reject){
+                        //console.log('promise...');
+                        load_shapefile();
+                        resolve();
+                    });
+                    promise.then(function() {
+                        //console.log('promise: success');
+                        update_table_data(filtered_data);
+                        resetMainFilterTotals();
+                        update_disease_list();
+                        updateMainFilterTotals();
+                    }).catch(function() {
+                        //console.log('promise: some error occurred');
+                    })
+                    
                 } else {
                     cleanMap();
                     update_table_data(filtered_data);
