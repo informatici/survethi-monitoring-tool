@@ -81,8 +81,10 @@
     var locations = [];
 
     var geoshapes = new L.geoJson();
+    var geoshapes = new L.geoJson();
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
+    var legenda = L.control({position: 'bottomright'});
 
 </script>
 
@@ -173,6 +175,17 @@
 
 <style type="text/css">
     #mapid { position: relative; }
+    .legend {
+        line-height: 18px;
+        color: #555;
+    }
+    .legend i {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 8px;
+        opacity: 0.7;
+    }
     .notloading { display: none; }
     .loading {
         display: block;
@@ -226,10 +239,6 @@
      * (function) get shape file with Ethiopian's regions
      */ 
     function load_shapefile() {
-        //shpfile = new L.Shapefile("{{url_for('static', filename='shapes/Ethiopia_admin_WGS84.zip') }}", {
-        //shpfile = new L.Shapefile("{{url_for('static', filename='shapes/ethiopiaworeda.zip') }}", {
-        //shpfile = new L.Shapefile("{{url_for('static', filename='shapes/places.zip') }}", {
-        //shpfile = new L.Shapefile("{{url_for('static', filename='shapes/Ethiopia_AdminBoundaries-shp.zip') }}", {
         shpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
 			onEachFeature: function(feature, layer) {
                 //console.log(feature);
@@ -246,8 +255,33 @@
         shpfile.once("data:loaded", function() {
              console.log("finished loaded shapefile");
              show_markers(filtered_data);
+             show_legenda();
         });
         return shpfile;
+    }
+
+    function show_legenda() {
+        
+        //console.log('==> adding legenda');
+
+        legenda.onAdd = function (mymap) {
+
+            var div = L.DomUtil.create('div', 'info legenda'),
+                labels = [];
+
+            // loop through our density intervals and generate a label with a colored square for each interval
+            for (var i = 0; i < grades.length; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + getColor(grades[i] + 1) + ';' + 
+                    'outline-style:solid; ' + 
+                    'outline-width:0px; opacity:' + getOpacity(grades[i]+1) + ';">' + 
+                    grades[i] + (grades[i + 1] ? '&nbsp;&ndash;&nbsp' + grades[i + 1] + 
+                    '</i><br>' : '+');
+                //console.log(div.innerHTML);
+            }
+            return div;
+        };
+        legenda.addTo(mymap);
     }
 
     /*
@@ -386,6 +420,7 @@
     function cleanMap() {
         layerGroup.clearLayers();
         mymap.removeControl(mapController);
+        mymap.removeControl(legenda);
         geoshapes.clearLayers();
     }
 
@@ -470,6 +505,16 @@
 
     }
 
+    var grades = [0, 1, 5, 10, 15, 20, 25, 30];
+    function buildBindPopupFirstMap(feature) {
+        return "<b>" + feature.properties.RK_NAME + ": " + feature.properties.hitCount + "</b><br />" +
+                    "<br />" +
+                    "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
+                    "Woreda: " + feature.properties.W_NAME + "<br />" +
+                    "Region: " + feature.properties.R_NAME + "<br />" +
+                    "Zone: " + feature.properties.Z_NAME + "<br />";
+    }
+
     function addShapeFile() {
         var hitShapes = {"type":"FeatureCollection","features":[]}
         var shapes = {"type":"FeatureCollection","features":[]}
@@ -493,12 +538,7 @@
                 //console.log(feature);
 				if (feature.properties) {
                     layer.bindPopup(
-                    "<b>" + feature.properties.RK_NAME + ": " + feature.properties.hitCount + "</b><br />" +
-                    "<br />" +
-                    "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
-                    "Woreda: " + feature.properties.W_NAME + "<br />" +
-                    "Region: " + feature.properties.R_NAME + "<br />" +
-                    "Zone: " + feature.properties.Z_NAME + "<br />", {
+                    buildBindPopupFirstMap(feature), {
 						maxHeight: 200
                     });
 				}
@@ -511,12 +551,7 @@
                 //console.log(feature);
 				if (feature.properties) {
                     layer.bindPopup(
-                    "<b>" + feature.properties.RK_NAME + ": " + feature.properties.hitCount + "</b><br />" +
-                    "<br />" +
-                    "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
-                    "Woreda: " + feature.properties.W_NAME + "<br />" +
-                    "Region: " + feature.properties.R_NAME + "<br />" +
-                    "Zone: " + feature.properties.Z_NAME + "<br />", {
+                        buildBindPopupFirstMap(feature), {
 						maxHeight: 200
                     });
 				}
@@ -529,14 +564,14 @@
      * https://colorbrewer2.org 
      */
     function getColor(d) {
-        return d > 30 ? '#800026' :
-            d > 25  ? '#BD0026' :
-            d > 20  ? '#E31A1C' :
-            d > 15  ? '#FC4E2A' :
-            d > 10   ? '#FD8D3C' :
-            d > 5   ? '#FEB24C' :
-            d > 1   ? '#FED976' :
-            d = 1   ? '#FFEDA0' :
+        return d > grades[7] ? '#800026' :
+            d > grades[6]  ? '#BD0026' :
+            d > grades[5]  ? '#E31A1C' :
+            d > grades[4]  ? '#FC4E2A' :
+            d > grades[3]   ? '#FD8D3C' :
+            d > grades[2]   ? '#FEB24C' :
+            d > grades[1]   ? '#FED976' :
+            d == grades[1]   ? '#FFEDA0' :
                         null;
     }
 
