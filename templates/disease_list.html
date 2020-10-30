@@ -17,9 +17,9 @@
         li.setAttribute('class',"list-group-item list-group-item-action d-flex justify-content-between align-items-start py-1");
                 
         span_sum.setAttribute('id','sum_'+item.id);
-        span_sum.setAttribute('class',"badge badge-success badge-pill ml-auto p-2 float-xs-right");
+        span_sum.setAttribute('class',"badge badge-warning badge-pill ml-auto p-2 float-xs-right");
         span_unknown.setAttribute('id','unknown_'+item.id);
-        span_unknown.setAttribute('class',"badge badge-warning badge-pill ml-auto p-2 float-xs-right");
+        span_unknown.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
 
         if (item.unknown > 0) {
             span_unknown.appendChild(document.createTextNode(item.unknown));

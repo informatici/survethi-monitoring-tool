@@ -115,9 +115,9 @@
             <div class="col">
                 {% include "primary_table.html" %}
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 {{ empty_space }}
-            </div>
+            </div> -->
         </div>
     </div>
     <br/>
@@ -481,10 +481,16 @@
                 });
             }
 
+            if (item.LOC_CITY && item.LOC_ADDRESS) {
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
+            } else {
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
+            }
+
             if (item.LOC_LAT) {
 
                 markerArray.push([item.LOC_LAT, item.LOC_LONG]);
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
+                // disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
 
                 //console.log(JSON.stringify(item));
                 var description = getMarkerDescription(item);
@@ -501,9 +507,9 @@
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
                             {icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description)); */
-            } else {
+            } /* else {
                 disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
-            }
+            } */
         }
 
         function getMarkerDescription(item) {

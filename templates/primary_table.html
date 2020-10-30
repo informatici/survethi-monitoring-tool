@@ -17,9 +17,10 @@
             <th data-sortable="true" data-field="DIS_DESC">Disease</th>
             <th data-sortable="true" data-field="PAT_CITY">Town</th>
             <th data-sortable="true" data-field="PAT_ADDR">Kebele</th>
+            <th data-sortable="true" data-field="LOC_RK_CODE" data-cell-style="cellStyleRKCODE">RK_CODE</th>
             <!-- <th data-sortable="true" data-field="LOC_LAT">Latitude</th>
             <th data-sortable="true" data-field="LOC_LONG">Longitude</th> -->
-            <th id="location" data-sortable="true" data-field="LOC_OK" data-cell-style="cellStyle" data-width="1">L</th>
+            <th id="location" data-sortable="true" data-field="LOC_OK" data-cell-style="cellStylePH" data-width="1">HP</th>
         </tr>
     </thead>
 </table>
@@ -51,20 +52,36 @@
         });
     }
 
-    function cellStyle(value, row, index) {
+    function cellStyleRKCODE(value, row, index) {
         
+        if (row['LOC_RK_CODE'] > 0) {
+            return {
+                classes:'bg-warning'
+            }  
+        } else {
+            return {
+                classes: 'bg-secondary'
+            }
+        }
+    }
+
+    function cellStylePH(value, row, index) {
+        
+        //console.log(value);
         //console.log(row);
+        //console.log(index);
 
         if (row['LOC_OK'] == 1) {
             return {
-                css: { color: '#2ECC40' },
-                classes: 'bg-green'
-            }  
+                css: { "color" : '#007bff',
+                        "background-color" : '#007bff'
+                },
+            }
         }
 
         return {
-            css: { color: '#FFDC00' },
-            classes: 'bg-yellow'
+            css: { color: '#FFFFFF' },
+            classes: 'bg-white'
         }
     }
 
