@@ -447,11 +447,12 @@
 
         data.forEach(show_marker);
 
-        var heatLayer = L.heatLayer(markerArray, {radius: 50})
-        mapController = L.control.layers(null, {"Heat Map": heatLayer});
+        //var heatLayer = L.heatLayer(markerArray, {radius: 50})
+        //mapController = L.control.layers(null, {"Heat Map": heatLayer});
+        mapController = L.control.layers(null, {"Health Posts": markersGroup1});
 
         layerGroup.addLayer(markersGroup1);
-        layerGroup.addLayer(heatLayer);
+        //layerGroup.addLayer(heatLayer);
         layerGroup.addTo(mymap);
         mymap.addControl(mapController);
         addShapeFile();
