@@ -80,8 +80,9 @@
         });
         // disease_list = _.sortBy(unique_list, 'count').reverse();
         disease_list = _.orderBy(unique_list, [
+                            function (item) { return item.count + item.unknown; },
                             function (item) { return item.count; },
                             function (item) { return item.unknown; }
-                            ], ["desc", "desc"]);
+                            ], ["desc", "desc", "desc"]);
     }
 </script>
