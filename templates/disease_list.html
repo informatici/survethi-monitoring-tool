@@ -27,6 +27,7 @@
         span_unknown.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
         span_total.setAttribute('id','total_'+item.id);
         span_total.setAttribute('class',"badge badge-primary badge-pill ml-auto p-2 float-xs-right");
+        span_total.setAttribute('style',"border-style:solid;color:#007bff;background-color:#ffffff");
 
         if (item.unknown > 0) {
             span_unknown.appendChild(document.createTextNode(item.unknown));

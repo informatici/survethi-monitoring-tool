@@ -20,7 +20,7 @@
         <div id="total_unknown" class="badge badge-secondary badge-pill ml-auto p-2 float-xs-right"></div>
         <div id="total_woreda" style="color:#fff;background-color:#238b45" class="badge badge-pill ml-auto p-2 float-xs-right"></div>
         <div id="total_kebele" class="badge badge-warning badge-pill ml-auto p-2 float-xs-right"></div>
-        <div id="total_total" class="badge badge-primary badge-pill ml-auto p-2 float-xs-right"></div>
+        <div id="total_total" style="border-style:solid;color:#007bff;background-color:#ffffff" class="badge badge-primary badge-pill ml-auto p-2 float-xs-right"></div>
     </div>
 </div>
 
@@ -81,8 +81,8 @@
         if (main_filter_total_total > 0) {
             total_total.appendChild(document.createTextNode(main_filter_total_total));
             $("#total_total").position({
-                my:        "center",
-                at:        "center",
+                my:        "right",
+                at:        "right",
                 of:        first_total_badge,
                 collision: "fit"
             });
@@ -91,9 +91,9 @@
         if (main_filter_total_kebele > 0) {
             total_kebele.appendChild(document.createTextNode(main_filter_total_kebele));
             $("#total_kebele").position({
-                my:        "center",
-                at:        "center",
-                of:        first_kebele_badge,
+                my:        "right",
+                at:        "left",
+                of:        total_total,
                 collision: "fit"
             });
             $("#total_kebele").css('top', 10);
@@ -104,15 +104,15 @@
                 $("#total_woreda").position({
                     my:        "right",
                     at:        "left",
-                    of:        first_kebele_badge,
+                    of:        total_kebele,
                     collision: "fit"
                 });
                 $("#total_woreda").css('top', 10);
             } else {
                 $("#total_woreda").position({
-                    my:        "center",
-                    at:        "center",
-                    of:        first_woreda_badge,
+                    my:        "right",
+                    at:        "left",
+                    of:        total_total,
                     collision: "fit"
                 });
                 $("#total_woreda").css('top', 10);
@@ -124,21 +124,21 @@
                 $("#total_unknown").position({
                     my:        "right",
                     at:        "left",
-                    of:        first_woreda_badge,
+                    of:        total_woreda,
                     collision: "fit"
                 });
             } else if (main_filter_total_kebele > 0) {
                 $("#total_unknown").position({
                     my:        "right",
                     at:        "left",
-                    of:        first_kebele_badge,
+                    of:        total_kebele,
                     collision: "fit"
                 });
             } else {
                 $("#total_unknown").position({
                     my:        "center",
                     at:        "center",
-                    of:        first_unknown_badge,
+                    of:        total_total,
                     collision: "fit"
                 });
             }

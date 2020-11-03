@@ -58,7 +58,7 @@ def query(dateFrom=None, dateTo=None):
     if not dateTo:
         dateTo = '2020-05-01'
     default_query = "SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, \
-                        LOC_LAT, LOC_LONG, LOC_RK_CODE FROM OPD \
+                        LOC_LAT, LOC_LONG, LOC_RK_CODE, LOC_W_CODE FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
@@ -79,7 +79,10 @@ def query_group(dateFrom=None, dateTo=None):
         dateTo = '2020-05-01'
     default_query = "SELECT COUNT(*) AS COUNT, INTERNAL.* FROM( \
                         SELECT OPD_ID, OPD_DATE_VIS, OPD_DIS_ID_A, DIS_DESC, PAT_CITY, LOC_CITY, PAT_ADDR, LOC_ADDRESS, \
-                        LOC_LAT, LOC_LONG, LOC_RK_CODE, IF(LOC_LAT IS NULL, 0, 1) AS LOC_OK FROM OPD \
+                        LOC_LAT, LOC_LONG, \
+                        (SELECT LOC_RK_CODE FROM LOCATION WHERE PAT_CITY=LOC_CITY AND PAT_ADDR=LOC_ADDRESS LIMIT 1) AS LOC_RK_CODE, \
+                        (SELECT LOC_W_CODE FROM LOCATION WHERE PAT_CITY=LOC_CITY LIMIT 1) AS LOC_W_CODE, \
+                        IF(LOC_LAT IS NULL, 0, 1) AS LOC_OK FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
@@ -87,7 +90,7 @@ def query_group(dateFrom=None, dateTo=None):
                     ) INTERNAL \
                     GROUP BY OPD_DIS_ID_A, PAT_CITY, LOC_CITY, PAT_ADDR \
                     ORDER BY COUNT DESC" %(escape(dateFrom), escape(dateTo))
-    #print(default_query)                
+    print(default_query)                
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
@@ -158,7 +161,7 @@ def query_epoch_json(dateFrom=None, dateTo=None):
             
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
-            for disease, date, city, address, latitude, longitude, rk_code in reader:
+            for disease, date, city, address, latitude, longitude, rk_code, w_code in reader:
 
                 if latitude == '':
                     continue  # skip empty geopositions
@@ -178,7 +181,8 @@ def query_epoch_json(dateFrom=None, dateTo=None):
                                 'town' : city,
                                 'kebele' : address,
                                 'time': date.replace(" ", "T") + '.000Z', #ISO8601 format
-                                'RK_CODE': rk_code
+                                'RK_CODE': rk_code,
+                                'W_CODE': w_code,
                             }
                         )
                     )
