@@ -20,6 +20,7 @@
         <div id="total_unknown" class="badge badge-secondary badge-pill ml-auto p-2 float-xs-right"></div>
         <div id="total_woreda" style="color:#fff;background-color:#238b45" class="badge badge-pill ml-auto p-2 float-xs-right"></div>
         <div id="total_kebele" class="badge badge-warning badge-pill ml-auto p-2 float-xs-right"></div>
+        <div id="total_total" class="badge badge-primary badge-pill ml-auto p-2 float-xs-right"></div>
     </div>
 </div>
 
@@ -52,25 +53,41 @@
      * - All type of Tuberculosis
      */ 
     var who_diseases_list = [55,1,120,8,138,139,140,64,634,635,636,637,110,111,112,122,125,205,229,56,57,58,59,207,208,61,206,113,114,115,116,117,118,228,137,1848,146,147,148,119];
+
+    var main_filter_total_total = 0;
     var main_filter_total_kebele = 0;
     var main_filter_total_woreda = 0;
     var main_filter_total_unknown = 0;
+    var first_total_badge;
     var first_kebele_badge;
     var first_woreda_badge;
     var first_unknown_badge;
 
     function updateMainFilterTotals() {
+        var total_total = document.getElementById("total_total");
         var total_kebele = document.getElementById("total_kebele");
         var total_woreda = document.getElementById("total_woreda");
         var total_unknown = document.getElementById("total_unknown");
+        //console.log('first_total_badge : ', first_total_badge);
         //console.log('first_kebele_badge : ', first_kebele_badge);
         //console.log('first_woreda_badge : ', first_woreda_badge);
         //console.log('first_unknown_badge : ', first_unknown_badge);
+        $('#total_total').empty();
         $('#total_kebele').empty();
         $('#total_woreda').empty();
         $('#total_unknown').empty();
 
         //TODO: optimize badge positions
+        if (main_filter_total_total > 0) {
+            total_total.appendChild(document.createTextNode(main_filter_total_total));
+            $("#total_total").position({
+                my:        "center",
+                at:        "center",
+                of:        first_total_badge,
+                collision: "fit"
+            });
+            $("#total_total").css('top', 10);
+        }
         if (main_filter_total_kebele > 0) {
             total_kebele.appendChild(document.createTextNode(main_filter_total_kebele));
             $("#total_kebele").position({
@@ -130,12 +147,15 @@
     }
 
     function resetMainFilterTotals() {
+        $('#total_total').empty();
         $('#total_kebele').empty();
         $('#total_woreda').empty();
         $('#total_unknown').empty();
+        main_filter_total_total = 0;
         main_filter_total_kebele = 0;
         main_filter_total_woreda = 0;
         main_filter_total_unknown = 0;
+        first_total_badge = undefined;
         first_kebele_badge = undefined;
         first_woreda_badge = undefined;
         first_unknown_badge = undefined;
