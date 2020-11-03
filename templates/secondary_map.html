@@ -33,7 +33,7 @@
      */ 
      function load_secondaryShapefile() {
         secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
-            style: style,
+            style: styleKebele,
 			onEachFeature: function(feature, layer) {
                 //console.log(feature);
                 if (feature.properties) {

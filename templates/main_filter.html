@@ -17,8 +17,9 @@
         </select>
     </div>
     <div class="col text-right">
-            <div id="total_unknown" class="badge badge-secondary badge-pill ml-auto p-2 float-xs-right"></div>
-            <div id="total_known" class="badge badge-warning badge-pill ml-auto p-2 float-xs-right"></div>
+        <div id="total_unknown" class="badge badge-secondary badge-pill ml-auto p-2 float-xs-right"></div>
+        <div id="total_woreda" style="color:#fff;background-color:#238b45" class="badge badge-pill ml-auto p-2 float-xs-right"></div>
+        <div id="total_kebele" class="badge badge-warning badge-pill ml-auto p-2 float-xs-right"></div>
     </div>
 </div>
 
@@ -51,35 +52,69 @@
      * - All type of Tuberculosis
      */ 
     var who_diseases_list = [55,1,120,8,138,139,140,64,634,635,636,637,110,111,112,122,125,205,229,56,57,58,59,207,208,61,206,113,114,115,116,117,118,228,137,1848,146,147,148,119];
-    var main_filter_total_known = 0;
+    var main_filter_total_kebele = 0;
+    var main_filter_total_woreda = 0;
     var main_filter_total_unknown = 0;
-    var first_known_badge;
+    var first_kebele_badge;
+    var first_woreda_badge;
     var first_unknown_badge;
 
     function updateMainFilterTotals() {
-        var total_known = document.getElementById("total_known");
+        var total_kebele = document.getElementById("total_kebele");
+        var total_woreda = document.getElementById("total_woreda");
         var total_unknown = document.getElementById("total_unknown");
-        //console.log('first_known_badge : ', first_known_badge);
+        //console.log('first_kebele_badge : ', first_kebele_badge);
+        //console.log('first_woreda_badge : ', first_woreda_badge);
         //console.log('first_unknown_badge : ', first_unknown_badge);
-        $('#total_known').empty();
+        $('#total_kebele').empty();
+        $('#total_woreda').empty();
         $('#total_unknown').empty();
-        if (main_filter_total_known > 0) {
-            total_known.appendChild(document.createTextNode(main_filter_total_known));
-            $("#total_known").position({
+
+        //TODO: optimize badge positions
+        if (main_filter_total_kebele > 0) {
+            total_kebele.appendChild(document.createTextNode(main_filter_total_kebele));
+            $("#total_kebele").position({
                 my:        "center",
                 at:        "center",
-                of:        first_known_badge,
+                of:        first_kebele_badge,
                 collision: "fit"
             });
-            $("#total_known").css('top', 10);
+            $("#total_kebele").css('top', 10);
+        }
+        if (main_filter_total_woreda > 0) {
+            total_woreda.appendChild(document.createTextNode(main_filter_total_woreda));
+            if (main_filter_total_kebele > 0) {
+                $("#total_woreda").position({
+                    my:        "right",
+                    at:        "left",
+                    of:        first_kebele_badge,
+                    collision: "fit"
+                });
+                $("#total_woreda").css('top', 10);
+            } else {
+                $("#total_woreda").position({
+                    my:        "center",
+                    at:        "center",
+                    of:        first_woreda_badge,
+                    collision: "fit"
+                });
+                $("#total_woreda").css('top', 10);
+            }
         }
         if (main_filter_total_unknown > 0) {
             total_unknown.appendChild(document.createTextNode(main_filter_total_unknown));
-            if (main_filter_total_known > 0) {
+            if (main_filter_total_woreda > 0) {
                 $("#total_unknown").position({
                     my:        "right",
                     at:        "left",
-                    of:        first_known_badge,
+                    of:        first_woreda_badge,
+                    collision: "fit"
+                });
+            } else if (main_filter_total_kebele > 0) {
+                $("#total_unknown").position({
+                    my:        "right",
+                    at:        "left",
+                    of:        first_kebele_badge,
                     collision: "fit"
                 });
             } else {
@@ -95,11 +130,14 @@
     }
 
     function resetMainFilterTotals() {
-        $('#total_known').empty();
+        $('#total_kebele').empty();
+        $('#total_woreda').empty();
         $('#total_unknown').empty();
-        main_filter_total_known = 0;
+        main_filter_total_kebele = 0;
+        main_filter_total_woreda = 0;
         main_filter_total_unknown = 0;
-        first_known_badge = undefined;
+        first_kebele_badge = undefined;
+        first_woreda_badge = undefined;
         first_unknown_badge = undefined;
     }
 

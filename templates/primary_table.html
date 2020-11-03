@@ -15,8 +15,9 @@
         <tr>
             <th data-sortable="true" data-field="COUNT">Count</th>
             <th data-sortable="true" data-field="DIS_DESC">Disease</th>
-            <th data-sortable="true" data-field="PAT_CITY">Town</th>
+            <th data-sortable="true" data-field="PAT_CITY">Woreda/Town</th>
             <th data-sortable="true" data-field="PAT_ADDR">Kebele</th>
+            <th data-sortable="true" data-field="LOC_W_CODE" data-cell-style="cellStyleWCODE">W_CODE</th>
             <th data-sortable="true" data-field="LOC_RK_CODE" data-cell-style="cellStyleRKCODE">RK_CODE</th>
             <!-- <th data-sortable="true" data-field="LOC_LAT">Latitude</th>
             <th data-sortable="true" data-field="LOC_LONG">Longitude</th> -->
@@ -52,6 +53,23 @@
         });
     }
 
+    function cellStyleWCODE(value, row, index) {
+        
+        if (row['LOC_RK_CODE'] > 0) {
+            return {
+                classes:'bg-warning'
+            }  
+        } else if (row['LOC_W_CODE'] > 0) {
+            return {
+                css: { 'background-color': '#238b45'}
+            }
+        } else {
+            return {
+                classes: 'bg-secondary'
+            }
+        }
+    }
+
     function cellStyleRKCODE(value, row, index) {
         
         if (row['LOC_RK_CODE'] > 0) {
@@ -60,7 +78,7 @@
             }  
         } else {
             return {
-                classes: 'bg-secondary'
+                classes: 'bg-white'
             }
         }
     }

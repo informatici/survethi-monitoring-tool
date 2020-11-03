@@ -81,7 +81,8 @@
     var locations = [];
 
     var geoshapes = new L.geoJson();
-    var hitGeoshapes = new L.geoJson();
+    var woredaGeoshapes = new L.geoJson();
+    var kebeleGeoshapes = new L.geoJson();
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
     var legenda = L.control({position: 'bottomright'});
@@ -244,7 +245,8 @@
                 //console.log(feature);
 				if (feature.properties) {
 					// we add our property for counting
-                    feature.properties.hitCount=0;
+                    feature.properties.kebeleCount=0;
+                    feature.properties.woredaCount=0;
 				}
 			}
         });
@@ -272,7 +274,7 @@
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
                 div.innerHTML +=
-                    '<i style="background:' + getColor(grades[i] + 1) + ';' + 
+                    '<i style="background:' + getColorKebele(grades[i] + 1) + ';' + 
                     'outline-style:solid; ' + 
                     'outline-width:0px; opacity:' + getOpacity(grades[i]+1) + ';">' + 
                     grades[i] + (grades[i + 1] ? '&nbsp;&ndash;&nbsp' + grades[i + 1] + 
@@ -431,7 +433,8 @@
         layerGroup.clearLayers();
         mymap.removeControl(mapController);
         mymap.removeControl(legenda);
-        hitGeoshapes.clearLayers();
+        kebeleGeoshapes.clearLayers();
+        woredaGeoshapes.clearLayers();
     }
 
     /**
@@ -449,43 +452,64 @@
 
         //var heatLayer = L.heatLayer(markerArray, {radius: 50})
         //mapController = L.control.layers(null, {"Heat Map": heatLayer});
-        mapController = L.control.layers(null, {"Health Posts": markersGroup1});
 
         layerGroup.addLayer(markersGroup1);
         //layerGroup.addLayer(heatLayer);
         layerGroup.addTo(mymap);
-        mymap.addControl(mapController);
-        addShapeFile();
 
-        if (Object.keys(markersGroup1.getBounds()).length === 0)
-            console.log('Main Map: nothing to display');
-        else {
-            mymap.invalidateSize();
-            mymap.flyToBounds(hitGeoshapes.getBounds());//.pad(10));
-        }
+        
+
+        var promise = new Promise(function(resolve, reject){
+            //console.log('promise...');
+            addShapeFile();
+            resolve();
+        });
+        promise.then(function() {
+            if (Object.keys(markersGroup1.getBounds()).length === 0)
+                console.log('Main Map: nothing to display');
+            else {
+                mymap.invalidateSize();
+                mymap.flyToBounds(kebeleGeoshapes.getBounds());//.pad(10));
+                var overlayMaps = {
+                    "Health Posts": markersGroup1,
+                    "Woreda": woredaGeoshapes,
+                    "Kebele": kebeleGeoshapes,
+                };
+                mapController = L.control.layers(null, overlayMaps, {'autoZIndex':true});
+                mymap.addControl(mapController);
+            }
+        }).catch(function() {
+            //console.log('promise: some error occurred');
+        })
 
         function show_marker(item, index) {
 
-            if (item.LOC_RK_CODE > 0) {
-            
+            if (item.LOC_W_CODE > 0) {
+                
                 Object.values(shpfile._layers).forEach(function(thisFeature) {
                         
                     feature = thisFeature.feature;
 
-                    // counting by Woreda
+                    // counting by Woreda and Kebele
                     var rk_code = feature.properties.RK_CODE;
+                    var w_code = feature.properties.W_CODE;
 
                     if (item.LOC_RK_CODE == rk_code) {
-                        feature.properties.hitCount+=1;
+                        feature.properties.kebeleCount+=item.COUNT;
+                        //console.log(feature);
+                    } else if (item.LOC_W_CODE == w_code) {
+                        feature.properties.woredaCount+=item.COUNT;
                         //console.log(feature);
                     }
                 });
-            }
+            } 
 
-            if (item.LOC_CITY && item.LOC_ADDRESS) {
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
+            if (item.LOC_W_CODE && item.LOC_RK_CODE) {
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': item.COUNT, 'woreda': 0, 'unknown': 0});
+            } else if (item.LOC_W_CODE) {
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': item.COUNT, 'unknown': 0});
             } else {
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
+                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 0, 'unknown': item.COUNT});
             }
 
             if (item.LOC_LAT) {
@@ -522,9 +546,8 @@
 
     }
 
-    var grades = [0, 1, 5, 10, 15, 20, 25, 30];
     function buildBindPopupFirstMap(feature) {
-        return "<b>" + feature.properties.RK_NAME + ": " + feature.properties.hitCount + "</b><br />" +
+        return "<b>" + feature.properties.RK_NAME + "</b><br />" +
                     "<br />" +
                     "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
                     "Woreda: " + feature.properties.W_NAME + "<br />" +
@@ -532,8 +555,27 @@
                     "Zone: " + feature.properties.Z_NAME + "<br />";
     }
 
+    function buildBindPopupFirstMapKebele(feature) {
+        return "<b>" + feature.properties.RK_NAME + ": " + feature.properties.kebeleCount + "</b><br />" +
+                    "<br />" +
+                    "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
+                    "Woreda: " + feature.properties.W_NAME + "<br />" +
+                    "Region: " + feature.properties.R_NAME + "<br />" +
+                    "Zone: " + feature.properties.Z_NAME + "<br />";
+    }
+
+    function buildBindPopupFirstMapWoreda(feature) {
+        return "<b>" + feature.properties.W_NAME + ": " + feature.properties.woredaCount + "</b><br />" +
+                    "<br />" +
+                    "Woreda Code: " + feature.properties.W_CODE + "<br />" +
+                    "Kebele: " + feature.properties.RK_NAME + "<br />" +
+                    "Region: " + feature.properties.R_NAME + "<br />" +
+                    "Zone: " + feature.properties.Z_NAME + "<br />";
+    }
+
     function addShapeFile() {
-        var hitShapes = {"type":"FeatureCollection","features":[]}
+        var kebeleShapes = {"type":"FeatureCollection","features":[]}
+        var woredaShapes = {"type":"FeatureCollection","features":[]}
         var shapes = {"type":"FeatureCollection","features":[]}
 
         Object.values(shpfile._layers).forEach(function(thisFeature) {
@@ -541,26 +583,14 @@
             feature = thisFeature.feature;
             shapes.features.push(feature);
 
-            if (feature.properties.hitCount > 0) {
+            if (feature.properties.kebeleCount > 0) {
                 //console.log(feature);
-                hitShapes.features.push(feature);
+                kebeleShapes.features.push(feature);
             } 
+            if (feature.properties.woredaCount > 0) {
+                woredaShapes.features.push(feature);
+            }
         });
-        //console.log(hitShapes);
-
-        hitGeoshapes = L.geoJson(hitShapes, {
-            style: style,
-            onEachFeature: function(feature, layer) {
-                //console.log(feature);
-				if (feature.properties) {
-                    layer.bindPopup(
-                    buildBindPopupFirstMap(feature), {
-						maxHeight: 200
-                    });
-				}
-			}
-        }).addTo(mymap);
-        //console.log(hitGeoshapes);
         geoshapes = L.geoJson(shapes, {
             style: emptyStyle,
             onEachFeature: function(feature, layer) {
@@ -573,13 +603,40 @@
 				}
 			}
         }).addTo(mymap);
+        //console.log(geoshapes);
+        woredaGeoshapes = L.geoJson(woredaShapes, {
+            style: styleWoreda,
+            onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    layer.bindPopup(
+                        buildBindPopupFirstMapWoreda(feature), {
+						maxHeight: 200
+                    });
+				}
+			}
+        }).addTo(mymap);
+        kebeleGeoshapes = L.geoJson(kebeleShapes, {
+            style: styleKebele,
+            onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    layer.bindPopup(
+                        buildBindPopupFirstMapKebele(feature), {
+						maxHeight: 200
+                    });
+				}
+			}
+        }).addTo(mymap);
+        //console.log(kebeleGeoshapes);
     }
 
+    var grades = [0, 1, 5, 10, 15, 20, 25, 30];
     /*
-     * (function) color sequence for hitGeoshapes 
+     * (function) color sequence for kebeleGeoshapes (yellow grades)
      * https://colorbrewer2.org 
      */
-    function getColor(d) {
+    function getColorKebele(d) {
         return d > grades[7] ? '#800026' :
             d > grades[6]  ? '#BD0026' :
             d > grades[5]  ? '#E31A1C' :
@@ -592,23 +649,53 @@
     }
 
     /*
-     * (function) color opacity for hitGeoshapes 
+     * (function) color sequence for woredaGeoshapes (green grades)
+     * https://colorbrewer2.org 
+     */
+     function getColorWoreda(d) {
+        return d > grades[7] ? '#005824' :
+            d > grades[6]  ? '#238b45' :
+            d > grades[5]  ? '#41ae76' :
+            d > grades[4]  ? '#66c2a4' :
+            d > grades[3]   ? '#99d8c9' :
+            d > grades[2]   ? '#ccece6' :
+            d > grades[1]   ? '#e5f5f9' :
+            d == grades[1]   ? '#f7fcfd' :
+                        null;
+    }
+
+    /*
+     * (function) color opacity for Geoshapes 
      */
      function getOpacity(d) {
         return d > 0 ? 0.5 : 0.1;
     }
 
     /*
-     * (function) style sequence for hitGeoshapes
+     * (function) style sequence for kebeleGeoshapes
      */
-    function style(feature) {
+    function styleKebele(feature) {
         return {
-            fillColor: getColor(feature.properties.hitCount),
+            fillColor: getColorKebele(feature.properties.kebeleCount),
             weight: 0.5,
             opacity: 1,
             color: 'white',
             //dashArray: '3',
-            fillOpacity: getOpacity(feature.properties.hitCount),
+            fillOpacity: getOpacity(feature.properties.kebeleCount),
+        };
+    }
+
+    /*
+     * (function) style sequence for kebeleGeoshapes
+     */
+     function styleWoreda(feature) {
+        return {
+            fillColor: getColorWoreda(feature.properties.woredaCount),
+            weight: 0.5,
+            opacity: 1,
+            color: 'white',
+            //dashArray: '3',
+            fillOpacity: getOpacity(feature.properties.woredaCount),
         };
     }
 
@@ -617,14 +704,22 @@
      */
      function emptyStyle(feature) {
         return {
-            fillColor: getColor(0),
+            fillColor: getColor(),
             weight: 0.5,
             opacity: 1,
             color: 'white',
             //dashArray: '3',
-            fillOpacity: getOpacity(0),
+            fillOpacity: 0,
         };
     }
+
+     /*
+     * (function) color sequence for empty geoshapes (kebele grades)
+     * https://colorbrewer2.org 
+     */
+     function getColor() {
+        return getColorKebele(0);
+     }
 
     // Starts from here (main)
     $(document).ready(function (response) {
