@@ -379,7 +379,9 @@
         });
         //console.log(value_y_c);
         //console.log(topTen_c);
-
+        while(numberOfCasesCumulative.series.length > 1) { //remove all except the first
+            numberOfCasesCumulative.series[1].remove(true);
+        }
         numberOfCasesCumulative.update({
             xAxis: {
                 categories: label_x,
