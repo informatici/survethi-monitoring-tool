@@ -90,7 +90,7 @@ def query_group(dateFrom=None, dateTo=None):
                     ) INTERNAL \
                     GROUP BY OPD_DIS_ID_A, PAT_CITY, LOC_CITY, PAT_ADDR \
                     ORDER BY COUNT DESC" %(escape(dateFrom), escape(dateTo))
-    print(default_query)                
+    #print(default_query)                
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
