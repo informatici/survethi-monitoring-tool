@@ -7,7 +7,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40516
   }, 
   {
     "LOC_ADDRESS": "Adama", 
@@ -17,7 +19,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Adis Ababa", 
@@ -27,7 +31,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 140101
   }, 
   {
     "LOC_ADDRESS": "Boter", 
@@ -37,7 +43,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "D/Mango", 
@@ -47,7 +55,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Kebele 01", 
@@ -57,7 +67,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Kebele 02", 
@@ -67,7 +79,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Kebele 03", 
@@ -77,7 +91,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Kebele 04", 
@@ -87,7 +103,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Kelecha", 
@@ -97,7 +115,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Sebeta", 
@@ -107,7 +127,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Shebha", 
@@ -117,7 +139,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Yesira", 
@@ -127,7 +151,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Abado Holei", 
@@ -137,7 +163,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301015, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Abuye Jebilal", 
@@ -147,7 +175,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301035, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Ajamo Kura", 
@@ -157,7 +187,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301012, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Ajo Baha", 
@@ -167,7 +199,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301004, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Ajo Jidu", 
@@ -177,7 +211,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301003, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Ajo Lita", 
@@ -187,7 +223,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301002, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Ali Bebo", 
@@ -197,7 +235,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Arbaseden Kura", 
@@ -207,7 +247,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301021, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Aroji Ejersa", 
@@ -217,7 +259,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301014, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Ashutei Gambela", 
@@ -227,7 +271,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301023, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Berei Tirtira", 
@@ -237,7 +283,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301011, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Bereida Chilalo", 
@@ -247,7 +295,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301028, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Bero Muri Yaa", 
@@ -257,7 +307,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301029, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Biro Selan", 
@@ -267,7 +319,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Cheha Kesei", 
@@ -277,7 +331,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301025, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Dire Aroji", 
@@ -287,7 +343,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301016, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Dunkeka", 
@@ -297,7 +355,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Gemborei Aliye", 
@@ -307,7 +367,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301026, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Gindo", 
@@ -317,7 +379,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4130101, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Guilt Bola", 
@@ -327,7 +391,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301009, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Gutei Itiya", 
@@ -337,7 +403,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301005, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Hudad 01", 
@@ -347,7 +415,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Hudad 02", 
@@ -357,7 +427,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301031, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Hudad 03", 
@@ -367,7 +439,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301031, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "I/Kersa", 
@@ -377,7 +451,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Jefit Itiya", 
@@ -387,7 +463,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Jibat Kuchulo", 
@@ -397,7 +475,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301013, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "K/Korit", 
@@ -407,7 +487,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "K/Robeyi", 
@@ -417,7 +499,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Kaba Leku", 
@@ -427,7 +511,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301010, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Kechema", 
@@ -437,7 +523,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301007, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Kechemei Jirein", 
@@ -447,7 +535,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301007, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Kenessa", 
@@ -457,7 +547,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Kerssa Kilei", 
@@ -467,7 +559,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301008, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Kono Kulit", 
@@ -477,7 +571,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301027, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Korra", 
@@ -487,7 +583,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Kota", 
@@ -497,7 +595,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Kura Bole", 
@@ -507,7 +607,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301006, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Lefito Tsigei", 
@@ -517,7 +619,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301020, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Meri Sekela", 
@@ -527,7 +631,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301022, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Moko Ujuba Kota", 
@@ -537,7 +643,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301024, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Mugno Jila", 
@@ -547,7 +655,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301001, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "S/Abuke Gala", 
@@ -557,7 +667,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "S/Mere", 
@@ -567,7 +679,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Shonkei Hudad 09", 
@@ -577,7 +691,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Sobo", 
@@ -587,7 +703,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "T/Lemen", 
@@ -597,7 +715,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Tiro", 
@@ -607,7 +727,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Tiro Ilala", 
@@ -617,7 +739,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301032, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Tsega Lafto", 
@@ -627,7 +751,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301020, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Tumi", 
@@ -637,7 +763,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301019, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Tumi Bino Sombo", 
@@ -647,7 +775,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301019, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Wechileli Dobi", 
@@ -657,7 +787,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41301034, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Wele Kelo", 
@@ -667,7 +799,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41301
   }, 
   {
     "LOC_ADDRESS": "Ambo", 
@@ -677,7 +811,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40503
   }, 
   {
     "LOC_ADDRESS": "Asendabo", 
@@ -687,7 +823,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "A.Bune", 
@@ -697,7 +835,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309002, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Asgori", 
@@ -707,7 +847,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Awash Bune", 
@@ -717,7 +859,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309002, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "B/Gefere", 
@@ -727,7 +871,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309017, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Batu", 
@@ -737,7 +883,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309012, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Batu Chirecha", 
@@ -747,7 +895,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309012, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Bebeli", 
@@ -757,7 +907,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309016, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Bebeli Debegna", 
@@ -767,7 +919,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309016, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Becho Town", 
@@ -777,7 +931,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Bessa", 
@@ -787,7 +943,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309006, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Boji Geferei", 
@@ -797,7 +955,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309017, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Deka Guda", 
@@ -807,7 +967,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309009, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "G/Badada", 
@@ -817,7 +979,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Gna gololei", 
@@ -827,7 +991,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Insilalei Keta", 
@@ -837,7 +1003,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309013, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Jeto", 
@@ -847,7 +1015,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309003, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Kara Sedeik", 
@@ -857,7 +1027,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309010, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Kobo", 
@@ -867,7 +1039,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Lencha Keshemei", 
@@ -877,7 +1051,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309001, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Mendei Tufissa", 
@@ -887,7 +1063,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309018, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "S/Chirecha", 
@@ -897,7 +1075,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Shankur", 
@@ -907,7 +1087,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309019, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Sodo Liben", 
@@ -917,7 +1099,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309014, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Soyoma", 
@@ -927,7 +1111,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309011, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Tullu Bollo", 
@@ -937,7 +1123,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4130901, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Tulu Rada", 
@@ -947,7 +1135,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Urago Tedei", 
@@ -957,7 +1147,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309015, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Woserbi Abeti", 
@@ -967,7 +1159,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41309004, 
+    "LOC_W_CODE": 41309
   }, 
   {
     "LOC_ADDRESS": "Chandi", 
@@ -977,7 +1171,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Cheha", 
@@ -987,7 +1183,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70110
   }, 
   {
     "LOC_ADDRESS": "Dano", 
@@ -997,7 +1195,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40507
   }, 
   {
     "LOC_ADDRESS": "Belchi Kenchera", 
@@ -1007,7 +1207,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304024, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Beshi Kiltu", 
@@ -1017,7 +1219,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304023, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Burka Gode", 
@@ -1027,7 +1231,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Busa", 
@@ -1037,7 +1243,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Bussa 01", 
@@ -1047,7 +1255,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4130401, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "D/Sedden", 
@@ -1057,7 +1267,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304021, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Dawo Kera", 
@@ -1067,7 +1279,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304022, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Dawo Seden", 
@@ -1077,7 +1291,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304021, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Dema   Jeluma", 
@@ -1087,7 +1303,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304008, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Dere Ilanso", 
@@ -1097,7 +1315,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304016, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Dima Jeliwan", 
@@ -1107,7 +1327,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304008, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Dimtu Aba", 
@@ -1117,7 +1339,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Gombissa Kusaye", 
@@ -1127,7 +1351,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304017, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Gora Roge", 
@@ -1137,7 +1363,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304011, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Jabodedi", 
@@ -1147,7 +1375,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Jidukaa", 
@@ -1157,7 +1387,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Kechema", 
@@ -1167,7 +1399,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Kelecho Gerbi", 
@@ -1177,7 +1411,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304013, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Kenchera Alito", 
@@ -1187,7 +1423,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304010, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Kerssa Adeyi Galutei", 
@@ -1197,7 +1435,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304006, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Kerssa Bombi", 
@@ -1207,7 +1447,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304005, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Kishaw", 
@@ -1217,7 +1459,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Mekeit Suntarei", 
@@ -1227,7 +1471,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304007, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Nano Gebreil", 
@@ -1237,7 +1483,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304019, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Reche", 
@@ -1247,7 +1495,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304015, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Rechei Kusho", 
@@ -1257,7 +1507,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304015, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "S/Haribu", 
@@ -1267,7 +1519,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304014, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Seiderei Harbu", 
@@ -1277,7 +1531,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304014, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Tajib Gora Sakeyo", 
@@ -1287,7 +1543,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304012, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Tute", 
@@ -1297,7 +1555,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304020, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Tutei Kunchei", 
@@ -1307,7 +1567,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304020, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Ulma Busa", 
@@ -1317,7 +1579,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41304018, 
+    "LOC_W_CODE": 41304
   }, 
   {
     "LOC_ADDRESS": "Ginchi", 
@@ -1327,7 +1591,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4051001, 
+    "LOC_W_CODE": 40510
   }, 
   {
     "LOC_ADDRESS": "Deneba", 
@@ -1337,7 +1603,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Alengo tulu", 
@@ -1347,7 +1615,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Amdo Kuncho", 
@@ -1357,7 +1627,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Asgori", 
@@ -1367,7 +1639,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Bantu Alito", 
@@ -1377,7 +1651,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Bilbil", 
@@ -1387,7 +1663,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Bile", 
@@ -1397,7 +1675,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Bili", 
@@ -1407,7 +1687,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "D/Logo", 
@@ -1417,7 +1699,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Dugda Lugo", 
@@ -1427,7 +1711,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Golole Kiltu", 
@@ -1437,7 +1723,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Goro Kurkurfa", 
@@ -1447,7 +1735,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Jedu", 
@@ -1457,7 +1747,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Jigdu Mida", 
@@ -1467,7 +1759,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "K/Kita", 
@@ -1477,7 +1771,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Keta", 
@@ -1487,7 +1783,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Keta Andode", 
@@ -1497,7 +1795,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Keta Asgori", 
@@ -1507,7 +1807,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Kule Gefersa", 
@@ -1517,7 +1819,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "M/Satayi", 
@@ -1527,7 +1831,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Mulo satayi", 
@@ -1537,7 +1843,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Sembo Goro", 
@@ -1547,7 +1855,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Simbo Goro", 
@@ -1557,7 +1867,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Talgo Buti", 
@@ -1567,7 +1879,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Tulu Mangura", 
@@ -1577,7 +1891,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "W/Kelena", 
@@ -1587,7 +1903,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Warersso Kolina", 
@@ -1597,7 +1915,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Wasarbi Basi", 
@@ -1607,7 +1927,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Woserbi Nado", 
@@ -1617,7 +1939,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Enmur", 
@@ -1627,7 +1951,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70111
   }, 
   {
     "LOC_ADDRESS": "Gibei", 
@@ -1637,7 +1963,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Ginde Beret", 
@@ -1647,7 +1975,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 40501019, 
+    "LOC_W_CODE": 40501
   }, 
   {
     "LOC_ADDRESS": "Abado Bukassa", 
@@ -1657,7 +1987,9 @@
     "LOC_GEO_POS_NAME": "ABADO BUKASSA HP", 
     "LOC_LAT": 8.38958, 
     "LOC_LONG": 37.776, 
-    "LOC_REFERENCE_OTHER_NAME": "WAYU HC"
+    "LOC_REFERENCE_OTHER_NAME": "WAYU HC", 
+    "LOC_RK_CODE": 41312018, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Abadu", 
@@ -1667,17 +1999,21 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Adami Wadeissa", 
     "LOC_CITY": "Goro", 
-    "LOC_DIST_ID_A": 25.2, 
-    "LOC_DIST_ID_B": 3.1, 
-    "LOC_GEO_POS_NAME": "ADAMI WEDEISSA HP", 
-    "LOC_LAT": 8.38037, 
-    "LOC_LONG": 37.8778, 
-    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41312014, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Addis Alem", 
@@ -1687,7 +2023,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Bekisei", 
@@ -1697,7 +2035,9 @@
     "LOC_GEO_POS_NAME": "BEKISSEI HP", 
     "LOC_LAT": 8.40163, 
     "LOC_LONG": 37.9653, 
-    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC", 
+    "LOC_RK_CODE": 41312005, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Burka Bido", 
@@ -1707,7 +2047,9 @@
     "LOC_GEO_POS_NAME": "BURKA BIDO HC e HP", 
     "LOC_LAT": 8.45321, 
     "LOC_LONG": 37.8258, 
-    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO", 
+    "LOC_RK_CODE": 41312010, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Chancho", 
@@ -1717,7 +2059,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41312006, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Chancho Soyoma", 
@@ -1727,7 +2071,9 @@
     "LOC_GEO_POS_NAME": "CHANCHO SOYOMA HP", 
     "LOC_LAT": 8.41309, 
     "LOC_LONG": 37.9038, 
-    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC", 
+    "LOC_RK_CODE": 41312006, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Charandis", 
@@ -1737,7 +2083,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Chirecha", 
@@ -1747,7 +2095,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41312002, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Chirecha tedira", 
@@ -1757,7 +2107,9 @@
     "LOC_GEO_POS_NAME": "CHIRECHA TEDIRA HP", 
     "LOC_LAT": 8.47112, 
     "LOC_LONG": 37.9181, 
-    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC", 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Dembel Dildilla", 
@@ -1767,7 +2119,9 @@
     "LOC_GEO_POS_NAME": "DEMBEL DILDILLA HP", 
     "LOC_LAT": 8.40966, 
     "LOC_LONG": 37.8643, 
-    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC", 
+    "LOC_RK_CODE": 41312013, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Dembi Kono", 
@@ -1777,17 +2131,9 @@
     "LOC_GEO_POS_NAME": "DEMBI KONO HP", 
     "LOC_LAT": 8.44838, 
     "LOC_LONG": 37.8978, 
-    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
-  }, 
-  {
-    "LOC_ADDRESS": "Dibidiba Abado", 
-    "LOC_CITY": "Goro", 
-    "LOC_DIST_ID_A": 18.7, 
-    "LOC_DIST_ID_B": 11.3, 
-    "LOC_GEO_POS_NAME": "DIBIDIBA ABADO HP", 
-    "LOC_LAT": 8.51026, 
-    "LOC_LONG": 37.8352, 
-    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC", 
+    "LOC_RK_CODE": 41312007, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Didibe", 
@@ -1797,7 +2143,21 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
+  }, 
+  {
+    "LOC_ADDRESS": "Didibe Abado", 
+    "LOC_CITY": "Goro", 
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41312001, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Dogema Dembi", 
@@ -1807,7 +2167,9 @@
     "LOC_GEO_POS_NAME": "DOGMA DEMBI HP", 
     "LOC_LAT": 8.46868, 
     "LOC_LONG": 37.8611, 
-    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO", 
+    "LOC_RK_CODE": 41312008, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Finchere", 
@@ -1817,17 +2179,21 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41312016, 
+    "LOC_W_CODE": 41312
   }, 
   {
-    "LOC_ADDRESS": "Finchir Amba", 
+    "LOC_ADDRESS": "Finchir Ambabeissa", 
     "LOC_CITY": "Goro", 
-    "LOC_DIST_ID_A": 31.7, 
-    "LOC_DIST_ID_B": 3.4, 
-    "LOC_GEO_POS_NAME": "FINCHER AMBA HP", 
-    "LOC_LAT": 8.35382, 
-    "LOC_LONG": 37.7985, 
-    "LOC_REFERENCE_OTHER_NAME": "WAYU HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41312016, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Fugo Oda Mela", 
@@ -1837,7 +2203,9 @@
     "LOC_GEO_POS_NAME": "FUGO ODA MELA HP", 
     "LOC_LAT": 8.42647, 
     "LOC_LONG": 37.7951, 
-    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO", 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Galiye Rogda", 
@@ -1847,7 +2215,9 @@
     "LOC_GEO_POS_NAME": "GALYIE ROGDA HP", 
     "LOC_LAT": 8.37831, 
     "LOC_LONG": 37.697, 
-    "LOC_REFERENCE_OTHER_NAME": "WAYU HC"
+    "LOC_REFERENCE_OTHER_NAME": "WAYU HC", 
+    "LOC_RK_CODE": 41312019, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Gambeilla Goro", 
@@ -1857,7 +2227,9 @@
     "LOC_GEO_POS_NAME": "GAMBELA GORO HP", 
     "LOC_LAT": 8.38482, 
     "LOC_LONG": 37.8576, 
-    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC", 
+    "LOC_RK_CODE": 41312015, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Goro Town", 
@@ -1867,7 +2239,9 @@
     "LOC_GEO_POS_NAME": "GORO TOWN HP", 
     "LOC_LAT": 8.39555, 
     "LOC_LONG": 37.8662, 
-    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC", 
+    "LOC_RK_CODE": 4131201, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Gosana Chirecha", 
@@ -1877,7 +2251,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Gurura town", 
@@ -1887,7 +2263,9 @@
     "LOC_GEO_POS_NAME": "GURURA TOWN HP", 
     "LOC_LAT": 8.4409, 
     "LOC_LONG": 37.9233, 
-    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC", 
+    "LOC_RK_CODE": 4131202, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Keinteiro Bido", 
@@ -1897,7 +2275,9 @@
     "LOC_GEO_POS_NAME": "KEINTEIRO BIDO HP", 
     "LOC_LAT": 8.44986, 
     "LOC_LONG": 37.8457, 
-    "LOC_REFERENCE_OTHER_NAME": "GORO HC"
+    "LOC_REFERENCE_OTHER_NAME": "GORO HC", 
+    "LOC_RK_CODE": 41312010, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Leimen Abado", 
@@ -1907,17 +2287,21 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
-    "LOC_ADDRESS": "Leman Abu", 
+    "LOC_ADDRESS": "Leimen Abu", 
     "LOC_CITY": "Goro", 
-    "LOC_DIST_ID_A": 15.9, 
-    "LOC_DIST_ID_B": 4.1, 
-    "LOC_GEO_POS_NAME": "LEMAN ABU HP", 
-    "LOC_LAT": 8.42979, 
-    "LOC_LONG": 37.9547, 
-    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41312003, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Serano", 
@@ -1927,7 +2311,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Sinano", 
@@ -1937,27 +2323,33 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
-    "LOC_ADDRESS": "Sinano Ameya", 
+    "LOC_ADDRESS": "Sinano Amegna Gutei", 
     "LOC_CITY": "Goro", 
-    "LOC_DIST_ID_A": 32.0, 
-    "LOC_DIST_ID_B": 2.3, 
-    "LOC_GEO_POS_NAME": "SINANO AMEYA HP", 
-    "LOC_LAT": 8.46206, 
-    "LOC_LONG": 37.8101, 
-    "LOC_REFERENCE_OTHER_NAME": "BURKA BIDO"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41312011, 
+    "LOC_W_CODE": 41312
   }, 
   {
-    "LOC_ADDRESS": "Sololia Kote Abote", 
+    "LOC_ADDRESS": "Sololia Korei Abote", 
     "LOC_CITY": "Goro", 
-    "LOC_DIST_ID_A": 18.0, 
-    "LOC_DIST_ID_B": 7.1, 
-    "LOC_GEO_POS_NAME": "SOLOLIA KOTE ABOTEI HP", 
-    "LOC_LAT": 8.42014, 
-    "LOC_LONG": 37.9753, 
-    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Wayu", 
@@ -1967,7 +2359,9 @@
     "LOC_GEO_POS_NAME": "WAYU HP", 
     "LOC_LAT": 8.37304, 
     "LOC_LONG": 37.7661, 
-    "LOC_REFERENCE_OTHER_NAME": "WAYU HC"
+    "LOC_REFERENCE_OTHER_NAME": "WAYU HC", 
+    "LOC_RK_CODE": 41312017, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Widibe", 
@@ -1977,7 +2371,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41312
   }, 
   {
     "LOC_ADDRESS": "Gunchirei", 
@@ -1987,7 +2383,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Holeta", 
@@ -1997,7 +2395,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40520
   }, 
   {
     "LOC_ADDRESS": "Jeldu", 
@@ -2007,7 +2407,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40502
   }, 
   {
     "LOC_ADDRESS": "Chora Botor", 
@@ -2017,7 +2419,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 40415022, 
+    "LOC_W_CODE": 40415
   }, 
   {
     "LOC_ADDRESS": "K/Sogola", 
@@ -2027,7 +2431,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40415
   }, 
   {
     "LOC_ADDRESS": "Sokoru", 
@@ -2037,7 +2443,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40415
   }, 
   {
     "LOC_ADDRESS": "Kabena", 
@@ -2047,7 +2455,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70101
   }, 
   {
     "LOC_ADDRESS": "Adadi", 
@@ -2057,7 +2467,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Alga Delat", 
@@ -2067,7 +2479,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307024, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Arifeta", 
@@ -2077,7 +2491,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307014, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Awash Felte", 
@@ -2087,7 +2503,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307004, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Baye Giche", 
@@ -2097,7 +2515,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307013, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Chancho Robe", 
@@ -2107,7 +2527,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307010, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Cheleb Titu", 
@@ -2117,7 +2539,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307027, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Chobo Misdo", 
@@ -2127,7 +2551,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307025, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Damota daskekelo", 
@@ -2137,7 +2563,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307023, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Denbi Roge", 
@@ -2147,7 +2575,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307005, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Dewel Deira", 
@@ -2157,7 +2587,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307031, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Godeiti Wanber", 
@@ -2167,7 +2599,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307006, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Goro Gebreil", 
@@ -2177,7 +2611,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307001, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Gutu Urji", 
@@ -2187,7 +2623,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307018, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Harbu Wanbera", 
@@ -2197,7 +2635,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307003, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Hawa Dangago", 
@@ -2207,7 +2647,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307028, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Hawa Wayu", 
@@ -2217,7 +2659,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307029, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Ilala Seden", 
@@ -2227,7 +2671,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307022, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Ilala Wako", 
@@ -2237,7 +2683,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307030, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Kaso Mamei", 
@@ -2247,7 +2695,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307017, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Kersa Warko", 
@@ -2257,7 +2707,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307012, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Korei Sabi", 
@@ -2267,7 +2719,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307002, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Kusaye Bode", 
@@ -2277,7 +2731,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307011, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Kusaye Tiro", 
@@ -2287,7 +2743,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307015, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Lemen 01", 
@@ -2297,7 +2755,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4130701, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Mazoria Golba", 
@@ -2307,7 +2767,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307016, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Muti Alibo", 
@@ -2317,7 +2779,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307007, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Muti Dayui", 
@@ -2327,7 +2791,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307008, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Taa Gola", 
@@ -2337,7 +2803,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307019, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Tuka Godeti", 
@@ -2347,7 +2815,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307026, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Tumei Wato", 
@@ -2357,7 +2827,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307021, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Worabo Haro", 
@@ -2367,7 +2839,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41307020, 
+    "LOC_W_CODE": 41307
   }, 
   {
     "LOC_ADDRESS": "Kokir Gedebano", 
@@ -2377,7 +2851,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70104
   }, 
   {
     "LOC_ADDRESS": "Limmu", 
@@ -2387,7 +2863,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Checha", 
@@ -2397,7 +2875,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "Condo", 
@@ -2407,7 +2887,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "Darge", 
@@ -2417,7 +2899,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "Degag", 
@@ -2427,7 +2911,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "Dibo", 
@@ -2437,7 +2923,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "Jirra Gemechu", 
@@ -2447,7 +2935,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 40508032, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "K/Denke", 
@@ -2457,7 +2947,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "M/Korke", 
@@ -2467,7 +2959,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "M/Silase", 
@@ -2477,7 +2971,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "Nono Town", 
@@ -2487,7 +2983,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "Silke Amba", 
@@ -2497,7 +2995,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40508
   }, 
   {
     "LOC_ADDRESS": "Other", 
@@ -2507,7 +3007,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Sebeta", 
@@ -2517,7 +3019,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "A/Boru", 
@@ -2527,7 +3031,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Abelite", 
@@ -2537,7 +3043,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Adadi Borale", 
@@ -2547,7 +3055,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310007, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Aderei Kotebei", 
@@ -2557,7 +3067,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310020, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Ajo", 
@@ -2567,7 +3079,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Alei Abeba", 
@@ -2577,7 +3091,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310009, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Alga Woserbi", 
@@ -2587,7 +3103,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310004, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Balekese", 
@@ -2597,7 +3115,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310006, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Chulule", 
@@ -2607,7 +3127,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "D/Gidano", 
@@ -2617,7 +3139,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Detu", 
@@ -2627,7 +3151,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Ebisa", 
@@ -2637,7 +3163,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Ello", 
@@ -2647,7 +3175,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Fissewo", 
@@ -2657,7 +3187,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310014, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "G/Dalota", 
@@ -2667,7 +3199,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "G/Kistama", 
@@ -2677,7 +3211,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Gedebano", 
@@ -2687,7 +3223,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Gerbo", 
@@ -2697,7 +3235,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Godei Dula", 
@@ -2707,7 +3247,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310012, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Harbu Chululei", 
@@ -2717,7 +3259,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4131001, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Ireinsso Alei Abeyi", 
@@ -2727,7 +3271,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310013, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Ireinsso chewa Daregot", 
@@ -2737,7 +3283,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310016, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Kesht", 
@@ -2747,7 +3295,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310018, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Kokir", 
@@ -2757,7 +3307,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "L/Gedano", 
@@ -2767,7 +3319,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Legey", 
@@ -2777,7 +3331,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "M/Seriti", 
@@ -2787,7 +3343,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Molohun", 
@@ -2797,7 +3355,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Mudena Iba", 
@@ -2807,7 +3367,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310002, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Mudena Ibayu", 
@@ -2817,7 +3379,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310002, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Ogu", 
@@ -2827,7 +3391,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "R/Kusho", 
@@ -2837,7 +3403,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Tenocha", 
@@ -2847,7 +3415,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Tolei Belekeisi", 
@@ -2857,7 +3427,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310006, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Tolei Dalota", 
@@ -2867,7 +3439,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41310005, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Urago", 
@@ -2877,7 +3451,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Wonchene", 
@@ -2887,7 +3463,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Yimer Amba", 
@@ -2897,7 +3475,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41310
   }, 
   {
     "LOC_ADDRESS": "Serbo", 
@@ -2907,7 +3487,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "A/Wayo", 
@@ -2917,57 +3499,69 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Badu Sonbo", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Becheki", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Burkuke Robelei", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Cheka", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Gala Mulicha", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Galiye", 
@@ -2977,87 +3571,105 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Gara Geteissa", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Gatira Sutel", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Gegno Golem", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Guyei", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Haro Oma", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Haya Woredi", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Kechema Dawei", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Langano", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Lemen", 
@@ -3067,67 +3679,81 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Mariami Sirei", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Meja Kimita", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Odo leka", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Seden Muchicheta", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Terei 01", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Terei Shino", 
-    "LOC_CITY": "Sodo Dachi", 
+    "LOC_CITY": "Sodo dachi", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41313
   }, 
   {
     "LOC_ADDRESS": "Sokoru", 
@@ -3137,7 +3763,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 40403
   }, 
   {
     "LOC_ADDRESS": "Teji", 
@@ -3147,7 +3775,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Tolay", 
@@ -3157,7 +3787,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "A/S/Gichila", 
@@ -3167,7 +3799,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308012, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "A/Solole", 
@@ -3177,7 +3811,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Alei", 
@@ -3187,7 +3823,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308002, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Alengo Tullu", 
@@ -3197,7 +3835,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41305008, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Alenu Shenkora", 
@@ -3207,7 +3847,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308013, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Bantu", 
@@ -3217,7 +3859,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4130801, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Bantu Boda", 
@@ -3227,7 +3871,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308018, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Batu", 
@@ -3237,7 +3883,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308018, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Bege", 
@@ -3247,7 +3895,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Besi Abukeiku", 
@@ -3257,7 +3907,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308004, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Besi Bilda", 
@@ -3267,7 +3919,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308005, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Bili Malima", 
@@ -3277,7 +3931,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308010, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Dawa Bisei", 
@@ -3287,7 +3943,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308001, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Dokat", 
@@ -3297,7 +3955,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308015, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Golole Temssa", 
@@ -3307,7 +3967,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308014, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Gonen Bubissa", 
@@ -3317,7 +3979,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308022, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Habibe", 
@@ -3327,7 +3991,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Jewaro", 
@@ -3337,7 +4003,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Jewaro Kora", 
@@ -3347,7 +4015,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308006, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "K/A/Leka", 
@@ -3357,7 +4027,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "K/Mariyam", 
@@ -3367,7 +4039,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308017, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Kura Luku", 
@@ -3377,7 +4051,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308011, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "L/Boter", 
@@ -3387,7 +4063,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "M/S Botonei", 
@@ -3397,7 +4075,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308020, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "M/Sole", 
@@ -3407,7 +4087,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "M/T/cherfa", 
@@ -3417,7 +4099,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308019, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Shancho", 
@@ -3427,7 +4111,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Sobo", 
@@ -3437,7 +4123,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "T/Yaya", 
@@ -3447,7 +4135,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308016, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Tulu teji", 
@@ -3457,7 +4147,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308023, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Tumei Wayu", 
@@ -3467,7 +4159,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308021, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Weserbi", 
@@ -3477,7 +4171,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308007, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Woserbi Migridi", 
@@ -3487,7 +4183,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41308007, 
+    "LOC_W_CODE": 41308
   }, 
   {
     "LOC_ADDRESS": "Abeshegei", 
@@ -3497,7 +4195,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Fite", 
@@ -3507,7 +4207,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Jejeba", 
@@ -3517,7 +4219,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Kulit", 
@@ -3527,7 +4231,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
     "LOC_ADDRESS": "Abado Jewe", 
@@ -3537,7 +4243,9 @@
     "LOC_GEO_POS_NAME": "ABADO JEWE HP", 
     "LOC_LAT": 8.75782, 
     "LOC_LONG": 37.9867, 
-    "LOC_REFERENCE_OTHER_NAME": "DESE JEBO HC E HP"
+    "LOC_REFERENCE_OTHER_NAME": "DESE JEBO HC E HP", 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Abado Lemen", 
@@ -3547,7 +4255,9 @@
     "LOC_GEO_POS_NAME": "ABADO LEMEN HP", 
     "LOC_LAT": 8.51512, 
     "LOC_LONG": 37.8939, 
-    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC", 
+    "LOC_RK_CODE": 41303027, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Adami Gotu", 
@@ -3557,7 +4267,9 @@
     "LOC_GEO_POS_NAME": "ADAMI GOTU HP", 
     "LOC_LAT": 8.61632, 
     "LOC_LONG": 38.031, 
-    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC", 
+    "LOC_RK_CODE": 41303007, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Ale Koya", 
@@ -3567,7 +4279,9 @@
     "LOC_GEO_POS_NAME": "ALE KOYA HP", 
     "LOC_LAT": 8.70084, 
     "LOC_LONG": 38.079, 
-    "LOC_REFERENCE_OTHER_NAME": "DESE JEBO HC E HP"
+    "LOC_REFERENCE_OTHER_NAME": "DESE JEBO HC E HP", 
+    "LOC_RK_CODE": 41303002, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Beda Keiro", 
@@ -3577,7 +4291,9 @@
     "LOC_GEO_POS_NAME": "BEDA KERO HP", 
     "LOC_LAT": 8.55615, 
     "LOC_LONG": 38.1092, 
-    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP"
+    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP", 
+    "LOC_RK_CODE": 41303017, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Bedeisa Koricha", 
@@ -3587,7 +4303,9 @@
     "LOC_GEO_POS_NAME": "BEDESA KORCHA HP", 
     "LOC_LAT": 8.52964, 
     "LOC_LONG": 37.9548, 
-    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC"
+    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC", 
+    "LOC_RK_CODE": 41303014, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Birbirsa Kenteiro", 
@@ -3597,7 +4315,9 @@
     "LOC_GEO_POS_NAME": "BIRBISA KENTERO HP", 
     "LOC_LAT": 8.43744, 
     "LOC_LONG": 37.992, 
-    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC"
+    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC", 
+    "LOC_RK_CODE": 41303033, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Bukasa Keta", 
@@ -3607,7 +4327,9 @@
     "LOC_GEO_POS_NAME": "BUKASA KETA HP", 
     "LOC_LAT": 8.46436, 
     "LOC_LONG": 37.988, 
-    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC"
+    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC", 
+    "LOC_RK_CODE": 41303031, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Chefe Mekana", 
@@ -3617,17 +4339,21 @@
     "LOC_GEO_POS_NAME": "CHEFE MEKANA HP", 
     "LOC_LAT": 8.51515, 
     "LOC_LONG": 37.8785, 
-    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC", 
+    "LOC_RK_CODE": 41303028, 
+    "LOC_W_CODE": 41303
   }, 
   {
-    "LOC_ADDRESS": "Chirech Wonberi", 
+    "LOC_ADDRESS": "Chiracha Wanbari", 
     "LOC_CITY": "Wolisso Rural", 
     "LOC_DIST_ID_A": null, 
     "LOC_DIST_ID_B": null, 
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303029, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Dembali Keta", 
@@ -3637,7 +4363,9 @@
     "LOC_GEO_POS_NAME": "DEMBELI KETA HP", 
     "LOC_LAT": 8.59562, 
     "LOC_LONG": 37.9908, 
-    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC", 
+    "LOC_RK_CODE": 41303012, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Derare Ebicha", 
@@ -3647,7 +4375,9 @@
     "LOC_GEO_POS_NAME": "DERAREI EBICHA HP", 
     "LOC_LAT": 8.43294, 
     "LOC_LONG": 38.0887, 
-    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC", 
+    "LOC_RK_CODE": 41303035, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Dese Jebo", 
@@ -3657,7 +4387,9 @@
     "LOC_GEO_POS_NAME": "DESE JEBO HC E HP", 
     "LOC_LAT": 8.6948, 
     "LOC_LONG": 38.0234, 
-    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO", 
+    "LOC_RK_CODE": 41303001, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Dildila Mangura", 
@@ -3667,7 +4399,9 @@
     "LOC_GEO_POS_NAME": "DILDILA MANGURA HP", 
     "LOC_LAT": 8.45408, 
     "LOC_LONG": 38.0812, 
-    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC", 
+    "LOC_RK_CODE": 41303034, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Dilela Town", 
@@ -3677,17 +4411,21 @@
     "LOC_GEO_POS_NAME": "DILELA TOWN HP", 
     "LOC_LAT": 8.64119, 
     "LOC_LONG": 38.0496, 
-    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC", 
+    "LOC_RK_CODE": 4130301, 
+    "LOC_W_CODE": 41303
   }, 
   {
-    "LOC_ADDRESS": "Dire Duleti", 
+    "LOC_ADDRESS": "Direi Duleti", 
     "LOC_CITY": "Wolisso Rural", 
-    "LOC_DIST_ID_A": 0.0, 
-    "LOC_DIST_ID_B": 12.1, 
-    "LOC_GEO_POS_NAME": "DIRE DULETI HP AND HC", 
-    "LOC_LAT": 8.4815, 
-    "LOC_LONG": 38.0052, 
-    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303025, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Doyo Kora", 
@@ -3697,7 +4435,9 @@
     "LOC_GEO_POS_NAME": "DOYO KORA HP", 
     "LOC_LAT": 8.64343, 
     "LOC_LONG": 38.1186, 
-    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC", 
+    "LOC_RK_CODE": 41303003, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Fodu Gora", 
@@ -3707,7 +4447,9 @@
     "LOC_GEO_POS_NAME": "FODU GORA HP", 
     "LOC_LAT": 8.50621, 
     "LOC_LONG": 37.9717, 
-    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC"
+    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC", 
+    "LOC_RK_CODE": 41303026, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Gadu Kistana", 
@@ -3717,7 +4459,9 @@
     "LOC_GEO_POS_NAME": "GADU KISTANE HP", 
     "LOC_LAT": 8.50784, 
     "LOC_LONG": 38.1418, 
-    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC"
+    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC", 
+    "LOC_RK_CODE": 41303018, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Gurura Baka", 
@@ -3727,7 +4471,9 @@
     "LOC_GEO_POS_NAME": "GURURA BAKA HP", 
     "LOC_LAT": 8.47561, 
     "LOC_LONG": 37.9557, 
-    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHIRECHA WOMBERI HC", 
+    "LOC_RK_CODE": 41303030, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Gute Godeti", 
@@ -3737,7 +4483,9 @@
     "LOC_GEO_POS_NAME": "GUTE GODEITI HP", 
     "LOC_LAT": 8.59126, 
     "LOC_LONG": 37.9634, 
-    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC", 
+    "LOC_RK_CODE": 41303013, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Ilala Kersa", 
@@ -3747,7 +4495,9 @@
     "LOC_GEO_POS_NAME": "ILALA KERSA HP", 
     "LOC_LAT": 8.44426, 
     "LOC_LONG": 38.1587, 
-    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC"
+    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC", 
+    "LOC_RK_CODE": 41303036, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Jelisa Cheka", 
@@ -3757,7 +4507,9 @@
     "LOC_GEO_POS_NAME": "JELISSA CHEKA HP", 
     "LOC_LAT": 8.47275, 
     "LOC_LONG": 38.0769, 
-    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC", 
+    "LOC_RK_CODE": 41303021, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "K/Alemu", 
@@ -3767,7 +4519,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "K/Bedasa", 
@@ -3777,7 +4531,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303014, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "K/Bedeko", 
@@ -3787,7 +4543,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303017, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "K/Birbrisa", 
@@ -3797,7 +4555,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303033, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Karo Simela", 
@@ -3807,7 +4567,9 @@
     "LOC_GEO_POS_NAME": "KARO SIMELA HC E HP", 
     "LOC_LAT": 8.58295, 
     "LOC_LONG": 38.089, 
-    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO", 
+    "LOC_RK_CODE": 41303010, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Kegnera Lebu", 
@@ -3817,7 +4579,9 @@
     "LOC_GEO_POS_NAME": "KENGERA LEBU HP", 
     "LOC_LAT": 8.47063, 
     "LOC_LONG": 38.1789, 
-    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC"
+    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC", 
+    "LOC_RK_CODE": 41303019, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Kegnra", 
@@ -3827,7 +4591,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Kile", 
@@ -3837,7 +4603,9 @@
     "LOC_GEO_POS_NAME": "KILE HP", 
     "LOC_LAT": 8.47435, 
     "LOC_LONG": 38.0561, 
-    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC", 
+    "LOC_RK_CODE": 41303022, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Kono Lefe Arba", 
@@ -3847,7 +4615,9 @@
     "LOC_GEO_POS_NAME": "KONO LAFE ARBA HP", 
     "LOC_LAT": 8.45302, 
     "LOC_LONG": 38.0377, 
-    "LOC_REFERENCE_OTHER_NAME": "KORKE HC"
+    "LOC_REFERENCE_OTHER_NAME": "KORKE HC", 
+    "LOC_RK_CODE": 41303032, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Korke", 
@@ -3857,7 +4627,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Korra", 
@@ -3867,7 +4639,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303003, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Kume", 
@@ -3877,7 +4651,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "L/Anchbe", 
@@ -3887,7 +4663,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303016, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Leman", 
@@ -3897,7 +4675,9 @@
     "LOC_GEO_POS_NAME": "LEMEN HC", 
     "LOC_LAT": 8.59671, 
     "LOC_LONG": 37.8481, 
-    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO", 
+    "LOC_RK_CODE": 41303024, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Leman Abu", 
@@ -3907,7 +4687,9 @@
     "LOC_GEO_POS_NAME": "LEMAN ABU HP", 
     "LOC_LAT": 8.42979, 
     "LOC_LONG": 37.9547, 
-    "LOC_REFERENCE_OTHER_NAME": "GURURA HC"
+    "LOC_REFERENCE_OTHER_NAME": "GURURA HC", 
+    "LOC_RK_CODE": 41303027, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Leman Ayitu", 
@@ -3917,7 +4699,9 @@
     "LOC_GEO_POS_NAME": "LEMEN AYETU HP", 
     "LOC_LAT": 8.53359, 
     "LOC_LONG": 38.02, 
-    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC"
+    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC", 
+    "LOC_RK_CODE": 41303024, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Maru ", 
@@ -3927,7 +4711,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Maru Babali", 
@@ -3937,7 +4723,9 @@
     "LOC_GEO_POS_NAME": "MARU BABELI HP", 
     "LOC_LAT": 8.65029, 
     "LOC_LONG": 38.0392, 
-    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC", 
+    "LOC_RK_CODE": 41303005, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Maru Fekei", 
@@ -3947,7 +4735,9 @@
     "LOC_GEO_POS_NAME": "MARU FAKE HP", 
     "LOC_LAT": 8.60098, 
     "LOC_LONG": 38.0509, 
-    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP"
+    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP", 
+    "LOC_RK_CODE": 41303011, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Obi", 
@@ -3957,7 +4747,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303015, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Obi Koji", 
@@ -3967,7 +4759,9 @@
     "LOC_GEO_POS_NAME": "OBI KOJI HP", 
     "LOC_LAT": 8.56712, 
     "LOC_LONG": 37.991, 
-    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC", 
+    "LOC_RK_CODE": 41303015, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "S/Koke", 
@@ -3977,7 +4771,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "S/Yabet", 
@@ -3987,17 +4783,21 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303009, 
+    "LOC_W_CODE": 41303
   }, 
   {
-    "LOC_ADDRESS": "Senkelei Alei Mariyam", 
+    "LOC_ADDRESS": "Senkele Ale Mariyam", 
     "LOC_CITY": "Wolisso Rural", 
-    "LOC_DIST_ID_A": 18.7, 
-    "LOC_DIST_ID_B": 5.4, 
-    "LOC_GEO_POS_NAME": "SENKELEI ALEI MARIAM HP", 
-    "LOC_LAT": 8.67465, 
-    "LOC_LONG": 38.0751, 
-    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41303004, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Sodo Gerbo", 
@@ -4007,7 +4807,9 @@
     "LOC_GEO_POS_NAME": "SODO GERBO HP", 
     "LOC_LAT": 8.47209, 
     "LOC_LONG": 38.1323, 
-    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC"
+    "LOC_REFERENCE_OTHER_NAME": "SODO GERBO CLINIC HC", 
+    "LOC_RK_CODE": 41303020, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Sombo Yabeta", 
@@ -4017,7 +4819,9 @@
     "LOC_GEO_POS_NAME": "SENBO YABETA HP", 
     "LOC_LAT": 8.58255, 
     "LOC_LONG": 38.1062, 
-    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP"
+    "LOC_REFERENCE_OTHER_NAME": "KARO SIMELA HC E HP", 
+    "LOC_RK_CODE": 41303009, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Sonkola", 
@@ -4027,7 +4831,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Tobe", 
@@ -4037,7 +4843,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Tolay", 
@@ -4047,7 +4855,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Tombe Anchebi", 
@@ -4057,7 +4867,9 @@
     "LOC_GEO_POS_NAME": "TOMBE ANCHEBI HP E HC", 
     "LOC_LAT": 8.54362, 
     "LOC_LONG": 38.0311, 
-    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO"
+    "LOC_REFERENCE_OTHER_NAME": "WOLISSO HO", 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Walu Soma", 
@@ -4067,7 +4879,9 @@
     "LOC_GEO_POS_NAME": "WOLUSSOMA HP", 
     "LOC_LAT": 8.63202, 
     "LOC_LONG": 37.981, 
-    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC", 
+    "LOC_RK_CODE": 41303006, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Warabu Bariyu", 
@@ -4077,7 +4891,9 @@
     "LOC_GEO_POS_NAME": "WORABU BERIYU HP", 
     "LOC_LAT": 8.61519, 
     "LOC_LONG": 38.0755, 
-    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC", 
+    "LOC_RK_CODE": 41303008, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Waranen Megnako", 
@@ -4087,7 +4903,9 @@
     "LOC_GEO_POS_NAME": "WORANE MEGNAKO HP", 
     "LOC_LAT": 8.4752, 
     "LOC_LONG": 38.0388, 
-    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC"
+    "LOC_REFERENCE_OTHER_NAME": "DIRE DULETI HP AND HC", 
+    "LOC_RK_CODE": 41303023, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Wolisoma", 
@@ -4097,7 +4915,9 @@
     "LOC_GEO_POS_NAME": "WOLUSSOMA HP", 
     "LOC_LAT": 8.63202, 
     "LOC_LONG": 37.981, 
-    "LOC_REFERENCE_OTHER_NAME": "OBI HC"
+    "LOC_REFERENCE_OTHER_NAME": "OBI HC", 
+    "LOC_RK_CODE": 41303006, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Yaya", 
@@ -4107,7 +4927,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41303
   }, 
   {
     "LOC_ADDRESS": "Kebele 01", 
@@ -4117,7 +4939,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4110301, 
+    "LOC_W_CODE": 41103
   }, 
   {
     "LOC_ADDRESS": "Kebele 02", 
@@ -4127,7 +4951,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4110301, 
+    "LOC_W_CODE": 41103
   }, 
   {
     "LOC_ADDRESS": "Kebele 03", 
@@ -4137,7 +4963,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4110301, 
+    "LOC_W_CODE": 41103
   }, 
   {
     "LOC_ADDRESS": "Kebele 04", 
@@ -4147,7 +4975,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4110301, 
+    "LOC_W_CODE": 41103
   }, 
   {
     "LOC_ADDRESS": "Kebele 05", 
@@ -4157,7 +4987,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4110301, 
+    "LOC_W_CODE": 41103
   }, 
   {
     "LOC_ADDRESS": "Kebele 06", 
@@ -4167,7 +4999,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4110301, 
+    "LOC_W_CODE": 41103
   }, 
   {
     "LOC_ADDRESS": "Kebele 07", 
@@ -4177,7 +5011,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4110301, 
+    "LOC_W_CODE": 41103
   }, 
   {
     "LOC_ADDRESS": "Kebele 08", 
@@ -4187,7 +5023,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 4110301, 
+    "LOC_W_CODE": 41103
   }, 
   {
     "LOC_ADDRESS": "A/Becho", 
@@ -4197,7 +5035,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Acheber", 
@@ -4207,7 +5047,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Berio", 
@@ -4217,7 +5059,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Emdibir", 
@@ -4227,7 +5071,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Enge", 
@@ -4237,7 +5083,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Eza", 
@@ -4247,7 +5095,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Gumer", 
@@ -4257,7 +5107,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Gunchure", 
@@ -4267,7 +5119,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Gurura", 
@@ -4277,7 +5131,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Kebele 01", 
@@ -4287,7 +5143,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Kebele 02", 
@@ -4297,7 +5155,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Mihur", 
@@ -4307,7 +5167,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Walga", 
@@ -4317,7 +5179,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 70114
   }, 
   {
     "LOC_ADDRESS": "Wollega", 
@@ -4327,17 +5191,21 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": null
   }, 
   {
-    "LOC_ADDRESS": "Azer Kereinssa", 
+    "LOC_ADDRESS": "Azer", 
     "LOC_CITY": "Wonchi", 
-    "LOC_DIST_ID_A": 24.4, 
-    "LOC_DIST_ID_B": 4.62856, 
-    "LOC_GEO_POS_NAME": "AZER KEREINSSA HP", 
-    "LOC_LAT": 8.72201, 
-    "LOC_LONG": 37.9205, 
-    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302005, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Belbela Bulbula", 
@@ -4347,17 +5215,21 @@
     "LOC_GEO_POS_NAME": "BELBELA BULBULLA HP", 
     "LOC_LAT": 8.60246, 
     "LOC_LONG": 37.9087, 
-    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC", 
+    "LOC_RK_CODE": 41302021, 
+    "LOC_W_CODE": 41302
   }, 
   {
-    "LOC_ADDRESS": "Chebo Sanseleti", 
+    "LOC_ADDRESS": "Chebo Sansalti", 
     "LOC_CITY": "Wonchi", 
-    "LOC_DIST_ID_A": 32.2, 
-    "LOC_DIST_ID_B": 2.7, 
-    "LOC_GEO_POS_NAME": "CHEBO SENSELETI HP", 
-    "LOC_LAT": 8.73679, 
-    "LOC_LONG": 37.8465, 
-    "LOC_REFERENCE_OTHER_NAME": "SELAM GATIRO HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302008, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Chitu Town", 
@@ -4367,7 +5239,9 @@
     "LOC_GEO_POS_NAME": "CHITU TOWN HP", 
     "LOC_LAT": 8.60576, 
     "LOC_LONG": 37.9207, 
-    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC", 
+    "LOC_RK_CODE": 4130201, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Dae Wendimtu", 
@@ -4377,7 +5251,9 @@
     "LOC_GEO_POS_NAME": "DAE WONDIMTU HP", 
     "LOC_LAT": 8.67434, 
     "LOC_LONG": 37.9591, 
-    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+    "LOC_REFERENCE_OTHER_NAME": "DULELE HC", 
+    "LOC_RK_CODE": 41302014, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Damu Degelei", 
@@ -4387,7 +5263,9 @@
     "LOC_GEO_POS_NAME": "DAMU DEGELEI HP", 
     "LOC_LAT": 8.72794, 
     "LOC_LONG": 37.9548, 
-    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+    "LOC_REFERENCE_OTHER_NAME": "DULELE HC", 
+    "LOC_RK_CODE": 41302004, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Degoye Galiye", 
@@ -4397,7 +5275,9 @@
     "LOC_GEO_POS_NAME": "DEGOYE GALYE HP", 
     "LOC_LAT": 8.56336, 
     "LOC_LONG": 37.8351, 
-    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC"
+    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC", 
+    "LOC_RK_CODE": 41302020, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Dimtu Godeti", 
@@ -4407,7 +5287,9 @@
     "LOC_GEO_POS_NAME": "DIMTU GODETI HP", 
     "LOC_LAT": 8.60961, 
     "LOC_LONG": 37.8789, 
-    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC", 
+    "LOC_RK_CODE": 41302017, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Dulelei Bilacha", 
@@ -4417,7 +5299,9 @@
     "LOC_GEO_POS_NAME": "DULELE BILACHA HP", 
     "LOC_LAT": 8.63799, 
     "LOC_LONG": 37.8568, 
-    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC"
+    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC", 
+    "LOC_RK_CODE": 41302018, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Dulelei kori", 
@@ -4427,17 +5311,21 @@
     "LOC_GEO_POS_NAME": "DULELE KORI HP", 
     "LOC_LAT": 8.69178, 
     "LOC_LONG": 37.9447, 
-    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+    "LOC_REFERENCE_OTHER_NAME": "DULELE HC", 
+    "LOC_RK_CODE": 41302013, 
+    "LOC_W_CODE": 41302
   }, 
   {
-    "LOC_ADDRESS": "Echa Dibdiba", 
+    "LOC_ADDRESS": "Echa", 
     "LOC_CITY": "Wonchi", 
-    "LOC_DIST_ID_A": 23.9, 
-    "LOC_DIST_ID_B": 6.5, 
-    "LOC_GEO_POS_NAME": "ECHA DIBDIBA HP", 
-    "LOC_LAT": 8.53316, 
-    "LOC_LONG": 37.8495, 
-    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302023, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Fite wato", 
@@ -4447,7 +5335,9 @@
     "LOC_GEO_POS_NAME": "FITE WATO HP", 
     "LOC_LAT": 8.68283, 
     "LOC_LONG": 37.8916, 
-    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC"
+    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC", 
+    "LOC_RK_CODE": 41302011, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Haro Beseka", 
@@ -4457,7 +5347,9 @@
     "LOC_GEO_POS_NAME": "HARO BESEKA HP", 
     "LOC_LAT": 8.6265, 
     "LOC_LONG": 37.9047, 
-    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC", 
+    "LOC_RK_CODE": 41302016, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Haro Kono", 
@@ -4467,7 +5359,9 @@
     "LOC_GEO_POS_NAME": "HARO KONO HP", 
     "LOC_LAT": 8.55436, 
     "LOC_LONG": 37.8593, 
-    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC"
+    "LOC_REFERENCE_OTHER_NAME": "LEMEN HC", 
+    "LOC_RK_CODE": 41302022, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Haro Wonchi", 
@@ -4477,7 +5371,9 @@
     "LOC_GEO_POS_NAME": "HARO WONCHI HP", 
     "LOC_LAT": 8.789, 
     "LOC_LONG": 37.8768, 
-    "LOC_REFERENCE_OTHER_NAME": "HARO WONCHI"
+    "LOC_REFERENCE_OTHER_NAME": "HARO WONCHI", 
+    "LOC_RK_CODE": 41302002, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Hazar  ", 
@@ -4487,7 +5383,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Hazar Kerensa", 
@@ -4497,7 +5395,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302005, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Hono Fare", 
@@ -4507,7 +5407,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Kurfo Gutei", 
@@ -4517,7 +5419,9 @@
     "LOC_GEO_POS_NAME": "KURFO GUTE HP", 
     "LOC_LAT": 8.67974, 
     "LOC_LONG": 37.8795, 
-    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC"
+    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC", 
+    "LOC_RK_CODE": 41302010, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Leman Ayitu", 
@@ -4527,7 +5431,9 @@
     "LOC_GEO_POS_NAME": "LEMEN AYETU HP", 
     "LOC_LAT": 8.53359, 
     "LOC_LONG": 38.02, 
-    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC"
+    "LOC_REFERENCE_OTHER_NAME": "TOMBE ANCHEBI HP E HC", 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "M/Kube", 
@@ -4537,7 +5443,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "M/Walga", 
@@ -4547,7 +5455,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302015, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Meiti Walga", 
@@ -4557,7 +5467,9 @@
     "LOC_GEO_POS_NAME": "METI WALGA HP", 
     "LOC_LAT": 8.58753, 
     "LOC_LONG": 37.9377, 
-    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC", 
+    "LOC_RK_CODE": 41302015, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Merga Abiye", 
@@ -4567,7 +5479,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302009, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Meti", 
@@ -4577,7 +5491,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302015, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Odo Fura", 
@@ -4587,7 +5503,9 @@
     "LOC_GEO_POS_NAME": "Odo Fura", 
     "LOC_LAT": 8.79722, 
     "LOC_LONG": 37.8125, 
-    "LOC_REFERENCE_OTHER_NAME": "HARO WONCHI"
+    "LOC_REFERENCE_OTHER_NAME": "HARO WONCHI", 
+    "LOC_RK_CODE": 41302001, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Senkolei Kake", 
@@ -4597,17 +5515,21 @@
     "LOC_GEO_POS_NAME": "SENKOLEI KAKEI HP", 
     "LOC_LAT": 8.64683, 
     "LOC_LONG": 37.9, 
-    "LOC_REFERENCE_OTHER_NAME": "CHITU HC"
+    "LOC_REFERENCE_OTHER_NAME": "CHITU HC", 
+    "LOC_RK_CODE": 41302012, 
+    "LOC_W_CODE": 41302
   }, 
   {
-    "LOC_ADDRESS": "Shegeg Gefere", 
+    "LOC_ADDRESS": "Shegag", 
     "LOC_CITY": "Wonchi", 
-    "LOC_DIST_ID_A": 30.1, 
-    "LOC_DIST_ID_B": 10.368, 
-    "LOC_GEO_POS_NAME": "SHEGEG GEFERE HP", 
-    "LOC_LAT": 8.76261, 
-    "LOC_LONG": 37.924, 
-    "LOC_REFERENCE_OTHER_NAME": "DULELE HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302003, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Sokole Kaki", 
@@ -4617,7 +5539,9 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302012, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Toleka Lema", 
@@ -4627,17 +5551,21 @@
     "LOC_GEO_POS_NAME": null, 
     "LOC_LAT": null, 
     "LOC_LONG": null, 
-    "LOC_REFERENCE_OTHER_NAME": null
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41302
   }, 
   {
-    "LOC_ADDRESS": "Weldo Talfam", 
+    "LOC_ADDRESS": "Waldo Telfame", 
     "LOC_CITY": "Wonchi", 
-    "LOC_DIST_ID_A": 29.9, 
-    "LOC_DIST_ID_B": 5.7, 
-    "LOC_GEO_POS_NAME": "WELDO TALFAM HP", 
-    "LOC_LAT": 8.73862, 
-    "LOC_LONG": 37.8777, 
-    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302006, 
+    "LOC_W_CODE": 41302
   }, 
   {
     "LOC_ADDRESS": "Werabu Bariyu", 
@@ -4647,16 +5575,20 @@
     "LOC_GEO_POS_NAME": "WORABU BERIYU HP", 
     "LOC_LAT": 8.61519, 
     "LOC_LONG": 38.0755, 
-    "LOC_REFERENCE_OTHER_NAME": "DILELA HC"
+    "LOC_REFERENCE_OTHER_NAME": "DILELA HC", 
+    "LOC_RK_CODE": null, 
+    "LOC_W_CODE": 41302
   }, 
   {
-    "LOC_ADDRESS": "Worabu Massi", 
+    "LOC_ADDRESS": "Worabu", 
     "LOC_CITY": "Wonchi", 
-    "LOC_DIST_ID_A": 25.4, 
-    "LOC_DIST_ID_B": 3.5, 
-    "LOC_GEO_POS_NAME": "WORABU MASSI HP", 
-    "LOC_LAT": 8.70629, 
-    "LOC_LONG": 37.8803, 
-    "LOC_REFERENCE_OTHER_NAME": "DARIYA HC"
+    "LOC_DIST_ID_A": null, 
+    "LOC_DIST_ID_B": null, 
+    "LOC_GEO_POS_NAME": null, 
+    "LOC_LAT": null, 
+    "LOC_LONG": null, 
+    "LOC_REFERENCE_OTHER_NAME": null, 
+    "LOC_RK_CODE": 41302007, 
+    "LOC_W_CODE": 41302
   }
 ]
