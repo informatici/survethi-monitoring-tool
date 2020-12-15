@@ -106,7 +106,9 @@ def query_epoch(dateFrom=None, dateTo=None):
         dateFrom = '2019-01-01'
     if not dateTo:
         dateTo = '2019-12-31'
-    default_query = "SELECT OPD_DIS_ID_A, OPD_DATE, LOC_CITY, LOC_ADDRESS, LOC_LAT, LOC_LONG, LOC_RK_CODE \
+    default_query = "SELECT OPD_DIS_ID_A, OPD_DATE, LOC_CITY, LOC_ADDRESS, LOC_LAT, LOC_LONG, \
+                        (SELECT LOC_RK_CODE FROM LOCATION WHERE PAT_CITY=LOC_CITY AND PAT_ADDR=LOC_ADDRESS LIMIT 1) AS LOC_RK_CODE, \
+                        (SELECT LOC_W_CODE FROM LOCATION WHERE PAT_CITY=LOC_CITY LIMIT 1) AS LOC_W_CODE \
                         FROM OPD \
                         LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
@@ -151,9 +153,9 @@ def query_epoch_range():
         
     return range
 
-@app.route('/query_epoch_json')
-@app.route('/query_epoch_json/<dateFrom>/<dateTo>')
-def query_epoch_json(dateFrom=None, dateTo=None):
+@app.route('/query_epoch_geojson')
+@app.route('/query_epoch_geojson/<dateFrom>/<dateTo>')
+def query_epoch_geojson(dateFrom=None, dateTo=None):
     # GeoJSON
     features = []
     try:
@@ -195,17 +197,17 @@ def query_epoch_json(dateFrom=None, dateTo=None):
 
 
     collection = FeatureCollection(features)
-    with open("datasource/epoch.json", "w") as geojsonfile:
+    with open("datasource/epoch.geojson", "w") as geojsonfile:
         geojsonfile.write('%s' % collection)
 
-    with open("datasource/epoch.json") as json_file:
+    with open("datasource/epoch.geojson") as json_file:
         json_data = json.load(json_file)
     
     return jsonify(json_data)
 
-@app.route('/query_epoch_json_static')
-def query_epoch_json_static():
-    with open("datasource/epoch.json") as json_file:
+@app.route('/query_epoch_geojson_static')
+def query_epoch_geojson_static():
+    with open("datasource/epoch.geojson") as json_file:
         json_data = json.load(json_file)
     
     return jsonify(json_data)

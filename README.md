@@ -97,12 +97,12 @@ Query Epoch Range (get the last available date range from historical data)
 
 Query Epoch JSON (no query, just convert previous retrieved data to JSON)
 ```
-/query_epoch_json_static (default values = '2019-01-01'/'2019-12-31')
+/query_epoch_geojson_static (default values = '2019-01-01'/'2019-12-31')
 ```
 
 Query Epoch GeoJSON (no query, just convert previous retrieved data to GeoJSON)
 ```
-/query_epoch_json (default values = '2019-01-01'/'2019-12-31')
+/query_epoch_geojson (default values = '2019-01-01'/'2019-12-31')
 ```
 
 Diseases (returns the list of available diseases)
