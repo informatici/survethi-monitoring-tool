@@ -3,11 +3,19 @@ from flask import Flask, escape, request, render_template, Response
 from flask import jsonify
 import MySQLdb
 import csv
+import geojson
 from geojson import Feature, FeatureCollection, Point
 import datetime
 from decimal import Decimal
 import json
 import os.path
+
+with open('static/shapes/survethi-monitoring-tool.geojson', 'r') as f:
+    # read the GeoJSON file
+    gj = geojson.load(f)
+
+print('==> working with', len(gj.features), 'features')
+gjmap = {str(x['properties']['RK_CODE']) : x for x in gj.features}
 
 app = Flask(__name__)
 if app.config["ENV"] == "production":
@@ -114,7 +122,9 @@ def query_epoch(dateFrom=None, dateTo=None):
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
                         WHERE OPD_DATE BETWEEN '%s' AND '%s' \
                         ORDER BY OPD_DATE " %(escape(dateFrom), escape(dateTo))
-    #print(default_query)                
+    
+    #print(default_query)
+    print('==> fetching data...', end='')             
     cursor = db.cursor()
     cursor.execute(default_query)
     result = cursor.fetchall()
@@ -128,30 +138,30 @@ def query_epoch(dateFrom=None, dateTo=None):
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow(column_names)
         writer.writerows(result)
+        print('done!')
 
-    #cursor.close()
-    #TODO: cursor to be closed? cursor.close()
     return dateFrom, dateTo
 
 @app.route('/query_epoch_range')
 def query_epoch_range():
     
-    range = {'min': None, 'max': None}
+    epoch_range = {'min': None, 'max': None}
     try:
         with open('datasource/epoch.csv', newline='') as csvfile:
+            print('==> check already fetched data...', end='')
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
             for disease, date, city, address, latitude, longitude in reader:
-                if not range['min'] or date < range['min']:
-                    range['min'] = date
+                if not epoch_range['min'] or date < epoch_range['min']:
+                    epoch_range['min'] = date
 
-                if not range['max'] or date > range['max']:
-                    range['max'] = date
+                if not epoch_range['max'] or date > epoch_range['max']:
+                    epoch_range['max'] = date
 
-    except:
+    except Exception:
         print('Warning: epoch parsing data: empty datasource (needs query)')
         
-    return range
+    return epoch_range
 
 @app.route('/query_epoch_geojson')
 @app.route('/query_epoch_geojson/<dateFrom>/<dateTo>')
@@ -160,43 +170,76 @@ def query_epoch_geojson(dateFrom=None, dateTo=None):
     features = []
     try:
         with open('datasource/epoch.csv', newline='') as csvfile:
-            
+            print('==> processing data...')
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
             for disease, date, city, address, latitude, longitude, rk_code, w_code in reader:
-
-                if latitude == '':
-                    continue  # skip empty geopositions
-
+                #print('processing : ', disease, date, latitude, longitude, rk_code, w_code)
                 if dateFrom and dateTo:
                     if date < dateFrom or date > dateTo:
                         continue # skip dates out of range (if any)
 
-                try:    
-                    latitude, longitude = map(float, (latitude, longitude))
+                # adding Points (Health Posts) - if latitude (or longitude) are not null
+                if latitude != '':
+                    try:    
+                        latitude, longitude = map(float, (latitude, longitude))
+                        features.append(
+                            Feature(
+                                geometry = Point((longitude, latitude)),
+                                properties = {
+                                    'disease': disease,
+                                    'epoch': date,
+                                    'town' : city,
+                                    'kebele' : address,
+                                    'time': date.replace(" ", "T") + '.000Z', #ISO8601 format
+                                    'RK_CODE': rk_code,
+                                    'W_CODE': w_code,
+                                    'RK_NAME': address,
+                                }
+                            )
+                        )
+                        #print('added: Point')
+                    except Exception:
+                        print('skipped : ', disease, date, latitude, longitude, rk_code, w_code)
+                        pass #useful when log above is commented
+
+                # adding shapes - all, but in different count number
+                if rk_code != '':
+                    gj_properties = gjmap.get(str(rk_code))['properties']
                     features.append(
                         Feature(
-                            geometry = Point((longitude, latitude)),
+                            geometry = gjmap.get(str(rk_code))['geometry'],
                             properties = {
                                 'disease': disease,
                                 'epoch': date,
                                 'town' : city,
                                 'kebele' : address,
                                 'time': date.replace(" ", "T") + '.000Z', #ISO8601 format
+                                'W_NAME': gj_properties['W_NAME'],
+                                'RK_NAME': gj_properties['RK_NAME'],
+                                'Z_NAME': gj_properties['Z_NAME'],
                                 'RK_CODE': rk_code,
                                 'W_CODE': w_code,
                             }
                         )
                     )
-                except:
-                    #print(disease, date, latitude, longitude)
+
+                elif w_code != '':
+                    #print('skipped : ', disease, date, latitude, longitude, rk_code, w_code)
                     pass
-    except:
+                    
+                else:
+                    #print('skipped : ', disease, date, latitude, longitude, rk_code, w_code)
+                    pass #useful when log above is commented
+                
+    except Exception as e:
+        print (e)
         print('Warning: GeoJSON parsing data: empty datasource (needs query)')
         json_data = ""
 
 
     collection = FeatureCollection(features)
+    print('==> parsed fatures', len(collection.features), 'features')
     with open("datasource/epoch.geojson", "w") as geojsonfile:
         geojsonfile.write('%s' % collection)
 

@@ -33,7 +33,7 @@
      */ 
      function load_secondaryShapefile() {
         secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
-            style: styleKebele,
+            style: baseStyle,
 			onEachFeature: function(feature, layer) {
                 //console.log(feature);
                 if (feature.properties) {
@@ -46,6 +46,10 @@
                     "Zone: " + feature.properties.Z_NAME + "<br />", {
 						maxHeight: 200
                     });
+                    layer.on({
+                        mouseover:highlightFeature,
+                        mouseout:resetHighlight,
+                    });
 				}
 			}
         });
@@ -57,6 +61,37 @@
              console.log("finished loaded secondaryShpfile");
         });
         return secondaryShpfile;
+    }
+
+    function highlightFeature(evt) {
+        var feature = evt.target;
+        feature.setStyle(highlightStyle);
+        if (!L.Browser.ie && !L.Browser.opera) {
+            feature.bringToFront();
+        }
+    }
+
+    var highlightStyle = {
+        weight: 3,
+        color: '#3B555C',
+        dashArray: '',
+        fillOpacity: 0.6
+    }
+
+    var baseStyle = {
+        fillColor: null,
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',
+        fillOpacity: 0.1,
+    };
+
+    function resetHighlight(evt) {
+        var feature = evt.target;
+        feature.setStyle(baseStyle);
+        if (!L.Browser.ie && !L.Browser.opera) {
+            feature.bringToFront();
+        }
     }
 
     /**
@@ -93,7 +128,11 @@
             playerOptions: {
                 transitionTime: 1000,
                 loop: false
-            }
+            },
+            minSpeed: 1,
+            maxSpeed: 30,
+            speedStep: 1,
+            displayDate: true,
         },
     }).setView(parametersSecondMap.center, parametersSecondMap.initial_zoom);
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -147,7 +186,7 @@
             fetch_data_epoch(newUrl);
         } else {
             console.log('range already fetched: just show!')
-            newUrl = get_url_epoch('query_epoch_json')
+            newUrl = get_url_epoch('query_epoch_geojson')
             show_epoch_data(newUrl);
         }
     }
@@ -188,7 +227,7 @@
             complete: function(){
                 setLoadingSecondMap(false);
                 //getRangeLimitFromDatasource();
-                newUrl = get_url_epoch('query_epoch_json')
+                newUrl = get_url_epoch('query_epoch_geojson')
                 show_epoch_data(newUrl);
             },
             error: function(){
@@ -197,18 +236,16 @@
         })
     }
 
-    var mapLayerGroups = [];
-
-    var counter = 0;
     /*
      * Apply secondary_filter
      */
+    var counter = 0;
     function applySecondaryFilter(feature) {
         //console.log(counter, feature);
 
-        if (feature.geometry.type == 'Polygon' ||
-            feature.geometry.type == 'MultiPolygon')
-            return true; //skip shapes
+        // if (feature.geometry.type == 'Polygon' ||
+        //     feature.geometry.type == 'MultiPolygon')
+        //     return true; //skip shapes
 
         var town = feature.properties.town;
         var kebele = feature.properties.kebele;
@@ -238,21 +275,6 @@
             //console.log(object);
             if (updating) second_data_set.push(object);
 
-            Object.values(secondaryShpfile._layers).forEach(function(thisFeature) {
-                        
-                var shape = thisFeature.feature;
-
-                //var w_name = shape.properties.W_NAME;
-                var rk_code = shape.properties.RK_CODE;
-                
-
-                //adding shapes of kebele
-                if (feature.properties.RK_CODE == rk_code) {
-                    var object = jQuery.extend(true, {'properties': {'time': feature.properties.time}}, shape);
-                    second_shape_data_set.push(object); //we add the features later
-                    //console.log(object);
-                }
-            });
         }
         //console.log(second_data_set);
         counter = counter + 1;
@@ -281,19 +303,20 @@
                     testlayer = L.geoJson(json.features, {filter: applySecondaryFilter, 
                         style: style2,
                         onEachFeature: function(feature, layer) {
-                        //console.log(feature);
-                        if (feature.properties) {
-                            layer.bindPopup(
-                            "<b>" + feature.properties.RK_NAME + "</b><br />" +
-                            "<br />" +
-                            "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
-                            "Woreda: " + feature.properties.W_NAME + "<br />" +
-                            "Region: " + feature.properties.R_NAME + "<br />" +
-                            "Zone: " + feature.properties.Z_NAME + "<br />", {
-                                maxHeight: 200
-                            });
+                            //console.log(feature);
+                            if (feature.properties) {
+                                layer.bindPopup(
+                                "<b>" + feature.properties.RK_NAME + "</b><br />" +
+                                "<br />" +
+                                "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
+                                "Woreda: " + feature.properties.W_NAME + "<br />" +
+                                "Region: " + feature.properties.R_NAME + "<br />" +
+                                "Zone: " + feature.properties.Z_NAME + "<br />", {
+                                    maxHeight: 200
+                                });
+                            }
                         }
-                    }});
+                    });
                     
                     updating = false;
                     //console.log("1>" + Object.keys(testlayer._layers).length);
@@ -309,7 +332,6 @@
                     //enableDatesRangeToogle(false);
                 } else {
                     //add selected shapes
-                    testlayer.addData(second_shape_data_set);
 
                     //add timeDimension data
                     L.timeDimension.layer.geoJson(testlayer, {
@@ -340,14 +362,24 @@
      * (function) style sequence for geoshapes
      */
      function style2(feature) {
-        return {
-            fillColor: '#FFEDA0',
-            weight: 0.5,
-            opacity: 1,
-            color: 'white',
-            //dashArray: '3',
-            fillOpacity: 0.7
-        };
+        if (feature.properties.kebele) 
+            return {
+                fillColor: '#FFEDA0',
+                weight: 0.5,
+                opacity: 1,
+                color: 'white',
+                //dashArray: '3',
+                fillOpacity: 0.7
+            };
+        else if (feature.properties.woreda)
+            return {
+                fillColor: '#99d8c9',
+                weight: 0.5,
+                opacity: 1,
+                color: 'white',
+                //dashArray: '3',
+                fillOpacity: 0.7
+            };
     }
 
     mySecondaryMap.timeDimension.on('timeload', function(data) {
