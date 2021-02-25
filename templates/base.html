@@ -27,6 +27,7 @@
     <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" rel="stylesheet" />
     <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
     <script src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
+
     <!-- map history control plugin (https://github.com/cscott530/leaflet-history)-->
     <link rel="stylesheet" type="text/css" href="static/css/leaflet-history.css">
     <script type="text/javascript" src="static/js/leaflet-history.js"></script>
@@ -34,13 +35,16 @@
     <!-- secondary map -->
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    
     <!-- Include this library for mobile touch support  -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    
     <!-- Date pickers -->
     <link href="{{url_for('static', filename='css/daterangepicker.css') }}" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/660b9c8da8.js" crossorigin="anonymous"></script>
     <script src="{{url_for('static', filename='js/moment.min.js') }}"></script>
     <script src="{{url_for('static', filename='js/daterangepicker.js') }}"></script>
+    
     <!-- TimeDimension from https://github.com/socib/Leaflet.TimeDimension -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
@@ -111,14 +115,10 @@
             </div>
         </div>
 
-        <!-- <h2>DataTable</h2> -->
         <div class="row">
             <div class="col">
                 {% include "primary_table.html" %}
             </div>
-            <!-- <div class="col">
-                {{ empty_space }}
-            </div> -->
         </div>
     </div>
     <br/>

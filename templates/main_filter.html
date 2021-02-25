@@ -77,7 +77,7 @@
         $('#total_woreda').empty();
         $('#total_unknown').empty();
 
-        //TODO: optimize badge positions
+        //TODO: optimize badge positions calculation: maybe there is a better way to layout badges one beside each other
         if (main_filter_total_total > 0) {
             total_total.appendChild(document.createTextNode(main_filter_total_total));
             $("#total_total").position({
