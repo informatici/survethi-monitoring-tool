@@ -49,8 +49,32 @@ def getRefreshIntervals():
     # define refresh interval in minutes, default as first element
     return ['1','5','15','30']
 
+def get_diseases():
+    createDBconnection()
+    # execute default query on the DB
+    default_query = "SELECT * FROM DISEASE \
+                    ORDER BY DIS_DESC"
+    #print(default_query)                
+    cursor = db.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute(default_query)
+    result = cursor.fetchall()
+    return jsonify(result)
+
+def get_locations():
+    createDBconnection()
+    # execute default query on the DB
+    default_query = "SELECT * FROM LOCATION \
+                    ORDER BY LOC_CITY, LOC_ADDRESS"
+    #print(default_query)                
+    cursor = db.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute(default_query)
+    result = cursor.fetchall()
+    return jsonify(result)
+
 @app.route('/', methods=['GET'])
 def index():
+    get_diseases()
+    get_locations()
     return render_template('base.html', 
         title='Survethi Monitoring Tool', 
         refresh_intervals=getRefreshIntervals()
@@ -257,15 +281,7 @@ def query_epoch_geojson_static():
 
 @app.route('/diseases')
 def diseases():
-    createDBconnection()
-    # execute default query on the DB
-    default_query = "SELECT * FROM DISEASE \
-                    ORDER BY DIS_DESC"
-    #print(default_query)                
-    cursor = db.cursor(MySQLdb.cursors.DictCursor)
-    cursor.execute(default_query)
-    result = cursor.fetchall()
-    return jsonify(result)
+    return get_diseases()
 
 @app.route('/test_diseases')
 def test_diseases(return_json=False):
@@ -279,15 +295,7 @@ def test_diseases(return_json=False):
 
 @app.route('/locations')
 def locations():
-    createDBconnection()
-    # execute default query on the DB
-    default_query = "SELECT * FROM LOCATION \
-                    ORDER BY LOC_CITY, LOC_ADDRESS"
-    #print(default_query)                
-    cursor = db.cursor(MySQLdb.cursors.DictCursor)
-    cursor.execute(default_query)
-    result = cursor.fetchall()
-    return jsonify(result)
+    return get_locations()
 
 @app.route('/test_locations')
 def test_locations(return_json=False):
