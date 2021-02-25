@@ -98,7 +98,7 @@
      * (sync) fetch data from URL
      */
      function getRangeLimitFromDatasource() {
-        setLoadingReportrange(true);
+        setLoadingReportRange(true);
         $.ajax({
             url: 'query_epoch_range',
             success:function(range,status,xhr)
@@ -110,7 +110,7 @@
                 //console.log(cached_dateFrom, cached_dateTo);
             },
             complete: function(){
-                setLoadingReportrange(false);
+                setLoadingReportRange(false);
             },
             error: function(){
                 console.log('error');
@@ -159,7 +159,6 @@
     function refresh_second_map(refresh) {
         //alert('Refresh!');
         var newUrl = get_url_epoch('query_epoch');
-        
         if (refresh) 
             fetch_data_epoch(newUrl);
         else 
@@ -205,7 +204,7 @@
     /**
      * (function) show loading indicators
      */
-     function setLoadingReportrange(loading) {
+     function setLoadingReportRange(loading) {
         if (loading) {
             console.log('Loading range...');
         } else {
@@ -286,6 +285,7 @@
      */
     var updating = false; // workaround to bound applySecondaryFilter to only one run
     function show_epoch_data(newUrl) {
+        setLoadingSecondMap(true);
         $.ajax({
             url: newUrl, //convert fetched data to geojson
             success:function(json,status,xhr)
@@ -350,7 +350,7 @@
 
             },
             complete: function(){
-
+                setLoadingSecondMap(false);
             },
             error: function(){
                 console.log('error');
