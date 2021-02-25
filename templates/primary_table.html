@@ -3,6 +3,7 @@
     id="table_primary"
     data-show-export="true"
     data-export-types="['excel', 'csv']"
+    data-export-data-type="all"
     data-toggle="table"
     data-pagination="true"
     data-page-size="5"
@@ -11,17 +12,16 @@
     data-search="false"
     data-undefined-text=""
     >
+    <caption>Real-Time fetched data</caption>
     <thead>
         <tr>
-            <th data-sortable="true" data-field="COUNT">Count</th>
-            <th data-sortable="true" data-field="DIS_DESC">Disease</th>
-            <th data-sortable="true" data-field="PAT_CITY">Woreda/Town</th>
-            <th data-sortable="true" data-field="PAT_ADDR">Kebele</th>
-            <th data-sortable="true" data-field="LOC_W_CODE" data-cell-style="cellStyleWCODE">W_CODE</th>
-            <th data-sortable="true" data-field="LOC_RK_CODE" data-cell-style="cellStyleRKCODE">RK_CODE</th>
-            <!-- <th data-sortable="true" data-field="LOC_LAT">Latitude</th>
-            <th data-sortable="true" data-field="LOC_LONG">Longitude</th> -->
-            <th id="location" data-sortable="true" data-field="LOC_OK" data-cell-style="cellStylePH" data-width="1">HP</th>
+            <th scope="col" data-sortable="true" data-field="COUNT">Count</th>
+            <th scope="col" data-sortable="true" data-field="DIS_DESC">Disease</th>
+            <th scope="col" data-sortable="true" data-field="PAT_CITY">Woreda/Town</th>
+            <th scope="col" data-sortable="true" data-field="PAT_ADDR">Kebele</th>
+            <th scope="col" data-sortable="true" data-field="LOC_W_CODE" data-cell-style="cellStyleWCODE">W_CODE</th>
+            <th scope="col" data-sortable="true" data-field="LOC_RK_CODE" data-cell-style="cellStyleRKCODE">RK_CODE</th>
+            <th scope="col" id="location" data-sortable="true" data-field="LOC_OK" data-cell-style="cellStylePH" data-width="1">HP</th>
         </tr>
     </thead>
 </table>
