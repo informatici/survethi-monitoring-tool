@@ -30,12 +30,14 @@ CORS(app)
 db = MySQLdb
 
 default_position = [8.55611, 38.9741666] #WolisoTown, Kebele 01
+epoch_csv_path = 'datasource/epoch.csv'
+epoch_json_path = 'datasource/epoch.geojson'
 
 @app.before_request
 def before_request():
     app.jinja_env.cache = {}
 
-def createDBconnection():
+def create_db_connection():
     # database connection settings
     global db
     db = MySQLdb.connect(
@@ -45,12 +47,12 @@ def createDBconnection():
         host=app.config["DB_HOST"],
         port=app.config["DB_PORT"])
 
-def getRefreshIntervals():
+def get_refresh_intervals():
     # define refresh interval in minutes, default as first element
     return ['1','5','15','30']
 
 def get_diseases():
-    createDBconnection()
+    create_db_connection()
     # execute default query on the DB
     default_query = "SELECT * FROM DISEASE \
                     ORDER BY DIS_DESC"
@@ -61,7 +63,7 @@ def get_diseases():
     return jsonify(result)
 
 def get_locations():
-    createDBconnection()
+    create_db_connection()
     # execute default query on the DB
     default_query = "SELECT * FROM LOCATION \
                     ORDER BY LOC_CITY, LOC_ADDRESS"
@@ -77,13 +79,13 @@ def index():
     get_locations()
     return render_template('base.html', 
         title='Survethi Monitoring Tool', 
-        refresh_intervals=getRefreshIntervals()
+        refresh_intervals=get_refresh_intervals()
     )
 
 @app.route('/query')
 @app.route('/query/<dateFrom>/<dateTo>')
 def query(dateFrom=None, dateTo=None):
-    createDBconnection()
+    create_db_connection()
     # execute default query on the DB
     if not dateFrom:
         dateFrom = '2020-05-01'
@@ -103,7 +105,7 @@ def query(dateFrom=None, dateTo=None):
 @app.route('/query_group')
 @app.route('/query_group/<dateFrom>/<dateTo>')
 def query_group(dateFrom=None, dateTo=None):
-    createDBconnection()
+    create_db_connection()
     # execute default query on the DB
     if not dateFrom:
         dateFrom = '2020-01-01'
@@ -132,7 +134,7 @@ def query_group(dateFrom=None, dateTo=None):
 @app.route('/query_epoch')
 @app.route('/query_epoch/<dateFrom>/<dateTo>')
 def query_epoch(dateFrom=None, dateTo=None):
-    createDBconnection()
+    create_db_connection()
     # execute default query on the DB
     if not dateFrom:
         dateFrom = '2019-01-01'
@@ -154,7 +156,7 @@ def query_epoch(dateFrom=None, dateTo=None):
     result = cursor.fetchall()
 
     # CSV
-    with open('datasource/epoch.csv', 'w', newline='') as csvfile:
+    with open(epoch_csv_path, 'w', newline='') as csvfile:
         column_names = list()
         for i in cursor.description:
             column_names.append(i[0])
@@ -171,7 +173,7 @@ def query_epoch_range():
     
     epoch_range = {'min': None, 'max': None}
     try:
-        with open('datasource/epoch.csv', newline='') as csvfile:
+        with open(epoch_csv_path, newline='') as csvfile:
             print('==> check already fetched data...', end='')
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
@@ -193,14 +195,13 @@ def query_epoch_geojson(dateFrom=None, dateTo=None):
     # GeoJSON
     features = []
     try:
-        with open('datasource/epoch.csv', newline='') as csvfile:
+        with open(epoch_csv_path, newline='') as csvfile:
             print('==> processing data...')
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
             for disease, date, city, address, latitude, longitude, rk_code, w_code in reader:
                 #print('processing : ', disease, date, latitude, longitude, rk_code, w_code)
-                if dateFrom and dateTo:
-                    if date < dateFrom or date > dateTo:
+                if dateFrom and dateTo and (date < dateFrom or date > dateTo):
                         continue # skip dates out of range (if any)
 
                 # adding Points (Health Posts) - if latitude (or longitude) are not null
@@ -264,17 +265,17 @@ def query_epoch_geojson(dateFrom=None, dateTo=None):
 
     collection = FeatureCollection(features)
     print('==> parsed fatures', len(collection.features), 'features')
-    with open("datasource/epoch.geojson", "w") as geojsonfile:
+    with open(epoch_json_path, "w") as geojsonfile:
         geojsonfile.write('%s' % collection)
 
-    with open("datasource/epoch.geojson") as json_file:
+    with open(epoch_json_path) as json_file:
         json_data = json.load(json_file)
     
     return jsonify(json_data)
 
 @app.route('/query_epoch_geojson_static')
 def query_epoch_geojson_static():
-    with open("datasource/epoch.geojson") as json_file:
+    with open(epoch_json_path) as json_file:
         json_data = json.load(json_file)
     
     return jsonify(json_data)
