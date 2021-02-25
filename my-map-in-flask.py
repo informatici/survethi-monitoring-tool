@@ -128,7 +128,7 @@ def query_group(dateFrom=None, dateTo=None):
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
-    #TODO: cursor to be closed? cursor.close()
+    cursor.close()
     return jsonify(result)
 
 @app.route('/query_epoch')
