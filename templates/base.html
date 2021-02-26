@@ -77,8 +77,10 @@
         initial_zoom: 11,
         refresh_interval: 5,
         refresh: false,
+        test_interval: 5000,
     }
 
+    var connection = true;
     var shpfile;
     var diseases = [];
     var disease_list = [];
@@ -97,7 +99,13 @@
 <body>
     <div class="container-fluid">
         <hr>
-        <h2>Real-time Monitoring</h2>
+        <h1><div class="d-flex align-items-center">
+            Real-time Monitoring
+            <div id="spinner_connection" class="spinner-grow text-seconday mt-1" role="status">
+                <span class="sr-only">Connected...</span>
+            </div>
+            <div id="spinner_connection_status" class="text-secondary w-25 small" role="status">Waiting connection...</div>
+        </div></h1>
         <hr>
         <div class="row">
             <div class="col">
@@ -217,8 +225,10 @@
      */
     function initialize(){
         load_secondaryShapefile(); //we load in memory the shapefile only for the secondmap
-        fetch_diseases();
-        fetch_locations();
+        if (connection) {
+            fetch_diseases();
+            fetch_locations();
+        }
         var button_refresh = $('#button_refresh');
         if (!parameters.refresh) {
             button_refresh.removeClass('btn-outline-success');
@@ -231,7 +241,8 @@
         }
         var toggle_range = $('#toggle_range');
         parameters.refresh_interval = $('#select_interval').val() * 60; // minutes
-        refresh(true);
+        if (connection)
+            refresh(true);
         var newUrl = get_url_epoch('query_epoch_geojson')
         show_epoch_data(newUrl);
     }
@@ -311,6 +322,36 @@
     }
 
     /**
+     * (function) Refresh function
+     */
+    function check_connection() {
+        $.ajax({
+            url: 'test_connection',
+            success:function(data,status,xhr)
+            {
+                console.log(data)
+                if (data) {
+                    $('#spinner_connection').prop('class', 'spinner-grow text-success mt-1');
+                    $('#spinner_connection_status').prop('class','text-success w-25 small');
+                    $('#spinner_connection_status').text('Connection OK')
+                    connection = true;
+                } else {
+                    $('#spinner_connection').prop('class', 'spinner-grow text-warning mt-1')
+                    $('#spinner_connection_status').prop('class','text-warning w-25 small');
+                    $('#spinner_connection_status').text('No Connection');
+                    connection = false;
+                }
+            },
+            complete: function(){
+                myTimeout = setTimeout(check_connection, parameters.test_interval);
+            },
+            error: function(){
+                console.log('error');
+            }
+        })
+    }
+
+    /**
      * (function) build the url with parameters
      */
     function get_url() {
@@ -360,7 +401,7 @@
     /**
      * (sync) fetch locations
      */
-     function fetch_locations() {
+    function fetch_locations() {
         setLoading(true);
         $.ajax({
             url: 'locations',
@@ -724,8 +765,10 @@
     // Starts from here (main)
     $(document).ready(function (response) {
 
+        check_connection();
         initialize();
         myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
+        
     });
 
 </script>

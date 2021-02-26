@@ -60,6 +60,7 @@ def get_diseases():
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
+    cursor.close()
     return jsonify(result)
 
 def get_locations():
@@ -71,12 +72,25 @@ def get_locations():
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
+    cursor.close()
     return jsonify(result)
+
+@app.route('/test_connection', methods=['GET'])
+def test_connection():
+    try:
+        create_db_connection()
+        return jsonify(True)
+    except Exception:
+        return jsonify(False)
 
 @app.route('/', methods=['GET'])
 def index():
-    get_diseases()
-    get_locations()
+    try:
+        create_db_connection()
+        get_diseases()
+        get_locations()
+    except Exception:
+        pass
     return render_template('base.html', 
         title='Survethi Monitoring Tool', 
         refresh_intervals=get_refresh_intervals()
@@ -100,6 +114,7 @@ def query(dateFrom=None, dateTo=None):
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
     result = cursor.fetchall()
+    cursor.close()
     return jsonify(result)
 
 @app.route('/query_group')
@@ -154,7 +169,7 @@ def query_epoch(dateFrom=None, dateTo=None):
     cursor = db.cursor()
     cursor.execute(default_query)
     result = cursor.fetchall()
-
+    cursor.close()
     # CSV
     with open(epoch_csv_path, 'w', newline='') as csvfile:
         column_names = list()
