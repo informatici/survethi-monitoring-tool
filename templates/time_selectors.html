@@ -9,6 +9,10 @@
     </div>
     <div class="col text-right">
         <button id="button_update" type="button" class="btn btn-outline-success mt-1">Update</button>
+        <button id="spinner_refresh" class="btn btn-success mt-1" type="button" disabled hidden>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="sr-only">Loading...</span>
+        </button>
         <input id="toggle_refresh"
             type="checkbox" 
             data-toggle="toggle"
@@ -62,9 +66,12 @@
             parameters.refresh = !parameters.refresh;
            // console.log(parameters.refresh)
             if (parameters.refresh) {
+                $('#spinner_refresh').prop('hidden', false);
                 if (myTimeout) clearTimeout(myTimeout);
                 myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
                 refresh(true);
+            } else {
+                $('#spinner_refresh').prop('hidden', true);
             }
         })
     })
