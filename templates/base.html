@@ -93,6 +93,8 @@
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
     var legenda = L.control({position: 'bottomright'});
+    var selectedShapes = {"type":"FeatureCollection","features":[]}
+    var loadedTableData = [];
 
 </script>
 
@@ -258,6 +260,7 @@
 					// we add our property for counting
                     feature.properties.kebeleCount=0;
                     feature.properties.woredaCount=0;
+                    feature.properties.diseaselist=[];
 				}
 			}
         });
@@ -266,7 +269,7 @@
 
         // shpfile.addTo(mymap);
         shpfile.once("data:loaded", function() {
-             console.log("finished loaded shapefile");
+             console.log("finished loading shapefile");
              show_markers(filtered_data);
              show_legenda();
         });
@@ -432,6 +435,7 @@
             {
                 //console.log(data);
                 //alert(JSON.stringify(data[0]));
+                loadedTableData = data;
                 filtered_data = filterFast(data, disease_list_filter, 'OPD_DIS_ID_A');
                 //console.log(filtered_data);
                 if (filtered_data.length > 0) {
@@ -454,7 +458,7 @@
                 } else {
                     cleanMap();
                     update_table_data(filtered_data);
-                    clean_disease_list();
+                    clean_dynamic_list_object();
                     resetMainFilterTotals();
                 }
             },
@@ -510,7 +514,7 @@
                 console.log('Main Map: nothing to display');
             else {
                 mymap.invalidateSize();
-                mymap.flyToBounds(kebeleGeoshapes.getBounds());//.pad(10));
+                mymap.flyToBounds(kebeleGeoshapes.getBounds());
                 var overlayMaps = {
                     "Health Posts": markersGroup1,
                     "Woreda": woredaGeoshapes,
@@ -537,21 +541,22 @@
 
                     if (item.LOC_RK_CODE == rk_code) {
                         feature.properties.kebeleCount+=item.COUNT;
+                        if (feature.properties.diseaselist.indexOf(item.OPD_DIS_ID_A) < 0) {
+                            feature.properties.diseaselist.push(item.OPD_DIS_ID_A);
+                        }
                         //console.log(feature);
                     } else if (item.LOC_W_CODE == w_code) {
                         feature.properties.woredaCount+=item.COUNT;
+                        if (feature.properties.diseaselist.indexOf(item.OPD_DIS_ID_A) < 0) {
+                            feature.properties.diseaselist.push(item.OPD_DIS_ID_A);
+                        }
                         //console.log(feature);
                     }
+                    
                 });
-            } 
-
-            if (item.LOC_W_CODE && item.LOC_RK_CODE) {
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': item.COUNT, 'woreda': 0, 'unknown': 0});
-            } else if (item.LOC_W_CODE) {
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': item.COUNT, 'unknown': 0});
-            } else {
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 0, 'unknown': item.COUNT});
             }
+
+            addItemToDiseaseList(item);
 
             if (item.LOC_LAT) {
 
@@ -587,6 +592,16 @@
 
     }
 
+    function addItemToDiseaseList(item) {
+        if (item.LOC_W_CODE && item.LOC_RK_CODE) {
+            disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': item.COUNT, 'woreda': 0, 'unknown': 0});
+        } else if (item.LOC_W_CODE) {
+            disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': item.COUNT, 'unknown': 0});
+        } else {
+            disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 0, 'unknown': item.COUNT});
+        }
+    }
+
     function buildBindPopupFirstMap(feature) {
         return "<b>" + feature.properties.RK_NAME + "</b><br />" +
                     "<br />" +
@@ -599,6 +614,7 @@
     function buildBindPopupFirstMapKebele(feature) {
         return "<b>" + feature.properties.RK_NAME + ": " + feature.properties.kebeleCount + "</b><br />" +
                     "<br />" +
+                    "Diseases: " + feature.properties.diseaselist.slice(0, 10) + "<br />" +
                     "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
                     "Woreda: " + feature.properties.W_NAME + "<br />" +
                     "Region: " + feature.properties.R_NAME + "<br />" +
@@ -608,6 +624,7 @@
     function buildBindPopupFirstMapWoreda(feature) {
         return "<b>" + feature.properties.W_NAME + ": " + feature.properties.woredaCount + "</b><br />" +
                     "<br />" +
+                    "Diseases: " + feature.properties.diseaselist.slice(0, 10) + "<br />" +
                     "Woreda Code: " + feature.properties.W_CODE + "<br />" +
                     "Kebele: " + feature.properties.RK_NAME + "<br />" +
                     "Region: " + feature.properties.R_NAME + "<br />" +

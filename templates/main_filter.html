@@ -190,7 +190,6 @@
         main_filter.append(main_filter_make_option('WHO','WHO Priority Diseases ('+who_diseases_count+')'));
         //main_filter.append(main_filter_make_option('TopTen','Top Ten Diseases (10)'));
         main_filter.append('<option id="data-divider" data-divider="true"></option>');
-        // main_filter.append(main_filter_make_option('Selected','Selected ('+disease_list_filter+')'));
         
         diseases.forEach(function (item, index) {
             main_filter.append(main_filter_make_option(item.DIS_ID_A,item.DIS_DESC));

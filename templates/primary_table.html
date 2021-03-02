@@ -15,7 +15,7 @@
     <caption>Real-Time fetched data</caption>
     <thead>
         <tr>
-            <th scope="col" data-sortable="true" data-field="COUNT">Count</th>
+            <th scope="col" data-sortable="true" data-field="COUNT">Cases</th>
             <th scope="col" data-sortable="true" data-field="DIS_DESC">Disease</th>
             <th scope="col" data-sortable="true" data-field="PAT_CITY">Woreda/Town</th>
             <th scope="col" data-sortable="true" data-field="PAT_ADDR">Kebele</th>
@@ -28,16 +28,71 @@
 
 <script type="text/javascript">
 
-    /**
-     * (function) update table from URL
-     */ 
-     function update_table(newUrl) {
-        var myTable = $('#table_primary');
-        myTable.bootstrapTable('refresh', {url: newUrl});
-        myTable.bootstrapTable('resetView');
-        myTable.bootstrapTable('resetSearch');
-        //console.log(myTable.bootstrapTable("getData"));
-        
+    $('#table_primary').on('click-cell.bs.table', function (field, value, row, record) {
+        click_on_table(record);
+    })
+
+    function click_on_table(record) {
+        //console.log(record);
+        selected_dis = record['OPD_DIS_ID_A'];
+        selected_rk = record['LOC_RK_CODE'];
+        selected_w = record['LOC_W_CODE'];
+        console.log(selected_dis, selected_rk, selected_w);
+        selectedShapes = {"type":"FeatureCollection","features":[]}
+
+        mymap.eachLayer(function(layer) {
+            click_on_table_select(layer, selected_dis, selected_rk, selected_w);
+        });
+        if (selectedShapes.features.length > 0) {
+            selectedGeoShapes = L.geoJson(selectedShapes, {})
+            mymap.flyToBounds(selectedGeoShapes.getBounds());
+            update_disease_list();
+        }
+    }
+
+    function click_on_table_select(layer, selected_dis, selected_rk, selected_w){
+        if (layer.feature != undefined) {
+            if (selected_rk != null) {
+                if (selected_w == layer.feature.properties.W_CODE 
+                    && selected_rk == layer.feature.properties.RK_CODE) {
+                        // && layer.feature.properties.diseaselist.indexOf(selected_dis) >= 0) {
+                            //console.log(layer.feature.properties.diseaselist, layer.feature.properties.RK_CODE, layer.feature.properties.W_CODE);
+                            layer.setStyle({
+                                fillOpacity: 0.5,
+                            });
+                            selectedShapes.features.push(layer.feature);
+                            disease_list = [];
+                            let temp_data = filterFast(loadedTableData, [selected_rk], 'LOC_RK_CODE');
+                            temp_data.forEach(item => {
+                                addItemToDiseaseList(item);
+                            });
+                            //console.log(disease_list);
+                } else {
+                    layer.setStyle({
+                        fillOpacity: 0,
+                    });
+                }
+            } else if (selected_w != null) {
+                if (selected_w == layer.feature.properties.W_CODE) {
+                        // && layer.feature.properties.diseaselist.indexOf(selected_dis) >= 0) {
+                            //console.log(layer.feature.properties.diseaselist, layer.feature.properties.RK_CODE, layer.feature.properties.W_CODE);
+                            layer.setStyle({
+                                fillOpacity: 0.5,
+                            });
+                            selectedShapes.features.push(layer.feature);
+                            disease_list = [];
+                            let temp_data = filterFast(loadedTableData, [selected_w], 'LOC_W_CODE');
+                            temp_data.forEach(item => {
+                                addItemToDiseaseList(item);
+                            });
+                            //console.log(disease_list);
+                } else {
+                    layer.setStyle({
+                        fillOpacity: 0,
+                    });
+                } 
+            }
+        }
     }
 
     /**

@@ -73,14 +73,48 @@
         */
     function update_disease_list() {
         summarize_and_sort_list()
-        clean_disease_list();
+        clean_dynamic_list_object();
         disease_list.forEach(addItemDisease);
+
+        $('#dynamic-list li').on('click', function (e) {
+            e.preventDefault();
+            selected_id = "" + this.id; //convert to String
+
+            selectedShapes = {"type":"FeatureCollection","features":[]}
+            //console.log(selected_id);
+            mymap.eachLayer(function(layer){
+                click_on_list_select(layer, selected_id);
+            });
+
+            if (selectedShapes.features.length > 0) {
+                selectedGeoShapes = L.geoJson(selectedShapes, {})
+                mymap.flyToBounds(selectedGeoShapes.getBounds());
+            }
+            filtered_data = filterFast(loadedTableData, [selected_id], 'OPD_DIS_ID_A');
+            update_table_data(filtered_data);
+        })
+    }
+
+    function click_on_list_select(layer, selected_id) {
+        if (layer.feature != undefined) {
+            if (layer.feature.properties.diseaselist.indexOf(selected_id) < 0) {
+                //console.log(layer);
+                layer.setStyle({
+                    fillOpacity: 0,
+                });
+            } else {
+                layer.setStyle({
+                    fillOpacity: 0.5,
+                });
+                selectedShapes.features.push(layer.feature);
+            }
+        }
     }
 
     /*
         * (function) clean disease list
         */
-    function clean_disease_list() {
+    function clean_dynamic_list_object() {
         $('#dynamic-list').empty();
     }
 
