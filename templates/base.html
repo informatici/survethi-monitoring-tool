@@ -432,6 +432,7 @@
      */
     function fetch_data(newUrl) {
         setLoading(true);
+        $('#spinner_refresh').prop('hidden', false);
         $.ajax({
             url: newUrl,
             success:function(data,status,xhr)
@@ -467,6 +468,7 @@
             },
             complete: function(){
                 setLoading(false);
+                $('#spinner_refresh').prop('hidden', true);
             },
             error: function(){
                 console.log('error');
