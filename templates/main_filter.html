@@ -15,13 +15,13 @@
             data-live-search-placeholder="type disease number or part of the name..."
             data-selected-text-format="count">
         </select>
+        <div id="main-filter-loading-indicator" class="col notloading">Will reload...</div>
     </div>
-    <div id="main-filter-loading-indicator" class="notloading">Will reload...</div>
     <div class="col text-right">
         <div id="total_unknown" class="badge badge-secondary badge-pill ml-auto p-2 float-xs-right"></div>
-        <div id="total_woreda" style="color:#fff;background-color:#238b45" class="badge badge-pill ml-auto p-2 float-xs-right"></div>
+        <div id="total_woreda" class="badge badge-pill ml-auto p-2 float-xs-right" style="color:#fff;background-color:#238b45"></div>
         <div id="total_kebele" class="badge badge-warning badge-pill ml-auto p-2 float-xs-right"></div>
-        <div id="total_total" style="border-style:solid;color:#007bff;background-color:#ffffff" class="badge badge-primary badge-pill ml-auto p-2 float-xs-right"></div>
+        <div id="total_total" class="badge badge-primary badge-pill ml-auto p-2 float-xs-right" style="border-style:solid;color:#007bff;background-color:#ffffff"></div>
     </div>
 </div>
 
@@ -205,7 +205,7 @@
      * (event) when the change the filter selection
      */
     $('#main_filter').on("changed.bs.select", function(e, clickedIndex, newValue, oldValue) {
-        $('#main-filter-loading-indicator').attr("class","loading");
+        // $('#main-filter-loading-indicator').attr("class","loading");
         update_main_filter = true;
         var selected = $('#main_filter').val();
         // var lastSelected = $(this).find('option').eq(clickedIndex).val();
