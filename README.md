@@ -10,17 +10,17 @@ Historical data are meant for long term studies and comparations and are lazily 
 
 ## included softwares
 
-- Bootstrap 4.1.3 
+- Bootstrap 4.4.1 
   
-  (+Toggle, +Select, +Popper.js, +tippy-bundle 6, +colors-css 2.2.0, +bootstrap-table 1.17.1, +bootstrap-table-export)
+  (+Essentials, +Toggle, +Select, +Popper.js, +tippy-bundle, +colors-css, +bootstrap-table, +bootstrap-table-export)
 
 - jQuery 3.5.1
 
-  (+ui 1.12.1, +touch-pouch 0.2.2, +tableExport)
+  (+ui, +touch-punch)
 
 - Leaflet 1.5.1
 
-  (+MarkerCluser 1.4.1, +Fullscreen 1.0.1, +heat, +history, +TimeDimension 1.1.1, +shpfile)
+  (+MarkerCluser, +Fullscreen, +heat, +history, +TimeDimension, +shpfile)
 
 - HighCharts (+exporting, +offline-exporting, +export-data)
 - DaterangePicker (+FontAwesome)
