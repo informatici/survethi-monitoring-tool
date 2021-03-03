@@ -53,8 +53,8 @@
 				}
 			}
         });
-        console.log(secondaryShpfile);
-        console.log(secondaryShpfile._layers);
+        //console.log(secondaryShpfile);
+        //console.log(secondaryShpfile._layers);
 
         secondaryShpfile.addTo(mySecondaryMap);
         secondaryShpfile.once("data:loaded", function() {
@@ -113,7 +113,7 @@
                 setLoadingReportRange(false);
             },
             error: function(){
-                console.log('error');
+                console.log('datasource fetching error');
             }
         })
     }
@@ -230,7 +230,7 @@
                 show_epoch_data(newUrl);
             },
             error: function(){
-                console.log('error');
+                console.log('epoch data fetch error');
             }
         })
     }
@@ -353,7 +353,7 @@
                 setLoadingSecondMap(false);
             },
             error: function(){
-                console.log('error');
+                console.log('epoch data show error');
             }
         })
     }

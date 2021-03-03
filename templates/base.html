@@ -266,8 +266,8 @@
 				}
 			}
         });
-        console.log(shpfile);
-        console.log(shpfile._layers);
+        //console.log(shpfile);
+        //console.log(shpfile._layers);
 
         // shpfile.addTo(mymap);
         shpfile.once("data:loaded", function() {
@@ -351,7 +351,7 @@
                 myTimeout = setTimeout(check_connection, parameters.test_interval);
             },
             error: function(){
-                console.log('error');
+                console.log('check connection error');
             }
         })
     }
@@ -398,7 +398,7 @@
                 setLoading(false);
             },
             error: function(){
-                console.log('error');
+                console.log('fetch disease error');
             }
         })
     }
@@ -421,7 +421,7 @@
                 setLoading(false);
             },
             error: function(){
-                console.log('error');
+                console.log('fetch locations error');
             }
         })
     }
@@ -470,7 +470,7 @@
                 $('#spinner_refresh').prop('hidden', true);
             },
             error: function(){
-                console.log('error');
+                console.log('fetch data error');
             }
         })
     }

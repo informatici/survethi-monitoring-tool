@@ -35,7 +35,7 @@
             },
         }, function(start, end) {
             $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-            console.log(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            console.log('Selected range: ' + start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             parametersSecondMap.dateFrom = start;
             parametersSecondMap.dateTo = end;
             refresh_second_map();

@@ -25,7 +25,7 @@
      $(function() {
         $('#toggle_range').change(function() {
             parametersSecondMap.range = !parametersSecondMap.range;
-            console.log(parametersSecondMap.range);
+            console.log('Historical data: ' + parametersSecondMap.range);
             refresh_second_map(false);
             
         })

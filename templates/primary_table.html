@@ -37,7 +37,7 @@
         selected_dis = record['OPD_DIS_ID_A'];
         selected_rk = record['LOC_RK_CODE'];
         selected_w = record['LOC_W_CODE'];
-        console.log(selected_dis, selected_rk, selected_w);
+        console.log('selected record: ' + selected_dis, selected_rk, selected_w);
         selectedShapes = {"type":"FeatureCollection","features":[]}
 
         mymap.eachLayer(function(layer) {
