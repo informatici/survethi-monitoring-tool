@@ -29,11 +29,16 @@
         span_total.setAttribute('class',"badge badge-primary badge-pill ml-auto p-2 float-xs-right");
         span_total.setAttribute('style',"border-style:solid;color:#007bff;background-color:#ffffff");
 
-        if (item.unknown > 0) {
-            span_unknown.appendChild(document.createTextNode(item.unknown));
-            span_totals.appendChild(span_unknown);
-            if (first_unknown_badge === undefined) {
-                first_unknown_badge = span_unknown;
+        span_total.appendChild(document.createTextNode(item.kebele + item.woreda + item.unknown));
+        if (first_total_badge === undefined) {
+            first_total_badge = span_total;
+        }
+        span_totals.appendChild(span_total);
+        if (item.kebele > 0) {
+            span_kebele.appendChild(document.createTextNode(item.kebele));
+            span_totals.appendChild(span_kebele);
+            if (first_kebele_badge === undefined) {
+                first_kebele_badge = span_kebele;
             }
         }
         if (item.woreda > 0) {
@@ -43,19 +48,13 @@
                 first_woreda_badge = span_woreda;
             }
         }
-        if (item.kebele > 0) {
-            span_kebele.appendChild(document.createTextNode(item.kebele));
-            span_totals.appendChild(span_kebele);
-            if (first_kebele_badge === undefined) {
-                first_kebele_badge = span_kebele;
+        if (item.unknown > 0) {
+            span_unknown.appendChild(document.createTextNode(item.unknown));
+            span_totals.appendChild(span_unknown);
+            if (first_unknown_badge === undefined) {
+                first_unknown_badge = span_unknown;
             }
         }
-        span_total.appendChild(document.createTextNode(item.kebele + item.woreda + item.unknown));
-        if (first_total_badge === undefined) {
-            first_total_badge = span_total;
-        }
-        span_totals.appendChild(span_total);
-
         li.appendChild(document.createTextNode(item.desc));
         // li.appendChild(span_unknown);
         // li.appendChild(span_kebele);
