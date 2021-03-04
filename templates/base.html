@@ -254,7 +254,7 @@
     /*
      * (function) get shape file with Ethiopian regions
      */ 
-    function load_shapefile() {
+    function load_shapefile(resolve, reject) {
         shpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
 			onEachFeature: function(feature, layer) {
                 //console.log(feature);
@@ -274,8 +274,9 @@
              console.log("finished loading shapefile");
              show_markers(filtered_data);
              show_legenda();
+             resolve();
         });
-        return shpfile;
+        //return shpfile;
     }
 
     function show_legenda() {
@@ -372,11 +373,16 @@
      */
     function setLoading(loading) {
         if (loading) {
+            $('#spinner_refresh').prop('hidden', false);
             $('#map-loading-indicator').attr("class","loading");
             $('#table_primary').bootstrapTable('showLoading');
+            $('#dynamic-list-loading-indicator').attr('class', 'loading');
+                    
         } else {
+            $('#spinner_refresh').prop('hidden', true);
             $('#map-loading-indicator').attr("class","notloading");
             $('#table_primary').bootstrapTable('hideLoading')
+            $('#dynamic-list-loading-indicator').attr('class', 'notloading');
         }
     }
 
@@ -431,7 +437,6 @@
      */
     function fetch_data(newUrl) {
         setLoading(true);
-        $('#spinner_refresh').prop('hidden', false);
         $.ajax({
             url: newUrl,
             success:function(data,status,xhr)
@@ -443,21 +448,15 @@
                 //console.log(filtered_data);
                 if (filtered_data.length > 0) {
                     //show_markers(filtered_data); deferred to load_shapefile().once()
-                    var promise = new Promise(function(resolve, reject){
-                        //console.log('promise...');
-                        load_shapefile();
-                        resolve();
-                    });
-                    promise.then(function() {
+                    var promise = new Promise(load_shapefile)
+                    .then(function() {
                         //console.log('promise: success');
                         update_table_data(filtered_data);
-                        resetMainFilterTotals();
                         update_disease_list();
                         updateMainFilterTotals();
                     }).catch(function() {
-                        //console.log('promise: some error occurred');
+                        console.log('Promise(load_shapefile): rejected');
                     })
-                    
                 } else {
                     cleanMap();
                     update_table_data(filtered_data);
@@ -467,7 +466,6 @@
             },
             complete: function(){
                 setLoading(false);
-                $('#spinner_refresh').prop('hidden', true);
             },
             error: function(){
                 console.log('fetch data error');
@@ -508,17 +506,21 @@
 
         
 
-        var promise = new Promise(function(resolve, reject){
-            //console.log('promise...');
-            addShapeFile();
-            resolve();
-        });
-        promise.then(function() {
-            if (Object.keys(markersGroup1.getBounds()).length === 0)
+        var promise = new Promise(addShapeFile)
+        .then(function() {
+            let count_kebele = Object.keys(kebeleGeoshapes._layers).length;
+            let count_woreda = Object.keys(woredaGeoshapes._layers).length;
+            if (Object.keys(markersGroup1.getBounds()).length === 0
+                && count_kebele == 0
+                && count_woreda == 0) {
                 console.log('Main Map: nothing to display');
-            else {
+            } else {                
                 mymap.invalidateSize();
-                mymap.flyToBounds(kebeleGeoshapes.getBounds());
+                if (count_kebele > 0) {
+                    mymap.flyToBounds(kebeleGeoshapes.getBounds());
+                } else if (count_woreda > 0) {
+                    mymap.flyToBounds(woredaGeoshapes.getBounds());
+                }
                 var overlayMaps = {
                     "Health Posts": markersGroup1,
                     "Woreda": woredaGeoshapes,
@@ -635,7 +637,7 @@
                     "Zone: " + feature.properties.Z_NAME + "<br />";
     }
 
-    function addShapeFile() {
+    function addShapeFile(resolve, reject) {
         var kebeleShapes = {"type":"FeatureCollection","features":[]}
         var woredaShapes = {"type":"FeatureCollection","features":[]}
         var shapes = {"type":"FeatureCollection","features":[]}
@@ -691,6 +693,7 @@
 			}
         }).addTo(mymap);
         //console.log(kebeleGeoshapes);
+        resolve();
     }
 
     var grades = [0, 1, 5, 10, 15, 20, 25, 30];

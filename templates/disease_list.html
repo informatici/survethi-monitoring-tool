@@ -1,5 +1,6 @@
 <!doctype html>
 <ul id="dynamic-list" class="list-group"></ul>
+<div id="dynamic-list-loading-indicator" class="notloading">Listing...</div>
 <script type="text/javascript">
 
     /**
@@ -93,6 +94,7 @@
             filtered_data = filterFast(loadedTableData, [selected_id], 'OPD_DIS_ID_A');
             update_table_data(filtered_data);
         })
+
     }
 
     function click_on_list_select(layer, selected_id) {
