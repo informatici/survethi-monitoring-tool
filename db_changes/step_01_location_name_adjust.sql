@@ -1,69 +1,236 @@
 -- Goro changes
-UPDATE LOCATION SET LOC_ADDRESS = 'Adami Wadeissa' WHERE (LOC_CITY = 'Goro') and (LOC_ADDRESS = 'Adami Wadesa');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Chirecha');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Chirecha tedira');
+UPDATE PATIENT SET PAT_ADDR = 'Chirecha Tedira' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Chirecha tedira';
+UPDATE OPD SET OPD_PAT_ADDR = 'Chirecha Tedira' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Chirecha tedira';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Adami Wadesa' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Adami Wadeissa');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Addis Alem');
 UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Adami Wadesa' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Adami Wadeissa';
 UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Adami Wadesa' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Adami Wadeissa';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Adami Wadesa' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Addis Alem';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Adami Wadesa' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Addis Alem';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Chancho Soyoma' WHERE (LOC_CITY = 'Goro') and (LOC_ADDRESS = 'Chancho');
+UPDATE LOCATION SET LOC_ADDRESS = 'Goro' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Gosana Chirecha');
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Goro' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Gosana Chirecha';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Goro' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Gosana Chirecha';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Gurura Town' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Gurura town');
+UPDATE PATIENT SET PAT_ADDR = 'Gurura Town' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Gurura town';
+UPDATE OPD SET OPD_PAT_ADDR = 'Gurura Town' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Gurura town';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Gurura Town' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Gurura';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Gurura Town' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Gurura';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Chancho');
 UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Chancho Soyoma' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Chancho';
 UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Chancho Soyoma' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Chancho';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Dibidiba Abado' WHERE (LOC_CITY = 'Goro') and (LOC_ADDRESS = 'Didibe Abado');
+UPDATE LOCATION SET LOC_ADDRESS = 'Dibidiba Abado' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Didibe Abado');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Didibe');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Widibe');
 UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Dibidiba Abado' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Didibe Abado';
 UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Dibidiba Abado' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Didibe Abado';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Dibidiba Abado' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Didibe';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Dibidiba Abado' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Didibe';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Dibidiba Abado' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Widibe';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Dibidiba Abado' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Widibe';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Finchir Amba' WHERE (LOC_CITY = 'Goro') and (LOC_ADDRESS = 'Finchir Ambabeissa');
+UPDATE LOCATION SET LOC_ADDRESS = 'Finchir Amba' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Finchir Ambabeissa');
 UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Finchir Amba' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Finchir Ambabeissa';
 UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Finchir Amba' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Finchir Ambabeissa';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Leman Abu' WHERE (LOC_CITY = 'Goro') and (LOC_ADDRESS = 'Leimen Abu');
+UPDATE LOCATION SET LOC_ADDRESS = 'Fenchir Ambabesa' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Finchir Amba');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Finchere');
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Fenchir Ambabesa' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Finchir Amba';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Fenchir Ambabesa' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Finchir Amba';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Fenchir Ambabesa' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Finchere';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Fenchir Ambabesa' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Finchere';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Leman Abu' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Leimen Abu');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Leimen Abado');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Leimen Abado');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Leman Abu');
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Leman Abu' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Leman Abu';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Leman Abu' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Leman Abu';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Leman Abu' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Leimen Abado';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Leman Abu' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Leimen Abado';
 UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Leman Abu' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Leimen Abu';
 UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Leman Abu' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Leimen Abu';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Leman Abu' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Leimen Abado';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Leman Abu' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Leimen Abado';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Sinano Ameya' WHERE (LOC_CITY = 'Goro') and (LOC_ADDRESS = 'Sinano Amegna Gutei');
+UPDATE LOCATION SET LOC_ADDRESS = 'Sinano Ameya' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Sinano Amegna Gutei');
 UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Sinano Ameya' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Sinano Amegna Gutei';
 UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Sinano Ameya' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Sinano Amegna Gutei';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Sololia Kote Abote' WHERE (LOC_CITY = 'Goro') and (LOC_ADDRESS = 'Sololia Korei Abote');
+UPDATE LOCATION SET LOC_ADDRESS = 'Sinano Amanya Gute' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Serano');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Sinano');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Sinano Ameya');
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Sinano Amanya Gute' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Sinano Ameya';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Sinano Amanya Gute' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Sinano Ameya';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Sinano Amanya Gute' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Sinano';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Sinano Amanya Gute' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Sinano';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Sinano Amanya Gute' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Serano';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Sinano Amanya Gute' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Serano';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Sololia Kote Abote' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Sololia Korei Abote');
 UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Sololia Kote Abote' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Sololia Korei Abote';
 UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Sololia Kote Abote' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Sololia Korei Abote';
 
+UPDATE LOCATION SET LOC_ADDRESS = 'Abadho Bukasa' WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Abado Bukassa');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Abadu');
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Abadho Bukasa' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Abado Bukassa';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Abadho Bukasa' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Abado Bukassa';
+UPDATE PATIENT SET PAT_CITY = 'Goro', PAT_ADDR = 'Abadho Bukasa' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Abadu';
+UPDATE OPD SET OPD_PAT_CITY = 'Goro', OPD_PAT_ADDR = 'Abadho Bukasa' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Abadu';
+
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Charandis');
+
 -- Wolisso Rural changes
-UPDATE LOCATION SET LOC_ADDRESS = 'Chirech Wonberi' WHERE (LOC_CITY = 'Wolisso Rural') and (LOC_ADDRESS = 'Chiracha Wanbari');
+UPDATE LOCATION SET LOC_ADDRESS = 'Chirech Wonberi' WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Chiracha Wanbari');
 UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Chirech Wonberi' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Chiracha Wanbari';
 UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Chirech Wonberi' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Chiracha Wanbari';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Dire Duleti' WHERE (LOC_CITY = 'Wolisso Rural') and (LOC_ADDRESS = 'Direi Duleti');
+UPDATE LOCATION SET LOC_ADDRESS = 'Dire Duleti' WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Direi Duleti');
 UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Dire Duleti' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Direi Duleti';
 UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Dire Duleti' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Direi Duleti';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Senkelei Alei Mariyam' WHERE (LOC_CITY = 'Wolisso Rural') and (LOC_ADDRESS = 'Senkele Ale Mariyam');
+UPDATE LOCATION SET LOC_ADDRESS = 'Senkelei Alei Mariyam' WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Senkele Ale Mariyam');
 UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Senkelei Alei Mariyam' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Senkele Ale Mariyam';
 UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Senkelei Alei Mariyam' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Senkele Ale Mariyam';
 
--- Wonchi Rural changes
-UPDATE LOCATION SET LOC_ADDRESS = 'Azer Kereinssa' WHERE (LOC_CITY = 'Wonchi') and (LOC_ADDRESS = 'Azer');
-UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Azer Kereinssa' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Azer';
-UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Azer Kereinssa' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Azer';
+UPDATE LOCATION SET LOC_ADDRESS = 'Kenyira Lebu' WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Kegnra');
+UPDATE PATIENT SET PAT_ADDR = 'Kenyira Lebu' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Kegnra';
+UPDATE OPD SET OPD_PAT_ADDR = 'Kenyira Lebu' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Kegnra';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Chebo Sanseleti' WHERE (LOC_CITY = 'Wonchi') and (LOC_ADDRESS = 'Chebo Sansalti');
-UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Chebo Sanseleti' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Chebo Sansalti';
-UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Chebo Sanseleti' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Chebo Sansalti';
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Maru');
+UPDATE PATIENT SET PAT_ADDR = 'Maru Babali' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Maru';
+UPDATE OPD SET OPD_PAT_ADDR = 'Maru Babali' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Maru';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Echa Dibdiba' WHERE (LOC_CITY = 'Wonchi') and (LOC_ADDRESS = 'Echa');
-UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Echa Dibdiba' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Echa';
-UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Echa Dibdiba' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Echa';
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'G/Kistama');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Gadu Kistana' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'G/Kistama';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Gadu Kistana' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'G/Kistama';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Shegeg Gefere' WHERE (LOC_CITY = 'Wonchi') and (LOC_ADDRESS = 'Shegag');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Gerbo');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Sodo Gerbo' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Gerbo';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Sodo Gerbo' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Gerbo';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'K/Bedasa');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Bedeisa Koricha' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'K/Bedasa';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Bedeisa Koricha' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'K/Bedasa';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'K/Bedeko');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Beda Keiro' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'K/Bedeko';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Beda Keiro' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'K/Bedeko';
+
+UPDATE LOCATION SET LOC_CITY = 'Wolisso Rural', LOC_ADDRESS = 'Birbisa Kenteiro' WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'K/Birbrisa');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Birbisa Kenteiro' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'K/Birbrisa';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Birbisa Kenteiro' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'K/Birbrisa';
+
+UPDATE LOCATION SET LOC_CITY = 'Wolisso Rural', LOC_ADDRESS = 'Kenyira Lebu' WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Kegnra');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Kenyira Lebu' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Kegnra';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Kenyira Lebu' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Kegnra';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Kegnera Lebu');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Kenyira Lebu' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Kegnera Lebu';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Kenyira Lebu' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Kegnera Lebu';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Korra');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Doyo Kora' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Korra';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Doyo Kora' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Korra';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'L/Anchbe');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Tobe');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Tombe Anchebi' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'L/Anchbe';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Tombe Anchebi' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'L/Anchbe';
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Tombe Anchebi' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Tobe';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Tombe Anchebi' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Tobe';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Obi');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Obi Koji' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Obi';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Obi Koji' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Obi';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'S/Yabet');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Sombo Yabeta' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'S/Yabet';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Sombo Yabeta' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'S/Yabet';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Walu Soma');
+UPDATE PATIENT SET PAT_CITY = 'Wolisso Rural', PAT_ADDR = 'Wolisoma' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Walu Soma';
+UPDATE OPD SET OPD_PAT_CITY = 'Wolisso Rural', OPD_PAT_ADDR = 'Wolisoma' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Walu Soma';
+
+DELETE FROM LOCATION WHERE LOC_CITY = 'Wolisso Rural' AND LOC_ADDRESS = 'Leman';
+UPDATE PATIENT SET PAT_ADDR = 'Leman Ayitu' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Leman';
+UPDATE OPD SET OPD_PAT_ADDR = 'Leman Ayitu' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Leman';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Yaya');
+
+-- Wonchi changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Chebose Seleten' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Chebo Sansalti');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Chebose Seleten' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Chebo Sansalti';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Chebose Seleten' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Chebo Sansalti';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Chebose Seleten' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Chebo Sansalti');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Chebose Seleten' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Chebo Sansalti';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Chebose Seleten' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Chebo Sansalti';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Echade Bidibe' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Echa');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Echade Bidibe' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Echa';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Echade Bidibe' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Echa';
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Echade Bidibe' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Echa Dibdiba';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Echade Bidibe' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Echa Dibdiba';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Shegeg Gefere' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Shegag');
 UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Shegeg Gefere' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Shegag';
 UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Shegeg Gefere' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Shegag';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Weldo Talfam' WHERE (LOC_CITY = 'Wonchi') and (LOC_ADDRESS = 'Waldo Telfame');
+UPDATE LOCATION SET LOC_ADDRESS = 'Weldo Talfam' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Waldo Telfame');
 UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Weldo Talfam' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Waldo Telfame';
 UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Weldo Talfam' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Waldo Telfame';
 
-UPDATE LOCATION SET LOC_ADDRESS = 'Worabu Massi' WHERE (LOC_CITY = 'Wonchi') and (LOC_ADDRESS = 'Worabu');
+UPDATE LOCATION SET LOC_ADDRESS = 'Worabu Massi' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Worabu');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Werabu Bariyu');
 UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Worabu Massi' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Worabu';
 UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Worabu Massi' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Worabu';
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Worabu Massi' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Werabu Bariyu';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Worabu Massi' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Werabu Bariyu';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Azer Qerensa' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Hazar');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Hazar Kerensa');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Azer Kereinssa');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Azer Qerensa' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Hazar Kerensa';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Azer Qerensa' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Hazar Kerensa';
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Azer Qerensa' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Hazar';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Azer Qerensa' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Hazar';
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Azer Qerensa' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Azer Kereinssa';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Azer Qerensa' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Azer Kereinssa';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Lemen Metahora' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Leman Ayitu');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Lemen Metahora' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Leman Ayitu';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Lemen Metahora' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Leman Ayitu';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Meti Welga' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Meiti Walga');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'M/Walga');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Meti Welga' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Meiti Walga';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Meti Welga' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Meiti Walga';
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Meti Welga' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'M/Walga';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Meti Welga' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'M/Walga';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Wendo Talfe' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Weldo Talfam');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Wendo Talfe' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Weldo Talfam';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Wendo Talfe' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Weldo Talfam';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Wonchi' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Hono Fare');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Wonchi' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Hono Fare';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Wonchi' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Hono Fare';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'M/Kube');
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Senkolei Kake');
+UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Sokole Kaki' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Senkolei Kake';
+UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Sokole Kaki' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Senkolei Kake';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Toleka Lema');
 
 -- Wolisso Town changes
 UPDATE LOCATION SET LOC_CITY = 'Wolisso Town' WHERE LOC_CITY = 'Wolisso town';
@@ -75,8 +242,493 @@ UPDATE LOCATION SET LOC_CITY = 'Sodo Dachi' WHERE LOC_CITY = 'Sodo dachi';
 UPDATE PATIENT SET PAT_CITY = 'Sodo Dachi' WHERE PAT_CITY = 'Sodo dachi';
 UPDATE OPD SET OPD_PAT_CITY = 'Sodo Dachi' WHERE OPD_PAT_CITY = 'Sodo dachi';
 
+UPDATE LOCATION SET LOC_ADDRESS = 'Weni Oda Leqa' WHERE (LOC_CITY = 'Sodo Dachi') AND (LOC_ADDRESS = 'Odo Leka');
+UPDATE PATIENT SET PAT_ADDR = 'Weni Oda Leqa' WHERE PAT_CITY = 'Sodo Dachi' AND PAT_ADDR = 'Odo Leka';
+UPDATE OPD SET OPD_PAT_ADDR = 'Weni Oda Leqa' WHERE OPD_PAT_CITY = 'Sodo Dachi' AND OPD_PAT_ADDR = 'Odo Leka';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Tere Town' WHERE (LOC_CITY = 'Sodo Dachi') AND (LOC_ADDRESS = 'Terei 01');
+UPDATE PATIENT SET PAT_ADDR = 'Tere Town' WHERE PAT_CITY = 'Sodo Dachi' AND PAT_ADDR = 'Terei 01';
+UPDATE OPD SET OPD_PAT_ADDR = 'Tere Town' WHERE OPD_PAT_CITY = 'Sodo Dachi' AND OPD_PAT_ADDR = 'Terei 01';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Sodo Dachi') AND (LOC_ADDRESS = 'A/Wayo');
+
 -- Chitu Town changes
-UPDATE LOCATION SET LOC_ADDRESS = 'Chitu Town' WHERE (LOC_CITY = 'Wonchi') and (LOC_ADDRESS = 'Chitu town');
+UPDATE LOCATION SET LOC_ADDRESS = 'Chitu Town' WHERE (LOC_CITY = 'Wonchi') AND (LOC_ADDRESS = 'Chitu town');
 UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Chitu Town' WHERE PAT_CITY = 'Wonchi' AND PAT_ADDR = 'Chitu town';
 UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Chitu Town' WHERE OPD_PAT_CITY = 'Wonchi' AND OPD_PAT_ADDR = 'Chitu town';
 
+-- Amaya Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Denkaka Odu Bari' WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Dunkeka');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Denkaka Odu Bari' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Dunkeka';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Denkaka Odu Bari' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Dunkeka';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Kerisa Kilei' WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'I/Kersa');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Kerssa');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Kerisa Kilei' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'I/Kersa';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Kerisa Kilei' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'I/Kersa';
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Kerisa Kilei' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Kerssa';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Kerisa Kilei' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Kerssa';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Shonike Abuko' WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'S/Abuke Gala');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Shonike Abuko' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'S/Abuke Gala';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Shonike Abuko' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'S/Abuke Gala';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Eteya Jafitinibo' WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Jefit Itiya');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Eteya Jafitinibo' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Jefit Itiya';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Eteya Jafitinibo' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Jefit Itiya';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Amaya' WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Ali Bebo');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Amaya' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Ali Bebo';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Amaya' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Ali Bebo';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Biro Selan');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Amaya' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Biro Selan';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Amaya' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Biro Selan';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'K/Korit');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Walga') AND (LOC_ADDRESS = 'Kulit');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Kono Kulit' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'K/Korit';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Kono Kulit' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'K/Korit';
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Kono Kulit' WHERE PAT_CITY = 'Walga' AND PAT_ADDR = 'Kulit';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Kono Kulit' WHERE OPD_PAT_CITY = 'Walga' AND OPD_PAT_ADDR = 'Kulit';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'K/Robeyi');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Amaya' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'K/Robeyi';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Amaya' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'K/Robeyi';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Kechema');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Kechemei Jirein' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Kechema';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Kechemei Jirein' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Kechema';
+
+DELETE FROM LOCATION WHERE LOC_ADDRESS = 'Kenessa' AND LOC_CITY = 'Amaya';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Korra');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Arbaseden Kura' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Korra';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Arbaseden Kura' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Korra';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Kota');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Moko Ujuba Kota' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Kota';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Moko Ujuba Kota' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Kota';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'S/Mere');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Meri Sekela' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'S/Mere';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Meri Sekela' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'S/Mere';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Shonkei Hudad 09');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Shonike Abuko' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Shonkei Hudad 09';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Shonike Abuko' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Shonkei Hudad 09';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Sobo');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Tumi');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Tumi Bino Sombo' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Sobo';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Tumi Bino Sombo' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Sobo';
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Tumi Bino Sombo' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Tumi';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Tumi Bino Sombo' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Tumi';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'T/Lemen');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Amaya' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'T/Lemen';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Amaya' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'T/Lemen';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Amaya') AND (LOC_ADDRESS = 'Tiro');
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Tiro Ilala' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Tiro';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Tiro Ilala' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Tiro';
+
+DELETE FROM LOCATION WHERE LOC_ADDRESS = 'Wele Kelo' AND LOC_CITY = 'Amaya';
+
+DELETE FROM LOCATION WHERE LOC_ADDRESS = 'Lefito Tsigei' AND LOC_CITY = 'Amaya';
+UPDATE PATIENT SET PAT_CITY = 'Amaya', PAT_ADDR = 'Tsega Lafto' WHERE PAT_CITY = 'Amaya' AND PAT_ADDR = 'Lefito Tsigei';
+UPDATE OPD SET OPD_PAT_CITY = 'Amaya', OPD_PAT_ADDR = 'Tsega Lafto' WHERE OPD_PAT_CITY = 'Amaya' AND OPD_PAT_ADDR = 'Lefito Tsigei';
+
+-- Becho Town changes
+DELETE FROM LOCATION WHERE LOC_ADDRESS = 'Becho' AND LOC_CITY = 'S/Chirecha';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Becho') AND (LOC_ADDRESS = 'A.Bune');
+UPDATE PATIENT SET PAT_CITY = 'Becho', PAT_ADDR = 'Awash Bune' WHERE PAT_CITY = 'Becho' AND PAT_ADDR = 'A.Bune';
+UPDATE OPD SET OPD_PAT_CITY = 'Becho', OPD_PAT_ADDR = 'Awash Bune' WHERE OPD_PAT_CITY = 'Becho' AND OPD_PAT_ADDR = 'A.Bune';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Becho') AND (LOC_ADDRESS = 'B/Gefere');
+UPDATE PATIENT SET PAT_CITY = 'Becho', PAT_ADDR = 'Boji Geferei' WHERE PAT_CITY = 'Becho' AND PAT_ADDR = 'B/Gefere';
+UPDATE OPD SET OPD_PAT_CITY = 'Becho', OPD_PAT_ADDR = 'Boji Geferei' WHERE OPD_PAT_CITY = 'Becho' AND OPD_PAT_ADDR = 'B/Gefere';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Batu Cherecha' WHERE (LOC_CITY = 'Becho') AND (LOC_ADDRESS = 'Batu');
+UPDATE PATIENT SET PAT_CITY = 'Becho', PAT_ADDR = 'Batu Cherecha' WHERE PAT_CITY = 'Becho' AND PAT_ADDR = 'Batu';
+UPDATE OPD SET OPD_PAT_CITY = 'Becho', OPD_PAT_ADDR = 'Batu Cherecha' WHERE OPD_PAT_CITY = 'Becho' AND OPD_PAT_ADDR = 'Batu';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Becho') AND (LOC_ADDRESS = 'Bebeli');
+UPDATE PATIENT SET PAT_CITY = 'Becho', PAT_ADDR = 'Bebeli Debegna' WHERE PAT_CITY = 'Becho' AND PAT_ADDR = 'Bebeli';
+UPDATE OPD SET OPD_PAT_CITY = 'Becho', OPD_PAT_ADDR = 'Bebeli Debegna' WHERE OPD_PAT_CITY = 'Becho' AND OPD_PAT_ADDR = 'Bebeli';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Becho' WHERE (LOC_CITY = 'Becho') AND (LOC_ADDRESS = 'Becho Town');
+UPDATE PATIENT SET PAT_CITY = 'Becho', PAT_ADDR = 'Becho' WHERE PAT_CITY = 'Becho' AND PAT_ADDR = 'Becho Town';
+UPDATE OPD SET OPD_PAT_CITY = 'Becho', OPD_PAT_ADDR = 'Becho' WHERE OPD_PAT_CITY = 'Becho' AND OPD_PAT_ADDR = 'Becho Town';
+
+DELETE FROM LOCATION WHERE LOC_ADDRESS = 'G/Badada' AND LOC_CITY = 'Becho';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Becho' WHERE (LOC_CITY = 'Becho') AND (LOC_ADDRESS = 'Gna gogolei');
+UPDATE PATIENT SET PAT_CITY = 'Becho', PAT_ADDR = 'Becho' WHERE PAT_CITY = 'Becho' AND PAT_ADDR = 'Gna gogolei';
+UPDATE OPD SET OPD_PAT_CITY = 'Becho', OPD_PAT_ADDR = 'Becho' WHERE OPD_PAT_CITY = 'Becho' AND OPD_PAT_ADDR = 'Gna gogolei';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Becho') AND (LOC_ADDRESS = 'Tulu Rada');
+UPDATE PATIENT SET PAT_CITY = 'Becho', PAT_ADDR = 'Becho' WHERE PAT_CITY = 'Becho' AND PAT_ADDR = 'Tulu Rada';
+UPDATE OPD SET OPD_PAT_CITY = 'Becho', OPD_PAT_ADDR = 'Becho' WHERE OPD_PAT_CITY = 'Becho' AND OPD_PAT_ADDR = 'Tulu Rada';
+
+-- Dano Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Dano Shenen' WHERE (LOC_CITY = 'Dano') AND (LOC_ADDRESS = 'Dano');
+UPDATE PATIENT SET PAT_CITY = 'Dano', PAT_ADDR = 'Dano Shenen' WHERE PAT_CITY = 'Dano' AND PAT_ADDR = 'Dano';
+UPDATE OPD SET OPD_PAT_CITY = 'Dano', OPD_PAT_ADDR = 'Dano Shenen' WHERE OPD_PAT_CITY = 'Dano' AND OPD_PAT_ADDR = 'Dano';
+
+-- Dawo Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Busa Town' WHERE (LOC_CITY = 'Dawo') AND (LOC_ADDRESS = 'Busa');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Dawo') AND (LOC_ADDRESS = 'Bussa 01');
+UPDATE PATIENT SET PAT_CITY = 'Dawo', PAT_ADDR = 'Busa Town' WHERE PAT_CITY = 'Dawo' AND PAT_ADDR = 'Busa';
+UPDATE OPD SET OPD_PAT_CITY = 'Dawo', OPD_PAT_ADDR = 'Busa Town' WHERE OPD_PAT_CITY = 'Dawo' AND OPD_PAT_ADDR = 'Busa';
+UPDATE PATIENT SET PAT_CITY = 'Dawo', PAT_ADDR = 'Busa Town' WHERE PAT_CITY = 'Dawo' AND PAT_ADDR = 'Bussa 01';
+UPDATE OPD SET OPD_PAT_CITY = 'Dawo', OPD_PAT_ADDR = 'Busa Town' WHERE OPD_PAT_CITY = 'Dawo' AND OPD_PAT_ADDR = 'Bussa 01';
+
+DELETE FROM LOCATION WHERE LOC_ADDRESS = 'Burka Gode' AND LOC_CITY = 'Dawo';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Dawo') AND (LOC_ADDRESS = 'D/Sedden');
+UPDATE PATIENT SET PAT_CITY = 'Dawo', PAT_ADDR = 'Dawo Seden' WHERE PAT_CITY = 'Dawo' AND PAT_ADDR = 'D/Sedden';
+UPDATE OPD SET OPD_PAT_CITY = 'Dawo', OPD_PAT_ADDR = 'Dawo Seden' WHERE OPD_PAT_CITY = 'Dawo' AND OPD_PAT_ADDR = 'D/Sedden';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Dawo') AND (LOC_ADDRESS = 'Dema   Jeluma');
+UPDATE PATIENT SET PAT_CITY = 'Dawo', PAT_ADDR = 'Dima Jeliwan' WHERE PAT_CITY = 'Dawo' AND PAT_ADDR = 'Dema   Jeluma';
+UPDATE OPD SET OPD_PAT_CITY = 'Dawo', OPD_PAT_ADDR = 'Dima Jeliwan' WHERE OPD_PAT_CITY = 'Dawo' AND OPD_PAT_ADDR = 'Dema   Jeluma';
+
+DELETE FROM LOCATION WHERE LOC_ADDRESS = 'Jabodedi' AND LOC_CITY = 'Dawo';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Dawo' WHERE (LOC_CITY = 'Dawo') AND (LOC_ADDRESS = 'Kechema');
+UPDATE PATIENT SET PAT_CITY = 'Dawo', PAT_ADDR = 'Dawo' WHERE PAT_CITY = 'Dawo' AND PAT_ADDR = 'Kechema';
+UPDATE OPD SET OPD_PAT_CITY = 'Dawo', OPD_PAT_ADDR = 'Dawo' WHERE OPD_PAT_CITY = 'Dawo' AND OPD_PAT_ADDR = 'Kechema';
+
+DELETE FROM LOCATION WHERE LOC_ADDRESS = 'Kishaw' AND LOC_CITY = 'Dawo';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Dawo') AND (LOC_ADDRESS = 'Reche');
+UPDATE PATIENT SET PAT_CITY = 'Dawo', PAT_ADDR = 'Rechei Kusho' WHERE PAT_CITY = 'Dawo' AND PAT_ADDR = 'Reche';
+UPDATE OPD SET OPD_PAT_CITY = 'Dawo', OPD_PAT_ADDR = 'Rechei Kusho' WHERE OPD_PAT_CITY = 'Dawo' AND OPD_PAT_ADDR = 'Reche';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Dawo') AND (LOC_ADDRESS = 'S/Haribu');
+UPDATE PATIENT SET PAT_CITY = 'Dawo', PAT_ADDR = 'Seiderei Harbu' WHERE PAT_CITY = 'Dawo' AND PAT_ADDR = 'S/Haribu';
+UPDATE OPD SET OPD_PAT_CITY = 'Dawo', OPD_PAT_ADDR = 'Seiderei Harbu' WHERE OPD_PAT_CITY = 'Dawo' AND OPD_PAT_ADDR = 'S/Haribu';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Dawo') AND (LOC_ADDRESS = 'Tute');
+UPDATE PATIENT SET PAT_CITY = 'Dawo', PAT_ADDR = 'Tutei Kunchei' WHERE PAT_CITY = 'Dawo' AND PAT_ADDR = 'Tute';
+UPDATE OPD SET OPD_PAT_CITY = 'Dawo', OPD_PAT_ADDR = 'Tutei Kunchei' WHERE OPD_PAT_CITY = 'Dawo' AND OPD_PAT_ADDR = 'Tute';
+
+-- Elu Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Amido Kuncho' WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Amdo Kuncho');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Amido Kuncho' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Amdo Kuncho';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Amido Kuncho' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Amdo Kuncho';
+
+UPDATE PATIENT SET PAT_CITY = 'Becho', PAT_ADDR = 'Asgori Town' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Asgori';
+UPDATE OPD SET OPD_PAT_CITY = 'Becho', OPD_PAT_ADDR = 'Asgori Town' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Asgori';
+DELETE FROM LOCATION WHERE LOC_CITY = 'Elu' AND LOC_ADDRESS = 'Asgori';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Bilbil');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Bile');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Bili' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Bilbil';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Bili' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Bilbil';
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Bili' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Bile';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Bili' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Bile';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'D/Logo');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Dugda Lugo' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'D/Logo';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Dugda Lugo' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'D/Logo';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Jedu');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Jigdu Mida' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Jedu';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Jigdu Mida' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Jedu';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Keta');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'K/Kita');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Keta Asgori' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Keta';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Keta Asgori' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Keta';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Mulu Satey' WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Mulo satayi');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'M/Satayi');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Mulu Satey' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Mulo satayi';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Mulu Satey' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Mulo satayi';
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Mulu Satey' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'M/Satayi';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Mulu Satey' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'M/Satayi';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Senibo Goro' WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Simbo Goro');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Sembo Goro');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Senibo Goro' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Simbo Goro';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Senibo Goro' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Simbo Goro';
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Senibo Goro' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Sembo Goro';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Senibo Goro' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Sembo Goro';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Buti Teglo' WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Talgo Buti');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Buti Teglo' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Talgo Buti';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Buti Teglo' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Talgo Buti';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Wereso Kolina' WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'Warersso Kolina');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Elu') AND (LOC_ADDRESS = 'W/Kelena');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Wereso Kolina' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'Warersso Kolina';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Wereso Kolina' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'Warersso Kolina';
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Wereso Kolina' WHERE PAT_CITY = 'Elu' AND PAT_ADDR = 'W/Kelena';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Wereso Kolina' WHERE OPD_PAT_CITY = 'Elu' AND OPD_PAT_ADDR = 'W/Kelena';
+
+-- Gibei Town changes
+UPDATE LOCATION SET LOC_CITY = 'Jimma' WHERE (LOC_CITY = 'Gibei') AND (LOC_ADDRESS = 'Gibei');
+UPDATE PATIENT SET PAT_CITY = 'Jimma', PAT_ADDR = 'Gibei' WHERE PAT_CITY = 'Gibei' AND PAT_ADDR = 'Gibei';
+UPDATE OPD SET OPD_PAT_CITY = 'Jimma', OPD_PAT_ADDR = 'Gibei' WHERE OPD_PAT_CITY = 'Gibei' AND OPD_PAT_ADDR = 'Gibei';
+
+-- Enmur Area changes
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Gunchirei') AND (LOC_ADDRESS = 'Gunchirei');
+UPDATE PATIENT SET PAT_CITY = 'Enmur', PAT_ADDR = 'Gunchirei' WHERE PAT_CITY = 'Gunchirei' AND PAT_ADDR = 'Gunchirei';
+UPDATE OPD SET OPD_PAT_CITY = 'Enmur', OPD_PAT_ADDR = 'Gunchirei' WHERE OPD_PAT_CITY = 'Gunchirei' AND OPD_PAT_ADDR = 'Gunchirei';
+
+-- Asendabo Town change
+UPDATE LOCATION SET LOC_CITY = 'Jimma', LOC_ADDRESS = 'Asendabo Town' WHERE (LOC_CITY = 'Asendabo') AND (LOC_ADDRESS = 'Asendabo');
+UPDATE PATIENT SET PAT_CITY = 'Jimma', PAT_ADDR = 'Asendabo Town' WHERE PAT_CITY = 'Asendabo' AND PAT_ADDR = 'Asendabo';
+UPDATE OPD SET OPD_PAT_CITY = 'Jimma', OPD_PAT_ADDR = 'Asendabo Town' WHERE OPD_PAT_CITY = 'Asendabo' AND OPD_PAT_ADDR = 'Asendabo';
+
+-- Nono Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Chando' WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'Condo');
+UPDATE PATIENT SET PAT_ADDR = 'Chando' WHERE PAT_CITY = 'Nono' AND PAT_ADDR = 'Condo';
+UPDATE OPD SET OPD_PAT_ADDR = 'Chando' WHERE OPD_PAT_CITY = 'Nono' AND OPD_PAT_ADDR = 'Condo';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Hurumukorke' WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'M/Korke');
+UPDATE PATIENT SET PAT_ADDR = 'Hurumukorke' WHERE PAT_CITY = 'Nono' AND PAT_ADDR = 'M/Korke';
+UPDATE OPD SET OPD_PAT_ADDR = 'Hurumukorke' WHERE OPD_PAT_CITY = 'Nono' AND OPD_PAT_ADDR = 'M/Korke';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Metusilase' WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'M/Silase');
+UPDATE PATIENT SET PAT_ADDR = 'Metusilase' WHERE PAT_CITY = 'Nono' AND PAT_ADDR = 'M/Silase';
+UPDATE OPD SET OPD_PAT_ADDR = 'Metusilase' WHERE OPD_PAT_CITY = 'Nono' AND OPD_PAT_ADDR = 'M/Silase';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Nono Qondala' WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'Nono Town');
+UPDATE PATIENT SET PAT_ADDR = 'Nono Qondala' WHERE PAT_CITY = 'Nono' AND PAT_ADDR = 'Nono Town';
+UPDATE OPD SET OPD_PAT_ADDR = 'Nono Qondala' WHERE OPD_PAT_CITY = 'Nono' AND OPD_PAT_ADDR = 'Nono Town';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Nono' WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'Checha');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'Darge');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'Dibo');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'K/Denke');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Nono') AND (LOC_ADDRESS = 'Degag');
+UPDATE PATIENT SET PAT_ADDR = 'Nono' WHERE PAT_CITY = 'Nono' AND PAT_ADDR = 'Checha';
+UPDATE OPD SET OPD_PAT_ADDR = 'Nono' WHERE OPD_PAT_CITY = 'Nono' AND OPD_PAT_ADDR = 'Checha';
+UPDATE PATIENT SET PAT_ADDR = 'Nono' WHERE PAT_CITY = 'Nono' AND PAT_ADDR = 'Darge';
+UPDATE OPD SET OPD_PAT_ADDR = 'Nono' WHERE OPD_PAT_CITY = 'Nono' AND OPD_PAT_ADDR = 'Darge';
+UPDATE PATIENT SET PAT_ADDR = 'Nono' WHERE PAT_CITY = 'Nono' AND PAT_ADDR = 'Dibo';
+UPDATE OPD SET OPD_PAT_ADDR = 'Nono' WHERE OPD_PAT_CITY = 'Nono' AND OPD_PAT_ADDR = 'Dibo';
+UPDATE PATIENT SET PAT_ADDR = 'Nono' WHERE PAT_CITY = 'Nono' AND PAT_ADDR = 'Degag';
+UPDATE OPD SET OPD_PAT_ADDR = 'Nono' WHERE OPD_PAT_CITY = 'Nono' AND OPD_PAT_ADDR = 'Degag';
+
+-- Seden Sodo Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Ale Abeba' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Alei Abeba');
+UPDATE PATIENT SET PAT_ADDR = 'Ale Abeba' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Alei Abeba';
+UPDATE OPD SET OPD_PAT_ADDR = 'Ale Abeba' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Alei Abeba';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Ejoy Eskedey' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Ajo');
+UPDATE PATIENT SET PAT_ADDR = 'Ejoy Eskedey' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Ajo';
+UPDATE OPD SET OPD_PAT_ADDR = 'Ejoy Eskedey' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Ajo';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Gidano Dalota' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'D/Gidano');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'G/Dalota');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'L/Gedano');
+UPDATE PATIENT SET PAT_ADDR = 'Gidano Dalota' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'D/Gidano';
+UPDATE OPD SET OPD_PAT_ADDR = 'Gidano Dalota' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'D/Gidano';
+UPDATE PATIENT SET PAT_ADDR = 'Gidano Dalota' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'G/Dalota';
+UPDATE OPD SET OPD_PAT_ADDR = 'Gidano Dalota' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'G/Dalota';
+UPDATE PATIENT SET PAT_ADDR = 'Gidano Dalota' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'L/Gedano';
+UPDATE OPD SET OPD_PAT_ADDR = 'Gidano Dalota' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'L/Gedano';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Ailo' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Ello');
+UPDATE PATIENT SET PAT_ADDR = 'Ailo' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Ello';
+UPDATE OPD SET OPD_PAT_ADDR = 'Ailo' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Ello';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Chulule');
+UPDATE PATIENT SET PAT_ADDR = 'Harbu Chululei' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Chulule';
+UPDATE OPD SET OPD_PAT_ADDR = 'Harbu Chululei' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Chulule';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Aebisa Leku Gidawa' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Ebisa');
+UPDATE PATIENT SET PAT_ADDR = 'Aebisa Leku Gidawa' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Ebisa';
+UPDATE OPD SET OPD_PAT_ADDR = 'Aebisa Leku Gidawa' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Ebisa';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Tawocha Wechanchr' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Wonchene');
+UPDATE PATIENT SET PAT_ADDR = 'Tawocha Wechanchr' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Wonchene';
+UPDATE OPD SET OPD_PAT_ADDR = 'Tawocha Wechanchr' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Wonchene';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Tenocha');
+UPDATE PATIENT SET PAT_ADDR = 'Tawocha Wechanchr' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Tenocha';
+UPDATE OPD SET OPD_PAT_ADDR = 'Tawocha Wechanchr' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Tenocha';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Yimer Amba Washenba' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Yimer Amba');
+UPDATE PATIENT SET PAT_ADDR = 'Yimer Amba Washenba' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Yimer Amba';
+UPDATE OPD SET OPD_PAT_ADDR = 'Yimer Amba Washenba' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Yimer Amba';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Aurago Kelcha' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Urago');
+UPDATE PATIENT SET PAT_ADDR = 'Aurago Kelcha' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Urago';
+UPDATE OPD SET OPD_PAT_ADDR = 'Aurago Kelcha' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Urago';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Abadi Borale' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'A/Boru');
+UPDATE PATIENT SET PAT_ADDR = 'Abadi Borale' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'A/Boru';
+UPDATE OPD SET OPD_PAT_ADDR = 'Abadi Borale' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'A/Boru';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Seden Sodo' WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Abelite');
+UPDATE PATIENT SET PAT_ADDR = 'Seden Sodo' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Abelite';
+UPDATE OPD SET OPD_PAT_ADDR = 'Seden Sodo' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Abelite';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Detu');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Gedebano');
+UPDATE PATIENT SET PAT_ADDR = 'Seden Sodo' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Gedebano';
+UPDATE OPD SET OPD_PAT_ADDR = 'Seden Sodo' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Gedebano';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'M/Seriti');
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Molohun');
+UPDATE PATIENT SET PAT_ADDR = 'Seden Sodo' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Molohun';
+UPDATE OPD SET OPD_PAT_ADDR = 'Seden Sodo' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Molohun';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Mudena Iba');
+UPDATE PATIENT SET PAT_ADDR = 'Mudena Ibayu' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Mudena Iba';
+UPDATE OPD SET OPD_PAT_ADDR = 'Mudena Ibayu' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Mudena Iba';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Ogu');
+UPDATE PATIENT SET PAT_ADDR = 'Seden Sodo' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Ogu';
+UPDATE OPD SET OPD_PAT_ADDR = 'Seden Sodo' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Ogu';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'R/Kusho');
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Seden Sodo') AND (LOC_ADDRESS = 'Tolei Belekeisi');
+UPDATE PATIENT SET PAT_ADDR = 'Balekese' WHERE PAT_CITY = 'Seden Sodo' AND PAT_ADDR = 'Tolei Belekeisi';
+UPDATE OPD SET OPD_PAT_ADDR = 'Balekese' WHERE OPD_PAT_CITY = 'Seden Sodo' AND OPD_PAT_ADDR = 'Tolei Belekeisi';
+
+-- Sokoru Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Sokoru Town' WHERE (LOC_CITY = 'Sokoru') AND (LOC_ADDRESS = 'Sokoru');
+UPDATE PATIENT SET PAT_ADDR = 'Sokoru Town' WHERE PAT_CITY = 'Sokoru' AND PAT_ADDR = 'Sokoru';
+UPDATE OPD SET OPD_PAT_ADDR = 'Sokoru Town' WHERE OPD_PAT_CITY = 'Sokoru' AND OPD_PAT_ADDR = 'Sokoru';
+
+UPDATE LOCATION SET LOC_CITY = 'Sokoru Town', LOC_ADDRESS = 'Sokoru Town' WHERE (LOC_CITY = 'Jimma') AND (LOC_ADDRESS = 'Sokoru');
+UPDATE PATIENT SET PAT_CITY = 'Sokoru Town', PAT_ADDR = 'Sokoru Town' WHERE PAT_CITY = 'Jimma' AND PAT_ADDR = 'Sokoru';
+UPDATE OPD SET OPD_PAT_CITY = 'Sokoru Town', OPD_PAT_ADDR = 'Sokoru Town' WHERE OPD_PAT_CITY = 'Jimma' AND OPD_PAT_ADDR = 'Sokoru';
+
+-- Teji Town changes
+UPDATE LOCATION SET LOC_CITY = 'Elu', LOC_ADDRESS = 'Teji Town' WHERE (LOC_CITY = 'Teji') AND (LOC_ADDRESS = 'Teji');
+UPDATE PATIENT SET PAT_CITY = 'Elu', PAT_ADDR = 'Teji Town' WHERE PAT_CITY = 'Teji' AND PAT_ADDR = 'Teji';
+UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Teji Town' WHERE OPD_PAT_CITY = 'Teji' AND OPD_PAT_ADDR = 'Teji';
+UPDATE PATIENT SET PAT_CITY = 'Elu' WHERE PAT_CITY = 'Teji' AND (PAT_ADDR = '' OR PAT_ADDR IS NULL);
+UPDATE OPD SET OPD_PAT_CITY = 'Elu' WHERE OPD_PAT_CITY = 'Teji' AND (OPD_PAT_ADDR = '' OR OPD_PAT_ADDR IS NULL);
+
+-- Tole Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Habebe Silasena Gichila' WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Habibe');
+UPDATE PATIENT SET PAT_ADDR = 'Habebe Silasena Gichila' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'Habibe';
+UPDATE OPD SET OPD_PAT_ADDR = 'Habebe Silasena Gichila' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'Habibe';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Jawaro Kera' WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Jewaro');
+UPDATE PATIENT SET PAT_ADDR = 'Jawaro Kera' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'Jewaro';
+UPDATE OPD SET OPD_PAT_ADDR = 'Jawaro Kera' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'Jewaro';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Jewaro Kora');
+UPDATE PATIENT SET PAT_ADDR = 'Jawaro Kera' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'Jewaro Kora';
+UPDATE OPD SET OPD_PAT_ADDR = 'Jawaro Kera' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'Jewaro Kora';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Lege boter' WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'L/Boter');
+UPDATE PATIENT SET PAT_ADDR = 'Lege boter' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'L/Boter';
+UPDATE OPD SET OPD_PAT_ADDR = 'Lege boter' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'L/Boter';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Mendida Sole' WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'M/Sole');
+UPDATE PATIENT SET PAT_ADDR = 'Mendida Sole' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'M/Sole';
+UPDATE OPD SET OPD_PAT_ADDR = 'Mendida Sole' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'M/Sole';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Sobo Chancho' WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Sobo');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Shancho');
+UPDATE PATIENT SET PAT_ADDR = 'Sobo Chancho' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'Sobo';
+UPDATE OPD SET OPD_PAT_ADDR = 'Sobo Chancho' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'Sobo';
+UPDATE PATIENT SET PAT_ADDR = 'Sobo Chancho' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'Shancho';
+UPDATE OPD SET OPD_PAT_ADDR = 'Sobo Chancho' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'Shancho';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'A/S/Gichila');
+UPDATE PATIENT SET PAT_ADDR = 'Habebe Silasena Gichila' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'A/S/Gichila';
+UPDATE OPD SET OPD_PAT_ADDR = 'Habebe Silasena Gichila' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'A/S/Gichila';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Amrufo Solole' WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'A/Solole');
+UPDATE PATIENT SET PAT_ADDR = 'Amrufo Solole' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'A/Solole';
+UPDATE OPD SET OPD_PAT_ADDR = 'Amrufo Solole' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'A/Solole';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Alengo Tullu');
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Banitu Town' WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Bantu');
+UPDATE PATIENT SET PAT_ADDR = 'Banitu Town' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'Bantu';
+UPDATE OPD SET OPD_PAT_ADDR = 'Banitu Town' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'Bantu';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Batu');
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Weserbi');
+UPDATE PATIENT SET PAT_ADDR = 'Woserbi Migridi' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'Weserbi';
+UPDATE OPD SET OPD_PAT_ADDR = 'Woserbi Migridi' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'Weserbi';
+
+-- Wolkite Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Emdibir Town' WHERE (LOC_CITY = 'Wolkite') AND (LOC_ADDRESS = 'Emdibir');
+UPDATE PATIENT SET PAT_ADDR = 'Emdibir Town' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Emdibir';
+UPDATE OPD SET OPD_PAT_ADDR = 'Emdibir Town' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Emdibir';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Gumer Buna Tekil' WHERE (LOC_CITY = 'Wolkite') AND (LOC_ADDRESS = 'Gumer');
+UPDATE PATIENT SET PAT_ADDR = 'Gumer Buna Tekil' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Gumer';
+UPDATE OPD SET OPD_PAT_ADDR = 'Gumer Buna Tekil' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Gumer';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Wolkite' WHERE (LOC_CITY = 'Wolkite') AND (LOC_ADDRESS = 'Berio');
+UPDATE PATIENT SET PAT_ADDR = 'Wolkite' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Berio';
+UPDATE OPD SET OPD_PAT_ADDR = 'Wolkite' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Berio';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolkite') AND (LOC_ADDRESS = 'Emdibir');
+UPDATE PATIENT SET PAT_CITY = 'Checha', PAT_ADDR = 'Imdibir Town' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Emdibir';
+UPDATE OPD SET OPD_PAT_CITY = 'Checha', OPD_PAT_ADDR = 'Imdibir Town' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Emdibir';
+
+UPDATE LOCATION SET LOC_ADDRESS = 'Wolkite Town' WHERE (LOC_CITY = 'Wolkite') AND (LOC_ADDRESS = 'Kebele 01');
+UPDATE PATIENT SET PAT_ADDR = 'Wolkite Town' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Kebele 01';
+UPDATE OPD SET OPD_PAT_ADDR = 'Wolkite Town' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Kebele 01';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolkite') AND (LOC_ADDRESS = 'Kebele 02');
+UPDATE PATIENT SET PAT_ADDR = 'Wolkite Town' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Kebele 02';
+UPDATE OPD SET OPD_PAT_ADDR = 'Wolkite Town' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Kebele 02';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolkite') AND (LOC_ADDRESS = 'Walga');
+UPDATE PATIENT SET PAT_ADDR = 'Wolkite' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Walga';
+UPDATE OPD SET OPD_PAT_ADDR = 'Wolkite' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Walga';
+
+-- Deneba Town changes
+UPDATE LOCATION SET LOC_CITY = 'Kokir Gedebano' WHERE (LOC_CITY = 'Deneba') AND (LOC_ADDRESS = 'Deneba');
+UPDATE PATIENT SET PAT_CITY = 'Kokir Gedebano' WHERE PAT_CITY = 'Deneba' AND PAT_ADDR = 'Deneba';
+UPDATE OPD SET OPD_PAT_CITY = 'Kokir Gedebano' WHERE OPD_PAT_CITY = 'Deneba' AND OPD_PAT_ADDR = 'Deneba';
+
+-- Cheha - Imdibir Town changes
+UPDATE LOCATION SET LOC_ADDRESS = 'Imdibir Town' WHERE (LOC_CITY = 'Cheha') AND (LOC_ADDRESS = 'Cheha');
+UPDATE PATIENT SET PAT_ADDR = 'Imdibir Town' WHERE PAT_CITY = 'Cheha' AND PAT_ADDR = 'Cheha';
+UPDATE OPD SET OPD_PAT_ADDR = 'Imdibir Town' WHERE OPD_PAT_CITY = 'Cheha' AND OPD_PAT_ADDR = 'Cheha';
+
+-- Abeshgei Area changes
+UPDATE LOCATION SET LOC_CITY = 'Abeshegei' WHERE (LOC_CITY = 'Walga') AND (LOC_ADDRESS = 'Abeshegei');
+UPDATE PATIENT SET PAT_CITY = 'Abeshegei' WHERE PAT_CITY = 'Walga' AND PAT_ADDR = 'Abeshegei';
+UPDATE OPD SET OPD_PAT_CITY = 'Abeshegei' WHERE OPD_PAT_CITY = 'Walga' AND OPD_PAT_ADDR = 'Abeshegei';
+
+-- Chora Boter Area changes
+UPDATE LOCATION SET LOC_CITY = 'Chora Boter' WHERE (LOC_CITY = 'Tolay') AND (LOC_ADDRESS = 'Tolay');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolisso Rural') AND (LOC_ADDRESS = 'Tolay');
+UPDATE PATIENT SET PAT_CITY = 'Chora Boter' WHERE PAT_CITY = 'Tolay' AND PAT_ADDR = 'Tolay';
+UPDATE OPD SET OPD_PAT_CITY = 'Chora Boter' WHERE OPD_PAT_CITY = 'Tolay' AND OPD_PAT_ADDR = 'Tolay';
+UPDATE PATIENT SET PAT_CITY = 'Chora Boter' WHERE PAT_CITY = 'Tolay' AND (PAT_ADDR = '' OR PAT_ADDR IS NULL);
+UPDATE OPD SET OPD_PAT_CITY = 'Chora Boter' WHERE OPD_PAT_CITY = 'Tolay' AND (OPD_PAT_ADDR = '' OR OPD_PAT_ADDR IS NULL);
+UPDATE PATIENT SET PAT_CITY = 'Chora Boter', PAT_ADDR = 'Tolay' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Tolay';
+UPDATE OPD SET OPD_PAT_CITY = 'Chora Boter', OPD_PAT_ADDR = 'Tolay' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Tolay';
+
+UPDATE LOCATION SET LOC_CITY = 'Chora Boter' WHERE (LOC_CITY = 'Tole') AND (LOC_ADDRESS = 'Bege');
+UPDATE PATIENT SET PAT_CITY = 'Chora Boter' WHERE PAT_CITY = 'Tole' AND PAT_ADDR = 'Bege';
+UPDATE OPD SET OPD_PAT_CITY = 'Chora Boter' WHERE OPD_PAT_CITY = 'Tole' AND OPD_PAT_ADDR = 'Bege';
+
+UPDATE LOCATION SET LOC_CITY = 'Chora Boter' WHERE (LOC_CITY = 'Jimma') AND (LOC_ADDRESS = 'Chora Botor');
+UPDATE PATIENT SET PAT_CITY = 'Chora Boter' WHERE PAT_CITY = 'Jimma' AND PAT_ADDR = 'Chora Botor';
+UPDATE OPD SET OPD_PAT_CITY = 'Chora Boter' WHERE OPD_PAT_CITY = 'Jimma' AND OPD_PAT_ADDR = 'Chora Botor';
+
+UPDATE LOCATION SET LOC_CITY = 'Chora Boter', LOC_ADDRESS = 'Kemasogola' WHERE (LOC_CITY = 'Jimma') AND (LOC_ADDRESS = 'K/Sogola');
+UPDATE PATIENT SET PAT_CITY = 'Chora Boter', PAT_ADDR = 'Kemasogola' WHERE PAT_CITY = 'Jimma' AND PAT_ADDR = 'K/Sogola';
+UPDATE OPD SET OPD_PAT_CITY = 'Chora Boter', OPD_PAT_ADDR = 'Kemasogola' WHERE OPD_PAT_CITY = 'Jimma' AND OPD_PAT_ADDR = 'K/Sogola';
+
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Kersa Malima') AND (LOC_ADDRESS = 'Abadi');
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Limmu') AND (LOC_ADDRESS = 'Limmu');
+
+-- Delete Wollega-Wollega
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Wollega') AND (LOC_ADDRESS = 'Wollega');
+UPDATE PATIENT SET PAT_CITY = 'Other', PAT_ADDR = 'Other' WHERE PAT_CITY = 'Wollega' AND PAT_ADDR = 'Wollega';
+UPDATE OPD SET OPD_PAT_CITY = 'Other', OPD_PAT_ADDR = 'Other' WHERE OPD_PAT_CITY = 'Wollega' AND OPD_PAT_ADDR = 'Wollega';
