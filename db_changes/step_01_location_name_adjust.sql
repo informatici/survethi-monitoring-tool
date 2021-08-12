@@ -1,5 +1,4 @@
 -- Goro changes
-DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Chirecha');
 DELETE FROM LOCATION WHERE (LOC_CITY = 'Goro') AND (LOC_ADDRESS = 'Chirecha tedira');
 UPDATE PATIENT SET PAT_ADDR = 'Chirecha Tedira' WHERE PAT_CITY = 'Goro' AND PAT_ADDR = 'Chirecha tedira';
 UPDATE OPD SET OPD_PAT_ADDR = 'Chirecha Tedira' WHERE OPD_PAT_CITY = 'Goro' AND OPD_PAT_ADDR = 'Chirecha tedira';
@@ -474,17 +473,17 @@ UPDATE OPD SET OPD_PAT_CITY = 'Elu', OPD_PAT_ADDR = 'Wereso Kolina' WHERE OPD_PA
 
 -- Gibei Town changes
 UPDATE LOCATION SET LOC_CITY = 'Jimma' WHERE (LOC_CITY = 'Gibei') AND (LOC_ADDRESS = 'Gibei');
-UPDATE PATIENT SET PAT_CITY = 'Jimma', PAT_ADDR = 'Gibei' WHERE PAT_CITY = 'Gibei' AND PAT_ADDR = 'Gibei';
-UPDATE OPD SET OPD_PAT_CITY = 'Jimma', OPD_PAT_ADDR = 'Gibei' WHERE OPD_PAT_CITY = 'Gibei' AND OPD_PAT_ADDR = 'Gibei';
+UPDATE PATIENT SET PAT_CITY = 'Jimma', PAT_ADDR = 'Gibei' WHERE PAT_CITY = 'Gibei' AND (PAT_ADDR = 'Gibei' OR PAT_ADDR = '');
+UPDATE OPD SET OPD_PAT_CITY = 'Jimma', OPD_PAT_ADDR = 'Gibei' WHERE OPD_PAT_CITY = 'Gibei' AND (OPD_PAT_ADDR = 'Gibei' OR OPD_PAT_ADDR = '');
 
 -- Enmur Area changes
 DELETE FROM LOCATION WHERE (LOC_CITY = 'Gunchirei') AND (LOC_ADDRESS = 'Gunchirei');
-UPDATE PATIENT SET PAT_CITY = 'Enmur', PAT_ADDR = 'Gunchirei' WHERE PAT_CITY = 'Gunchirei' AND PAT_ADDR = 'Gunchirei';
-UPDATE OPD SET OPD_PAT_CITY = 'Enmur', OPD_PAT_ADDR = 'Gunchirei' WHERE OPD_PAT_CITY = 'Gunchirei' AND OPD_PAT_ADDR = 'Gunchirei';
+UPDATE PATIENT SET PAT_CITY = 'Enmur', PAT_ADDR = 'Gunchirei' WHERE PAT_CITY = 'Gunchirei' AND (PAT_ADDR = 'Gunchirei' OR PAT_ADDR = '');
+UPDATE OPD SET OPD_PAT_CITY = 'Enmur', OPD_PAT_ADDR = 'Gunchirei' WHERE OPD_PAT_CITY = 'Gunchirei' AND (OPD_PAT_ADDR = 'Gunchirei' OR OPD_PAT_ADDR = '');
 
 DELETE FROM LOCATION WHERE (LOC_CITY = 'Wolkite') AND (LOC_ADDRESS = 'Gunchure');
-UPDATE PATIENT SET PAT_CITY = 'Enmur', PAT_ADDR = 'Gunchirei' WHERE PAT_CITY = 'Wolkite' AND PAT_ADDR = 'Gunchure';
-UPDATE OPD SET OPD_PAT_CITY = 'Enmur', OPD_PAT_ADDR = 'Gunchirei' WHERE OPD_PAT_CITY = 'Wolkite' AND OPD_PAT_ADDR = 'Gunchure';
+UPDATE PATIENT SET PAT_CITY = 'Enmur', PAT_ADDR = 'Gunchirei' WHERE PAT_CITY = 'Wolkite' AND (PAT_ADDR = 'Gunchure' OR PAT_ADDR = '');
+UPDATE OPD SET OPD_PAT_CITY = 'Enmur', OPD_PAT_ADDR = 'Gunchirei' WHERE OPD_PAT_CITY = 'Wolkite' AND (OPD_PAT_ADDR = 'Gunchure' OR OPD_PAT_ADDR = '');
 
 -- Asendabo Town change
 UPDATE LOCATION SET LOC_CITY = 'Jimma', LOC_ADDRESS = 'Asendabo Town' WHERE (LOC_CITY = 'Asendabo') AND (LOC_ADDRESS = 'Asendabo');
@@ -757,8 +756,8 @@ DELETE FROM LOCATION WHERE (LOC_CITY = 'Limmu') AND (LOC_ADDRESS = 'Limmu');
 
 -- Delete Wollega-Wollega
 DELETE FROM LOCATION WHERE (LOC_CITY = 'Wollega') AND (LOC_ADDRESS = 'Wollega');
-UPDATE PATIENT SET PAT_CITY = 'Other', PAT_ADDR = 'Other' WHERE PAT_CITY = 'Wollega' AND PAT_ADDR = 'Wollega';
-UPDATE OPD SET OPD_PAT_CITY = 'Other', OPD_PAT_ADDR = 'Other' WHERE OPD_PAT_CITY = 'Wollega' AND OPD_PAT_ADDR = 'Wollega';
+UPDATE PATIENT SET PAT_CITY = 'Other', PAT_ADDR = 'Other' WHERE PAT_CITY = 'Wollega' AND (PAT_ADDR = 'Wollega' OR PAT_ADDR = '');
+UPDATE OPD SET OPD_PAT_CITY = 'Other', OPD_PAT_ADDR = 'Other' WHERE OPD_PAT_CITY = 'Wollega' AND (OPD_PAT_ADDR = 'Wollega' OR OPD_PAT_ADDR = '');
 
 -- Delete Chandi-Chandi
 DELETE FROM LOCATION WHERE (LOC_CITY = 'Chandi') AND (LOC_ADDRESS = 'Chandi');
@@ -802,3 +801,19 @@ UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Senkolei Kake' WHERE PAT_CIT
 UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Senkolei Kake' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'S/Koke';
 UPDATE PATIENT SET PAT_CITY = 'Wonchi', PAT_ADDR = 'Senkolei Kake' WHERE PAT_CITY = 'Wolisso Rural' AND PAT_ADDR = 'Sonkole';
 UPDATE OPD SET OPD_PAT_CITY = 'Wonchi', OPD_PAT_ADDR = 'Senkolei Kake' WHERE OPD_PAT_CITY = 'Wolisso Rural' AND OPD_PAT_ADDR = 'Sonkole';
+
+-- Delete Walga-Fite
+DELETE FROM LOCATION WHERE (LOC_CITY = 'Walga') AND (LOC_ADDRESS = 'Fite');
+UPDATE PATIENT SET PAT_CITY = 'Other', PAT_ADDR = 'Other' WHERE PAT_CITY = 'Walga' AND PAT_ADDR = 'Fite';
+UPDATE OPD SET OPD_PAT_CITY = 'Other', OPD_PAT_ADDR = 'Other' WHERE OPD_PAT_CITY = 'Walga' AND OPD_PAT_ADDR = 'Fite';
+
+-- Set Walga-Walga for remaining location
+INSERT INTO LOCATION (LOC_CITY, LOC_ADDRESS) VALUES ('Walga','Walga');
+UPDATE PATIENT SET PAT_ADDR = 'Walga' WHERE PAT_CITY = 'Walga';
+UPDATE OPD SET OPD_PAT_ADDR = 'Walga' WHERE OPD_PAT_CITY = 'Walga';
+
+-- Set Other-Other for remaining patients
+UPDATE PATIENT SET PAT_CITY = 'Other', PAT_ADDR = 'Other' WHERE PAT_CITY = '';
+UPDATE PATIENT SET PAT_ADDR = 'Other' WHERE PAT_CITY = 'Other';
+UPDATE OPD SET OPD_PAT_CITY = 'Other', OPD_PAT_ADDR = 'Other' WHERE OPD_PAT_CITY = '';
+UPDATE OPD SET OPD_PAT_ADDR = 'Other' WHERE OPD_PAT_CITY = 'Other';
