@@ -29,7 +29,9 @@
 <script type="text/javascript">
 
     $('#table_primary').on('click-cell.bs.table', function (field, value, row, record) {
+        setLoading(true);
         click_on_table(record);
+        setLoading(false);
     })
 
     function click_on_table(record) {
