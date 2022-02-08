@@ -73,6 +73,10 @@
         */
     function update_disease_list() {
         console.log('updating disease list...');
+
+        // reset totals
+        resetMainFilterTotals();
+
         summarize_and_sort_list()
         clean_dynamic_list_object();
         disease_list.forEach(addItemDisease);
