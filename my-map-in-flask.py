@@ -54,7 +54,21 @@ def get_refresh_intervals():
 def get_diseases():
     create_db_connection()
     # execute default query on the DB
+    #
+    # Non clinical diseases - filtered out from resultset
+    # 
+    # 1.1 - Surgical Consultation
+    # 1.2 - Orthopedic Consultation
+    # 1.3 - Gynecologic Consultation
+    # 1.4 - ENT Consultation
+    # 1.5 - Ophtalmic Consultation
+    # 1.6 - Psychiatric Consultation
+    # 1.7 - Dental Consultation
+    # 1.8 - OPD Consultaiton
+    # 1.9 - Admitted Patient
+    #
     default_query = "SELECT * FROM DISEASE \
+                    WHERE DIS_ID_A NOT IN ('1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8', '1.9') \
                     ORDER BY DIS_DESC"
     #print(default_query)                
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
@@ -136,6 +150,7 @@ def query_group(dateFrom=None, dateTo=None):
                         LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
                         LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
                         WHERE OPD_DATE_VIS BETWEEN '%s' AND '%s' \
+                            AND OPD_DIS_ID_A NOT IN ('1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8', '1.9') \
                     ) INTERNAL \
                     GROUP BY OPD_DIS_ID_A, PAT_CITY, LOC_CITY, PAT_ADDR \
                     ORDER BY COUNT DESC" %(escape(dateFrom), escape(dateTo))
