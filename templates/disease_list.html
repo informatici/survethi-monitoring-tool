@@ -14,6 +14,8 @@
         var span_kebele = document.createElement("div");
         var span_woreda = document.createElement("div");
         var span_unknown = document.createElement("div");
+        var span_opd = document.createElement("div");
+        var span_ipd = document.createElement("div");
         var span_total = document.createElement("div");
         
         li.setAttribute('id',item.id);
@@ -29,33 +31,40 @@
         span_total.setAttribute('id','total_'+item.id);
         span_total.setAttribute('class',"badge badge-primary badge-pill ml-auto p-2 float-xs-right");
         span_total.setAttribute('style',"border-style:solid;color:#007bff;background-color:#ffffff");
+        span_opd.setAttribute('id','opd_'+item.id);
+        span_opd.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
+        span_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
+        span_ipd.setAttribute('id','ipd_'+item.id);
+        span_ipd.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
+        span_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
 
-        span_total.appendChild(document.createTextNode(item.kebele + item.woreda + item.unknown));
+        //span_total.appendChild(document.createTextNode(item.kebele + item.woreda + item.unknown));
+        span_total.appendChild(document.createTextNode("T: " + (item.opd + item.ipd)));
         if (first_total_badge === undefined) {
             first_total_badge = span_total;
         }
         span_totals.appendChild(span_total);
-        if (item.kebele > 0) {
-            span_kebele.appendChild(document.createTextNode(item.kebele));
-            span_totals.appendChild(span_kebele);
-            if (first_kebele_badge === undefined) {
-                first_kebele_badge = span_kebele;
+        if (item.ipd > 0) {
+            span_ipd.appendChild(document.createTextNode("IPD: " + item.ipd));
+            span_totals.appendChild(span_ipd);
+            if (first_ipd_badge === undefined) {
+                first_ipd_badge = span_ipd;
             }
         }
-        if (item.woreda > 0) {
-            span_woreda.appendChild(document.createTextNode(item.woreda));
-            span_totals.appendChild(span_woreda);
-            if (first_woreda_badge === undefined) {
-                first_woreda_badge = span_woreda;
+        if (item.opd > 0) {
+            span_opd.appendChild(document.createTextNode("OPD: " + item.opd));
+            span_totals.appendChild(span_opd);
+            if (first_opd_badge === undefined) {
+                first_opd_badge = span_opd;
             }
         }
-        if (item.unknown > 0) {
-            span_unknown.appendChild(document.createTextNode(item.unknown));
-            span_totals.appendChild(span_unknown);
-            if (first_unknown_badge === undefined) {
-                first_unknown_badge = span_unknown;
-            }
-        }
+        // if (item.unknown > 0) {
+        //     span_unknown.appendChild(document.createTextNode(item.unknown));
+        //     span_totals.appendChild(span_unknown);
+        //     if (first_unknown_badge === undefined) {
+        //         first_unknown_badge = span_unknown;
+        //     }
+        // }
         li.appendChild(document.createTextNode(item.desc));
         // li.appendChild(span_unknown);
         // li.appendChild(span_kebele);
@@ -66,7 +75,10 @@
         main_filter_total_kebele = main_filter_total_kebele + item.kebele;
         main_filter_total_woreda = main_filter_total_woreda + item.woreda;
         main_filter_total_unknown = main_filter_total_unknown + item.unknown;
-        main_filter_total_total = main_filter_total_total + item.unknown + item.woreda + item.kebele;
+        main_filter_total_opd = main_filter_total_opd + item.opd;
+        main_filter_total_ipd = main_filter_total_ipd + item.ipd;
+        // main_filter_total_total = main_filter_total_total + item.unknown + item.woreda + item.kebele;
+        main_filter_total_total = main_filter_total_total + item.opd + item.ipd;
     }
     /*
         * (function) update disease list
@@ -95,7 +107,7 @@
                 selectedGeoShapes = L.geoJson(selectedShapes, {})
                 mymap.flyToBounds(selectedGeoShapes.getBounds());
             }
-            filtered_data = filterFast(loadedTableData, [selected_id], 'OPD_DIS_ID_A');
+            filtered_data = filterFast(loadedTableData, [selected_id], 'DIS_ID_A');
             update_table_data(filtered_data);
         })
 
@@ -129,20 +141,28 @@
      * and return sorted totals (reverse)
      */ 
     function summarize_and_sort_list() {
+        //console.log(disease_list);
         unique_list = _.uniqBy(disease_list, 'id');
         unique_list.forEach(function(item, index) {
 
             this_disease_list = _.filter(disease_list, ['id', item.id]);
+
             sum_kebele = _.sumBy(this_disease_list, 'kebele');
             sum_woreda = _.sumBy(this_disease_list, 'woreda');
             sum_unknown = _.sumBy(this_disease_list, 'unknown');
+
+            sum_opd = _.sumBy(this_disease_list, function(o) { return o.type == 'OPD' ? o.kebele + o.woreda + o.unknown : 0; });
+            sum_ipd = _.sumBy(this_disease_list, function(o) { return o.type == 'IPD' ? o.kebele + o.woreda + o.unknown : 0; });
             
             objIndex = unique_list.findIndex((obj => obj.id == item.id));
             unique_list[objIndex].kebele = sum_kebele;
             unique_list[objIndex].woreda = sum_woreda;
             unique_list[objIndex].unknown = sum_unknown;
+            unique_list[objIndex].opd = sum_opd;
+            unique_list[objIndex].ipd = sum_ipd;
         });
         // disease_list = _.sortBy(unique_list, 'count').reverse();
+        //console.log(unique_list);
         disease_list = _.orderBy(unique_list, [
                             function (item) { return item.kebele + item.woreda + item.unknown; },
                             function (item) { return item.kebele; },

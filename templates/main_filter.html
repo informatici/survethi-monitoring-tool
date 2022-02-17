@@ -18,10 +18,12 @@
     </div>
     <div id="main-filter-loading-indicator" class="notloading">Will reload...</div>
     <div class="col text-right">
-        <div id="total_total" class="badge badge-primary badge-pill ml-auto p-2 float-xs-right" style="border-style:solid;color:#007bff;background-color:#ffffff"></div>
-        <div id="total_kebele" class="badge badge-warning badge-pill ml-auto p-2 float-xs-right"></div>
-        <div id="total_woreda" class="badge badge-pill ml-auto p-2 float-xs-right" style="color:#fff;background-color:#238b45"></div>
-        <div id="total_unknown" class="badge badge-secondary badge-pill ml-auto p-2 float-xs-right"></div>
+        <div id="total_total"></div>
+        <div id="total_kebele"></div>
+        <div id="total_woreda"></div>
+        <div id="total_unknown"></div>
+        <div id="total_ipd"></div>
+        <div id="total_opd"></div>
     </div>
 </div>
 
@@ -101,10 +103,14 @@
     var main_filter_total_kebele = 0;
     var main_filter_total_woreda = 0;
     var main_filter_total_unknown = 0;
+    var main_filter_total_opd = 0;
+    var main_filter_total_ipd = 0;
     var first_total_badge;
     var first_kebele_badge;
     var first_woreda_badge;
     var first_unknown_badge;
+    var first_opd_badge;
+    var first_ipd_badge;
 
     var update_main_filter = false;
 
@@ -114,18 +120,33 @@
         var total_kebele = document.getElementById("total_kebele");
         var total_woreda = document.getElementById("total_woreda");
         var total_unknown = document.getElementById("total_unknown");
+        var total_opd = document.getElementById("total_opd");
+        var total_ipd = document.getElementById("total_ipd");
+        
+        total_total.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
+        total_total.setAttribute('style',"border-style:solid;color:#007bff;background-color:#ffffff");
+        total_opd.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
+        total_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
+        total_ipd.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
+        total_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
+
         //console.log('first_total_badge : ', first_total_badge);
         //console.log('first_kebele_badge : ', first_kebele_badge);
         //console.log('first_woreda_badge : ', first_woreda_badge);
         //console.log('first_unknown_badge : ', first_unknown_badge);
+        //console.log('first_opd_badge : ', first_opd_badge);
+        //console.log('first_ipd_badge : ', first_ipd_badge);
+
         $('#total_total').empty();
         $('#total_kebele').empty();
         $('#total_woreda').empty();
         $('#total_unknown').empty();
+        $('#total_opd').empty();
+        $('#total_ipd').empty();
 
         //TODO: optimize badge positions calculation: maybe there is a better way to layout badges one beside each other
         if (main_filter_total_total > 0) {
-            total_total.appendChild(document.createTextNode(main_filter_total_total));
+            total_total.appendChild(document.createTextNode("T: " + main_filter_total_total));
             $("#total_total").position({
                 my:        "right",
                 at:        "right",
@@ -134,62 +155,64 @@
             });
             $("#total_total").css('top', 10);
         }
-        if (main_filter_total_kebele > 0) {
-            total_kebele.appendChild(document.createTextNode(main_filter_total_kebele));
-            $("#total_kebele").position({
+        //console.log('main_filter_total_ipd : ' + main_filter_total_ipd)
+        if (main_filter_total_ipd > 0) {
+            total_ipd.appendChild(document.createTextNode("IPD: " + main_filter_total_ipd));
+            $("#total_ipd").position({
                 my:        "right",
                 at:        "left",
                 of:        total_total,
                 collision: "fit"
             });
-            $("#total_kebele").css('top', 10);
+            $("#total_ipd").css('top', 10);
         }
-        if (main_filter_total_woreda > 0) {
-            total_woreda.appendChild(document.createTextNode(main_filter_total_woreda));
-            if (main_filter_total_kebele > 0) {
-                $("#total_woreda").position({
+        //console.log('main_filter_total_opd : ' + main_filter_total_opd)
+        if (main_filter_total_opd > 0) {
+            total_opd.appendChild(document.createTextNode("OPD: " + main_filter_total_opd));
+            if (main_filter_total_ipd > 0) {
+                $("#total_opd").position({
                     my:        "right",
                     at:        "left",
-                    of:        total_kebele,
+                    of:        total_ipd,
                     collision: "fit"
                 });
-                $("#total_woreda").css('top', 10);
+                $("#total_opd").css('top', 10);
             } else {
-                $("#total_woreda").position({
+                $("#total_opd").position({
                     my:        "right",
                     at:        "left",
                     of:        total_total,
                     collision: "fit"
                 });
-                $("#total_woreda").css('top', 10);
+                $("#total_opd").css('top', 10);
             }
         }
-        if (main_filter_total_unknown > 0) {
-            total_unknown.appendChild(document.createTextNode(main_filter_total_unknown));
-            if (main_filter_total_woreda > 0) {
-                $("#total_unknown").position({
-                    my:        "right",
-                    at:        "left",
-                    of:        total_woreda,
-                    collision: "fit"
-                });
-            } else if (main_filter_total_kebele > 0) {
-                $("#total_unknown").position({
-                    my:        "right",
-                    at:        "left",
-                    of:        total_kebele,
-                    collision: "fit"
-                });
-            } else {
-                $("#total_unknown").position({
-                    my:        "center",
-                    at:        "center",
-                    of:        total_total,
-                    collision: "fit"
-                });
-            }
-            $("#total_unknown").css('top', 10);
-        }
+        // if (main_filter_total_unknown > 0) {
+        //     total_unknown.appendChild(document.createTextNode(main_filter_total_unknown));
+        //     if (main_filter_total_woreda > 0) {
+        //         $("#total_unknown").position({
+        //             my:        "right",
+        //             at:        "left",
+        //             of:        total_woreda,
+        //             collision: "fit"
+        //         });
+        //     } else if (main_filter_total_kebele > 0) {
+        //         $("#total_unknown").position({
+        //             my:        "right",
+        //             at:        "left",
+        //             of:        total_kebele,
+        //             collision: "fit"
+        //         });
+        //     } else {
+        //         $("#total_unknown").position({
+        //             my:        "center",
+        //             at:        "center",
+        //             of:        total_total,
+        //             collision: "fit"
+        //         });
+        //     }
+        //     $("#total_unknown").css('top', 10);
+        // }
     }
 
     function resetMainFilterTotals() {
@@ -197,14 +220,20 @@
         $('#total_kebele').empty();
         $('#total_woreda').empty();
         $('#total_unknown').empty();
+        $('#total_opd').empty();
+        $('#total_ipd').empty();
         main_filter_total_total = 0;
         main_filter_total_kebele = 0;
         main_filter_total_woreda = 0;
         main_filter_total_unknown = 0;
+        main_filter_total_opd = 0;
+        main_filter_total_ipd = 0;
         first_total_badge = undefined;
         first_kebele_badge = undefined;
         first_woreda_badge = undefined;
         first_unknown_badge = undefined;
+        first_opd_badge = undefined;
+        first_ipd_badge = undefined;
     }
 
     /*

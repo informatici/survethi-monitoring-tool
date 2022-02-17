@@ -1,4 +1,11 @@
 <!doctype html>
+
+<div id="toolbar">
+    <input id="filterOPD" type="checkbox" class="btn btn-primary" checked>
+    <label id="laberlForFilterOPD" for="filterOPD" class="badge">OPD</label>
+    <input id="filterIPD" type="checkbox" class="btn btn-primary" checked>
+    <label id="laberlForFilterIPD" for="filterIPD" class="badge">IPD</label>
+</div>
 <table
     id="table_primary"
     data-show-export="true"
@@ -7,14 +14,15 @@
     data-toggle="table"
     data-pagination="true"
     data-page-size="5"
-    data-url=""
     data-page-list="[5,10,20,50,All]"
-    data-search="false"
     data-undefined-text=""
+    data-search="false"
+    data-toolbar="#toolbar"
     >
     <caption>Real-Time fetched data</caption>
     <thead>
         <tr>
+            <th scope="col" data-sortable="true" data-field="TYPE">Type</th>
             <th scope="col" data-sortable="true" data-field="COUNT">Cases</th>
             <th scope="col" data-sortable="true" data-field="DIS_DESC">Disease</th>
             <th scope="col" data-sortable="true" data-field="PAT_CITY">Woreda/Town</th>
@@ -28,15 +36,28 @@
 
 <script type="text/javascript">
 
+    var filter_opd = document.getElementById("laberlForFilterOPD");
+    var filter_ipd = document.getElementById("laberlForFilterIPD");
+    filter_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
+    filter_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
+
     $('#table_primary').on('click-cell.bs.table', function (field, value, row, record) {
         setLoading(true);
         click_on_table(record);
         setLoading(false);
     })
 
+    $('#filterOPD').on('click', function () {
+        console.log("clicked OPD");
+    })
+    
+    $('#filterIPD').on('click', function () {
+        console.log("clicked IPD");
+    })
+
     function click_on_table(record) {
         //console.log(record);
-        selected_dis = record['OPD_DIS_ID_A'];
+        selected_dis = record['DIS_ID_A'];
         selected_rk = record['LOC_RK_CODE'];
         selected_w = record['LOC_W_CODE'];
         console.log('selected record: ' + selected_dis, selected_rk, selected_w);
@@ -111,14 +132,16 @@
     }
 
     function cellStyleWCODE(value, row, index) {
+
+        if (row['TYPE'] == 'OPD') {
+            w_color = woredaOPDcolor;
+        } else {
+            w_color = woredaIPDcolor;
+        }
         
-        if (row['LOC_RK_CODE'] > 0) {
+        if (row['LOC_W_CODE'] > 0) {
             return {
-                classes:'bg-warning'
-            }  
-        } else if (row['LOC_W_CODE'] > 0) {
-            return {
-                css: { 'background-color': '#238b45'}
+                css: { 'background-color': w_color}
             }
         } else {
             return {
@@ -128,14 +151,27 @@
     }
 
     function cellStyleRKCODE(value, row, index) {
-        
-        if (row['LOC_RK_CODE'] > 0) {
-            return {
-                classes:'bg-warning'
-            }  
+
+        if (row['TYPE'] == 'OPD') {
+            rk_color = kebeleOPDcolor;
+        } else {
+            rk_color = kebeleIPDcolor;
+        }
+
+        if (row['LOC_W_CODE'] > 0) {
+
+            if (row['LOC_RK_CODE'] > 0) {
+                return {
+                    css: { 'background-color': rk_color}
+                } 
+            } else {
+                return {
+                    classes: 'bg-white'
+                }
+            }
         } else {
             return {
-                classes: 'bg-white'
+                classes: 'bg-secondary'
             }
         }
     }
