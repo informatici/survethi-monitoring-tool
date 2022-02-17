@@ -2,6 +2,8 @@
 
 **Survethi** stands for Surveillance Ethiopia, a PAT/AICS project ([link](https://www.informaticisenzafrontiere.org/en/progetti/migliorare-la-sorveglianza-e-il-controllo-delle-malattie-in-etiopia/) - AID011330) 
 
+![image](https://user-images.githubusercontent.com/2938553/154437238-b6eb66a0-cc34-49a4-b2ba-f743669893d8.png)
+
 Tool in Flask + Bootstrap (Python, Javascript) to show in real time and historical perspective, the data collected with [OpenHospital](https://github.com/informatici/openhospital) tool in St.Luke Hospital of Wolisso, Region of Oromia, South West Shoa Zone (SWSZ), Ethiopia.
 
 Data are collected from phisicians in real-time, the tool queries the DB with a refresh rate for aggregated data (patients' details are never exposed!) and shows on the map the total numbers with geo-positions (provenance declared by the patients) and grouped by disease.
