@@ -60,8 +60,14 @@
         selected_dis = record['DIS_ID_A'];
         selected_rk = record['LOC_RK_CODE'];
         selected_w = record['LOC_W_CODE'];
+        selected_type = record['TYPE'];
         console.log('selected record: ' + selected_dis, selected_rk, selected_w);
         selectedShapes = {"type":"FeatureCollection","features":[]}
+
+        //console.log(selected_rk);
+        //console.log(selected_w);
+        //console.log(selected_dis);
+        //console.log(selected_type);
 
         mymap.eachLayer(function(layer) {
             click_on_table_select(layer, selected_dis, selected_rk, selected_w);
@@ -86,6 +92,8 @@
                             selectedShapes.features.push(layer.feature);
                             disease_list = [];
                             let temp_data = filterFast(loadedTableData, [selected_rk], 'LOC_RK_CODE');
+                            temp_data = filterFast(temp_data, [selected_dis], 'DIS_ID_A');
+                            temp_data = filterFast(temp_data, [selected_type], 'TYPE');
                             temp_data.forEach(item => {
                                 addItemToDiseaseList(item);
                             });
@@ -105,6 +113,8 @@
                             selectedShapes.features.push(layer.feature);
                             disease_list = [];
                             let temp_data = filterFast(loadedTableData, [selected_w], 'LOC_W_CODE');
+                            temp_data = filterFast(temp_data, [selected_dis], 'DIS_ID_A');
+                            temp_data = filterFast(temp_data, [selected_type], 'TYPE');
                             temp_data.forEach(item => {
                                 addItemToDiseaseList(item);
                             });
