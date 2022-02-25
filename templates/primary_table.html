@@ -1,4 +1,11 @@
 <!doctype html>
+
+<div id="toolbar">
+    <input id="filterOPD" type="checkbox" class="btn btn-primary" checked>
+    <label id="laberlForFilterOPD" for="filterOPD" class="badge">OPD</label>
+    <input id="filterIPD" type="checkbox" class="btn btn-primary" checked>
+    <label id="laberlForFilterIPD" for="filterIPD" class="badge">IPD</label>
+</div>
 <table
     id="table_primary"
     data-show-export="true"
@@ -7,14 +14,15 @@
     data-toggle="table"
     data-pagination="true"
     data-page-size="5"
-    data-url=""
     data-page-list="[5,10,20,50,All]"
-    data-search="false"
     data-undefined-text=""
+    data-search="false"
+    data-toolbar="#toolbar"
     >
     <caption>Real-Time fetched data</caption>
     <thead>
         <tr>
+            <th scope="col" data-sortable="true" data-field="TYPE">Type</th>
             <th scope="col" data-sortable="true" data-field="COUNT">Cases</th>
             <th scope="col" data-sortable="true" data-field="DIS_DESC">Disease</th>
             <th scope="col" data-sortable="true" data-field="PAT_CITY">Woreda/Town</th>
@@ -28,19 +36,38 @@
 
 <script type="text/javascript">
 
+    var filter_opd = document.getElementById("laberlForFilterOPD");
+    var filter_ipd = document.getElementById("laberlForFilterIPD");
+    filter_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
+    filter_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
+
     $('#table_primary').on('click-cell.bs.table', function (field, value, row, record) {
         setLoading(true);
         click_on_table(record);
         setLoading(false);
     })
 
+    $('#filterOPD').on('click', function () {
+        console.log("clicked OPD");
+    })
+    
+    $('#filterIPD').on('click', function () {
+        console.log("clicked IPD");
+    })
+
     function click_on_table(record) {
         //console.log(record);
-        selected_dis = record['OPD_DIS_ID_A'];
+        selected_dis = record['DIS_ID_A'];
         selected_rk = record['LOC_RK_CODE'];
         selected_w = record['LOC_W_CODE'];
+        selected_type = record['TYPE'];
         console.log('selected record: ' + selected_dis, selected_rk, selected_w);
         selectedShapes = {"type":"FeatureCollection","features":[]}
+
+        //console.log(selected_rk);
+        //console.log(selected_w);
+        //console.log(selected_dis);
+        //console.log(selected_type);
 
         mymap.eachLayer(function(layer) {
             click_on_table_select(layer, selected_dis, selected_rk, selected_w);
@@ -65,9 +92,12 @@
                             selectedShapes.features.push(layer.feature);
                             disease_list = [];
                             let temp_data = filterFast(loadedTableData, [selected_rk], 'LOC_RK_CODE');
+                            temp_data = filterFast(temp_data, [selected_dis], 'DIS_ID_A');
+                            temp_data = filterFast(temp_data, [selected_type], 'TYPE');
                             temp_data.forEach(item => {
                                 addItemToDiseaseList(item);
                             });
+                            update_table_data(temp_data);
                             //console.log(disease_list);
                 } else {
                     layer.setStyle({
@@ -84,9 +114,12 @@
                             selectedShapes.features.push(layer.feature);
                             disease_list = [];
                             let temp_data = filterFast(loadedTableData, [selected_w], 'LOC_W_CODE');
+                            temp_data = filterFast(temp_data, [selected_dis], 'DIS_ID_A');
+                            temp_data = filterFast(temp_data, [selected_type], 'TYPE');
                             temp_data.forEach(item => {
                                 addItemToDiseaseList(item);
                             });
+                            update_table_data(temp_data);
                             //console.log(disease_list);
                 } else {
                     layer.setStyle({
@@ -111,14 +144,16 @@
     }
 
     function cellStyleWCODE(value, row, index) {
+
+        if (row['TYPE'] == 'OPD') {
+            w_color = woredaOPDcolor;
+        } else {
+            w_color = woredaIPDcolor;
+        }
         
-        if (row['LOC_RK_CODE'] > 0) {
+        if (row['LOC_W_CODE'] > 0) {
             return {
-                classes:'bg-warning'
-            }  
-        } else if (row['LOC_W_CODE'] > 0) {
-            return {
-                css: { 'background-color': '#238b45'}
+                css: { 'background-color': w_color}
             }
         } else {
             return {
@@ -128,14 +163,27 @@
     }
 
     function cellStyleRKCODE(value, row, index) {
-        
-        if (row['LOC_RK_CODE'] > 0) {
-            return {
-                classes:'bg-warning'
-            }  
+
+        if (row['TYPE'] == 'OPD') {
+            rk_color = kebeleOPDcolor;
+        } else {
+            rk_color = kebeleIPDcolor;
+        }
+
+        if (row['LOC_W_CODE'] > 0) {
+
+            if (row['LOC_RK_CODE'] > 0) {
+                return {
+                    css: { 'background-color': rk_color}
+                } 
+            } else {
+                return {
+                    classes: 'bg-white'
+                }
+            }
         } else {
             return {
-                classes: 'bg-white'
+                classes: 'bg-secondary'
             }
         }
     }

@@ -2,7 +2,7 @@
 
 **Survethi** stands for Surveillance Ethiopia, a PAT/AICS project ([link](https://www.informaticisenzafrontiere.org/en/progetti/migliorare-la-sorveglianza-e-il-controllo-delle-malattie-in-etiopia/) - AID011330) 
 
-![image](https://user-images.githubusercontent.com/2938553/154438114-1f1d4e24-f418-4821-838c-06c9d082c14b.png)
+![image](https://user-images.githubusercontent.com/2938553/154437238-b6eb66a0-cc34-49a4-b2ba-f743669893d8.png)
 
 ![image](https://user-images.githubusercontent.com/2938553/154438507-86d52516-1c2c-4460-bb53-49bd9d9d6958.png)
 

@@ -30,6 +30,8 @@
     <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" rel="stylesheet" />
     <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
     <script src="{{ url_for('static', filename='js/leaflet-heat-v0.4.0.js') }}"></script>
+    <link href="{{ url_for('static', filename='css/L.Control.Layers.Tree.css') }}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='js/L.Control.Layers.Tree.js') }}"></script>
 
     <!-- map history control plugin (https://github.com/cscott530/leaflet-history)-->
     <link rel="stylesheet" type="text/css" href="static/css/leaflet-history.css">
@@ -90,13 +92,37 @@
     var locations = [];
 
     var geoshapes = new L.geoJson();
-    var woredaGeoshapes = new L.geoJson();
-    var kebeleGeoshapes = new L.geoJson();
+    var woredaGeoshapesOPD = new L.geoJson();
+    var kebeleGeoshapesOPD = new L.geoJson();
+    var woredaGeoshapesIPD = new L.geoJson();
+    var kebeleGeoshapesIPD = new L.geoJson();
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
     var legenda = L.control({position: 'bottomright'});
     var selectedShapes = {"type":"FeatureCollection","features":[]}
     var loadedTableData = [];
+
+    /*
+     * (function) color sequences
+     * https://colorbrewer2.org 
+     */
+    var grade_levels = [0, 1, 5, 10, 15, 20, 25, 30];
+    var ocra_shades = ['#fff5eb','#fee6ce','#fdd0a2','#fdae6b','#fd8d3c','#f16913','#d94801','#8c2d04']; // (ocra shades)
+    var green_shades = ['#f7fcf5','#e5f5e0','#c7e9c0','#a1d99b','#74c476','#41ab5d','#238b45','#005a32']; // (green shades)
+    var purple_shades = ['#fcfbfd','#efedf5','#dadaeb','#bcbddc','#9e9ac8','#807dba','#6a51a3','#4a1486']; // (purple shades)
+    var blue_shades = ['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#084594']; // (blue shades)
+    var red_shades = ['#fff5f0','#fee0d2','#fcbba1','#fc9272','#fb6a4a','#ef3b2c','#cb181d','#99000d']; // (red shades)
+
+    var kebeleOPDcolors = blue_shades;
+    var woredaOPDcolors = blue_shades;
+    var kebeleIPDcolors = purple_shades;
+    var woredaIPDcolors = purple_shades;
+
+    var kebeleOPDcolor = kebeleOPDcolors[5];
+    var woredaOPDcolor = woredaOPDcolors[3];
+    var kebeleIPDcolor = kebeleIPDcolors[5];
+    var woredaIPDcolor = woredaIPDcolors[3];
+
 
 </script>
 
@@ -260,8 +286,10 @@
                 //console.log(feature);
 				if (feature.properties) {
 					// we add our property for counting
-                    feature.properties.kebeleCount=0;
-                    feature.properties.woredaCount=0;
+                    feature.properties.kebeleOPDCount=0;
+                    feature.properties.woredaOPDCount=0;
+                    feature.properties.kebeleIPDCount=0;
+                    feature.properties.woredaIPDCount=0;
                     feature.properties.diseaselist=[];
 				}
 			}
@@ -289,12 +317,12 @@
                 labels = [];
 
             // loop through our density intervals and generate a label with a colored square for each interval
-            for (var i = 0; i < grades.length; i++) {
+            for (var i = 0; i < grade_levels.length; i++) {
                 div.innerHTML +=
-                    '<i style="background:' + getColorKebele(grades[i] + 1) + ';' + 
+                    '<i style="background:' + getColorsFor(grade_levels[i] + 1, kebeleOPDcolors) + ';' + 
                     'outline-style:solid; ' + 
-                    'outline-width:0px; opacity:' + getOpacity(grades[i]+1) + ';">' + 
-                    grades[i] + (grades[i + 1] ? '&nbsp;&ndash;&nbsp' + grades[i + 1] + 
+                    'outline-width:0px; opacity:' + getOpacity(grade_levels[i]+1) + ';">' + 
+                    grade_levels[i] + (grade_levels[i + 1] ? '&nbsp;&ndash;&nbsp' + grade_levels[i + 1] + 
                     '</i><br>' : '+');
                 //console.log(div.innerHTML);
             }
@@ -304,11 +332,23 @@
     }
 
     /*
+     * (function) filter OPD/IPD cases
+     */ 
+     function filterOpdIpd(data) {
+        checkbox_opd_selected = document.getElementById("filterOPD").checked;
+        checkbox_ipd_selected = document.getElementById("filterIPD").checked;
+        if (checkbox_ipd_selected && checkbox_opd_selected) return data;
+        if (checkbox_opd_selected) return filterFast(data, ['OPD'], 'TYPE');
+        else if (checkbox_ipd_selected) return filterFast(data, ['IPD'], 'TYPE');
+        else return [];
+    }
+
+    /*
      * (function) fast filter, thanks to:
      * https://stackoverflow.com/a/32377529/5309541
      */ 
      function filterFast(data, ids, field) {
-        if (ids.length == 0) return data;
+        if (ids.length == 0) return data; 
         var index = ids.reduce(function(a,b) {a[b] = 1; return a;}, {});
         return data.filter(function(item) {
             return index[item[field]] === 1;
@@ -328,7 +368,7 @@
     }
 
     /**
-     * (function) Refresh function
+     * (function) Check connection function
      */
     function check_connection() {
         $.ajax({
@@ -443,8 +483,8 @@
             {
                 //console.log(data);
                 //alert(JSON.stringify(data[0]));
-                loadedTableData = data;
-                filtered_data = filterFast(data, disease_list_filter, 'OPD_DIS_ID_A');
+                loadedTableData = filterOpdIpd(data);
+                filtered_data = filterFast(loadedTableData, disease_list_filter, 'DIS_ID_A');
                 //console.log(filtered_data);
                 if (filtered_data.length > 0) {
                     //show_markers(filtered_data); deferred to load_shapefile().once()
@@ -480,8 +520,10 @@
         layerGroup.clearLayers();
         mymap.removeControl(mapController);
         mymap.removeControl(legenda);
-        kebeleGeoshapes.clearLayers();
-        woredaGeoshapes.clearLayers();
+        kebeleGeoshapesOPD.clearLayers();
+        woredaGeoshapesOPD.clearLayers();
+        kebeleGeoshapesIPD.clearLayers();
+        woredaGeoshapesIPD.clearLayers();
     }
 
     /**
@@ -502,38 +544,84 @@
 
         layerGroup.addLayer(markersGroup1);
         //layerGroup.addLayer(heatLayer);
-        layerGroup.addTo(mymap);
+        // layerGroup.addTo(mymap);
 
         
 
         var promise = new Promise(addShapeFile)
         .then(function() {
-            let count_kebele = Object.keys(kebeleGeoshapes._layers).length;
-            let count_woreda = Object.keys(woredaGeoshapes._layers).length;
+            let count_kebele_opd = Object.keys(kebeleGeoshapesOPD._layers).length;
+            let count_woreda_opd = Object.keys(woredaGeoshapesOPD._layers).length;
+            let count_kebele_ipd = Object.keys(kebeleGeoshapesIPD._layers).length;
+            let count_woreda_ipd = Object.keys(woredaGeoshapesIPD._layers).length;
             if (Object.keys(markersGroup1.getBounds()).length === 0
-                && count_kebele == 0
-                && count_woreda == 0) {
+                && count_kebele_opd == 0
+                && count_woreda_opd == 0
+                && count_kebele_ipd == 0
+                && count_woreda_ipd == 0) {
                 console.log('Main Map: nothing to display');
             } else {                
                 mymap.invalidateSize();
-                if (count_kebele > 0) {
-                    mymap.flyToBounds(kebeleGeoshapes.getBounds());
-                } else if (count_woreda > 0) {
-                    mymap.flyToBounds(woredaGeoshapes.getBounds());
+                if (count_kebele_opd > 0) {
+                    mymap.flyToBounds(kebeleGeoshapesOPD.getBounds());
+                } else if (count_woreda_opd > 0) {
+                    mymap.flyToBounds(woredaGeoshapesOPD.getBounds());
+                } else if (count_kebele_ipd > 0) {
+                    mymap.flyToBounds(kebeleGeoshapesIPD.getBounds());
+                } else if (count_woreda_ipd > 0) {
+                    mymap.flyToBounds(woredaGeoshapesIPD.getBounds());
                 }
                 var overlayMaps = {
                     "Health Posts": markersGroup1,
-                    "Woreda": woredaGeoshapes,
-                    "Kebele": kebeleGeoshapes,
+                    "Woreda OPD": woredaGeoshapesOPD,
+                    "Kebele OPD": kebeleGeoshapesOPD,
+                    "Woreda IPD": woredaGeoshapesIPD,
+                    "Kebele IPD": kebeleGeoshapesIPD,
                 };
-                mapController = L.control.layers(null, overlayMaps, {'autoZIndex':true});
-                mymap.addControl(mapController);
+                var overlaysTree = {
+                    label: 'Data',
+                    //selectAllCheckbox: 'Un/select all',
+                    children: [
+                        {
+                            label: 'OPD',
+                            selectAllCheckbox: true,
+                            collapsed: true,
+                            children: [
+                                { label: 'Kebele OPD', layer: kebeleGeoshapesOPD },
+                                { label: 'Woreda OPD', layer: woredaGeoshapesOPD },
+                            ]
+                        }, {
+                            label: 'IPD',
+                            selectAllCheckbox: true,
+                            collapsed: true,
+                            children: [
+                                { label: 'Kebele IPD', layer: kebeleGeoshapesIPD },
+                                { label: 'Woreda IPD', layer: woredaGeoshapesIPD },
+                            ]
+                        }, {
+                            label: 'Health Posts',
+                            layer: markersGroup1,
+                            defaultChecked: false,
+                        },
+                    ],
+                };
+
+                //mapController = L.control.layers(null, overlayMaps, {'autoZIndex':true});
+                mapController = L.control.layers.tree(null, overlaysTree, {
+                                                                    namedToggle: true,
+                                                                    // collapseAll: 'Collapse all',
+                                                                    // expandAll: 'Expand all',
+                                                                    collapsed: false,
+                                                                });
+                //mymap.addControl(mapController);
+                mapController.addTo(mymap).collapseTree().expandSelected();
             }
         }).catch(function() {
             //console.log('promise: some error occurred');
         })
 
         function show_marker(item, index) {
+            //console.log(item);
 
             if (item.LOC_W_CODE > 0) {
                 
@@ -546,15 +634,23 @@
                     var w_code = feature.properties.W_CODE;
 
                     if (item.LOC_RK_CODE == rk_code) {
-                        feature.properties.kebeleCount+=item.COUNT;
-                        if (feature.properties.diseaselist.indexOf(item.OPD_DIS_ID_A) < 0) {
-                            feature.properties.diseaselist.push(item.OPD_DIS_ID_A);
+                        if (item.TYPE == "OPD") {
+                            feature.properties.kebeleOPDCount+=item.COUNT;
+                        } else if (item.TYPE == "IPD") {
+                            feature.properties.kebeleIPDCount+=item.COUNT;
+                        }
+                        if (feature.properties.diseaselist.indexOf(item.DIS_ID_A) < 0) {
+                            feature.properties.diseaselist.push(item.DIS_ID_A);
                         }
                         //console.log(feature);
                     } else if (item.LOC_W_CODE == w_code) {
-                        feature.properties.woredaCount+=item.COUNT;
-                        if (feature.properties.diseaselist.indexOf(item.OPD_DIS_ID_A) < 0) {
-                            feature.properties.diseaselist.push(item.OPD_DIS_ID_A);
+                        if (item.TYPE == "OPD") {
+                            feature.properties.woredaOPDCount+=item.COUNT;
+                        } else if (item.TYPE == "IPD") {
+                            feature.properties.woredaIPDCount+=item.COUNT;
+                        }
+                        if (feature.properties.diseaselist.indexOf(item.DIS_ID_A) < 0) {
+                            feature.properties.diseaselist.push(item.DIS_ID_A);
                         }
                         //console.log(feature);
                     }
@@ -567,7 +663,7 @@
             if (item.LOC_LAT) {
 
                 markerArray.push([item.LOC_LAT, item.LOC_LONG]);
-                // disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
+                // disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
 
                 //console.log(JSON.stringify(item));
                 var description = getMarkerDescription(item);
@@ -576,16 +672,16 @@
                 );
                 //console.log(JSON.stringify(item));
 
-                /* if (item.OPD_DIS_ID_A == "424")
+                /* if (item.DIS_ID_A == "424")
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
                             {icon: L.icon({iconUrl: 'static/img/blue_icon.png', iconSize: [32, 32]})}).bindPopup(description));
-                else if (item.OPD_DIS_ID_A == "461")
+                else if (item.DIS_ID_A == "461")
                     markersGroup1.addLayer(
                         new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
                             {icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description)); */
             } /* else {
-                disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
+                disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
             } */
         }
 
@@ -600,11 +696,11 @@
 
     function addItemToDiseaseList(item) {
         if (item.LOC_W_CODE && item.LOC_RK_CODE) {
-            disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': item.COUNT, 'woreda': 0, 'unknown': 0});
+            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': item.COUNT, 'woreda': 0, 'unknown': 0, 'type': item.TYPE});
         } else if (item.LOC_W_CODE) {
-            disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': item.COUNT, 'unknown': 0});
+            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': item.COUNT, 'unknown': 0, 'type': item.TYPE});
         } else {
-            disease_list.push({'id': item.OPD_DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 0, 'unknown': item.COUNT});
+            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 0, 'unknown': item.COUNT, 'type': item.TYPE});
         }
     }
 
@@ -618,7 +714,12 @@
     }
 
     function buildBindPopupFirstMapKebele(feature) {
-        return "<b>" + feature.properties.RK_NAME + ": " + feature.properties.kebeleCount + "</b><br />" +
+        nr_opd = feature.properties.kebeleOPDCount;
+        nr_ipd = feature.properties.kebeleIPDCount;
+
+        return "<b>" + feature.properties.RK_NAME + ":</b><br />" +
+                    (nr_opd > 0 ? "OPD: " + nr_opd + "<br />" : "") +
+                    (nr_ipd > 0 ? "IPD: " + nr_ipd + "<br />" : "") +
                     "<br />" +
                     "Diseases: " + feature.properties.diseaselist.slice(0, 10) + "<br />" +
                     "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
@@ -628,7 +729,12 @@
     }
 
     function buildBindPopupFirstMapWoreda(feature) {
-        return "<b>" + feature.properties.W_NAME + ": " + feature.properties.woredaCount + "</b><br />" +
+        nr_opd = feature.properties.woredaOPDCount;
+        nr_ipd = feature.properties.woredaIPDCount;
+
+        return "<b>" + feature.properties.W_NAME + ":</b><br />" +
+                    (nr_opd > 0 ? "OPD: " + nr_opd + "<br />" : "") +
+                    (nr_ipd > 0 ? "IPD: " + nr_ipd + "<br />" : "") +
                     "<br />" +
                     "Diseases: " + feature.properties.diseaselist.slice(0, 10) + "<br />" +
                     "Woreda Code: " + feature.properties.W_CODE + "<br />" +
@@ -638,8 +744,10 @@
     }
 
     function addShapeFile(resolve, reject) {
-        var kebeleShapes = {"type":"FeatureCollection","features":[]}
-        var woredaShapes = {"type":"FeatureCollection","features":[]}
+        var kebeleShapesOPD = {"type":"FeatureCollection","features":[]}
+        var woredaShapesOPD = {"type":"FeatureCollection","features":[]}
+        var kebeleShapesIPD = {"type":"FeatureCollection","features":[]}
+        var woredaShapesIPD = {"type":"FeatureCollection","features":[]}
         var shapes = {"type":"FeatureCollection","features":[]}
 
         Object.values(shpfile._layers).forEach(function(thisFeature) {
@@ -647,12 +755,19 @@
             feature = thisFeature.feature;
             shapes.features.push(feature);
 
-            if (feature.properties.kebeleCount > 0) {
+            if (feature.properties.kebeleOPDCount > 0) {
                 //console.log(feature);
-                kebeleShapes.features.push(feature);
+                kebeleShapesOPD.features.push(feature);
             } 
-            if (feature.properties.woredaCount > 0) {
-                woredaShapes.features.push(feature);
+            if (feature.properties.woredaOPDCount > 0) {
+                woredaShapesOPD.features.push(feature);
+            }
+            if (feature.properties.kebeleIPDCount > 0) {
+                //console.log(feature);
+                kebeleShapesIPD.features.push(feature);
+            } 
+            if (feature.properties.woredaIPDCount > 0) {
+                woredaShapesIPD.features.push(feature);
             }
         });
         geoshapes = L.geoJson(shapes, {
@@ -668,8 +783,8 @@
 			}
         }).addTo(mymap);
         //console.log(geoshapes);
-        woredaGeoshapes = L.geoJson(woredaShapes, {
-            style: styleWoreda,
+        woredaGeoshapesOPD = L.geoJson(woredaShapesOPD, {
+            style: function(feature){ return getStyle(feature.properties.woredaOPDCount, woredaOPDcolors) },
             onEachFeature: function(feature, layer) {
                 //console.log(feature);
 				if (feature.properties) {
@@ -680,8 +795,8 @@
 				}
 			}
         }).addTo(mymap);
-        kebeleGeoshapes = L.geoJson(kebeleShapes, {
-            style: styleKebele,
+        kebeleGeoshapesOPD = L.geoJson(kebeleShapesOPD, {
+            style: function(feature){ return getStyle(feature.properties.kebeleOPDCount, kebeleOPDcolors) },
             onEachFeature: function(feature, layer) {
                 //console.log(feature);
 				if (feature.properties) {
@@ -692,41 +807,51 @@
 				}
 			}
         }).addTo(mymap);
-        //console.log(kebeleGeoshapes);
+        woredaGeoshapesIPD = L.geoJson(woredaShapesIPD, {
+            style: function(feature){ return getStyle(feature.properties.woredaIPDCount, woredaIPDcolors) },
+            onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    layer.bindPopup(
+                        buildBindPopupFirstMapWoreda(feature), {
+						maxHeight: 200
+                    });
+				}
+			}
+        }).addTo(mymap);
+        kebeleGeoshapesIPD = L.geoJson(kebeleShapesIPD, {
+            style: function(feature){ return getStyle(feature.properties.kebeleIPDCount, kebeleIPDcolors) },
+            onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    layer.bindPopup(
+                        buildBindPopupFirstMapKebele(feature), {
+						maxHeight: 200
+                    });
+				}
+			}
+        }).addTo(mymap);
+        //console.log(kebeleGeoshapesOPD);
+        //console.log(kebeleGeoshapesIPD);
         resolve();
     }
 
-    var grades = [0, 1, 5, 10, 15, 20, 25, 30];
     /*
-     * (function) color sequence for kebeleGeoshapes (yellow grades)
-     * https://colorbrewer2.org 
+     * (function) color sequences
      */
-    function getColorKebele(d) {
-        return d > grades[7] ? '#800026' :
-            d > grades[6]  ? '#BD0026' :
-            d > grades[5]  ? '#E31A1C' :
-            d > grades[4]  ? '#FC4E2A' :
-            d > grades[3]   ? '#FD8D3C' :
-            d > grades[2]   ? '#FEB24C' :
-            d > grades[1]   ? '#FED976' :
-            d == grades[1]   ? '#FFEDA0' :
-                        null;
-    }
-
-    /*
-     * (function) color sequence for woredaGeoshapes (green grades)
-     * https://colorbrewer2.org 
-     */
-     function getColorWoreda(d) {
-        return d > grades[7] ? '#005824' :
-            d > grades[6]  ? '#238b45' :
-            d > grades[5]  ? '#41ae76' :
-            d > grades[4]  ? '#66c2a4' :
-            d > grades[3]   ? '#99d8c9' :
-            d > grades[2]   ? '#ccece6' :
-            d > grades[1]   ? '#e5f5f9' :
-            d == grades[1]   ? '#f7fcfd' :
-                        null;
+    function getColorsFor(d, colors) {
+        // console.log("in getColorsFor");
+        // console.log("   d: " + d);
+        // console.log("   colors[5]: " + colors[5]);    
+        if (d > grade_levels[7]) return colors[7];
+        if (d > grade_levels[6]) return colors[6];
+        if (d > grade_levels[5]) return colors[5];
+        if (d > grade_levels[4]) return colors[4];
+        if (d > grade_levels[3]) return colors[3];
+        if (d > grade_levels[2]) return colors[2];
+        if (d > grade_levels[1]) return colors[1];
+        if (d == grade_levels[1]) return colors[0];
+        return null;
     }
 
     /*
@@ -737,30 +862,21 @@
     }
 
     /*
-     * (function) style sequence for kebeleGeoshapes
+     * (function) style for feature
      */
-    function styleKebele(feature) {
+    function getStyle(count, colors) {
+        // console.log("in getStyle");
+        // console.log("   count: " + count);
+        // console.log("   colors: " + colors);
+        // console.log("   getColorsFor(count, colors): " + getColorsFor(count, colors));
+        // console.log("   getOpacity(count): " + getOpacity(count));
         return {
-            fillColor: getColorKebele(feature.properties.kebeleCount),
+            fillColor: getColorsFor(count, colors),
             weight: 0.5,
             opacity: 1,
             color: 'white',
             //dashArray: '3',
-            fillOpacity: getOpacity(feature.properties.kebeleCount),
-        };
-    }
-
-    /*
-     * (function) style sequence for kebeleGeoshapes
-     */
-     function styleWoreda(feature) {
-        return {
-            fillColor: getColorWoreda(feature.properties.woredaCount),
-            weight: 0.5,
-            opacity: 1,
-            color: 'white',
-            //dashArray: '3',
-            fillOpacity: getOpacity(feature.properties.woredaCount),
+            fillOpacity: getOpacity(count),
         };
     }
 
@@ -771,7 +887,7 @@
         return {
             fillColor: getColor(),
             weight: 0.5,
-            opacity: 1,
+            opacity: 0.5,
             color: 'white',
             //dashArray: '3',
             fillOpacity: 0,
@@ -779,11 +895,11 @@
     }
 
      /*
-     * (function) color sequence for empty geoshapes (kebele grades)
+     * (function) color sequence for empty geoshapes (kebele levels)
      * https://colorbrewer2.org 
      */
      function getColor() {
-        return getColorKebele(0);
+        return getColorsFor(0, kebeleOPDcolors);
      }
 
     // Starts from here (main)
