@@ -5,7 +5,7 @@ import MySQLdb
 import csv
 import geojson
 from geojson import Feature, FeatureCollection, Point
-import datetime
+from datetime import datetime
 from decimal import Decimal
 import json
 import os.path
@@ -46,6 +46,8 @@ default_position = [8.55611, 38.9741666] #WolisoTown, Kebele 01
 non_clinical_opd_diseases = "('1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8', '1.9')"
 epoch_csv_path = 'datasource/epoch.csv'
 epoch_json_path = 'datasource/epoch.geojson'
+zonal_csv_path = 'datasource/zonal_data.csv'
+zonal_json_path = 'datasource/zonal_data.json'
 
 @app.before_request
 def before_request():
@@ -213,6 +215,60 @@ def query_epoch(dateFrom=None, dateTo=None):
         print('done!')
 
     return dateFrom, dateTo
+
+@app.route('/query_zonal_range')
+def query_zonal_range():
+    
+    zonal_range = {'min': None, 'max': None}
+    try:
+        with open(zonal_csv_path, newline='') as csvfile:
+            print('==> check already fetched data...', end='')
+            reader = csv.reader(csvfile, delimiter=',')
+            next(reader, None)  # skip the headers
+            for sn, lab_name, patient_name, sex, age, region, zone, woreda, sub_location, date, result in reader:
+                if not zonal_range['min'] or date < zonal_range['min']:
+                    zonal_range['min'] = date
+
+                if not zonal_range['max'] or date > zonal_range['max']:
+                    zonal_range['max'] = date
+
+    except Exception:
+        print('Warning: zonal parsing data: empty datasource (needs query)')
+        
+    return zonal_range
+
+@app.route('/query_zonal_data')
+@app.route('/query_zonal_data/<dateFrom>/<dateTo>')
+def query_zonal_json(dateFrom=None, dateTo=None):
+
+    data = []
+
+    with open(zonal_csv_path, newline='') as csvfile:
+        print('==> processing data...')
+        reader = csv.DictReader(csvfile, delimiter=';')
+        next(reader, None)  # skip the headers
+        for row in reader:
+            
+            #date = row['Date of Specimen collection']
+            date = datetime.strptime(row['Date of Specimen collection'], '%d/%m/%Y')
+            date_str = date.strftime('%Y-%m-%d %H:%I:%S')
+            #print('date : ', date)
+            if dateFrom and dateTo and (date_str < dateFrom or date_str > dateTo):
+                #print('skipped : ', date)
+                continue # skip dates out of range (if any)
+
+            #print('processing : ', row)
+            key = row['S.N']
+            data.append(row)
+    
+    print('zonal data : %d records' % len(data))
+    with open(zonal_json_path, 'w', encoding='utf-8') as jsonf:
+        jsonf.write(json.dumps(data))
+
+    with open(zonal_json_path) as json_file:
+        json_data = json.load(json_file)
+    
+    return jsonify(json_data)
 
 @app.route('/query_epoch_range')
 def query_epoch_range():

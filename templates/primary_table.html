@@ -5,6 +5,8 @@
     <label id="laberlForFilterOPD" for="filterOPD" class="badge">OPD</label>
     <input id="filterIPD" type="checkbox" class="btn btn-primary" checked>
     <label id="laberlForFilterIPD" for="filterIPD" class="badge">IPD</label>
+    <input id="filterZONAL" type="checkbox" class="btn btn-primary" unchecked>
+    <label id="laberlForFilterZONAL" for="filterZONAL" class="badge">Covid Zonal</label>
 </div>
 <table
     id="table_primary"
@@ -38,8 +40,10 @@
 
     var filter_opd = document.getElementById("laberlForFilterOPD");
     var filter_ipd = document.getElementById("laberlForFilterIPD");
+    var filter_ZONAL = document.getElementById("laberlForFilterZONAL");
     filter_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
     filter_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
+    filter_ZONAL.setAttribute('style',"color:#fff;background-color:" + woredaZONALcolor);
 
     $('#table_primary').on('click-cell.bs.table', function (field, value, row, record) {
         setLoading(true);
@@ -49,10 +53,29 @@
 
     $('#filterOPD').on('click', function () {
         console.log("clicked OPD");
+        if ($('#filterOPD').prop('checked')) {
+            $('#filterIPD').prop('checked', true);
+            $('#filterZONAL').prop('checked', false);
+            refresh(true);
+        }
     })
     
     $('#filterIPD').on('click', function () {
         console.log("clicked IPD");
+        if ($('#filterIPD').prop('checked')) {
+            $('#filterOPD').prop('checked', true);
+            $('#filterZONAL').prop('checked', false);
+            refresh(true);
+        }
+    })
+
+    $('#filterZONAL').on('click', function () {
+        console.log("clicked ZONAL");
+        if ($('#filterZONAL').prop('checked')) {
+            $('#filterIPD').prop('checked', false);
+            $('#filterOPD').prop('checked', false);
+            refresh(true);
+        }
     })
 
     function click_on_table(record) {

@@ -1,0 +1,1425 @@
+S.N;Name of Testing Laboratory;Sex;Age;Region ;Zone/Sub-city;Woreda;Location of Sample Collection (Name of Town and Facility);Date of Specimen collection;RDT Antigen Result;LOC_W_CODE;DIS_ID_A;DIS_DESC;TYPE;PAT_CITY;COUNT
+5;Harbu Chulule HC;F;40;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;06/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+7;Harbu Chulule HC;M;18;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;06/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+24;Tullu Bollo G/Hospital;F;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+29;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+30;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+32;Tullu Bollo G/Hospital;F;70;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+40;Tullu Bollo G/Hospital;M;50;Oromia ;SWSZ;Ilu;Tullu Bollo G/Hospital;07/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+86;St.luke hospital;F;60;Oromia ;SWSZ;Goro;St.luke hospital;06/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+89;St.luke hospital;M;37;Oromia ;SWSZ;Goro;St.luke hospital;06/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+90;St.luke hospital;F;71;Oromia ;SWSZ;Wolisso R;St.luke hospital;06/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+94;St.luke hospital;M;74;Oromia ;SWSZ;Wolisso R;St.luke hospital;07/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+131;Chitu HC;F;28;Oromia ;SWSZ;Wonchi;Belbella Bulbulo;06/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+132;Chitu HC;M;4;Oromia ;SWSZ;Wonchi;Belbella Bulbulo;06/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+168;Chitu HC;M;10;Oromia ;SWSZ;Wonchi;Chitu HC ;07/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+169;Chitu HC;F;30;Oromia ;SWSZ;Wonchi;Haro Beseka;07/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+174;Chitu HC;M;7;Oromia ;SWSZ;Wonchi;Haro Beseka;08/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+175;Chitu HC;M;4;Oromia ;SWSZ;Wonchi;Haro Beseka;08/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+205;Tullu Bollo G/Hospital;M;35;Oromia ;SWSZ;Suden Sodo;Tullu Bolo Prison;09/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+232;Korke HC;M;30;Oromia ;SWSZ;Wolisso R;Korke;09/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+233;Korke HC;F;27;Oromia ;SWSZ;Wolisso R;Korke;09/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+246;St.luke hospital;F;25;Oromia ;SWSZ;Goro;St.luke hospital;10/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+250;St.luke hospital;M;58;Oromia ;SWSZ;Wolisso;St.luke hospital;10/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+262;Tullu Bollo G/Hospital;F;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+263;Tullu Bollo G/Hospital;M;70;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;10/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+298;Gurura HC;F;53;Oromia ;SWSZ;Goro;Gurura;09/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+301;Gurura HC;F;35;Oromia ;SWSZ;Goro;Gurura;09/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+305;Gurura HC;F;14;Oromia ;SWSZ;Goro;Gurura;10/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+331;Tullu Bollo G/Hospital;F;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;21/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+347;Wolisso Police Station ;M;55;Oromia ;SWSZ;Goro;Wolisso Police Station ;01/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+349;Wolisso Police Station ;M;18;Oromia ;SWSZ;Goro;Wolisso Police Station ;01/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+352;Wolisso Police Station ;M;20;Oromia ;SWSZ;Goro;Wolisso Police Station ;01/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+353;Wolisso Police Station ;M;67;Oromia ;SWSZ;Goro;Wolisso Police Station ;01/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+354;Wolisso Police Station ;M;17;Oromia ;SWSZ;Goro;Wolisso Police Station ;01/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+355;Wolisso Police Station ;M;40;Oromia ;SWSZ;Goro;Wolisso Police Station ;01/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+408;Busa HC;F;60;Oromia ;SWSZ;Dawo;Busa HC;09/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+429;Busa HC;F;37;Oromia ;SWSZ;Dawo;Busa HC;13/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+513;Lemen HC;M;19;Oromia ;SWSZ;Kersa Malima;Lemen HC;17/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+514;Lemen HC;F;22;Oromia ;SWSZ;Kersa Malima;Lemen HC;17/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+538;Kota HC;M;35;Oromia ;SWSZ;Ameya ;Kota HC;08/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya ;1
+539;Kota HC;M;66;Oromia ;SWSZ;Ameya ;Kota HC;08/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya ;1
+540;Kota HC;F;22;Oromia ;SWSZ;Ameya ;Kota HC;08/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya ;1
+567;Gindo HC;M;30;Oromia ;SWSZ;Ameya;Gindo HC;08/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+570;Gindo HC;M;42;Oromia ;SWSZ;Ameya;Gindo HC;08/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+612;Gindo HC;M;35;Oromia ;SWSZ;Ameya;Gindo HC;14/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+623;Gindo HC;F;34;Oromia ;SWSZ;Ameya;Gindo HC;15/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+638;Ameya Primary Hospital ;M;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;10/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+639;Ameya Primary Hospital ;F;50;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;10/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+654;Ameya Primary Hospital ;M;23;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;17/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+659;Gurura HC;F;27;Oromia ;SWSZ;Goro;Gurura;17/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+703;Harbu Chulule HC;F;35;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;17/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+705;Harbu Chulule HC;F;16;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;17/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+716;Harbu Chulule HC;F;45;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;17/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+717;Harbu Chulule HC;M;28;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;17/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+724;Harbu Chulule HC;F;30;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;17/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+726;Harbu Chulule HC;F;20;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;17/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+729;Harbu Chulule HC;F;21;Oromia ;SWSZ;Suden Sodo;Harbu Chulule HC;17/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+751;Tullu Bollo G/Hospital;M;50;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+753;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Dawo ;Tullu Bollo G/Hospital;30/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo ;1
+771;Chitu HC;F;6;Oromia ;SWSZ;Wonchi;Chitu HC ;24/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+772;Chitu HC;M;6;Oromia ;SWSZ;Wonchi;Chitu HC ;24/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+812;Ameya Primary Hospital;M;58;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;20/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+819;Ameya Primary Hospital;M;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;21/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+820;Ameya Primary Hospital;M;29;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;21/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+822;Ameya Primary Hospital;F;13;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;22/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+823;Ameya Primary Hospital;F;13;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;22/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+831;Chitu HC;F;6;Oromia ;SWSZ;Wonchi;Chitu HC ;15/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+866;Chitu HC;F;23;Oromia ;SWSZ;Wonchi;Chitu HC ;20/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+903;Tullu Bollo G/Hospital;M;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;23/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+918;Tullu Bollo G/Hospital;M;26;Oromia ;SWSZ;Becho;Tullu Bolo Prison;23/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+925;Lemen Primary Hospital ;F;27;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;24/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+929;Lemen Primary Hospital ;F;38;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;24/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+933;Lemen Primary Hospital ;M;50;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;25/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+934;Lemen Primary Hospital ;F;35;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;25/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+936;Lemen Primary Hospital ;F;27;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;25/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+938;Lemen Primary Hospital ;M;26;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;25/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+940;Bantu Primary hospital;M;34;Oromia ;SWSZ;Tole;Bantu Primary hospital;23/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+950;Gurura HC;F;16;Oromia ;SWSZ;Goro;Gurura;22/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+957;Gurura HC;F;30;Oromia ;SWSZ;Goro;Gurura;23/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+963;Gurura HC;M;14;Oromia ;SWSZ;Goro;Gurura;25/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+982;Tullu Bolo HC;M;57;Oromia ;SWSZ;Becho;Tullu Bolo HC;23/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+989;Tullu Bolo HC;F;45;Oromia ;SWSZ;Becho;Tullu Bolo HC;24/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+995;Tullu Bolo HC;M;60;Oromia ;SWSZ;Becho;Tullu Bolo HC;24/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1002;Ameya Primary Hospital;F;23;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;23/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1003;Ameya Primary Hospital;F;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;23/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1007;Ameya Primary Hospital;M;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;24/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1008;Ameya Primary Hospital;F;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;24/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1011;Ameya Primary Hospital;F;16;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;24/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1012;Ameya Primary Hospital;M;37;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;24/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1019;Asgori HC;F;17;Oromia ;SWSZ;Ilu;Asgori HC;24/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1022;Asgori HC;M;24;Oromia ;SWSZ;Ilu;Asgori HC;27/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1031;Lemen HC;F;22;Oromia ;SWSZ;Kersa Malima;Lemen HC;27/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1037;Ameya Primary Hospital;F;60;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;27/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1038;Ameya Primary Hospital;M;36;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;27/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1039;Ameya Primary Hospital;F;29;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;27/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1040;Ameya Primary Hospital;F;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;27/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1041;Ameya Primary Hospital;M;25;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;27/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1047;Bantu Primary hospital;M;28;Oromia ;SWSZ;Tole;Bantu Primary hospital;27/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1049;Bantu HC;F;21;Oromia ;SWSZ;Tole;Bantu HC;27/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1051;Bantu HC;M;33;Oromia ;SWSZ;Tole;Bantu HC;27/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1054;Bantu HC;F;25;Oromia ;SWSZ;Tole;Bantu HC;27/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1061;Bantu HC;F;21;Oromia ;SWSZ;Tole;Bantu HC;27/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1062;Lemen Primary Hospital;F;30;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;27/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1075;Lemen Primary Hospital;M;0;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;27/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1076;Lemen Primary Hospital;M;50;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;27/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1081;Lemen Primary Hospital;F;21;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;27/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1082;Lemen Primary Hospital;F;45;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;27/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1085;Tullu Bolo HC;M;23;Oromia ;SWSZ;Becho;Becho ;27/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1097;Lemen HC;M;12;Oromia ;SWSZ;Kersa Malima;Lemen HC;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1099;Lemen HC;F;20;Oromia ;SWSZ;Kersa Malima;Lemen HC;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1100;Lemen HC;M;10;Oromia ;SWSZ;Kersa Malima;Lemen HC;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1101;Lemen Primary Hospital ;F;22;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1105;Lemen Primary Hospital ;M;32;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1108;Lemen Primary Hospital ;F;26;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1109;Lemen Primary Hospital ;M;32;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1115;Lemen Primary Hospital ;M;32;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1117;Lemen Primary Hospital ;F;32;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;28/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1133;Tullu Bollo G/Hospital;M;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;24/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1137;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;24/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1139;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Ilu;Tullu Bollo G/Hospital;24/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1143;Tullu Bollo G/Hospital;F;27;Oromia ;SWSZ;Ilu;Tullu Bollo G/Hospital;26/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1144;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;26/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1145;Tullu Bollo G/Hospital;F;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;27/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1146;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;27/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1151;Tullu Bollo G/Hospital;M;50;Oromia ;SWSZ;Dawo ;Tullu Bollo G/Hospital;27/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo ;1
+1152;Tullu Bollo G/Hospital;F;24;Oromia ;SWSZ;Dawo ;Tullu Bollo G/Hospital;27/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo ;1
+1154;Tullu Bollo G/Hospital;F;32;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;27/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1155;Tullu Bollo G/Hospital;M;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;27/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1158;Tullu Bollo G/Hospital;F;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;27/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1160;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;27/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1161;Tullu Bollo G/Hospital;F;55;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;27/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1163;Tullu Bollo G/Hospital;M;38;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1165;Tullu Bollo G/Hospital;F;31;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1170;Tullu Bollo G/Hospital;M;53;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1171;Tullu Bollo G/Hospital;F;50;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1172;Tullu Bollo G/Hospital;M;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1176;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1179;Bantu HC;F;42;Oromia ;SWSZ;Tole;Bantu HC;28/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1181;Bantu HC;F;70;Oromia ;SWSZ;Tole;Bantu HC;28/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1185;Bantu HC;F;18;Oromia ;SWSZ;Tole;Bantu HC;28/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1188;Bantu Primary hospital;F;50;Oromia ;SWSZ;Tole;Bantu Primary hospital;28/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1189;Bantu Primary hospital;F;18;Oromia ;SWSZ;Tole;Bantu Primary hospital;28/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1190;Bantu Primary hospital;M;19;Oromia ;SWSZ;Tole;Bantu Primary hospital;28/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1191;Tullu Bolo HC;F;30;Oromia ;SWSZ;Becho;Becho ;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1195;Tullu Bolo HC;M;18;Oromia ;SWSZ;Becho;Becho ;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1196;Tullu Bolo HC;M;17;Oromia ;SWSZ;Becho;Becho ;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1197;Tullu Bolo HC;F;16;Oromia ;SWSZ;Becho;Becho ;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1199;Tullu Bolo HC;M;12;Oromia ;SWSZ;Becho;Becho ;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1201;Tullu Bolo HC;M;23;Oromia ;SWSZ;Becho;Becho ;28/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1202;Tullu Bolo HC;M;16;Oromia ;SWSZ;Becho;Becho ;29/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1207;Tullu Bolo HC;M;55;Oromia ;SWSZ;Becho;Becho ;29/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1215;Asgori HC;F;25;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1217;Asgori HC;M;26;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1221;Asgori HC;M;60;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1222;Asgori HC;M;20;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1223;Asgori HC;F;20;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1226;Asgori HC;M;;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1227;Asgori HC;M;61;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1228;Asgori HC;F;26;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1229;Asgori HC;M;30;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1231;Asgori HC;M;;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1236;Asgori HC;M;;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1237;Asgori HC;M;;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1238;Asgori HC;M;;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1239;Ameya Primary Hospital;M;25;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;28/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1246;Ameya Primary Hospital;F;18;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1247;Ameya Primary Hospital;M;23;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1251;Ameya Primary Hospital;F;35;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1252;Ameya Primary Hospital;F;53;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1254;Ameya Primary Hospital;F;50;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1257;Ameya Primary Hospital;F;40;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1260;Ameya Primary Hospital;M;27;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1261;Ameya Primary Hospital;M;38;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1262;Ameya Primary Hospital;M;32;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1266;Ameya Primary Hospital;F;38;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1269;Ameya Primary Hospital;M;18;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1270;Ameya Primary Hospital;F;35;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1271;Ameya Primary Hospital;F;26;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1273;Ameya Primary Hospital;F;25;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1274;Ameya Primary Hospital;M;31;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1275;Ameya Primary Hospital;F;48;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1276;Ameya Primary Hospital;F;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1278;Ameya Primary Hospital;F;14;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1279;Ameya Primary Hospital;M;28;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1283;Ameya Primary Hospital;F;28;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1286;Ameya Primary Hospital;F;4;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1291;Ameya Primary Hospital;M;25;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;01/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1300;Chitu HC;F;55;Oromia ;SWSZ;Wonchi;Dimtu Godeti;24/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+1316;Chitu HC;F;23;Oromia ;SWSZ;Wonchi;Chitu HC ;24/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+1322;Chitu HC;F;32;Oromia ;SWSZ;Wonchi;Chitu HC ;24/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+1327;Lemen HC;M;42;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1328;Lemen HC;M;47;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1329;Lemen HC;M;48;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1331;Lemen HC;M;34;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1332;Lemen HC;F;18;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1333;Lemen HC;M;20;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1334;Lemen HC;F;16;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1335;Lemen HC;M;25;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1336;Lemen HC;F;12;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1337;Lemen HC;F;49;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1342;Lemen HC;F;17;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1343;Lemen HC;F;14;Oromia ;SWSZ;Kersa Malima;Lemen HC;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1345;Bantu Primary hospital;M;27;Oromia ;SWSZ;Tole;Bantu Primary hospital;29/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1346;Bantu Primary hospital;M;42;Oromia ;SWSZ;Tole;Bantu Primary hospital;29/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1347;Bantu Primary hospital;F;16;Oromia ;SWSZ;Tole;Bantu Primary hospital;29/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1355;Lemen Primary Hospital;M;37;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1357;Lemen Primary Hospital;F;42;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1359;Lemen Primary Hospital;M;28;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1364;Lemen Primary Hospital;M;28;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1365;Lemen Primary Hospital;M;19;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1368;Lemen Primary Hospital;M;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1369;Lemen Primary Hospital;F;28;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1373;Lemen Primary Hospital;F;80;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;29/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1384;Tere HC;M;55;Oromia ;SWSZ;Sodo Dachi;Tere HC;30/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1386;Tere HC;M;66;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1387;Tere HC;F;60;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1388;Tere HC;M;24;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1389;Tere HC;M;17;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1390;Tere HC;F;30;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1391;Tere HC;F;17;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1392;Tere HC;F;40;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1394;Tere HC;M;17;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1395;Tere HC;M;19;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1396;Tere HC;M;56;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1397;Tere HC;F;50;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1398;Tere HC;M;56;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1401;Tere HC;M;29;Oromia ;SWSZ;Sodo Dachi;Tere HC;31/12/2021;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1404;Lemen HC;M;18;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1405;Lemen HC;M;21;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1407;Lemen HC;F;49;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1408;Lemen HC;M;50;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1409;Lemen HC;M;75;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1412;Lemen HC;F;20;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1413;Lemen HC;M;30;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1414;Lemen HC;M;35;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1417;Lemen HC;M;25;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1419;Lemen HC;M;56;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1422;Lemen HC;F;35;Oromia ;SWSZ;Kersa Malima;Lemen HC;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1425;Lemen Primary Hospital ;M;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;30/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1432;Lemen Primary Hospital ;M;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;30/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1433;Lemen Primary Hospital ;F;60;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;30/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1434;Lemen Primary Hospital ;M;8;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1436;Lemen Primary Hospital ;F;28;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1440;Lemen Primary Hospital ;M;28;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1442;Lemen Primary Hospital ;M;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;31/12/2021;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1450;Tullu Bollo G/Hospital;M;34;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;29/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1457;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;29/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1469;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;29/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1470;Tullu Bollo G/Hospital;F;18;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;29/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+1471;Tullu Bollo G/Hospital;M;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;29/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1473;Tullu Bollo G/Hospital;M;15;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;29/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1474;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1475;Tullu Bollo G/Hospital;M;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1476;Tullu Bollo G/Hospital;M;50;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1477;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1478;Tullu Bollo G/Hospital;M;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1479;Tullu Bollo G/Hospital;F;65;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1480;Tullu Bollo G/Hospital;M;19;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1481;Tullu Bollo G/Hospital;M;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1482;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1483;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1487;Tullu Bollo G/Hospital;F;56;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1489;Tullu Bollo G/Hospital;F;28;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1490;Tullu Bollo G/Hospital;F;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1491;Tullu Bollo G/Hospital;M;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1492;Tullu Bollo G/Hospital;M;42;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1495;Tullu Bollo G/Hospital;M;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1496;Tullu Bollo G/Hospital;M;29;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1499;Tullu Bollo G/Hospital;M;29;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1500;Tullu Bollo G/Hospital;M;28;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1501;Tullu Bollo G/Hospital;M;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1503;Tullu Bollo G/Hospital;M;53;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1505;Tullu Bollo G/Hospital;F;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1506;Tullu Bollo G/Hospital;M;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1509;Tullu Bollo G/Hospital;M;16;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1512;Tullu Bollo G/Hospital;M;29;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1514;Tullu Bollo G/Hospital;M;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1518;Tullu Bollo G/Hospital;F;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1520;Tullu Bollo G/Hospital;M;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1521;Tullu Bollo G/Hospital;M;32;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1522;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1524;Tullu Bollo G/Hospital;M;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1525;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1526;Tullu Bollo G/Hospital;F;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1528;Tullu Bollo G/Hospital;F;14;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1529;Tullu Bollo G/Hospital;M;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1531;Tullu Bollo G/Hospital;F;82;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1533;Tullu Bollo G/Hospital;F;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1534;Tullu Bollo G/Hospital;M;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1537;Tullu Bollo G/Hospital;F;28;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1538;Tullu Bollo G/Hospital;F;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1540;Tullu Bollo G/Hospital;F;32;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1541;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1543;Tullu Bollo G/Hospital;F;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1544;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1545;Tullu Bollo G/Hospital;M;60;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1546;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1547;Tullu Bollo G/Hospital;M;24;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;31/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1549;Tullu Bollo G/Hospital;M;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1550;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1551;Tullu Bollo G/Hospital;M;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1552;Tullu Bollo G/Hospital;F;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1554;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1556;Tullu Bollo G/Hospital;F;21;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1557;Tullu Bollo G/Hospital;F;60;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1558;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1559;Tullu Bollo G/Hospital;F;38;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1560;Tullu Bollo G/Hospital;F;15;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1561;Tullu Bollo G/Hospital;F;19;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1563;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1567;Tullu Bollo G/Hospital;M;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;01/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1573;Lemen Primary Hospital ;F;65;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;01/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1576;Lemen Primary Hospital ;M;31;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;01/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1583;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1584;Tullu Bollo G/Hospital;F;17;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1585;Tullu Bollo G/Hospital;F;24;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1586;Tullu Bollo G/Hospital;M;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1587;Tullu Bollo G/Hospital;F;53;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1588;Tullu Bollo G/Hospital;M;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1589;Tullu Bollo G/Hospital;F;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1590;Tullu Bollo G/Hospital;F;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1592;Tullu Bollo G/Hospital;F;50;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;02/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1595;Bantu Primary hospital;F;56;Oromia ;SWSZ;Tole;Bantu Primary hospital;02/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1596;Bantu Primary hospital;M;72;Oromia ;SWSZ;Tole;Bantu Primary hospital;02/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1597;Bantu Primary hospital;F;20;Oromia ;SWSZ;Tole;Bantu Primary hospital;02/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1601;Bantu Primary hospital;M;56;Oromia ;SWSZ;Tole;Bantu Primary hospital;02/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1608;Gurura HC;F;18;Oromia ;SWSZ;Goro;Gurura;25/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1615;Gurura HC;M;35;Oromia ;SWSZ;Goro;Gurura;26/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1619;Gurura HC;M;27;Oromia ;SWSZ;Goro;Gurura;27/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1622;Gurura HC;M;25;Oromia ;SWSZ;Goro;Gurura;27/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1623;Gurura HC;M;25;Oromia ;SWSZ;Goro;Gurura;27/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1631;Gurura HC;M;14;Oromia ;SWSZ;Goro;Gurura;28/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1642;Gurura HC;M;35;Oromia ;SWSZ;Goro;Gurura;29/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1644;Gurura HC;F;50;Oromia ;SWSZ;Goro;Gurura;29/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1648;Gurura HC;F;31;Oromia ;SWSZ;Goro;Gurura;29/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1650;Gurura HC;M;35;Oromia ;SWSZ;Goro;Gurura;29/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1651;Gurura HC;F;14;Oromia ;SWSZ;Goro;Gurura;29/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1655;Gurura HC;M;44;Oromia ;SWSZ;Goro;Gurura;30/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+1657;Asgori HC;M;45;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1658;Asgori HC;M;30;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1659;Asgori HC;F;25;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1660;Asgori HC;M;22;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1661;Asgori HC;M;25;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1662;Asgori HC;M;30;Oromia ;SWSZ;Ilu;Asgori HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1663;Teji HC;F;37;Oromia ;SWSZ;Ilu;Teji HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1664;Teji HC;F;36;Oromia ;SWSZ;Ilu;Teji HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1667;Teji HC;M;36;Oromia ;SWSZ;Ilu;Teji HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1668;Teji HC;M;35;Oromia ;SWSZ;Ilu;Teji HC;29/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1670;Teji HC;F;60;Oromia ;SWSZ;Ilu;Teji HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1672;Teji HC;F;26;Oromia ;SWSZ;Ilu;Teji HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1676;Asgori HC;M;32;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1678;Asgori HC;M;29;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1679;Asgori HC;F;17;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1680;Asgori HC;F;26;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1682;Asgori HC;F;37;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1683;Asgori HC;M;45;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1686;Asgori HC;M;24;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1689;Asgori HC;M;36;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1690;Asgori HC;F;47;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1691;Asgori HC;F;17;Oromia ;SWSZ;Ilu;Asgori HC;30/12/2021;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+1692;Tullu Bolo HC;F;46;Oromia ;SWSZ;Becho;Tullu Bolo HC;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1695;Tullu Bolo HC;F;46;Oromia ;SWSZ;Becho;Tullu Bolo HC;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1698;Tullu Bolo HC;F;23;Oromia ;SWSZ;Becho;Tullu Bolo HC;30/12/2021;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1702;Tullu Bollo G/Hospital;F;17;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1703;Tullu Bollo G/Hospital;M;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1708;Tullu Bollo G/Hospital;M;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1709;Tullu Bollo G/Hospital;M;75;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1710;Tullu Bollo G/Hospital;M;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1713;Tullu Bollo G/Hospital;M;12;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1714;Tullu Bollo G/Hospital;M;32;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1715;Tullu Bollo G/Hospital;F;32;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1716;Tullu Bollo G/Hospital;F;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1717;Tullu Bollo G/Hospital;F;60;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1718;Tullu Bollo G/Hospital;F;24;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1723;Tullu Bollo G/Hospital;F;18;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1724;Tullu Bollo G/Hospital;M;65;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1725;Tullu Bollo G/Hospital;F;29;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1726;Tullu Bollo G/Hospital;M;32;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1729;Tullu Bollo G/Hospital;M;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1730;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1731;Tullu Bollo G/Hospital;M;32;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1732;Tullu Bollo G/Hospital;F;65;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1733;Tullu Bollo G/Hospital;M;76;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1736;Tullu Bollo G/Hospital;M;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1740;Tullu Bollo G/Hospital;F;18;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1746;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1747;Tullu Bollo G/Hospital;M;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1749;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1753;Bantu Primary hospital;M;25;Oromia ;SWSZ;Tole;Bantu Primary hospital;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1759;Bantu Primary hospital;M;26;Oromia ;SWSZ;Tole;Bantu Primary hospital;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1762;Bantu Primary hospital;F;16;Oromia ;SWSZ;Tole;Bantu Primary hospital;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1778;Bantu HC;F;27;Oromia ;SWSZ;Tole;Bantu HC;31/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1779;Bantu HC;F;28;Oromia ;SWSZ;Tole;Bantu HC;31/12/2021;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1784;Bantu HC;M;19;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1785;Bantu HC;M;77;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1786;Bantu HC;F;24;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1788;Bantu HC;F;28;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1791;Bantu HC;M;40;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1792;Bantu HC;F;31;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1793;Bantu HC;F;29;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1795;Bantu HC;F;28;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1796;Bantu HC;F;35;Oromia ;SWSZ;Tole;Bantu HC;03/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1797;Lemen Primary Hospital ;F;45;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1798;Lemen Primary Hospital ;M;55;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1799;Lemen Primary Hospital ;M;40;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1800;Lemen Primary Hospital ;F;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1801;Lemen Primary Hospital ;F;22;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1802;Lemen Primary Hospital ;F;30;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1804;Lemen Primary Hospital ;M;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1810;Lemen Primary Hospital ;M;22;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1811;Lemen Primary Hospital ;F;18;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1812;Lemen Primary Hospital ;M;22;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1814;Lemen Primary Hospital ;M;21;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1815;Lemen Primary Hospital ;F;21;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1817;Tere HC;M;30;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1818;Tere HC;M;31;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1819;Tere HC;F;26;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1821;Tere HC;F;24;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1823;Tere HC;F;17;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1824;Tere HC;M;35;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1826;Tere HC;F;37;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1828;Tere HC;M;52;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1830;Tere HC;M;20;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1831;Tere HC;M;30;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1832;Tere HC;M;26;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1835;Tere HC;M;67;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1836;Tere HC;F;32;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1837;Tere HC;F;25;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1838;Tere HC;M;25;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1842;Tere HC;F;60;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1843;Tere HC;F;28;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1844;Tere HC;F;21;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1845;Tere HC;F;17;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1846;Tere HC;M;21;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1847;Tere HC;M;20;Oromia ;SWSZ;Sodo Dachi;Tere HC;04/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+1848;Lemen Primary Hospital ;M;51;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;04/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1849;Lemen Primary Hospital ;M;40;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;04/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1853;Lemen Primary Hospital ;F;12;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;04/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1855;Lemen Primary Hospital ;M;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;04/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1856;Lemen Primary Hospital ;M;40;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;04/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1857;Tullu Bollo G/Hospital;M;46;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1858;Tullu Bollo G/Hospital;F;21;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1859;Tullu Bollo G/Hospital;F;61;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1863;Tullu Bollo G/Hospital;F;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1864;Tullu Bollo G/Hospital;M;32;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1866;Tullu Bollo G/Hospital;F;50;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1869;Tullu Bollo G/Hospital;F;50;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1870;Tullu Bollo G/Hospital;F;24;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1871;Tullu Bollo G/Hospital;M;55;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1878;Tullu Bollo G/Hospital;M;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1880;Tullu Bollo G/Hospital;M;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1884;Tullu Bollo G/Hospital;F;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1887;Tullu Bollo G/Hospital;M;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1889;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1890;Tullu Bollo G/Hospital;M;18;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1891;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1892;Tullu Bollo G/Hospital;M;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1893;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1894;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1895;Ameya Primary Hospital;F;56;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;03/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1901;Ameya Primary Hospital;F;18;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;03/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1902;Ameya Primary Hospital;F;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;03/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1903;Ameya Primary Hospital;M;58;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;03/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1904;Ameya Primary Hospital;F;21;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;03/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1905;Ameya Primary Hospital;M;23;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;03/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1907;Ameya Primary Hospital;M;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1909;Ameya Primary Hospital;F;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1910;Ameya Primary Hospital;F;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1913;Ameya Primary Hospital;F;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1914;Ameya Primary Hospital;F;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1921;Ameya Primary Hospital;F;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1922;Ameya Primary Hospital;F;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1924;Ameya Primary Hospital;M;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1928;Ameya Primary Hospital;F;;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+1931;Bantu Primary hospital;F;28;Oromia ;SWSZ;Tole;Bantu Primary hospital;04/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1932;Bantu Primary hospital;F;36;Oromia ;SWSZ;Tole;Bantu Primary hospital;04/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1935;Bantu Primary hospital;F;24;Oromia ;SWSZ;Tole;Bantu Primary hospital;04/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1936;Bantu Primary hospital;F;18;Oromia ;SWSZ;Tole;Bantu Primary hospital;04/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1942;Bantu Primary hospital;M;25;Oromia ;SWSZ;Tole;Bantu Primary hospital;04/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1944;Bantu Primary hospital;F;26;Oromia ;SWSZ;Tole;Bantu Primary hospital;04/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1945;Bantu Primary hospital;M;23;Oromia ;SWSZ;Tole;Bantu Primary hospital;04/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+1946;Lemen HC;M;37;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1950;Lemen HC;F;25;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1951;Lemen HC;F;15;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1953;Lemen HC;F;24;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1954;Lemen HC;F;31;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1955;Lemen HC;F;72;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1956;Lemen HC;M;16;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1957;Lemen HC;M;7;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1959;Lemen HC;F;28;Oromia ;SWSZ;Kersa Malima;Lemen HC;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+1965;Tullu Bolo HC;M;27;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1966;Tullu Bolo HC;M;61;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1967;Tullu Bolo HC;M;48;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1969;Tullu Bolo HC;M;65;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1971;Tullu Bolo HC;F;28;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1972;Tullu Bolo HC;F;45;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1974;Tullu Bolo HC;M;75;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1975;Tullu Bolo HC;F;33;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1976;Tullu Bolo HC;F;50;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1980;Tullu Bolo HC;F;30;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1981;Tullu Bolo HC;F;37;Oromia ;SWSZ;Becho;Tullu Bolo HC;03/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1983;Tullu Bolo HC;F;46;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1984;Tullu Bolo HC;F;40;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1986;Tullu Bolo HC;F;40;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1987;Tullu Bolo HC;F;40;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1988;Tullu Bolo HC;M;46;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1989;Tullu Bolo HC;F;70;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1990;Tullu Bolo HC;M;26;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1991;Tullu Bolo HC;F;30;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1992;Tullu Bolo HC;M;75;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1993;Tullu Bolo HC;F;35;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1995;Tullu Bolo HC;F;40;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1996;Tullu Bolo HC;F;30;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+1999;Tullu Bolo HC;F;57;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2000;Tullu Bolo HC;F;57;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2001;Tullu Bolo HC;M;40;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2003;Tullu Bolo HC;F;55;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2004;Tullu Bolo HC;M;45;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2005;Tullu Bolo HC;F;55;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2008;Tere HC;M;25;Oromia ;SWSZ;Sodo Dachi;Tere HC;05/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+2012;Tere HC;M;16;Oromia ;SWSZ;Sodo Dachi;Tere HC;05/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+2014;Tere HC;M;22;Oromia ;SWSZ;Sodo Dachi;Tere HC;05/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+2018;Lemen Primary Hospital ;F;26;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2021;Lemen Primary Hospital ;F;12;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2024;Lemen Primary Hospital ;M;28;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2025;Lemen Primary Hospital ;F;42;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2026;Lemen Primary Hospital ;F;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2027;Lemen Primary Hospital ;F;18;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2028;Lemen Primary Hospital ;M;24;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2035;Tullu Bollo G/Hospital;M;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2038;Tullu Bollo G/Hospital;M;34;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2039;Tullu Bollo G/Hospital;M;57;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2040;Tullu Bollo G/Hospital;F;;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2041;Tullu Bollo G/Hospital;F;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2042;Tullu Bollo G/Hospital;M;60;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2044;Tullu Bollo G/Hospital;M;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2047;Tullu Bollo G/Hospital;M;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2048;Tullu Bollo G/Hospital;M;46;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2049;Tullu Bollo G/Hospital;M;54;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2051;Tullu Bollo G/Hospital;M;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2052;Tullu Bollo G/Hospital;M;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2053;Tullu Bollo G/Hospital;F;42;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2054;Tullu Bollo G/Hospital;F;16;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2058;Tullu Bollo G/Hospital;M;28;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2059;Tullu Bollo G/Hospital;F;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2061;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2063;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2065;Tullu Bollo G/Hospital;M;29;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2068;Tullu Bollo G/Hospital;F;55;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2072;Tullu Bollo G/Hospital;F;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2073;Tullu Bollo G/Hospital;F;19;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2075;Tullu Bollo G/Hospital;F;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2078;Ameya Primary Hospital;F;19;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2079;Ameya Primary Hospital;M;36;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2080;Ameya Primary Hospital;M;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2083;Ameya Primary Hospital;F;35;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2084;Ameya Primary Hospital;F;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2088;Ameya Primary Hospital;M;55;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2089;Ameya Primary Hospital;M;28;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2092;Ameya Primary Hospital;F;32;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2094;Bantu HC;M;25;Oromia ;SWSZ;Tole;Bantu HC;05/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2095;Bantu HC;M;25;Oromia ;SWSZ;Tole;Bantu HC;05/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2097;Bantu HC;M;22;Oromia ;SWSZ;Tole;Bantu HC;05/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2098;Bantu HC;F;17;Oromia ;SWSZ;Tole;Bantu HC;05/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2099;Bantu HC;F;25;Oromia ;SWSZ;Tole;Bantu HC;05/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2101;Tullu Bolo HC;F;46;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2102;Tullu Bolo HC;F;25;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2103;Tullu Bolo HC;F;28;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2104;Tullu Bolo HC;F;60;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2105;Tullu Bolo HC;F;100;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2114;Tullu Bolo HC;M;30;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2117;Tullu Bolo HC;M;27;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2118;Tullu Bolo HC;F;23;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2119;Tullu Bolo HC;F;22;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2120;Tullu Bolo HC;F;21;Oromia ;SWSZ;Becho;Tullu Bolo HC;04/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2124;Lemen HC;F;30;Oromia ;SWSZ;Kersa Malima;Lemen HC;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2125;Lemen HC;F;56;Oromia ;SWSZ;Kersa Malima;Lemen HC;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2127;Lemen HC;F;25;Oromia ;SWSZ;Kersa Malima;Lemen HC;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2129;Lemen HC;F;20;Oromia ;SWSZ;Kersa Malima;Lemen HC;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2135;St.Luke Hospital;F;24;Oromia ;SWSZ;Wolisso;St.luke hospital;21/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2137;St.Luke Hospital;M;30;Oromia ;SWSZ;Wolisso;St.luke hospital;23/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2138;St.Luke Hospital;F;50;Oromia ;SWSZ;Wolisso;St.luke hospital;23/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2140;St.Luke Hospital;F;38;Oromia ;SWSZ;Wolisso;St.luke hospital;23/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2146;St.Luke Hospital;M;30;Oromia ;SWSZ;Wolisso;St.luke hospital;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2147;St.Luke Hospital;M;50;Oromia ;SWSZ;Wolisso;St.luke hospital;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2148;St.Luke Hospital;M;27;Oromia ;SWSZ;Wolisso;St.luke hospital;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2150;St.Luke Hospital;M;42;Oromia ;SWSZ;Wolisso;St.luke hospital;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2154;St.Luke Hospital;F;45;Oromia ;SWSZ;Wolisso;St.luke hospital;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2157;St.Luke Hospital;F;70;Oromia ;SWSZ;Wolisso;St.luke hospital;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2159;St.Luke Hospital;M;51;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2160;St.Luke Hospital;F;23;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2163;St.Luke Hospital;M;18;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2164;St.Luke Hospital;M;10;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2169;St.Luke Hospital;M;70;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2170;St.Luke Hospital;M;32;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2171;St.Luke Hospital;F;43;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2174;St.Luke Hospital;M;23;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2176;St.Luke Hospital;F;17;Oromia ;SWSZ;Wolisso;St.luke hospital;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2181;St.Luke Hospital;F;40;Oromia ;SWSZ;Wolisso;St.luke hospital;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2183;St.Luke Hospital;F;27;Oromia ;SWSZ;Wolisso;St.luke hospital;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2184;St.Luke Hospital;M;65;Oromia ;SWSZ;Wolisso;St.luke hospital;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2185;St.Luke Hospital;M;;Oromia ;SWSZ;Wolisso;St.luke hospital;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2186;St.Luke Hospital;F;37;Oromia ;SWSZ;Wolisso;St.luke hospital;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2190;St.Luke Hospital;M;28;Oromia ;SWSZ;Wolisso;St.luke hospital;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2191;St.Luke Hospital;F;36;Oromia ;SWSZ;Wolisso;St.luke hospital;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2194;St.Luke Hospital;M;41;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2195;St.Luke Hospital;F;41;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2196;St.Luke Hospital;F;28;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2197;St.Luke Hospital;M;34;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2198;St.Luke Hospital;M;25;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2199;St.Luke Hospital;M;;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2201;St.Luke Hospital;F;35;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2202;St.Luke Hospital;F;21;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2203;St.Luke Hospital;M;62;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2204;St.Luke Hospital;M;22;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2206;St.Luke Hospital;F;26;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2210;St.Luke Hospital;M;8;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2211;St.Luke Hospital;M;15;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2212;St.Luke Hospital;M;12;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2213;St.Luke Hospital;M;12;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2215;St.Luke Hospital;F;24;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2216;St.Luke Hospital;M;29;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2217;St.Luke Hospital;F;28;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2218;St.Luke Hospital;M;55;Oromia ;SWSZ;Wolisso;St.luke hospital;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2222;St.Luke Hospital;F;35;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2226;St.Luke Hospital;F;20;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2227;St.Luke Hospital;F;30;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2228;St.Luke Hospital;F;41;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2229;St.Luke Hospital;F;45;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2230;St.Luke Hospital;F;24;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2232;St.Luke Hospital;F;20;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2235;St.Luke Hospital;F;28;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2237;St.Luke Hospital;F;;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2238;St.Luke Hospital;M;40;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2242;St.Luke Hospital;F;35;Oromia ;SWSZ;Wolisso;St.luke hospital;31/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2248;St.Luke Hospital;F;36;Oromia ;SWSZ;Wolisso;St.luke hospital;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2251;St.Luke Hospital;M;36;Oromia ;SWSZ;Wolisso;St.luke hospital;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2252;St.Luke Hospital;M;30;Oromia ;SWSZ;Wolisso;St.luke hospital;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2254;St.Luke Hospital;M;40;Oromia ;SWSZ;Wolisso;St.luke hospital;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2255;St.Luke Hospital;F;35;Oromia ;SWSZ;Wolisso;St.luke hospital;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2257;St.Luke Hospital;F;31;Oromia ;SWSZ;Wolisso;St.luke hospital;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2261;St.Luke Hospital;M;35;Oromia ;SWSZ;Wolisso;St.luke hospital;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2263;St.Luke Hospital;M;1;Oromia ;SWSZ;Wolisso;St.luke hospital;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2265;St.Luke Hospital;F;45;Oromia ;SWSZ;Wolisso;St.luke hospital;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2267;St.Luke Hospital;F;28;Oromia ;SWSZ;Wolisso;St.luke hospital;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2269;St.Luke Hospital;M;25;Oromia ;SWSZ;Wolisso;St.luke hospital;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2270;St.Luke Hospital;M;65;Oromia ;SWSZ;Wolisso;St.luke hospital;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2271;St.Luke Hospital;F;40;Oromia ;SWSZ;Wolisso;St.luke hospital;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2275;St.Luke Hospital;F;27;Oromia ;SWSZ;Wolisso;St.luke hospital;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2276;St.Luke Hospital;M;68;Oromia ;SWSZ;Wolisso;St.luke hospital;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2280;St.luke hospital;M;70;Oromia ;SWSZ;Wolisso;St.luke hospital;10/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2283;Bantu Primary Hospital ;M;65;Oromia ;SWSZ;Tole;Bantu Primary hospital;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2285;Bantu Primary Hospital ;M;74;Oromia ;SWSZ;Tole;Bantu Primary hospital;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2287;Bantu Primary Hospital ;M;76;Oromia ;SWSZ;Tole;Bantu Primary hospital;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2288;Bantu Primary Hospital ;F;20;Oromia ;SWSZ;Tole;Bantu Primary hospital;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2291;Lemen Primary Hospital;M;30;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2292;Lemen Primary Hospital;F;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2295;Lemen Primary Hospital;F;65;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2296;Lemen Primary Hospital;F;70;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2297;Lemen Primary Hospital;M;58;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2300;Lemen Primary Hospital;M;19;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2303;Lemen Primary Hospital;F;80;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;06/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2306;Tullu Bollo G/Hospital;F;19;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2308;Tullu Bollo G/Hospital;F;44;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2309;Tullu Bollo G/Hospital;M;47;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2310;Tullu Bollo G/Hospital;F;16;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2311;Tullu Bollo G/Hospital;M;62;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2313;Tullu Bollo G/Hospital;M;43;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2314;Tullu Bollo G/Hospital;M;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2315;Tullu Bollo G/Hospital;F;28;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2317;Tullu Bollo G/Hospital;M;56;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2318;Tullu Bollo G/Hospital;M;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2320;Tullu Bollo G/Hospital;F;50;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2321;Tullu Bollo G/Hospital;F;29;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2322;Tullu Bollo G/Hospital;F;28;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2323;Tullu Bollo G/Hospital;F;29;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2324;Tullu Bollo G/Hospital;F;2;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2326;Tullu Bollo G/Hospital;M;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2328;Tullu Bollo G/Hospital;M;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2329;Tullu Bollo G/Hospital;M;65;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;06/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2332;Tullu Bollo G/Hospital;F;35;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2333;Tullu Bollo G/Hospital;M;75;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;06/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2336;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2337;Tullu Bollo G/Hospital;F;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2340;Tullu Bollo G/Hospital;M;41;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2342;Tullu Bollo G/Hospital;F;26;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2343;Tullu Bollo G/Hospital;F;41;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2346;Tullu Bollo G/Hospital;F;60;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2348;Tullu Bollo G/Hospital;F;50;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;06/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2349;Tullu Bollo G/Hospital;F;7;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2351;Ameya Primary Hospital ;F;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2353;Ameya Primary Hospital ;M;50;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2354;Ameya Primary Hospital ;M;28;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2361;Bantu Primary Hospital ;M;38;Oromia ;SWSZ;Tole;Bantu Primary hospital;08/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2362;Bantu Primary Hospital ;M;22;Oromia ;SWSZ;Tole;Bantu Primary hospital;08/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2363;Bantu Primary Hospital ;F;18;Oromia ;SWSZ;Tole;Bantu Primary hospital;08/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2365;Bantu Primary Hospital ;F;50;Oromia ;SWSZ;Tole;Bantu Primary hospital;08/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2367;Bantu Primary Hospital ;F;29;Oromia ;SWSZ;Tole;Bantu Primary hospital;08/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2369;Bantu Primary Hospital ;M;60;Oromia ;SWSZ;Tole;Bantu Primary hospital;08/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2371;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2372;Tullu Bollo G/Hospital;M;2;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2373;Tullu Bollo G/Hospital;M;18;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2374;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2375;Tullu Bollo G/Hospital;M;55;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2376;Tullu Bollo G/Hospital;F;36;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2377;Tullu Bollo G/Hospital;F;14;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2378;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2379;Tullu Bollo G/Hospital;F;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2380;Tullu Bollo G/Hospital;F;38;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2381;Tullu Bollo G/Hospital;M;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;07/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2383;Tullu Bollo G/Hospital;F;15;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;08/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2384;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;08/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2391;Tullu Bollo G/Hospital;F;19;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;08/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2392;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;08/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2393;Tullu Bollo G/Hospital;F;21;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;08/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2394;Tullu Bollo G/Hospital;F;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;08/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2400;Tullu Bollo G/Hospital;F;60;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2401;Tullu Bollo G/Hospital;F;55;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;05/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2402;Bantu Primary Hospital ;M;38;Oromia ;SWSZ;Tole;Bantu Primary hospital;05/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2404;Bantu Primary Hospital ;M;55;Oromia ;SWSZ;Tole;Bantu Primary hospital;05/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2405;Bantu Primary Hospital ;F;42;Oromia ;SWSZ;Tole;Bantu Primary hospital;05/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2408;Ameya Primary Hospital ;M;49;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;09/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2409;Ameya Primary Hospital ;F;22;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;09/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2412;Bantu HC;M;45;Oromia ;SWSZ;Tole;Bantu HC;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2413;Bantu HC;F;35;Oromia ;SWSZ;Tole;Bantu HC;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2415;Bantu HC;F;50;Oromia ;SWSZ;Tole;Bantu HC;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2416;Bantu HC;M;18;Oromia ;SWSZ;Tole;Bantu HC;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2418;Bantu HC;M;66;Oromia ;SWSZ;Tole;Bantu HC;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2423;Bantu HC;F;43;Oromia ;SWSZ;Tole;Bantu HC;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2426;Bantu HC;M;15;Oromia ;SWSZ;Tole;Bantu HC;06/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2433;Chitu HC;M;90;Oromia ;SWSZ;Wonchi;Chitu HC ;28/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2445;Chitu HC;M;45;Oromia ;SWSZ;Wonchi;Chitu HC ;29/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2446;Chitu HC;F;30;Oromia ;SWSZ;Wonchi;Chitu HC ;29/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2453;Chitu HC;F;27;Oromia ;SWSZ;Wonchi;Chitu HC ;29/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2454;Chitu HC;M;7;Oromia ;SWSZ;Wonchi;Chitu HC ;29/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2455;Chitu HC;M;18;Oromia ;SWSZ;Wonchi;Chitu HC ;30/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2468;Chitu HC;F;32;Oromia ;SWSZ;Wonchi;Chitu HC ;30/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2469;Chitu HC;M;30;Oromia ;SWSZ;Wonchi;Chitu HC ;30/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2476;Chitu HC;M;27;Oromia ;SWSZ;Wonchi;Chitu HC ;30/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2477;Chitu HC;M;20;Oromia ;SWSZ;Wonchi;Chitu HC ;30/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2481;Chitu HC;F;46;Oromia ;SWSZ;Wonchi;Chitu HC ;31/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2490;Chitu HC;F;25;Oromia ;SWSZ;Wonchi;Chitu HC ;31/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2491;Chitu HC;M;35;Oromia ;SWSZ;Wonchi;Chitu HC ;31/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2492;Chitu HC;M;58;Oromia ;SWSZ;Wonchi;Chitu HC ;31/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2494;Chitu HC;M;19;Oromia ;SWSZ;Wonchi;Chitu HC ;31/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2495;Chitu HC;F;25;Oromia ;SWSZ;Wonchi;Chitu HC ;31/12/2021;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2517;Tere HC;F;40;Oromia ;SWSZ;Sodo Dachi;Tere HC;06/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+2518;Tere HC;M;31;Oromia ;SWSZ;Sodo Dachi;Tere HC;06/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+2521;Tere HC;M;50;Oromia ;SWSZ;Sodo Dachi;Tere HC;06/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+2522;Tere HC;F;18;Oromia ;SWSZ;Sodo Dachi;Tere HC;06/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+2523;Tere HC;M;70;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+2526;Lemen Primary Hospital ;F;30;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;10/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2528;Lemen Primary Hospital ;F;24;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;10/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2530;Bantu HC;F;27;Oromia ;SWSZ;Tole;Bantu HC;10/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2531;Bantu HC;M;32;Oromia ;SWSZ;Tole;Bantu HC;10/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2536;Bantu HC;M;48;Oromia ;SWSZ;Tole;Bantu HC;10/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2538;Bantu HC;F;25;Oromia ;SWSZ;Tole;Bantu HC;10/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2539;Bantu HC;M;50;Oromia ;SWSZ;Tole;Bantu HC;10/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2544;Ameya Primary Hospital ;F;26;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;10/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2549;Ameya Primary Hospital ;M;48;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;10/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2551;Ameya Primary Hospital ;F;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;10/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2555;Ameya Primary Hospital ;F;24;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;10/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2556;Ameya Primary Hospital ;F;35;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;10/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2566;Tullu Bollo G/Hospital;F;39;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2567;Tullu Bollo G/Hospital;F;15;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2573;Tullu Bollo G/Hospital;M;75;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2574;Tullu Bollo G/Hospital;M;20;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2577;Tullu Bollo G/Hospital;M;36;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2583;Tullu Bollo G/Hospital;F;22;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2585;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2587;Tullu Bollo G/Hospital;F;80;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;10/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+2591;Tullu Bollo G/Hospital;F;43;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2593;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;10/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2594;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;10/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+2595;Tullu Bollo G/Hospital;F;20;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;10/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+2598;Tullu Bollo G/Hospital;M;16;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;10/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+2606;Tullu Bollo G/Hospital;M;31;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;10/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2608;Bantu Primary Hospital;F;25;Oromia ;SWSZ;Tole;Bantu Primary hospital;10/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2612;St.luke hospital;M;53;Oromia ;SWSZ;Wolisso;St.luke hospital;11/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2614;St.luke hospital;F;30;Oromia ;SWSZ;Ameya;St.luke hospital;11/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2616;Busa HC;M;52;Oromia ;SWSZ;Dawo;Busa HC;16/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2635;Busa HC;F;28;Oromia ;SWSZ;Dawo;Busa HC;17/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2636;Busa HC;F;30;Oromia ;SWSZ;Dawo;Busa HC;22/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2638;Busa HC;M;58;Oromia ;SWSZ;Dawo;Busa HC;23/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2655;Busa HC;F;50;Oromia ;SWSZ;Dawo;Busa HC;23/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2660;Busa HC;F;28;Oromia ;SWSZ;Dawo;Busa HC;24/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2667;Busa HC;M;39;Oromia ;SWSZ;Dawo;Busa HC;24/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2669;Busa HC;M;37;Oromia ;SWSZ;Dawo;Busa HC;24/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2686;Busa HC;F;20;Oromia ;SWSZ;Dawo;Busa HC;28/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2687;Busa HC;F;21;Oromia ;SWSZ;Dawo;Busa HC;28/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2688;Busa HC;M;57;Oromia ;SWSZ;Dawo;Busa HC;28/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2700;Busa HC;M;45;Oromia ;SWSZ;Dawo;Busa HC;29/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2708;Busa HC;M;16;Oromia ;SWSZ;Dawo;Busa HC;29/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2709;Busa HC;F;30;Oromia ;SWSZ;Dawo;Busa HC;29/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2715;Busa HC;F;21;Oromia ;SWSZ;Dawo;Busa HC;29/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2716;Busa HC;F;29;Oromia ;SWSZ;Dawo;Busa HC;29/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2719;Busa HC;F;20;Oromia ;SWSZ;Dawo;Busa HC;29/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2721;Busa HC;M;27;Oromia ;SWSZ;Dawo;Busa HC;29/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2722;Busa HC;F;17;Oromia ;SWSZ;Dawo;Busa HC;29/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2724;Busa HC;M;28;Oromia ;SWSZ;Dawo;Busa HC;30/12/2021;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2726;Busa HC;M;23;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2727;Busa HC;F;30;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2728;Busa HC;M;24;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2729;Busa HC;F;20;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2730;Busa HC;F;25;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2732;Busa HC;F;28;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2737;Busa HC;F;32;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2738;Busa HC;M;34;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2745;Busa HC;F;19;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2749;Busa HC;F;18;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2751;Busa HC;M;25;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2754;Busa HC;F;36;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2757;Busa HC;M;27;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2758;Busa HC;F;35;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2759;Busa HC;F;36;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2772;Busa HC;M;40;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2773;Busa HC;F;19;Oromia ;SWSZ;Dawo;Busa HC;04/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2777;Busa HC;M;32;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2779;Busa HC;F;22;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2784;Busa HC;F;12;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2787;Busa HC;M;18;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2792;Busa HC;M;60;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2794;Busa HC;M;67;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2795;Busa HC;M;16;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2798;Busa HC;F;35;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2803;Busa HC;F;32;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2804;Busa HC;F;28;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2806;Busa HC;F;35;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2810;Busa HC;F;24;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2812;Busa HC;F;20;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2815;Busa HC;F;57;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2821;Busa HC;F;15;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2825;Busa HC;M;22;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2826;Busa HC;M;65;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2829;Busa HC;F;42;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2830;Busa HC;F;7;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2831;Busa HC;M;19;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2834;Busa HC;F;22;Oromia ;SWSZ;Dawo;Busa HC;05/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2837;Tullu Bollo G/Hospital;M;44;Oromia ;SWSZ;Ilu;Tullu Bollo G/Hospital;11/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2838;Tullu Bollo G/Hospital;F;19;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2840;Tullu Bollo G/Hospital;F;40;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;11/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2841;Tullu Bollo G/Hospital;M;45;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;11/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2842;Tullu Bollo G/Hospital;F;55;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2843;Tullu Bollo G/Hospital;M;50;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;11/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+2844;Tullu Bollo G/Hospital;M;21;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2846;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Ilu;Tullu Bollo G/Hospital;11/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2849;Tullu Bollo G/Hospital;F;64;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2850;Tullu Bollo G/Hospital;F;46;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2861;Tullu Bollo G/Hospital;F;16;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2862;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;11/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+2864;Tullu Bollo G/Hospital;F;45;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;11/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+2865;Tullu Bollo G/Hospital;F;61;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2866;Tullu Bollo G/Hospital;F;30;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2868;Tullu Bollo G/Hospital;F;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2870;Tullu Bollo G/Hospital;M;38;Oromia ;SWSZ;Ilu;Tullu Bollo G/Hospital;11/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2871;Tullu Bollo G/Hospital;F;18;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2873;Tullu Bollo G/Hospital;M;23;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+2874;Bantu Primary Hospital;F;22;Oromia ;SWSZ;Tole;Bantu Primary hospital;11/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2875;Bantu Primary Hospital;F;80;Oromia ;SWSZ;Tole;Bantu Primary hospital;11/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2876;Bantu Primary Hospital;F;32;Oromia ;SWSZ;Tole;Bantu Primary hospital;11/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2877;Bantu Primary Hospital;F;46;Oromia ;SWSZ;Tole;Bantu Primary hospital;11/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2878;Bantu Primary Hospital;F;32;Oromia ;SWSZ;Tole;Bantu Primary hospital;11/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2886;Bantu Primary Hospital;F;22;Oromia ;SWSZ;Tole;Bantu Primary hospital;11/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+2897;Ameya Primary Hospital ;M;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;09/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2899;Ameya Primary Hospital ;M;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;09/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2900;Ameya Primary Hospital ;F;15;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;09/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2901;Ameya Primary Hospital ;F;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;09/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2902;Ameya Primary Hospital ;M;70;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;09/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2904;Ameya Primary Hospital ;F;32;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;09/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+2910;Lemen Primary Hospital ;M;40;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;11/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2916;Lemen Primary Hospital ;F;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;11/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2923;Lemen Primary Hospital ;F;15;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;11/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2924;Lemen Primary Hospital ;F;40;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;11/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2925;Lemen Primary Hospital ;F;45;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;11/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2928;Lemen Primary Hospital ;M;85;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;11/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2929;Lemen Primary Hospital ;M;18;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;11/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2932;Lemen Primary Hospital ;F;65;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;11/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+2934;St.luke hospital;M;80;Oromia ;SWSZ;Wolisso;St.luke hospital;12/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+2936;Teji HC;F;35;Oromia ;SWSZ;Ilu;Teji HC;10/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2937;Teji HC;M;57;Oromia ;SWSZ;Ilu;Teji HC;10/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2939;Teji HC;M;37;Oromia ;SWSZ;Ilu;Teji HC;10/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2940;Teji HC;M;45;Oromia ;SWSZ;Ilu;Teji HC;10/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2943;Teji HC;M;13;Oromia ;SWSZ;Ilu;Teji HC;10/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2947;Teji HC;M;32;Oromia ;SWSZ;Ilu;Teji HC;11/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2948;Teji HC;F;30;Oromia ;SWSZ;Ilu;Teji HC;11/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2950;Teji HC;F;31;Oromia ;SWSZ;Ilu;Teji HC;11/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2951;Teji HC;M;45;Oromia ;SWSZ;Ilu;Teji HC;11/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+2953;Chitu HC;M;65;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2957;Chitu HC;M;56;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2958;Chitu HC;F;28;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2961;Chitu HC;M;29;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2963;Chitu HC;M;23;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2965;Chitu HC;F;25;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2966;Chitu HC;F;55;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2968;Chitu HC;M;25;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2973;Chitu HC;F;35;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2975;Chitu HC;M;30;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2977;Chitu HC;F;28;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2979;Chitu HC;F;28;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2980;Chitu HC;F;30;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2981;Chitu HC;M;1;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2982;Chitu HC;F;60;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2983;Chitu HC;F;60;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2987;Chitu HC;M;45;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2992;Chitu HC;F;28;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2995;Chitu HC;M;42;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+2999;Chitu HC;F;60;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3000;Chitu HC;M;34;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3001;Chitu HC;F;56;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3002;Chitu HC;F;56;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3013;Chitu HC;F;65;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3017;Chitu HC;F;26;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3021;Chitu HC;F;25;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3022;Chitu HC;M;29;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3023;Chitu HC;F;48;Oromia ;SWSZ;Wonchi;Chitu HC ;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+3047;Tullu Bollo G/Hospital;F;22;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;12/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3049;Tullu Bollo G/Hospital;F;48;Oromia ;SWSZ;Ilu;Tullu Bollo G/Hospital;12/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+3053;Tullu Bollo G/Hospital;F;50;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;12/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3054;Tullu Bollo G/Hospital;M;44;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;12/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3056;Tullu Bollo G/Hospital;M;50;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;12/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+3057;Tullu Bollo G/Hospital;M;80;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;12/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3059;Tullu Bollo G/Hospital;F;48;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;12/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3065;Bantu HC;F;16;Oromia ;SWSZ;Tole;Bantu HC;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3066;Bantu HC;F;24;Oromia ;SWSZ;Tole;Bantu HC;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3074;Bantu Primary Hospital;M;65;Oromia ;SWSZ;Tole;Bantu Primary hospital;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3075;Bantu Primary Hospital;F;67;Oromia ;SWSZ;Tole;Bantu Primary hospital;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3077;Bantu Primary Hospital;M;53;Oromia ;SWSZ;Tole;Bantu Primary hospital;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3078;Bantu Primary Hospital;F;40;Oromia ;SWSZ;Tole;Bantu Primary hospital;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3080;Bantu Primary Hospital;F;22;Oromia ;SWSZ;Tole;Bantu Primary hospital;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3084;Bantu Primary Hospital;M;26;Oromia ;SWSZ;Tole;Bantu Primary hospital;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3085;Bantu Primary Hospital;M;50;Oromia ;SWSZ;Tole;Bantu Primary hospital;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3086;Bantu Primary Hospital;M;67;Oromia ;SWSZ;Tole;Bantu Primary hospital;12/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3088;Ameya Primary Hospital ;F;75;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;12/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3091;Ameya Primary Hospital ;M;65;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;12/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3092;Ameya Primary Hospital ;M;54;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;12/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3093;Ameya Primary Hospital ;F;45;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;12/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3095;Ameya Primary Hospital ;M;50;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3099;Ameya Primary Hospital ;F;50;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3100;Ameya Primary Hospital ;F;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3101;Ameya Primary Hospital ;M;37;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3103;Ameya Primary Hospital ;F;25;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3104;Ameya Primary Hospital ;F;17;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3107;Ameya Primary Hospital ;F;25;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3112;Ameya Primary Hospital ;M;45;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3115;Tullu Bollo G/Hospital;F;38;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3117;Tullu Bollo G/Hospital;F;42;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;13/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3120;Tullu Bollo G/Hospital;F;60;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;13/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+3125;Tullu Bollo G/Hospital;F;27;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;13/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3133;Tullu Bollo G/Hospital;M;58;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;13/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3138;Lemen HC;F;30;Oromia ;SWSZ;Kersa Malima;Lemen HC;10/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3140;Lemen HC;F;24;Oromia ;SWSZ;Kersa Malima;Lemen HC;10/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3142;Lemen HC;F;25;Oromia ;SWSZ;Kersa Malima;Lemen HC;13/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3152;Lemen HC;M;21;Oromia ;SWSZ;Kersa Malima;Lemen HC;13/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3156;St.luke hospital;M;70;Oromia ;SWSZ;Wolisso;St.luke hospital;13/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3157;St.luke hospital;M;80;Oromia ;SWSZ;Wolisso;St.luke hospital;13/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3159;St.luke hospital;M;45;Oromia ;SWSZ;Wolisso;St.luke hospital;13/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3164;St.luke hospital;M;65;Oromia ;SWSZ;Wolisso;St.luke hospital;13/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3174;Teji HC;M;43;Oromia ;SWSZ;Ilu;Teji HC;13/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+3175;Teji HC;F;24;Oromia ;SWSZ;Ilu;Teji HC;13/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+3176;Teji HC;F;22;Oromia ;SWSZ;Ilu;Teji HC;13/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+3177;Teji HC;M;22;Oromia ;SWSZ;Ilu;Teji HC;13/01/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+3180;Tere HC;F;40;Oromia ;SWSZ;Sodo Dachi;Tere HC;06/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3181;Tere HC;M;31;Oromia ;SWSZ;Sodo Dachi;Tere HC;06/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3184;Tere HC;M;50;Oromia ;SWSZ;Sodo Dachi;Tere HC;06/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3185;Tere HC;F;18;Oromia ;SWSZ;Sodo Dachi;Tere HC;06/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3186;Tere HC;M;70;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3188;Tere HC;F;55;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3189;Tere HC;M;35;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3190;Tere HC;M;61;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3191;Tere HC;M;63;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3192;Tere HC;F;40;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3193;Tere HC;M;31;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3194;Tere HC;F;55;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3196;Tere HC;F;25;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3197;Tere HC;F;18;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3198;Tere HC;F;36;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3199;Tere HC;F;20;Oromia ;SWSZ;Sodo Dachi;Tere HC;11/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3202;Tere HC;M;26;Oromia ;SWSZ;Sodo Dachi;Tere HC;14/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3203;St.luke hospital;F;70;Oromia ;SWSZ;Wolisso;St.luke hospital;16/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3208;Lemen Primary Hospital ;F;55;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;15/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3209;Lemen Primary Hospital ;M;78;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;15/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3211;Lemen Primary Hospital ;M;46;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;15/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3214;Lemen Primary Hospital ;F;25;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;15/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3216;Lemen Primary Hospital ;F;28;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;15/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3221;Lemen Primary Hospital ;F;74;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;15/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3223;Lemen Primary Hospital ;M;19;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;15/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3224;Lemen Primary Hospital ;M;35;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;15/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3232;Bantu Primary Hospital;F;18;Oromia ;SWSZ;Tole;Bantu Primary hospital;14/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3233;Bantu Primary Hospital;F;60;Oromia ;SWSZ;Tole;Bantu Primary hospital;14/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3234;Bantu Primary Hospital;F;26;Oromia ;SWSZ;Tole;Bantu Primary hospital;14/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3235;Bantu Primary Hospital;M;20;Oromia ;SWSZ;Tole;Bantu Primary hospital;14/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3241;Bantu HC;F;25;Oromia ;SWSZ;Tole;Bantu HC;14/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3245;Bantu HC;F;18;Oromia ;SWSZ;Tole;Bantu HC;14/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3261;Tullu Bollo G/Hospital;F;57;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;13/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3265;Tullu Bollo G/Hospital;F;46;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3266;Tullu Bollo G/Hospital;M;20;Oromia ;SWSZ;Wolisso R;Tullu Bollo G/Hospital;13/01/2022;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+3267;Tullu Bollo G/Hospital;F;25;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;13/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3275;Tullu Bollo G/Hospital;F;24;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;14/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3279;Tullu Bollo G/Hospital;M;53;Oromia ;SWSZ;Suden Sodo;Tullu Bollo G/Hospital;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3287;Tere HC;M;60;Oromia ;SWSZ;Sodo Dachi;Tere HC;17/01/2022;Pos;41313;2.2;2.2 - Covid Positive;OPD;Sodo Dachi;1
+3294;Tullu Bollo G/Hospital;M;70;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;17/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3299;Tullu Bollo G/Hospital;M;60;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;17/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3301;Tullu Bollo G/Hospital;M;40;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;17/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3306;Lemen Primary Hospital ;M;28;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;19/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3311;Lemen Primary Hospital ;M;75;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;17/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3318;Lemen Primary Hospital ;F;35;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;19/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3319;Lemen Primary Hospital ;F;42;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;19/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3327;St.luke hospital;F;69;Oromia ;SWSZ;Wolisso;St.luke hospital;18/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3328;St.luke hospital;M;45;Oromia ;SWSZ;Wolisso;St.luke hospital;18/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3331;Tullu Bollo G/Hospital;F;70;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;18/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3336;Tullu Bollo G/Hospital;M;61;Oromia ;SWSZ;Becho;Tullu Bollo G/Hospital;18/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3339;Tullu Bollo G/Hospital;M;28;Oromia ;SWSZ;Dawo;Tullu Bollo G/Hospital;18/01/2022;Pos;41304;2.2;2.2 - Covid Positive;OPD;Dawo;1
+3352;Tullu Bollo G/Hospital;F;70;Oromia ;SWSZ;Ejere;Tullu Bollo G/Hospital;21/01/2022;Pos;;2.2;2.2 - Covid Positive;OPD;Ejere;1
+3354;Tullu Bollo G/Hospital;M;23;Amahra;Wolo;Wolo;Tullu Bollo G/Hospital;22/01/2022;Pos;;2.2;2.2 - Covid Positive;OPD;Wolo;1
+3392;Ameya Primary Hospital ;M;23;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;17/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3393;Ameya Primary Hospital ;M;20;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;17/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3400;Ameya Primary Hospital ;F;30;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;17/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3406;Ameya Primary Hospital ;M;70;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;18/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3407;Ameya Primary Hospital ;F;25;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;18/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3410;Ameya Primary Hospital ;M;50;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;18/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3411;Ameya Primary Hospital ;F;23;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;18/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3416;Ameya Primary Hospital ;F;65;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;19/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3417;Ameya Primary Hospital ;M;56;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;20/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3418;Ameya Primary Hospital ;M;56;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;20/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3423;Ameya Primary Hospital ;F;60;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;21/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3424;Ameya Primary Hospital ;F;37;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;21/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3438;Ameya Primary Hospital ;F;40;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;24/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3441;Ameya Primary Hospital ;M;70;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;24/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3470;Lemen Primary Hospital ;M;56;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;19/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3472;Lemen Primary Hospital ;M;81;Oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;17/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3514;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3515;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3516;Kota HC;F;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3517;Kota HC;F;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3524;Kota HC;F;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3525;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3526;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3527;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3528;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3529;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3530;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3531;Kota HC;F;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3534;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3535;Kota HC;F;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3536;Kota HC;F;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3537;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3538;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3539;Kota HC;F;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3540;Kota HC;M;28;Oromia ;SWSZ;Ameya;Kota HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3544;Kota HC;M;32;Oromia ;SWSZ;Ameya;Kota HC;11/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3550;Gindo HC;M;35;Oromia ;SWSZ;Ameya;Gindo HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3553;Gindo HC;M;29;Oromia ;SWSZ;Ameya;Gindo HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3554;Gindo HC;M;31;Oromia ;SWSZ;Ameya;Gindo HC;29/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3558;Gindo HC;M;30;Oromia ;SWSZ;Ameya;Gindo HC;30/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3561;Gindo HC;F;20;Oromia ;SWSZ;Ameya;Gindo HC;31/12/2021;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3563;Gindo HC;F;30;Oromia ;SWSZ;Ameya;Gindo HC;01/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3568;Gindo HC;F;38;Oromia ;SWSZ;Ameya;Gindo HC;01/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3569;Gindo HC;F;24;Oromia ;SWSZ;Ameya;Gindo HC;02/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3575;Gindo HC;M;24;Oromia ;SWSZ;Ameya;Gindo HC;03/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3576;Gindo HC;M;31;Oromia ;SWSZ;Ameya;Gindo HC;03/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3579;Gindo HC;M;27;Oromia ;SWSZ;Ameya;Gindo HC;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3583;Gindo HC;M;20;Oromia ;SWSZ;Ameya;Gindo HC;04/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3584;Gindo HC;F;19;Oromia ;SWSZ;Ameya;Gindo HC;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3586;Gindo HC;F;24;Oromia ;SWSZ;Ameya;Gindo HC;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3589;Gindo HC;M;58;Oromia ;SWSZ;Ameya;Gindo HC;05/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3598;Gindo HC;M;20;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3601;Gindo HC;F;35;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3602;Gindo HC;M;17;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3603;Gindo HC;M;22;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3604;Gindo HC;F;18;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3605;Gindo HC;F;18;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3607;Gindo HC;M;24;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3611;Gindo HC;F;28;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3612;Gindo HC;F;30;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3614;Gindo HC;F;45;Oromia ;SWSZ;Ameya;Gindo HC;06/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3619;Gindo HC;F;35;Oromia ;SWSZ;Ameya;Gindo HC;11/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3622;Gindo HC;F;35;Oromia ;SWSZ;Ameya;Gindo HC;11/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3624;Gindo HC;M;30;Oromia ;SWSZ;Ameya;Gindo HC;11/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3630;Gindo HC;F;24;Oromia ;SWSZ;Ameya;Gindo HC;11/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3631;Gindo HC;M;30;Oromia ;SWSZ;Ameya;Gindo HC;11/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3633;Gindo HC;M;30;Oromia ;SWSZ;Ameya;Gindo HC;12/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3641;Gindo HC;F;21;Oromia ;SWSZ;Ameya;Gindo HC;13/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3646;Gindo HC;F;20;Oromia ;SWSZ;Ameya;Gindo HC;14/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3657;bantu primary Hospital;M;46;Oromia ;SWSZ;Tole;Bantu Primary hospital;18/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3660;bantu primary Hospital;F;16;Oromia ;SWSZ;Tole;Bantu Primary hospital;18/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3661;Tullu Bolo HC;F;19;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3665;Tullu Bolo HC;F;26;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3666;Tullu Bolo HC;M;30;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3669;Tullu Bolo HC;F;50;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3671;Tullu Bolo HC;F;50;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3673;Tullu Bolo HC;M;54;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3674;Tullu Bolo HC;F;25;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3675;Tullu Bolo HC;F;65;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3676;Tullu Bolo HC;F;21;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3677;Tullu Bolo HC;F;28;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3681;Tullu Bolo HC;F;25;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3682;Tullu Bolo HC;F;60;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3683;Tullu Bolo HC;F;25;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3684;Tullu Bolo HC;M;27;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3685;Tullu Bolo HC;M;38;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3686;Tullu Bolo HC;F;36;Oromia ;SWSZ;Becho;Tullu Bolo HC;06/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3689;Tullu Bolo HC;F;37;Oromia ;SWSZ;Becho;Tullu Bolo HC;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3691;Tullu Bolo HC;F;28;Oromia ;SWSZ;Becho;Tullu Bolo HC;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3693;Tullu Bolo HC;F;65;Oromia ;SWSZ;Becho;Tullu Bolo HC;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3694;Tullu Bolo HC;F;38;Oromia ;SWSZ;Becho;Tullu Bolo HC;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3695;Tullu Bolo HC;F;27;Oromia ;SWSZ;Becho;Tullu Bolo HC;11/01/2022;Pos;41309;2.2;2.2 - Covid Positive;OPD;Becho;1
+3722;Lemen HC;F;12;Oromia ;SWSZ;Kersa Malima;Lemen HC;21/01/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+3723;Bantu HC;M;35;Oromia ;SWSZ;Tole;Bantu HC;21/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3727;Bantu HC;F;20;Oromia ;SWSZ;Tole;Bantu HC;21/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3729;Bantu HC;F;25;Oromia ;SWSZ;Tole;Bantu HC;21/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3730;Bantu HC;F;42;Oromia ;SWSZ;Tole;Bantu HC;21/01/2022;Pos;41308;2.2;2.2 - Covid Positive;OPD;Tole;1
+3748;St.Luke Hospital;M;80;Oromia ;SWSZ;Wolisso;St.luke hospital;20/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3753;St.Luke Hospital;F;85;Oromia ;SWSZ;Wolisso;St.luke hospital;21/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+3779;Ameya Primary Hospital ;F;41;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;27/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3782;Ameya Primary Hospital ;F;21;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;27/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3783;Ameya Primary Hospital ;F;60;Oromia ;SWSZ;Ameya;Ameya Primary Hospital ;27/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3798;Ameya Primary Hospital ;M;80;Oromia;SWSZ;Ameya;Ameya Primary Hospital ;28/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3806;Ameya Primary Hospital ;F;67;Oromia;SWSZ;Ameya;Ameya Primary Hospital ;31/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3807;Ameya Primary Hospital ;F;28;Oromia;SWSZ;Ameya;Ameya Primary Hospital ;31/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+3864;Harbu Chulule HC;M;31;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;27/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3866;Harbu Chulule HC;F;25;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;28/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3869;Harbu Chulule HC;F;15;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;29/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3870;Harbu Chulule HC;F;20;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;29/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3874;Harbu Chulule HC;M;50;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;29/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3876;Harbu Chulule HC;M;20;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;29/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3877;Harbu Chulule HC;M;21;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;29/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3878;Harbu Chulule HC;M;18;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;29/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3880;Harbu Chulule HC;M;20;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;29/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3884;Harbu Chulule HC;M;37;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;30/12/2021;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3894;Harbu Chulule HC;F;60;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;12/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3897;Harbu Chulule HC;F;60;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;12/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3898;Harbu Chulule HC;M;35;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;12/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3905;Harbu Chulule HC;F;30;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;12/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3906;Harbu Chulule HC;F;60;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;12/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3908;Harbu Chulule HC;M;51;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;12/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3910;Harbu Chulule HC;M;35;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3911;Harbu Chulule HC;F;29;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3915;Harbu Chulule HC;M;26;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3917;Harbu Chulule HC;M;76;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3920;Harbu Chulule HC;F;23;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3921;Harbu Chulule HC;M;45;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3923;Harbu Chulule HC;F;49;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3924;Harbu Chulule HC;F;22;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3930;Harbu Chulule HC;F;20;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;13/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3932;Harbu Chulule HC;F;45;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3933;Harbu Chulule HC;F;48;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3934;Harbu Chulule HC;M;50;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3936;Harbu Chulule HC;F;30;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3937;Harbu Chulule HC;M;25;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3938;Harbu Chulule HC;M;60;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3939;Harbu Chulule HC;M;42;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3941;Harbu Chulule HC;F;25;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3944;Harbu Chulule HC;F;35;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3952;Harbu Chulule HC;M;60;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3953;Harbu Chulule HC;M;15;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3954;Harbu Chulule HC;F;50;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3958;Harbu Chulule HC;F;50;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3960;Harbu Chulule HC;F;45;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;14/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3971;Harbu Chulule HC;F;27;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;21/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3976;Harbu Chulule HC;F;29;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;24/01/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3979;Harbu Chulule HC;F;30;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;08/02/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+3982;Harbu Chulule HC;M;42;Oromia;SWSZ;Suden Sodo;Harbu Chulule HC;08/02/2022;Pos;41310;2.2;2.2 - Covid Positive;OPD;Suden Sodo;1
+4007;Tullu Bollo G/Hospital;M;90;Oromia;SWSZ;Wonchi;Tullu Bollo G/Hospital;31/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4090;Lemen Primary Hospital ;f;17;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4092;Lemen Primary Hospital ;f;26;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4093;Lemen Primary Hospital ;m;28;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;05/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4099;Lemen Primary Hospital ;f;80;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;03/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4111;Lemen Primary Hospital ;m;30;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;07/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4122;Lemen Primary Hospital ;m;30;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;07/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4126;Gurura HC;M;65;Oromia;SWSZ;Goro;Gurura;10/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4128;Gurura HC;F;25;Oromia;SWSZ;Goro;Gurura;10/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4130;Gurura HC;M;50;Oromia;SWSZ;Goro;Gurura;10/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4132;Gurura HC;F;43;Oromia;SWSZ;Goro;Gurura;10/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4133;Gurura HC;F;42;Oromia;SWSZ;Goro;Gurura;10/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4138;Gurura HC;M;35;Oromia;SWSZ;Goro;Gurura;11/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4139;Gurura HC;M;60;Oromia;SWSZ;Goro;Gurura;11/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4140;Gurura HC;F;21;Oromia;SWSZ;Goro;Gurura;11/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4141;Gurura HC;F;60;Oromia;SWSZ;Goro;Gurura;11/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4143;Gurura HC;M;38;Oromia;SWSZ;Goro;Gurura;11/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4145;Gurura HC;F;38;Oromia;SWSZ;Goro;Gurura;11/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4146;Gurura HC;F;50;Oromia;SWSZ;Goro;Gurura;11/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4148;Gurura HC;F;35;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4149;Gurura HC;M;36;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4152;Gurura HC;F;30;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4153;Gurura HC;F;35;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4154;Gurura HC;M;60;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4155;Gurura HC;F;40;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4158;Gurura HC;M;28;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4161;Gurura HC;M;80;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4162;Gurura HC;M;37;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4163;Gurura HC;F;55;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4164;Gurura HC;F;45;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4165;Gurura HC;M;78;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4166;Gurura HC;M;60;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4168;Gurura HC;F;65;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4169;Gurura HC;F;30;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4171;Gurura HC;F;18;Oromia;SWSZ;Goro;Gurura;12/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4174;Gurura HC;M;40;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4175;Gurura HC;M;65;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4176;Gurura HC;F;35;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4182;Gurura HC;F;28;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4186;Gurura HC;F;40;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4189;Gurura HC;F;45;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4190;Gurura HC;M;61;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4193;Gurura HC;M;40;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4194;Gurura HC;F;20;Oromia;SWSZ;Goro;Gurura;13/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4196;Gurura HC;M;42;Oromia;SWSZ;Goro;Gurura;14/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4198;Gurura HC;M;25;Oromia;SWSZ;Goro;Gurura;14/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4207;Gurura HC;M;30;Oromia;SWSZ;Goro;Gurura;14/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4208;Gurura HC;M;12;Oromia;SWSZ;Goro;Gurura;15/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4211;Gurura HC;M;28;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4214;Gurura HC;F;60;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4216;Gurura HC;F;35;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4220;Gurura HC;F;20;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4221;Gurura HC;M;50;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4222;Gurura HC;F;7;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4225;Gurura HC;F;45;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4226;Gurura HC;F;50;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4233;Gurura HC;M;32;Oromia;SWSZ;Goro;Gurura;17/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4235;Gurura HC;M;64;Oromia;SWSZ;Goro;Gurura;18/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4238;Gurura HC;M;32;Oromia;SWSZ;Goro;Gurura;18/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4241;Gurura HC;M;45;Oromia;SWSZ;Goro;Gurura;18/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4247;Gurura HC;M;31;Oromia;SWSZ;Goro;Gurura;20/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4254;Gurura HC;M;46;Oromia;SWSZ;Goro;Gurura;20/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4255;Gurura HC;F;45;Oromia;SWSZ;Goro;Gurura;20/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4256;Gurura HC;F;40;Oromia;SWSZ;Goro;Gurura;20/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4258;Gurura HC;F;70;Oromia;SWSZ;Goro;Gurura;21/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4259;Gurura HC;F;35;Oromia;SWSZ;Goro;Gurura;21/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4260;Gurura HC;M;58;Oromia;SWSZ;Goro;Gurura;21/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4262;Gurura HC;F;70;Oromia;SWSZ;Goro;Gurura;21/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4266;Gurura HC;M;45;Oromia;SWSZ;Goro;Gurura;22/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4269;Gurura HC;M;53;Oromia;SWSZ;Goro;Gurura;24/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4271;Gurura HC;M;40;Oromia;SWSZ;Goro;Gurura;24/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4273;Gurura HC;F;22;Oromia;SWSZ;Goro;Gurura;24/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4275;Gurura HC;M;28;Oromia;SWSZ;Goro;Gurura;24/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4279;Gurura HC;F;40;Oromia;SWSZ;Goro;Gurura;25/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4281;Gurura HC;F;25;Oromia;SWSZ;Goro;Gurura;25/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4282;Gurura HC;F;60;Oromia;SWSZ;Goro;Gurura;25/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4286;Gurura HC;M;55;Oromia;SWSZ;Goro;Gurura;27/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4326;St.luke hospital;F;45;Oromia;SWSZ;Wolisso;St.luke hospital;01/02/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4332;St.luke hospital;M;45;Oromia;SWSZ;Wolisso;St.luke hospital;04/02/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4339;Chitu HC;F;30;Oromia;SWSZ;Wonchi;Meti Walga;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4340;Chitu HC;M;65;Oromia;SWSZ;Wonchi;Dimtu Godeti;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4341;Chitu HC;M;19;Oromia;SWSZ;Wonchi;Dimtu Godeti;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4342;Chitu HC;F;32;Oromia;SWSZ;Wonchi;Dimtu Godeti;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4344;Chitu HC;M;52;Oromia;SWSZ;Wonchi;Chitu HC ;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4346;Chitu HC;F;46;Oromia;SWSZ;Wonchi;Haro Kono;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4347;Chitu HC;F;22;Oromia;SWSZ;Wonchi;Haro Kono;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4348;Chitu HC;M;20;Oromia;SWSZ;Wonchi;Meti Walga;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4353;Chitu HC;M;47;Oromia;SWSZ;Wonchi;Haro Kono;11/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4358;Chitu HC;F;25;Oromia;SWSZ;Wonchi;Meti Walga;12/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4361;Chitu HC;F;40;Oromia;SWSZ;Wonchi;Chitu HC ;12/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4362;Chitu HC;M;55;Oromia;SWSZ;Wonchi;Haro Beseka;12/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4364;Chitu HC;M;14;Oromia;SWSZ;Wonchi;Meti Walga;14/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4377;Chitu HC;F;30;Oromia;SWSZ;Wonchi;Haro Kono;17/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4378;Chitu HC;M;8;Oromia;SWSZ;Wonchi;Chitu HC ;17/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4383;Chitu HC;F;35;Oromia;SWSZ;Wonchi;Haro Kono;18/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4384;Chitu HC;M;50;Oromia;SWSZ;Wonchi;Belbella Bulbulo;18/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4389;Chitu HC;M;22;Oromia;SWSZ;Wonchi;Meti Walga;18/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4392;Chitu HC;F;43;Oromia;SWSZ;Wonchi;Haro Kono;18/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4394;Chitu HC;M;32;Oromia;SWSZ;Wonchi;Chitu HC ;20/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4395;Chitu HC;F;55;Oromia;SWSZ;Wonchi;Haro Beseka;20/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4398;Chitu HC;M;60;Oromia;SWSZ;Wonchi;Haro Kono;21/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4403;Chitu HC;F;50;Oromia;SWSZ;Wonchi;Woldo Telfam;24/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi;1
+4427;Lemen Primary Hospital ;m;30;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;07/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4441;Lemen Primary Hospital ;m;80;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;12/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4443;Lemen Primary Hospital ;m;70;oromia ;SWSZ;Kersa Malima;Lemen Primary Hospital;12/02/2022;Pos;41307;2.2;2.2 - Covid Positive;OPD;Kersa Malima;1
+4532;Teji HC;M;17;Oromia;SWSZ;Ilu;Teji HC;23/02/2022;Pos;41305;2.2;2.2 - Covid Positive;OPD;Ilu;1
+4575;Dilala HC;F;25;Oromia;SWSZ;Wolisso R;Dilala HC;30/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4593;Dilala HC;F;30;Oromia;SWSZ;Wolisso R;Dilala HC;30/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4595;Dilala HC;M;62;Oromia;SWSZ;Wolisso R;Dilala HC;30/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4597;Dilala HC;F;22;Oromia;SWSZ;Wolisso R;Dilala HC;31/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4608;Dilala HC;M;40;Oromia;SWSZ;Wolisso R;Dilala HC;31/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4614;Dilala HC;M;26;Oromia;SWSZ;Wolisso R;Dilala HC;31/12/2021;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4619;Dilala HC;M;49;Oromia;SWSZ;Wolisso R;Dilala HC;03/01/2022;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4620;Dilala HC;M;17;Oromia;SWSZ;Wolisso R;Dilala HC;03/01/2022;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4621;Dilala HC;M;48;Oromia;SWSZ;Wolisso R;Dilala HC;03/01/2022;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4622;Dilala HC;M;48;Oromia;SWSZ;Wolisso R;Dilala HC;03/01/2022;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4624;Dilala HC;F;55;Oromia;SWSZ;Wolisso R;Dilala HC;03/01/2022;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4625;Dilala HC;M;48;Oromia;SWSZ;Wolisso R;Dilala HC;03/01/2022;Pos;41303;2.2;2.2 - Covid Positive;OPD;Wolisso R;1
+4627;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;12/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4634;WGH;M;30;Oromia;SWSZ;Wolisso;WGH;25/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4635;WGH;F;1;Oromia;SWSZ;Wolisso;WGH;26/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4639;WGH;M;54;Oromia;SWSZ;Wolisso;WGH;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4640;WGH;M;37;Oromia;SWSZ;Wolisso;WGH;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4641;WGH;M;53;Oromia;SWSZ;Wolisso;WGH;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4642;WGH;M;27;Oromia;SWSZ;Wolisso;WGH;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4644;WGH;F;50;Oromia;SWSZ;Wolisso;WGH;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4646;WGH;M;35;Oromia;SWSZ;Wolisso;WGH;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4648;WGH;F;25;Oromia;SWSZ;Wolisso;WGH;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4651;WGH;M;28;Oromia;SWSZ;Wolisso;WGH;27/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4653;WGH;F;27;Oromia;SWSZ;Wolisso;WGH;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4655;WGH;M;46;Oromia;SWSZ;Wolisso;WGH;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4656;WGH;F;50;Oromia;SWSZ;Wolisso;WGH;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4657;WGH;F;28;Oromia;SWSZ;Goro;WGH;28/12/2021;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4658;WGH;M;65;Oromia;SWSZ;Wolisso;WGH;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4661;WGH;F;24;Oromia;SWSZ;Wolisso;WGH;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4663;WGH;F;24;Oromia;SWSZ;Wolisso;WGH;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4664;WGH;F;14;Oromia;SWSZ;Wolisso;WGH;28/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4668;WGH;M;19;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4669;WGH;F;30;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4670;WGH;M;38;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4673;WGH;M;40;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4674;WGH;F;30;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4675;WGH;M;30;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4676;WGH;M;27;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4682;WGH;M;68;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4686;WGH;F;55;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4689;WGH;M;33;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4690;WGH;F;42;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4692;WGH;M;27;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4693;WGH;F;21;Oromia;SWSZ;Wolisso;WGH;29/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4695;WGH;M;18;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4700;WGH;M;32;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4701;WGH;M;25;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4702;WGH;M;45;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4703;WGH;M;32;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4707;WGH;M;25;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4708;WGH;F;24;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4713;WGH;M;60;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4715;WGH;M;55;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4716;WGH;F;65;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4717;WGH;F;38;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4718;WGH;F;30;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4721;WGH;M;28;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4722;WGH;M;27;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4723;WGH;M;19;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4725;WGH;F;35;Oromia;SWSZ;Wolisso;WGH;30/12/2021;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4732;WGH;M;30;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4733;WGH;F;75;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4734;WGH;F;18;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4735;WGH;M;51;Oromia;SWSZ;Ameya;WGH;01/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+4736;WGH;M;26;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4737;WGH;M;28;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4738;WGH;F;25;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4740;WGH;M;55;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4742;WGH;F;45;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4743;WGH;M;26;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4744;WGH;M;30;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4745;WGH;F;30;Oromia;SWSZ;Wolisso;WGH;01/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4746;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4747;WGH;F;73;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4749;WGH;F;52;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4750;WGH;F;30;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4751;WGH;M;32;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4753;WGH;F;16;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4754;WGH;F;26;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4755;WGH;F;12;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4758;WGH;F;37;Oromia;SWSZ;Wolisso;WGH;02/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4760;WGH;M;20;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4762;WGH;M;64;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4764;WGH;F;17;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4766;WGH;F;28;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4767;WGH;M;19;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4769;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4772;WGH;M;38;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4773;WGH;M;46;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4774;WGH;F;30;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4776;WGH;M;25;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4777;WGH;F;65;Oromia;SWSZ;Wonchi ;WGH;03/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi ;1
+4778;WGH;F;60;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4780;WGH;M;35;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4781;WGH;F;30;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4782;WGH;M;67;Oromia;SWSZ;Wolisso;WGH;03/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4785;WGH;F;50;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4787;WGH;M;18;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4790;WGH;F;48;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4792;WGH;F;89;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4795;WGH;M;35;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4798;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4801;WGH;F;23;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4805;WGH;F;60;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4806;WGH;F;20;Oromia;SWSZ;Wolisso;WGH;04/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4807;WGH;F;84;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4808;WGH;M;42;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4809;WGH;M;33;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4810;WGH;M;28;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4811;WGH;F;10;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4812;WGH;M;37;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4813;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4815;WGH;M;42;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4816;WGH;M;30;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4817;WGH;F;30;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4820;WGH;M;30;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4822;WGH;F;37;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4824;WGH;F;27;Oromia;SWSZ;Wolisso;WGH;05/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4826;WGH;F;28;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4827;WGH;F;55;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4830;WGH;F;20;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4831;WGH;F;55;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4832;WGH;F;48;Oromia;SWSZ;Wonchi ;WGH;06/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi ;1
+4836;WGH;F;50;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4842;WGH;F;36;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4843;WGH;F;34;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4844;WGH;M;45;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4846;WGH;F;45;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4847;WGH;F;80;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4848;WGH;F;68;Oromia;SWSZ;Wonchi ;WGH;06/01/2022;Pos;41302;2.2;2.2 - Covid Positive;OPD;Wonchi ;1
+4852;WGH;F;28;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4853;WGH;M;23;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4855;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4856;WGH;M;75;Oromia;SWSZ;Wolisso;WGH;06/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4858;WGH;F;31;Oromia;SWSZ;Wolisso;WGH;07/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4859;WGH;M;25;Oromia;SWSZ;Wolisso;WGH;07/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4862;WGH;M;65;Oromia;SWSZ;Wolisso;WGH;07/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4863;WGH;M;70;Oromia;SWSZ;Wolisso;WGH;07/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4864;WGH;M;20;Oromia;SWSZ;Wolisso;WGH;07/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4867;WGH;F;55;Oromia;SWSZ;Goro;WGH;08/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4868;WGH;M;95;Oromia;SWSZ;Goro;WGH;08/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4869;WGH;M;50;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4872;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4873;WGH;F;24;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4879;WGH;F;55;Oromia;SWSZ;Goro;WGH;08/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4880;WGH;M;95;Oromia;SWSZ;Goro;WGH;08/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4881;WGH;M;50;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4884;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4885;WGH;F;24;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4891;WGH;F;55;Oromia;SWSZ;Goro;WGH;08/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4892;WGH;M;95;Oromia;SWSZ;Goro;WGH;08/01/2022;Pos;41312;2.2;2.2 - Covid Positive;OPD;Goro;1
+4893;WGH;M;50;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4896;WGH;F;40;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4897;WGH;F;24;Oromia;SWSZ;Wolisso;WGH;08/01/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4900;WGH;F;15;Oromia;SWSZ;Ameya;WGH;08/01/2022;Pos;41301;2.2;2.2 - Covid Positive;OPD;Ameya;1
+4909;WGH;F;60;Oromia;SWSZ;Wolisso;WGH;01/02/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1
+4934;WGH;F;50;Oromia;SWSZ;Wolisso;WGH;16/02/2022;Pos;41311;2.2;2.2 - Covid Positive;OPD;Wolisso;1

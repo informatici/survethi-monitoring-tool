@@ -86,16 +86,16 @@
 
     var connection = true;
     var shpfile;
+    var shpfile_zonal;
     var diseases = [];
     var disease_list = [];
     var disease_list_filter = []; //[461,424];
     var locations = [];
 
     var geoshapes = new L.geoJson();
-    var woredaGeoshapesOPD = new L.geoJson();
-    var kebeleGeoshapesOPD = new L.geoJson();
-    var woredaGeoshapesIPD = new L.geoJson();
-    var kebeleGeoshapesIPD = new L.geoJson();
+    var woredaGeoshapes = new L.geoJson();
+    var kebeleGeoshapes = new L.geoJson();
+    var zonalGeoshapes = new L.geoJson();
     var layerGroup = new L.featureGroup();
     var mapController = new L.control.layers();
     var legenda = L.control({position: 'bottomright'});
@@ -107,21 +107,28 @@
      * https://colorbrewer2.org 
      */
     var grade_levels = [0, 1, 5, 10, 15, 20, 25, 30];
+    var grade_levels_zonal = [0, 10, 50, 100, 150, 200, 250, 300];
     var ocra_shades = ['#fff5eb','#fee6ce','#fdd0a2','#fdae6b','#fd8d3c','#f16913','#d94801','#8c2d04']; // (ocra shades)
     var green_shades = ['#f7fcf5','#e5f5e0','#c7e9c0','#a1d99b','#74c476','#41ab5d','#238b45','#005a32']; // (green shades)
     var purple_shades = ['#fcfbfd','#efedf5','#dadaeb','#bcbddc','#9e9ac8','#807dba','#6a51a3','#4a1486']; // (purple shades)
     var blue_shades = ['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#084594']; // (blue shades)
     var red_shades = ['#fff5f0','#fee0d2','#fcbba1','#fc9272','#fb6a4a','#ef3b2c','#cb181d','#99000d']; // (red shades)
 
+    var kebeleColors = blue_shades;
+    var woredaColors = blue_shades;
+    var zonalColors = red_shades;
+
     var kebeleOPDcolors = blue_shades;
     var woredaOPDcolors = blue_shades;
     var kebeleIPDcolors = purple_shades;
     var woredaIPDcolors = purple_shades;
+    var woredaZONALcolors = red_shades;
 
     var kebeleOPDcolor = kebeleOPDcolors[5];
     var woredaOPDcolor = woredaOPDcolors[3];
     var kebeleIPDcolor = kebeleIPDcolors[5];
     var woredaIPDcolor = woredaIPDcolors[3];
+    var woredaZONALcolor = woredaZONALcolors[3];
 
 
 </script>
@@ -285,7 +292,9 @@
 			onEachFeature: function(feature, layer) {
                 //console.log(feature);
 				if (feature.properties) {
-					// we add our property for counting
+                    // we add our property for counting
+                    feature.properties.kebeleCount=0;
+                    feature.properties.woredaCount=0;
                     feature.properties.kebeleOPDCount=0;
                     feature.properties.woredaOPDCount=0;
                     feature.properties.kebeleIPDCount=0;
@@ -307,6 +316,33 @@
         //return shpfile;
     }
 
+    /*
+     * (function) get shape file with Ethiopian regions
+     */ 
+     function load_shapefile_zonal(resolve, reject) {
+        shpfile_zonal = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
+			onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    // we add our property for counting
+                    feature.properties.zonalCount=0;
+                    feature.properties.diseaselist=[];
+				}
+			}
+        });
+        //console.log(shpfile_zonal);
+        //console.log(shpfile_zonal._layers);
+
+        // shpfile_zonal.addTo(mymap);
+        shpfile_zonal.once("data:loaded", function() {
+             console.log("finished loading Zonal shapefile");
+             show_markers_zonal(zonal_data);
+             show_legenda_zonal();
+             resolve();
+        });
+        //return shpfile;
+    }
+
     function show_legenda() {
         
         //console.log('==> adding legenda');
@@ -319,10 +355,34 @@
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grade_levels.length; i++) {
                 div.innerHTML +=
-                    '<i style="background:' + getColorsFor(grade_levels[i] + 1, kebeleOPDcolors) + ';' + 
+                    '<i style="background:' + getColorsFor(grade_levels[i] + 1, grade_levels, kebeleColors) + ';' + 
                     'outline-style:solid; ' + 
                     'outline-width:0px; opacity:' + getOpacity(grade_levels[i]+1) + ';">' + 
                     grade_levels[i] + (grade_levels[i + 1] ? '&nbsp;&ndash;&nbsp' + grade_levels[i + 1] + 
+                    '</i><br>' : '+');
+                //console.log(div.innerHTML);
+            }
+            return div;
+        };
+        legenda.addTo(mymap);
+    }
+
+    function show_legenda_zonal() {
+        
+        //console.log('==> adding legenda');
+
+        legenda.onAdd = function (mymap) {
+
+            var div = L.DomUtil.create('div', 'info legenda'),
+                labels = [];
+
+            // loop through our density intervals and generate a label with a colored square for each interval
+            for (var i = 0; i < grade_levels_zonal.length; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + getColorsFor(grade_levels_zonal[i] + 1, grade_levels_zonal, woredaZONALcolors) + ';' + 
+                    'outline-style:solid; ' + 
+                    'outline-width:0px; opacity:' + getOpacity(grade_levels_zonal[i]+1) + ';">' + 
+                    grade_levels_zonal[i] + (grade_levels_zonal[i + 1] ? '&nbsp;&ndash;&nbsp' + grade_levels_zonal[i + 1] + 
                     '</i><br>' : '+');
                 //console.log(div.innerHTML);
             }
@@ -338,9 +398,10 @@
         checkbox_opd_selected = document.getElementById("filterOPD").checked;
         checkbox_ipd_selected = document.getElementById("filterIPD").checked;
         if (checkbox_ipd_selected && checkbox_opd_selected) return data;
-        if (checkbox_opd_selected) return filterFast(data, ['OPD'], 'TYPE');
-        else if (checkbox_ipd_selected) return filterFast(data, ['IPD'], 'TYPE');
-        else return [];
+        filteredData = []
+        if (checkbox_opd_selected) filteredData = filteredData.concat(filterFast(data, ['OPD'], 'TYPE'));
+        if (checkbox_ipd_selected) filteredData = filteredData.concat(filterFast(data, ['IPD'], 'TYPE'));
+        return filteredData;
     }
 
     /*
@@ -361,8 +422,17 @@
     function refresh(refresh) {
         if (refresh || parameters.refresh) {
             //alert('Refresh!');
-            var newUrl = get_url();
-            fetch_data(newUrl);
+            
+
+            checkbox_opd_selected = document.getElementById("filterOPD").checked;
+            checkbox_ipd_selected = document.getElementById("filterIPD").checked;
+            if (checkbox_ipd_selected || checkbox_opd_selected) {
+                let newUrl = get_url('query_group');
+                fetch_data(newUrl);
+            } else {
+                let newUrl = get_url('query_zonal_data');
+                fetch_data_zonal(newUrl);
+            }
             myTimeout = setTimeout(refresh, parameters.refresh_interval * 1000);
         }
     }
@@ -375,7 +445,7 @@
             url: 'test_connection',
             success:function(data,status,xhr)
             {
-                console.log(data)
+                //console.log(data)
                 if (data) {
                     $('#spinner_connection').replaceWith('<button class="btn btn-success btn-circle"><i class="fa fa-check" aria-hidden="true"></i></button>');
                     $('#spinner_connection_status').prop('class','text-success w-25 small');
@@ -400,8 +470,7 @@
     /**
      * (function) build the url with parameters
      */
-    function get_url() {
-        var query =  'query_group';
+    function get_url(query) {
         query = query.concat('/').concat(parameters.dateFrom.toISOString().split('T')[0]);
         query = query.concat('/').concat(parameters.dateTo.toISOString().split('T')[0]);
         //console.log(query);
@@ -514,16 +583,92 @@
     }
 
     /**
+     * (sync) fetch data from URL
+     */
+     function fetch_data_zonal(newUrl) {
+        setLoading(true);
+        $.ajax({
+            url: newUrl,
+            success:function(data,status,xhr)
+            {
+                //console.log(data);
+                zonal_data = data
+                loadedTableData = data;
+                if (zonal_data.length > 0) {
+                    var promise = new Promise(load_shapefile_zonal)
+                    .then(function() {
+                        console.log('promise: success');
+                        update_table_data(data);
+                        update_disease_list();
+                        updateMainFilterTotals();
+                    }).catch(function() {
+                        console.log('Promise(load_shapefile): rejected');
+                    })
+                } else {
+                    cleanMap();
+                }
+            },
+            complete: function(){
+                setLoading(false);
+            },
+            error: function(){
+                console.log('fetch data error');
+            }
+        })
+    }
+
+    /**
      * (function) clean map removing layers and controllers
      */
     function cleanMap() {
         layerGroup.clearLayers();
         mymap.removeControl(mapController);
         mymap.removeControl(legenda);
-        kebeleGeoshapesOPD.clearLayers();
-        woredaGeoshapesOPD.clearLayers();
-        kebeleGeoshapesIPD.clearLayers();
-        woredaGeoshapesIPD.clearLayers();
+        kebeleGeoshapes.clearLayers();
+        woredaGeoshapes.clearLayers();
+        zonalGeoshapes.clearLayers();
+    }
+
+    /**
+     * (function) update map adding layers and controllers
+     */
+     function show_markers_zonal(data) {
+        cleanMap();
+
+        data.forEach(function(item, index) {
+
+            Object.values(shpfile_zonal._layers).forEach(function(thisFeature) {
+                
+                feature = thisFeature.feature;
+
+                // counting by Woreda
+                var w_code = feature.properties.W_CODE;
+
+                if (item.LOC_W_CODE == w_code) {
+                    feature.properties.zonalCount+=1;
+                    if (feature.properties.diseaselist.indexOf(item.DIS_ID_A) < 0) {
+                        feature.properties.diseaselist.push(item.DIS_ID_A);
+                    }
+                    //console.log(feature);
+                }
+            });
+            addZonalItemToDiseaseList(item);
+        });
+
+        var promise = new Promise(addShapeFileZonal)
+        .then(function() {
+            let count_zonal = Object.keys(zonalGeoshapes._layers).length;
+            if (count_zonal == 0) {
+                console.log('Main Map: nothing to display');
+            } else { 
+                mymap.invalidateSize();
+                if (count_zonal > 0) {
+                    mymap.flyToBounds(zonalGeoshapes.getBounds());
+                }
+            }   
+        }).catch(function() {
+            //console.log('promise: some error occurred');
+        })
     }
 
     /**
@@ -550,71 +695,66 @@
 
         var promise = new Promise(addShapeFile)
         .then(function() {
-            let count_kebele_opd = Object.keys(kebeleGeoshapesOPD._layers).length;
-            let count_woreda_opd = Object.keys(woredaGeoshapesOPD._layers).length;
-            let count_kebele_ipd = Object.keys(kebeleGeoshapesIPD._layers).length;
-            let count_woreda_ipd = Object.keys(woredaGeoshapesIPD._layers).length;
+
+            let count_kebele = Object.keys(kebeleGeoshapes._layers).length;
+            let count_woreda = Object.keys(woredaGeoshapes._layers).length;
             if (Object.keys(markersGroup1.getBounds()).length === 0
-                && count_kebele_opd == 0
-                && count_woreda_opd == 0
-                && count_kebele_ipd == 0
-                && count_woreda_ipd == 0) {
+                && count_kebele == 0
+                && count_woreda == 0
+                && count_zonal == 0) {
                 console.log('Main Map: nothing to display');
             } else {                
                 mymap.invalidateSize();
-                if (count_kebele_opd > 0) {
-                    mymap.flyToBounds(kebeleGeoshapesOPD.getBounds());
-                } else if (count_woreda_opd > 0) {
-                    mymap.flyToBounds(woredaGeoshapesOPD.getBounds());
-                } else if (count_kebele_ipd > 0) {
-                    mymap.flyToBounds(kebeleGeoshapesIPD.getBounds());
-                } else if (count_woreda_ipd > 0) {
-                    mymap.flyToBounds(woredaGeoshapesIPD.getBounds());
+                if (count_kebele > 0) {
+                    mymap.flyToBounds(kebeleGeoshapes.getBounds());
+                } else if (count_woreda > 0) {
+                    mymap.flyToBounds(woredaGeoshapes.getBounds());
+                } else if (count_zonal > 0) {
+                    mymap.flyToBounds(zonalGeoshapes.getBounds());
                 }
                 var overlayMaps = {
-                    "Health Posts": markersGroup1,
-                    "Woreda OPD": woredaGeoshapesOPD,
-                    "Kebele OPD": kebeleGeoshapesOPD,
-                    "Woreda IPD": woredaGeoshapesIPD,
-                    "Kebele IPD": kebeleGeoshapesIPD,
+                    //"Health Posts": markersGroup1,
+                    "Woreda": woredaGeoshapes,
+                    "Kebele": kebeleGeoshapes,
+                    "Zonal": zonalGeoshapes,
                 };
-                var overlaysTree = {
-                    label: 'Data',
-                    //selectAllCheckbox: 'Un/select all',
-                    children: [
-                        {
-                            label: 'OPD',
-                            selectAllCheckbox: true,
-                            collapsed: true,
-                            children: [
-                                { label: 'Kebele OPD', layer: kebeleGeoshapesOPD },
-                                { label: 'Woreda OPD', layer: woredaGeoshapesOPD },
-                            ]
-                        }, {
-                            label: 'IPD',
-                            selectAllCheckbox: true,
-                            collapsed: true,
-                            children: [
-                                { label: 'Kebele IPD', layer: kebeleGeoshapesIPD },
-                                { label: 'Woreda IPD', layer: woredaGeoshapesIPD },
-                            ]
-                        }, {
-                            label: 'Health Posts',
-                            layer: markersGroup1,
-                            defaultChecked: false,
-                        },
-                    ],
-                };
+                // var overlaysTree = {
+                //     label: 'Data',
+                //     //selectAllCheckbox: 'Un/select all',
+                //     children: [
+                //         {
+                //             label: 'OPD',
+                //             selectAllCheckbox: true,
+                //             collapsed: true,
+                //             children: [
+                //                 { label: 'Kebele OPD', layer: kebeleGeoshapesOPD },
+                //                 { label: 'Woreda OPD', layer: woredaGeoshapesOPD },
+                //             ]
+                //         }, {
+                //             label: 'IPD',
+                //             selectAllCheckbox: true,
+                //             collapsed: true,
+                //             children: [
+                //                 { label: 'Kebele IPD', layer: kebeleGeoshapesIPD },
+                //                 { label: 'Woreda IPD', layer: woredaGeoshapesIPD },
+                //             ]
+                //         }, {
+                //             label: 'Health Posts',
+                //             layer: markersGroup1,
+                //             defaultChecked: false,
+                //         },
+                //     ],
+                // };
 
-                //mapController = L.control.layers(null, overlayMaps, {'autoZIndex':true});
-                mapController = L.control.layers.tree(null, overlaysTree, {
-                                                                    namedToggle: true,
-                                                                    // collapseAll: 'Collapse all',
-                                                                    // expandAll: 'Expand all',
-                                                                    collapsed: false,
-                                                                });
-                //mymap.addControl(mapController);
-                mapController.addTo(mymap).collapseTree().expandSelected();
+                mapController = L.control.layers(null, overlayMaps, {'autoZIndex':true});
+                // mapController = L.control.layers.tree(null, overlaysTree, {
+                //                                                     namedToggle: true,
+                //                                                     // collapseAll: 'Collapse all',
+                //                                                     // expandAll: 'Expand all',
+                //                                                     collapsed: false,
+                //                                                 });
+                mymap.addControl(mapController);
+                //mapController.addTo(mymap).collapseTree().expandSelected();
             }
         }).catch(function() {
             //console.log('promise: some error occurred');
@@ -639,6 +779,7 @@
                         } else if (item.TYPE == "IPD") {
                             feature.properties.kebeleIPDCount+=item.COUNT;
                         }
+                        feature.properties.kebeleCount+=item.COUNT;
                         if (feature.properties.diseaselist.indexOf(item.DIS_ID_A) < 0) {
                             feature.properties.diseaselist.push(item.DIS_ID_A);
                         }
@@ -649,6 +790,7 @@
                         } else if (item.TYPE == "IPD") {
                             feature.properties.woredaIPDCount+=item.COUNT;
                         }
+                        feature.properties.woredaCount+=item.COUNT;
                         if (feature.properties.diseaselist.indexOf(item.DIS_ID_A) < 0) {
                             feature.properties.diseaselist.push(item.DIS_ID_A);
                         }
@@ -704,10 +846,29 @@
         }
     }
 
+    function addZonalItemToDiseaseList(item) {
+        if (item.LOC_W_CODE) {
+            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 1, 'unknown': 0, 'type': 'OPD'});
+        } else {
+            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 0, 'unknown': 1, 'type': 'OPD'});
+        }
+    }
+
     function buildBindPopupFirstMap(feature) {
         return "<b>" + feature.properties.RK_NAME + "</b><br />" +
                     "<br />" +
                     "Kebele Code: " + feature.properties.RK_CODE + "<br />" +
+                    "Woreda: " + feature.properties.W_NAME + "<br />" +
+                    "Region: " + feature.properties.R_NAME + "<br />" +
+                    "Zone: " + feature.properties.Z_NAME + "<br />";
+    }
+
+    function buildBindPopupFirstMapZonal(feature) {
+        nr_cases = feature.properties.zonalCount;
+
+        return "<b>" + feature.properties.W_NAME + "</b><br />" +
+                    (nr_cases > 0 ? "Cases: " + nr_cases + "<br />" : "") +
+                    "<br />" +
                     "Woreda: " + feature.properties.W_NAME + "<br />" +
                     "Region: " + feature.properties.R_NAME + "<br />" +
                     "Zone: " + feature.properties.Z_NAME + "<br />";
@@ -743,11 +904,52 @@
                     "Zone: " + feature.properties.Z_NAME + "<br />";
     }
 
+    function addShapeFileZonal(resolve, reject) {
+        var shapes = {"type":"FeatureCollection","features":[]}
+        var zonalShapes = {"type":"FeatureCollection","features":[]}
+
+        Object.values(shpfile_zonal._layers).forEach(function(thisFeature) {
+                        
+            feature = thisFeature.feature;
+            shapes.features.push(feature);
+
+            if (feature.properties.zonalCount > 0) {
+                //console.log(feature);
+                zonalShapes.features.push(feature);
+            } 
+        });
+        geoshapes = L.geoJson(shapes, {
+            style: emptyStyle,
+            onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    layer.bindPopup(
+                        buildBindPopupFirstMap(feature), {
+						maxHeight: 200
+                    });
+				}
+			}
+        }).addTo(mymap);
+        //console.log(geoshapes);
+        zonalGeoshapes = L.geoJson(zonalShapes, {
+            style: function(feature){ return getStyleZonal(feature.properties.zonalCount, zonalColors) },
+            onEachFeature: function(feature, layer) {
+                //console.log(feature);
+				if (feature.properties) {
+                    layer.bindPopup(
+                        buildBindPopupFirstMapZonal(feature), {
+						maxHeight: 200
+                    });
+				}
+			}
+        }).addTo(mymap);
+        //console.log(zonalGeoshapes);
+        resolve();
+    }
+
     function addShapeFile(resolve, reject) {
-        var kebeleShapesOPD = {"type":"FeatureCollection","features":[]}
-        var woredaShapesOPD = {"type":"FeatureCollection","features":[]}
-        var kebeleShapesIPD = {"type":"FeatureCollection","features":[]}
-        var woredaShapesIPD = {"type":"FeatureCollection","features":[]}
+        var kebeleShapes = {"type":"FeatureCollection","features":[]}
+        var woredaShapes = {"type":"FeatureCollection","features":[]}
         var shapes = {"type":"FeatureCollection","features":[]}
 
         Object.values(shpfile._layers).forEach(function(thisFeature) {
@@ -755,19 +957,12 @@
             feature = thisFeature.feature;
             shapes.features.push(feature);
 
-            if (feature.properties.kebeleOPDCount > 0) {
+            if (feature.properties.kebeleCount > 0) {
                 //console.log(feature);
-                kebeleShapesOPD.features.push(feature);
+                kebeleShapes.features.push(feature);
             } 
-            if (feature.properties.woredaOPDCount > 0) {
-                woredaShapesOPD.features.push(feature);
-            }
-            if (feature.properties.kebeleIPDCount > 0) {
-                //console.log(feature);
-                kebeleShapesIPD.features.push(feature);
-            } 
-            if (feature.properties.woredaIPDCount > 0) {
-                woredaShapesIPD.features.push(feature);
+            if (feature.properties.woredaCount > 0) {
+                woredaShapes.features.push(feature);
             }
         });
         geoshapes = L.geoJson(shapes, {
@@ -783,8 +978,8 @@
 			}
         }).addTo(mymap);
         //console.log(geoshapes);
-        woredaGeoshapesOPD = L.geoJson(woredaShapesOPD, {
-            style: function(feature){ return getStyle(feature.properties.woredaOPDCount, woredaOPDcolors) },
+        woredaGeoshapes = L.geoJson(woredaShapes, {
+            style: function(feature){ return getStyle(feature.properties.woredaCount, woredaColors) },
             onEachFeature: function(feature, layer) {
                 //console.log(feature);
 				if (feature.properties) {
@@ -795,8 +990,8 @@
 				}
 			}
         }).addTo(mymap);
-        kebeleGeoshapesOPD = L.geoJson(kebeleShapesOPD, {
-            style: function(feature){ return getStyle(feature.properties.kebeleOPDCount, kebeleOPDcolors) },
+        kebeleGeoshapes = L.geoJson(kebeleShapes, {
+            style: function(feature){ return getStyle(feature.properties.kebeleCount, kebeleColors) },
             onEachFeature: function(feature, layer) {
                 //console.log(feature);
 				if (feature.properties) {
@@ -807,50 +1002,26 @@
 				}
 			}
         }).addTo(mymap);
-        woredaGeoshapesIPD = L.geoJson(woredaShapesIPD, {
-            style: function(feature){ return getStyle(feature.properties.woredaIPDCount, woredaIPDcolors) },
-            onEachFeature: function(feature, layer) {
-                //console.log(feature);
-				if (feature.properties) {
-                    layer.bindPopup(
-                        buildBindPopupFirstMapWoreda(feature), {
-						maxHeight: 200
-                    });
-				}
-			}
-        }).addTo(mymap);
-        kebeleGeoshapesIPD = L.geoJson(kebeleShapesIPD, {
-            style: function(feature){ return getStyle(feature.properties.kebeleIPDCount, kebeleIPDcolors) },
-            onEachFeature: function(feature, layer) {
-                //console.log(feature);
-				if (feature.properties) {
-                    layer.bindPopup(
-                        buildBindPopupFirstMapKebele(feature), {
-						maxHeight: 200
-                    });
-				}
-			}
-        }).addTo(mymap);
-        //console.log(kebeleGeoshapesOPD);
-        //console.log(kebeleGeoshapesIPD);
+        //console.log(kebeleGeoshapes);
+        //console.log(kebeleGeoshapes);
         resolve();
     }
 
     /*
      * (function) color sequences
      */
-    function getColorsFor(d, colors) {
+    function getColorsFor(d, grades, colors) {
         // console.log("in getColorsFor");
         // console.log("   d: " + d);
         // console.log("   colors[5]: " + colors[5]);    
-        if (d > grade_levels[7]) return colors[7];
-        if (d > grade_levels[6]) return colors[6];
-        if (d > grade_levels[5]) return colors[5];
-        if (d > grade_levels[4]) return colors[4];
-        if (d > grade_levels[3]) return colors[3];
-        if (d > grade_levels[2]) return colors[2];
-        if (d > grade_levels[1]) return colors[1];
-        if (d == grade_levels[1]) return colors[0];
+        if (d > grades[7]) return colors[7];
+        if (d > grades[6]) return colors[6];
+        if (d > grades[5]) return colors[5];
+        if (d > grades[4]) return colors[4];
+        if (d > grades[3]) return colors[3];
+        if (d > grades[2]) return colors[2];
+        if (d > grades[1]) return colors[1];
+        if (d == grades[1]) return colors[0];
         return null;
     }
 
@@ -871,7 +1042,26 @@
         // console.log("   getColorsFor(count, colors): " + getColorsFor(count, colors));
         // console.log("   getOpacity(count): " + getOpacity(count));
         return {
-            fillColor: getColorsFor(count, colors),
+            fillColor: getColorsFor(count, grade_levels, colors),
+            weight: 0.5,
+            opacity: 1,
+            color: 'white',
+            //dashArray: '3',
+            fillOpacity: getOpacity(count),
+        };
+    }
+
+    /*
+     * (function) style for feature
+     */
+     function getStyleZonal(count, colors) {
+        // console.log("in getStyle");
+        // console.log("   count: " + count);
+        // console.log("   colors: " + colors);
+        // console.log("   getColorsFor(count, colors): " + getColorsFor(count, colors));
+        // console.log("   getOpacity(count): " + getOpacity(count));
+        return {
+            fillColor: getColorsFor(count, grade_levels_zonal, colors),
             weight: 0.5,
             opacity: 1,
             color: 'white',
@@ -899,7 +1089,7 @@
      * https://colorbrewer2.org 
      */
      function getColor() {
-        return getColorsFor(0, kebeleOPDcolors);
+        return getColorsFor(0, kebeleColors);
      }
 
     // Starts from here (main)
