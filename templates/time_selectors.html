@@ -3,8 +3,12 @@
     <div class="col">
         <div id="time-range-selector" class="m-1 btn-group" role="group" aria-label="Basic example">
             <button id="today" type="button" class="btn btn-primary">Today</button>
+            <button id="yesterday" type="button" class="btn">Yesterday</button>
             <button id="3days" type="button" class="btn">1-3 Days</button>
             <button id="1week" type="button" class="btn">1 week</button>
+            <button id="2weeks" type="button" class="btn">2 weeks</button>
+            <button id="1month" type="button" class="btn">1 month</button>
+            <button id="3months" type="button" class="btn">3 months</button>
         </div>
     </div>
     <div class="col text-right">
@@ -39,13 +43,35 @@
         // "today"
         parameters.dateFrom = new Date();
         parameters.dateTo = new Date();
+        if (this.id == "yesterday") {
+            var date = new Date();
+            parameters.dateTo.setDate(date.getDate() - 1);
+            parameters.dateFrom.setDate(date.getDate() - 1);
+        }
         if (this.id == "3days") {
             var date = new Date();
+            parameters.dateTo.setDate(date.getDate() - 1);
             parameters.dateFrom.setDate(date.getDate() - 3);
         }
         if (this.id == "1week") {
             var date = new Date();
+            parameters.dateTo.setDate(date.getDate() - 1);
             parameters.dateFrom.setDate(date.getDate() - 7);
+        }
+        if (this.id == "2weeks") {
+            var date = new Date();
+            parameters.dateTo.setDate(date.getDate() - 1);
+            parameters.dateFrom.setDate(date.getDate() - 14);
+        }
+        if (this.id == "1month") {
+            var date = new Date();
+            parameters.dateTo.setDate(date.getDate() - 1);
+            parameters.dateFrom.setDate(date.getDate() - 31);
+        }
+        if (this.id == "3months") {
+            var date = new Date();
+            parameters.dateTo.setDate(date.getDate() - 1);
+            parameters.dateFrom.setDate(date.getDate() - 90);
         }
         //alert(parameters.dateFrom + " " + parameters.dateTo);
         refresh(true);
