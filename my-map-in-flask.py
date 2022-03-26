@@ -167,7 +167,7 @@ def query_group(dateFrom=None, dateTo=None):
                             LEFT JOIN PATIENT ON PAT_ID = ADM_PAT_ID \
                             LEFT JOIN DISEASE ON DIS_ID_A = ADM_OUT_DIS_ID_A \
                             LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
-                        WHERE ADM_DATE_DIS IS NOT NULL AND\
+                        WHERE ADM_DATE_DIS IS NOT NULL AND \
 							ADM_DATE_DIS BETWEEN '%s' AND '%s' \
                     ) IPD \
                     GROUP BY DIS_ID_A, PAT_CITY, LOC_CITY, PAT_ADDR \
@@ -188,14 +188,24 @@ def query_epoch(dateFrom=None, dateTo=None):
         dateFrom = '2019-01-01'
     if not dateTo:
         dateTo = '2019-12-31'
-    default_query = "SELECT OPD_DIS_ID_A, OPD_DATE, LOC_CITY, LOC_ADDRESS, LOC_LAT, LOC_LONG, \
+    default_query = "SELECT 'OPD' AS TYPE, OPD_ID AS ID, OPD_DIS_ID_A, OPD_DATE, LOC_CITY, LOC_ADDRESS, LOC_LAT, LOC_LONG, \
                         (SELECT LOC_RK_CODE FROM LOCATION WHERE PAT_CITY=LOC_CITY AND PAT_ADDR=LOC_ADDRESS LIMIT 1) AS LOC_RK_CODE, \
                         (SELECT LOC_W_CODE FROM LOCATION WHERE PAT_CITY=LOC_CITY LIMIT 1) AS LOC_W_CODE \
                         FROM OPD \
-                        LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
-                        LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
+                            LEFT JOIN PATIENT ON PAT_ID = OPD_PAT_ID \
+                            LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
                         WHERE OPD_DATE BETWEEN '%s' AND '%s' \
-                        ORDER BY OPD_DATE " %(escape(dateFrom), escape(dateTo))
+                    UNION \
+                    SELECT 'IPD' AS TYPE, ADM_ID AS ID, ADM_OUT_DIS_ID_A, DATE(ADM_DATE_DIS), PAT_CITY, PAT_ADDR, LOC_LAT, LOC_LONG, \
+                        (SELECT LOC_RK_CODE FROM LOCATION WHERE PAT_CITY=LOC_CITY AND PAT_ADDR=LOC_ADDRESS LIMIT 1) AS LOC_RK_CODE, \
+                        (SELECT LOC_W_CODE FROM LOCATION WHERE PAT_CITY=LOC_CITY LIMIT 1) AS LOC_W_CODE \
+                        FROM ADMISSION \
+                            LEFT JOIN PATIENT ON PAT_ID = ADM_PAT_ID \
+                            LEFT JOIN LOCATION ON (PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
+                            LEFT JOIN DISEASE ON DIS_ID_A = ADM_OUT_DIS_ID_A \
+                        WHERE ADM_DATE_DIS IS NOT NULL AND \
+							ADM_DATE_DIS BETWEEN '%s' AND '%s' \
+                    ORDER BY OPD_DATE" % (escape(dateFrom), escape(dateTo), escape(dateFrom), escape(dateTo))
     
     #print(default_query)
     print('==> fetching data...', end='')             
@@ -301,34 +311,36 @@ def query_epoch_geojson(dateFrom=None, dateTo=None):
             print('==> processing data...')
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
-            for disease, date, city, address, latitude, longitude, rk_code, w_code in reader:
+            for type, id, disease, date, city, address, latitude, longitude, rk_code, w_code in reader:
+                # if disease in ('2.1', '2.2'):
+                #     print('found : ', type, id, disease, date, latitude, longitude, rk_code, w_code) 
                 #print('processing : ', disease, date, latitude, longitude, rk_code, w_code)
                 if dateFrom and dateTo and (date < dateFrom or date > dateTo):
                         continue # skip dates out of range (if any)
 
                 # adding Points (Health Posts) - if latitude (or longitude) are not null
-                if latitude != '':
-                    try:    
-                        latitude, longitude = map(float, (latitude, longitude))
-                        features.append(
-                            Feature(
-                                geometry = Point((longitude, latitude)),
-                                properties = {
-                                    'disease': disease,
-                                    'epoch': date,
-                                    'town' : city,
-                                    'kebele' : address,
-                                    'time': date.replace(" ", "T") + '.000Z', #ISO8601 format
-                                    'RK_CODE': rk_code,
-                                    'W_CODE': w_code,
-                                    'RK_NAME': address,
-                                }
-                            )
-                        )
-                        #print('added: Point')
-                    except Exception:
-                        print('skipped : ', disease, date, latitude, longitude, rk_code, w_code)
-                        pass #useful when log above is commented
+                # if latitude != '':
+                #     try:    
+                #         latitude, longitude = map(float, (latitude, longitude))
+                #         features.append(
+                #             Feature(
+                #                 geometry = Point((longitude, latitude)),
+                #                 properties = {
+                #                     'disease': disease,
+                #                     'epoch': date,
+                #                     'town' : city,
+                #                     'kebele' : address,
+                #                     'time': date.replace(" ", "T") + '.000Z', #ISO8601 format
+                #                     'RK_CODE': rk_code,
+                #                     'W_CODE': w_code,
+                #                     'RK_NAME': address,
+                #                 }
+                #             )
+                #         )
+                #         #print('added: Point')
+                #     except Exception:
+                #         print('skipped : ', disease, date, latitude, longitude, rk_code, w_code)
+                #         pass #useful when log above is commented
 
                 # adding shapes - all, but in different count number
                 if rk_code != '':
@@ -347,6 +359,7 @@ def query_epoch_geojson(dateFrom=None, dateTo=None):
                                 'Z_NAME': gj_properties['Z_NAME'],
                                 'RK_CODE': rk_code,
                                 'W_CODE': w_code,
+                                'TYPE': type,
                             }
                         )
                     )
@@ -356,7 +369,7 @@ def query_epoch_geojson(dateFrom=None, dateTo=None):
                     pass
                     
                 else:
-                    #print('skipped : ', disease, date, latitude, longitude, rk_code, w_code)
+                    #print('skipped : ', type, id, disease, date, latitude, longitude, rk_code, w_code)
                     pass #useful when log above is commented
                 
     except Exception as e:

@@ -8,7 +8,38 @@
         </div>
         <div id="second-map-loading-indicator" class="notloading">Loading...</div>
 </div>
+<div id="toolbar2">
+    <input id="filterOPD2" type="checkbox" class="btn btn-primary" checked>
+    <label id="laberlForFilterOPD2" for="filterOPD" class="badge">OPD</label>
+    <input id="filterIPD2" type="checkbox" class="btn btn-primary" checked>
+    <label id="laberlForFilterIPD2" for="filterIPD" class="badge">IPD</label>
+</div>
 <script>
+
+    var filter_opd2 = document.getElementById("laberlForFilterOPD");
+    var filter_ipd2 = document.getElementById("laberlForFilterIPD");
+    filter_opd2.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
+    filter_ipd2.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
+
+    $('#filterOPD2').on('click', function () {
+        console.log("clicked OPD");
+        // if ($('#filterOPD').prop('checked') && $('#filterZONAL').prop('checked')) {
+        //     $('#filterIPD').prop('checked', true);
+        //     $('#filterZONAL').prop('checked', false);
+        //     refresh(true);
+        // }
+        refresh_second_map();
+    })
+    
+    $('#filterIPD2').on('click', function () {
+        console.log("clicked IPD");
+        // if ($('#filterIPD').prop('checked') && $('#filterZONAL').prop('checked')) {
+        //     $('#filterOPD').prop('checked', true);
+        //     $('#filterZONAL').prop('checked', false);
+        //     refresh(true);
+        // }
+        refresh_second_map();
+    })
 
     var parametersSecondMap = {
         dateFrom: moment(),
@@ -242,9 +273,14 @@
     function applySecondaryFilter(feature) {
         //console.log(counter, feature);
 
+        let checkbox_opd_selected = document.getElementById("filterOPD2").checked;
+        let checkbox_ipd_selected = document.getElementById("filterIPD2").checked;
+
         // if (feature.geometry.type == 'Polygon' ||
         //     feature.geometry.type == 'MultiPolygon')
         //     return true; //skip shapes
+
+        var type = feature.properties.TYPE
 
         var town = feature.properties.town;
         var kebele = feature.properties.kebele;
@@ -255,6 +291,9 @@
         var filter_disease = secondary_disease_list_filter.length > 0;
 
         var ok = true;
+
+        if (!checkbox_opd_selected && type == 'OPD') return false;
+        if (!checkbox_ipd_selected && type == 'IPD') return false;
 
         if (filter_town)
             ok = ok && town_selected.indexOf(town) >= 0;
@@ -364,7 +403,7 @@
      function style2(feature) {
         if (feature.properties.kebele) 
             return {
-                fillColor: '#FFEDA0',
+                fillColor: red_shades[5],
                 weight: 0.5,
                 opacity: 1,
                 color: 'white',
@@ -373,7 +412,7 @@
             };
         else if (feature.properties.woreda)
             return {
-                fillColor: '#99d8c9',
+                fillColor: red_shades[3],
                 weight: 0.5,
                 opacity: 1,
                 color: 'white',

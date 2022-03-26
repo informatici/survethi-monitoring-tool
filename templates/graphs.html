@@ -288,6 +288,7 @@
         console.log('updating Number of Cases graph...');
         //console.log('second_data_set : ' + second_data_set);
 
+        var title = updateTitleOpdIpd('Number of Cases');
         var label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
         var value_y = getValues(label_x);
         var topTen = getSeries(label_x);
@@ -302,7 +303,10 @@
             series: [{
                 name: 'Total (' + _.sum(value_y) + ')',
                 data: value_y,
-            }]
+            }],
+            title: {
+                text: title,
+            },
         })
         if (topTen.length > 1) { //if more than one disease
             for (i = 0; i < topTen.length; i++) {
@@ -356,6 +360,21 @@
         return valueArray;
     }
 
+    function updateTitleOpdIpd(title) {
+        let checkbox_opd_selected = document.getElementById("filterOPD2").checked;
+        let checkbox_ipd_selected = document.getElementById("filterIPD2").checked;
+        if (checkbox_opd_selected && checkbox_ipd_selected) {
+            return title += ' OPD / IPD'
+        }
+        if (checkbox_opd_selected) {
+            title += ' OPD'
+        }
+        if (checkbox_ipd_selected) {
+            title += ' IPD'
+        }
+        return title;
+    }
+
     /*
     * (function) update numberOfCasesCumulative chart
     */
@@ -363,6 +382,7 @@
         console.log('updating Number of Cases Cumulative graph...');
         //console.log('second_data_set : ' + second_data_set);
 
+        var title = updateTitleOpdIpd('Number of Cases Cumulative');
         var label_x = getDates(parametersSecondMap.dateFrom, parametersSecondMap.dateTo);
         var value_y = getValues(label_x);
         var topTen = getSeries(label_x);
@@ -389,7 +409,10 @@
             series: [{
                 name: 'Total (' + _.sum(value_y) + ')',
                 data: value_y_c,
-            }]
+            }],
+            title: {
+                text: title,
+            },
         });
         if (topTen.length > 1) { //if more than one disease
             for (i = 0; i < topTen.length; i++) {

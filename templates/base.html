@@ -395,8 +395,8 @@
      * (function) filter OPD/IPD cases
      */ 
      function filterOpdIpd(data) {
-        checkbox_opd_selected = document.getElementById("filterOPD").checked;
-        checkbox_ipd_selected = document.getElementById("filterIPD").checked;
+        let checkbox_opd_selected = document.getElementById("filterOPD").checked;
+        let checkbox_ipd_selected = document.getElementById("filterIPD").checked;
         if (checkbox_ipd_selected && checkbox_opd_selected) return data;
         filteredData = []
         if (checkbox_opd_selected) filteredData = filteredData.concat(filterFast(data, ['OPD'], 'TYPE'));
@@ -424,8 +424,8 @@
             //alert('Refresh!');
             
 
-            checkbox_opd_selected = document.getElementById("filterOPD").checked;
-            checkbox_ipd_selected = document.getElementById("filterIPD").checked;
+            let checkbox_opd_selected = document.getElementById("filterOPD").checked;
+            let checkbox_ipd_selected = document.getElementById("filterIPD").checked;
             if (checkbox_ipd_selected || checkbox_opd_selected) {
                 let newUrl = get_url('query_group');
                 fetch_data(newUrl);
@@ -724,7 +724,7 @@
         cleanMap();
 
         var markersGroup1 = L.markerClusterGroup();
-        var markerArray = [];
+        //var markerArray = [];
         disease_list = [];
 
         data.forEach(show_marker);
@@ -847,7 +847,7 @@
 
             addItemToDiseaseList(item);
 
-            if (item.LOC_LAT) {
+            /* if (item.LOC_LAT) {
 
                 markerArray.push([item.LOC_LAT, item.LOC_LONG]);
                 // disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'count': item.COUNT, 'unknown': 0});
@@ -859,15 +859,7 @@
                 );
                 //console.log(JSON.stringify(item));
 
-                /* if (item.DIS_ID_A == "424")
-                    markersGroup1.addLayer(
-                        new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
-                            {icon: L.icon({iconUrl: 'static/img/blue_icon.png', iconSize: [32, 32]})}).bindPopup(description));
-                else if (item.DIS_ID_A == "461")
-                    markersGroup1.addLayer(
-                        new L.marker([parseFloat(item.LOC_LAT), parseFloat(item.LOC_LONG)], 
-                            {icon: L.icon({iconUrl: 'static/img/pink_icon.png', iconSize: [32, 32]})}).bindPopup(description)); */
-            } /* else {
+            } else {
                 disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'count': 0, 'unknown': item.COUNT});
             } */
         }
