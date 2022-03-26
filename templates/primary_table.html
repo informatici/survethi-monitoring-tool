@@ -53,7 +53,7 @@
 
     $('#filterOPD').on('click', function () {
         console.log("clicked OPD");
-        if ($('#filterOPD').prop('checked')) {
+        if ($('#filterOPD').prop('checked') && $('#filterZONAL').prop('checked')) {
             $('#filterIPD').prop('checked', true);
             $('#filterZONAL').prop('checked', false);
             refresh(true);
@@ -62,7 +62,7 @@
     
     $('#filterIPD').on('click', function () {
         console.log("clicked IPD");
-        if ($('#filterIPD').prop('checked')) {
+        if ($('#filterIPD').prop('checked') && $('#filterZONAL').prop('checked')) {
             $('#filterOPD').prop('checked', true);
             $('#filterZONAL').prop('checked', false);
             refresh(true);
