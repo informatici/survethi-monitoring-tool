@@ -88,9 +88,9 @@
 
         // reset totals
         resetMainFilterTotals();
+        clean_dynamic_list_object();
 
         summarize_and_sort_list()
-        clean_dynamic_list_object();
         disease_list.forEach(function(item, index) { return addItemDisease(item, index, opdColor, ipdColor) });
 
         $('#dynamic-list li').on('click', function (e) {
@@ -108,7 +108,7 @@
                 mymap.flyToBounds(selectedGeoShapes.getBounds());
             }
             filtered_data = filterFast(loadedTableData, [selected_id], 'DIS_ID_A');
-            update_table_data(filtered_data);
+            update_table_data(filtered_data, opdColor, ipdColor);
         })
 
     }

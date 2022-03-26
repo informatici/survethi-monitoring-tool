@@ -560,7 +560,7 @@
                     var promise = new Promise(load_shapefile)
                     .then(function() {
                         //console.log('promise: success');
-                        update_table_data(filtered_data);
+                        update_table_data(filtered_data, kebeleOPDcolors, kebeleIPDcolors);
                         update_disease_list(kebeleOPDcolor, kebeleIPDcolor);
                         updateMainFilterTotals(kebeleOPDcolor, kebeleIPDcolor);
                     }).catch(function() {
@@ -568,7 +568,7 @@
                     })
                 } else {
                     cleanMap();
-                    update_table_data(filtered_data);
+                    clean_table_data();
                     clean_dynamic_list_object();
                     resetMainFilterTotals();
                 }
@@ -592,13 +592,13 @@
             success:function(data,status,xhr)
             {
                 //console.log(data);
-                zonal_data = summarize_zonal_data(data)
+                zonal_data = aggregate_zonal_data(data)
                 loadedTableData = zonal_data;
                 if (zonal_data.length > 0) {
                     var promise = new Promise(load_shapefile_zonal)
                     .then(function() {
                         console.log('promise: success');
-                        update_table_data(zonal_data);
+                        update_table_data(zonal_data, zonalColors, zonalColors);
                         update_disease_list(woredaZONALcolor, woredaZONALcolor);
                         updateMainFilterTotals(woredaZONALcolor, woredaZONALcolor);
                     }).catch(function() {
@@ -606,6 +606,9 @@
                     })
                 } else {
                     cleanMap();
+                    clean_table_data();
+                    clean_dynamic_list_object();
+                    resetMainFilterTotals();
                 }
             },
             complete: function(){
@@ -621,7 +624,7 @@
      * (function) sum up 'count' with the same disease 'id'
      * and return sorted totals (reverse)
      */ 
-     function summarize_zonal_data(data) {
+     function aggregate_zonal_data(data) {
         //console.log(data);
         unique_list = _.uniqBy(data, 'LOC_W_CODE');
         unique_list.forEach(function(item, index) {
@@ -645,6 +648,7 @@
             unique_list[objIndex].unknown = sum_unknown;
             unique_list[objIndex].opd = sum_opd;
             unique_list[objIndex].ipd = sum_ipd;
+            unique_list[objIndex].COUNT = item.kebele + item.woreda + item.unknown;
         });
         // data = _.sortBy(unique_list, 'count').reverse();
         //console.log(unique_list);

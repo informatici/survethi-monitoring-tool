@@ -38,6 +38,11 @@
 
 <script type="text/javascript">
 
+    var cellWoredaOPDcolor;
+    var cellWoredaIPDcolor;
+    var cellKebeleOPDcolor;
+    var cellKebeleIPDcolor;
+
     var filter_opd = document.getElementById("laberlForFilterOPD");
     var filter_ipd = document.getElementById("laberlForFilterIPD");
     var filter_ZONAL = document.getElementById("laberlForFilterZONAL");
@@ -120,7 +125,7 @@
                             temp_data.forEach(item => {
                                 addItemToDiseaseList(item);
                             });
-                            update_table_data(temp_data);
+                            update_table_data(temp_data, green_shades, green_shades);
                             //console.log(disease_list);
                 } else {
                     layer.setStyle({
@@ -142,7 +147,7 @@
                             temp_data.forEach(item => {
                                 addItemToDiseaseList(item);
                             });
-                            update_table_data(temp_data);
+                            update_table_data(temp_data, green_shades, green_shades);
                             //console.log(disease_list);
                 } else {
                     layer.setStyle({
@@ -156,7 +161,29 @@
     /**
      * (function) update table with data
      */
-    function update_table_data(data) {
+    function clean_table_data() {
+        update_table_data([], green_shades, green_shades)
+    }
+
+    /**
+     * (function) update table with data
+     */
+    function update_table_data(data, opdColors, ipdColors) {
+        if (opdColors.length > 5) {
+            cellWoredaOPDcolor = opdColors[3];
+            cellKebeleOPDcolor = opdColors[5];
+        } else {
+            cellWoredaOPDcolor = green_shades[3];
+            cellKebeleOPDcolor = green_shades[5];
+        }
+        if (ipdColors.length > 5) {
+            cellWoredaIPDcolor = ipdColors[3];
+            cellKebeleIPDcolor = ipdColors[5];
+        } else {
+            cellWoredaIPDcolor = green_shades[3];
+            cellKebeleIPDcolor = green_shades[5];
+        }
+
         var myTable = $('#table_primary');
         myTable.bootstrapTable('load', data)
         myTable.bootstrapTable('resetView');
@@ -169,9 +196,9 @@
     function cellStyleWCODE(value, row, index) {
 
         if (row['TYPE'] == 'OPD') {
-            w_color = woredaOPDcolor;
+            w_color = cellWoredaOPDcolor;
         } else {
-            w_color = woredaIPDcolor;
+            w_color = cellWoredaIPDcolor;
         }
         
         if (row['LOC_W_CODE'] > 0) {
@@ -188,9 +215,9 @@
     function cellStyleRKCODE(value, row, index) {
 
         if (row['TYPE'] == 'OPD') {
-            rk_color = kebeleOPDcolor;
+            rk_color = cellKebeleOPDcolor;
         } else {
-            rk_color = kebeleIPDcolor;
+            rk_color = cellKebeleIPDcolor;
         }
 
         if (row['LOC_W_CODE'] > 0) {
