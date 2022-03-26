@@ -561,8 +561,8 @@
                     .then(function() {
                         //console.log('promise: success');
                         update_table_data(filtered_data);
-                        update_disease_list();
-                        updateMainFilterTotals();
+                        update_disease_list(kebeleOPDcolor, kebeleIPDcolor);
+                        updateMainFilterTotals(kebeleOPDcolor, kebeleIPDcolor);
                     }).catch(function() {
                         console.log('Promise(load_shapefile): rejected');
                     })
@@ -592,17 +592,17 @@
             success:function(data,status,xhr)
             {
                 //console.log(data);
-                zonal_data = data
-                loadedTableData = data;
+                zonal_data = summarize_zonal_data(data)
+                loadedTableData = zonal_data;
                 if (zonal_data.length > 0) {
                     var promise = new Promise(load_shapefile_zonal)
                     .then(function() {
                         console.log('promise: success');
-                        update_table_data(data);
-                        update_disease_list();
-                        updateMainFilterTotals();
+                        update_table_data(zonal_data);
+                        update_disease_list(woredaZONALcolor, woredaZONALcolor);
+                        updateMainFilterTotals(woredaZONALcolor, woredaZONALcolor);
                     }).catch(function() {
-                        console.log('Promise(load_shapefile): rejected');
+                        console.log('Promise(load_shapefile_zonal): rejected');
                     })
                 } else {
                     cleanMap();
@@ -615,6 +615,46 @@
                 console.log('fetch data error');
             }
         })
+    }
+
+    /*
+     * (function) sum up 'count' with the same disease 'id'
+     * and return sorted totals (reverse)
+     */ 
+     function summarize_zonal_data(data) {
+        //console.log(data);
+        unique_list = _.uniqBy(data, 'LOC_W_CODE');
+        unique_list.forEach(function(item, index) {
+
+            this_data = _.filter(data, ['LOC_W_CODE', item.LOC_W_CODE]);
+
+            sum = 0
+            sum_unknown = 0
+            if (this_data[0].LOC_W_CODE == '') {
+                sum_unknown = _.sumBy(this_data, item => Number(item.COUNT));
+            } else {
+                sum = _.sumBy(this_data, item => Number(item.COUNT));
+            }
+
+            sum_opd = _.sumBy(this_data, function(o) { return o.TYPE == 'OPD' ? Number(o.COUNT) : 0; });
+            sum_ipd = _.sumBy(this_data, function(o) { return o.TYPE == 'IPD' ? Number(o.COUNT) : 0; });
+            
+            objIndex = unique_list.findIndex((obj => obj.LOC_W_CODE == item.LOC_W_CODE));
+            unique_list[objIndex].kebele = 0;
+            unique_list[objIndex].woreda = sum;
+            unique_list[objIndex].unknown = sum_unknown;
+            unique_list[objIndex].opd = sum_opd;
+            unique_list[objIndex].ipd = sum_ipd;
+        });
+        // data = _.sortBy(unique_list, 'count').reverse();
+        //console.log(unique_list);
+        new_data = _.orderBy(unique_list, [
+                            function (item) { return item.kebele + item.woreda + item.unknown; },
+                            function (item) { return item.kebele; },
+                            function (item) { return item.woreda; },
+                            function (item) { return item.unknown; }
+                            ], ["desc", "desc", "desc", "desc"]);
+        return new_data
     }
 
     /**
@@ -634,6 +674,7 @@
      */
      function show_markers_zonal(data) {
         cleanMap();
+        disease_list = [];
 
         data.forEach(function(item, index) {
 
@@ -645,12 +686,12 @@
                 var w_code = feature.properties.W_CODE;
 
                 if (item.LOC_W_CODE == w_code) {
-                    feature.properties.zonalCount+=1;
+                    feature.properties.zonalCount+=item.woreda;
                     if (feature.properties.diseaselist.indexOf(item.DIS_ID_A) < 0) {
                         feature.properties.diseaselist.push(item.DIS_ID_A);
                     }
                     //console.log(feature);
-                }
+                } 
             });
             addZonalItemToDiseaseList(item);
         });
@@ -848,9 +889,9 @@
 
     function addZonalItemToDiseaseList(item) {
         if (item.LOC_W_CODE) {
-            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 1, 'unknown': 0, 'type': 'OPD'});
+            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': item.woreda, 'unknown': 0, 'type': 'OPD'});
         } else {
-            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 0, 'unknown': 1, 'type': 'OPD'});
+            disease_list.push({'id': item.DIS_ID_A, 'desc': item.DIS_DESC, 'kebele': 0, 'woreda': 0, 'unknown': item.unknown, 'type': 'OPD'});
         }
     }
 

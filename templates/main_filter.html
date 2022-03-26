@@ -119,7 +119,7 @@
 
     var update_main_filter = false;
 
-    function updateMainFilterTotals() {
+    function updateMainFilterTotals(opdColor, ipdColor) {
         //resetMainFilterTotals();
         var total_total = document.getElementById("total_total");
         var total_kebele = document.getElementById("total_kebele");
@@ -131,9 +131,9 @@
         total_total.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
         total_total.setAttribute('style',"border-style:solid;color:#007bff;background-color:#ffffff");
         total_opd.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
-        total_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
+        total_opd.setAttribute('style',"color:#fff;background-color:" + opdColor);
         total_ipd.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
-        total_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
+        total_ipd.setAttribute('style',"color:#fff;background-color:" + ipdColor);
 
         //console.log('first_total_badge : ', first_total_badge);
         //console.log('first_kebele_badge : ', first_kebele_badge);

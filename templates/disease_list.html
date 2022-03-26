@@ -6,7 +6,7 @@
     /**
      * (function) add disease to list
      */
-    function addItemDisease(item, index){
+    function addItemDisease(item, index, opdColor, ipdColor) {
         //console.log(item);
         var ul = document.getElementById("dynamic-list");
         var li = document.createElement("li");
@@ -33,10 +33,10 @@
         span_total.setAttribute('style',"border-style:solid;color:#007bff;background-color:#ffffff");
         span_opd.setAttribute('id','opd_'+item.id);
         span_opd.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
-        span_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
+        span_opd.setAttribute('style',"color:#fff;background-color:" + opdColor);
         span_ipd.setAttribute('id','ipd_'+item.id);
         span_ipd.setAttribute('class',"badge badge-secondary badge-pill ml-auto p-2 float-xs-right");
-        span_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
+        span_ipd.setAttribute('style',"color:#fff;background-color:" + ipdColor);
 
         //span_total.appendChild(document.createTextNode(item.kebele + item.woreda + item.unknown));
         span_total.appendChild(document.createTextNode("T: " + (item.opd + item.ipd)));
@@ -83,7 +83,7 @@
     /*
         * (function) update disease list
         */
-    function update_disease_list() {
+    function update_disease_list(opdColor, ipdColor) {
         console.log('updating disease list...');
 
         // reset totals
@@ -91,7 +91,7 @@
 
         summarize_and_sort_list()
         clean_dynamic_list_object();
-        disease_list.forEach(addItemDisease);
+        disease_list.forEach(function(item, index) { return addItemDisease(item, index, opdColor, ipdColor) });
 
         $('#dynamic-list li').on('click', function (e) {
             e.preventDefault();
