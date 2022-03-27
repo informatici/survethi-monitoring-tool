@@ -13,31 +13,42 @@
     <label id="laberlForFilterOPD2" for="filterOPD" class="badge">OPD</label>
     <input id="filterIPD2" type="checkbox" class="btn btn-primary" checked>
     <label id="laberlForFilterIPD2" for="filterIPD" class="badge">IPD</label>
+    <input id="filterZONAL2" type="checkbox" class="btn btn-primary">
+    <label id="laberlForFilterZONAL2" for="filterIPD" class="badge">Covid Zonal</label>
 </div>
 <script>
 
-    var filter_opd2 = document.getElementById("laberlForFilterOPD");
-    var filter_ipd2 = document.getElementById("laberlForFilterIPD");
+    var filter_opd2 = document.getElementById("laberlForFilterOPD2");
+    var filter_ipd2 = document.getElementById("laberlForFilterIPD2");
+    var filter_zonal2 = document.getElementById("laberlForFilterZONAL2");
     filter_opd2.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
     filter_ipd2.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
+    filter_zonal2.setAttribute('style',"color:#fff;background-color:" + woredaZONALcolor);
 
     $('#filterOPD2').on('click', function () {
         console.log("clicked OPD");
-        // if ($('#filterOPD').prop('checked') && $('#filterZONAL').prop('checked')) {
-        //     $('#filterIPD').prop('checked', true);
-        //     $('#filterZONAL').prop('checked', false);
-        //     refresh(true);
-        // }
+        if ($('#filterOPD2').prop('checked') && $('#filterZONAL2').prop('checked')) {
+            $('#filterIPD2').prop('checked', true);
+            $('#filterZONAL2').prop('checked', false);
+        }
         refresh_second_map();
     })
     
     $('#filterIPD2').on('click', function () {
         console.log("clicked IPD");
-        // if ($('#filterIPD').prop('checked') && $('#filterZONAL').prop('checked')) {
-        //     $('#filterOPD').prop('checked', true);
-        //     $('#filterZONAL').prop('checked', false);
-        //     refresh(true);
-        // }
+        if ($('#filterIPD2').prop('checked') && $('#filterZONAL2').prop('checked')) {
+            $('#filterOPD2').prop('checked', true);
+            $('#filterZONAL2').prop('checked', false);
+        }
+        refresh_second_map();
+    })
+
+    $('#filterZONAL2').on('click', function () {
+        console.log("clicked ZONAL");
+        if ($('#filterZONAL2').prop('checked')) {
+            $('#filterIPD2').prop('checked', false);
+            $('#filterOPD2').prop('checked', false);
+        }
         refresh_second_map();
     })
 
@@ -58,6 +69,8 @@
 
     var secondaryShpfile;
     var testlayer = L.geoJson();
+
+    var timeController;
 
     /*
      * (function) get shape file with Ethiopian's regions
@@ -161,7 +174,7 @@
                 loop: false
             },
             minSpeed: 1,
-            maxSpeed: 30,
+            maxSpeed: 60,
             speedStep: 1,
             displayDate: true,
         },
@@ -189,11 +202,19 @@
      */
     function refresh_second_map(refresh) {
         //alert('Refresh!');
-        var newUrl = get_url_epoch('query_epoch');
-        if (refresh) 
-            fetch_data_epoch(newUrl);
-        else 
-            lazy_fetch_data_epoch(newUrl);
+        cleanSecondaryMap();
+        let checkbox_zonal_selected = document.getElementById("filterZONAL2").checked;
+        if (checkbox_zonal_selected) {
+            console.log('zonal data already fetched: just show!')
+            newUrl = get_url_epoch('query_zonal_geojson')
+            show_epoch_data(newUrl);
+        } else {
+            var newUrl = get_url_epoch('query_epoch');
+            if (refresh) 
+                fetch_data_epoch(newUrl);
+            else 
+                lazy_fetch_data_epoch(newUrl);
+        }
     }
 
     /**
@@ -202,7 +223,6 @@
     function lazy_fetch_data_epoch(newUrl) {
         date_from = parametersSecondMap.dateFrom;
         date_to = parametersSecondMap.dateTo;
-
 
         if (date_from.isBefore(cached_dateFrom) || date_to.isAfter(cached_dateTo)) {
             console.log('new range data: need refresh...');
@@ -253,7 +273,7 @@
             success:function(data,status,xhr)
             {
                 console.log('...receiving...');
-            },
+             },
             complete: function(){
                 setLoadingSecondMap(false);
                 //getRangeLimitFromDatasource();
@@ -275,6 +295,7 @@
 
         let checkbox_opd_selected = document.getElementById("filterOPD2").checked;
         let checkbox_ipd_selected = document.getElementById("filterIPD2").checked;
+        let checkbox_zonal_selected = document.getElementById("filterZONAL2").checked;
 
         // if (feature.geometry.type == 'Polygon' ||
         //     feature.geometry.type == 'MultiPolygon')
@@ -292,8 +313,10 @@
 
         var ok = true;
 
-        if (!checkbox_opd_selected && type == 'OPD') return false;
-        if (!checkbox_ipd_selected && type == 'IPD') return false;
+        if (!checkbox_zonal_selected) {
+            if (!checkbox_opd_selected && type == 'OPD') return false;
+            if (!checkbox_ipd_selected && type == 'IPD') return false;
+        }
 
         if (filter_town)
             ok = ok && town_selected.indexOf(town) >= 0;
@@ -373,20 +396,25 @@
                     //add selected shapes
 
                     //add timeDimension data
-                    L.timeDimension.layer.geoJson(testlayer, {
+                    timeController = L.timeDimension.layer.geoJson(testlayer, {
                         updateTimeDimension: true,
                         duration: 'P1D',
                         updateTimeDimensionMode: 'replace',
                         waitForReady: true,
                         addlastPoint: true,
-                    }).addTo(mySecondaryMap);
+                    });
+                    timeController.addTo(mySecondaryMap);
 
                     mySecondaryMap.invalidateSize();
                     mySecondaryMap.flyToBounds(testlayer, 10);
+
+                    console.log('mySecondaryMap : ', mySecondaryMap);
                 }
 
                 updateCharts();
-
+                min_value = parametersSecondMap.dateFrom.format().split('T')[0];
+                updateChartsPlotLines(min_value);
+                mySecondaryMap.timeDimension.setCurrentTime(new Date(min_value).getTime());
             },
             complete: function(){
                 setLoadingSecondMap(false);
@@ -401,23 +429,30 @@
      * (function) style sequence for geoshapes
      */
      function style2(feature) {
+        let checkbox_zonal_selected = document.getElementById("filterZONAL2").checked;
+        let kebeleColor = blue_shades[5];
+        let woredaColor = blue_shades[3];
+        if (checkbox_zonal_selected) {
+            kebeleColor = red_shades[5];
+            woredaColor = red_shades[3];
+        }
         if (feature.properties.kebele) 
             return {
-                fillColor: red_shades[5],
+                fillColor: kebeleColor,
                 weight: 0.5,
                 opacity: 1,
                 color: 'white',
                 //dashArray: '3',
-                fillOpacity: 0.7
+                fillOpacity: 0.5
             };
         else if (feature.properties.woreda)
             return {
-                fillColor: red_shades[3],
+                fillColor: woredaColor,
                 weight: 0.5,
                 opacity: 1,
                 color: 'white',
                 //dashArray: '3',
-                fillOpacity: 0.7
+                fillOpacity: 0.2
             };
     }
 
@@ -427,6 +462,15 @@
         //console.log(date);
         updateChartsPlotLines(date);
     })
+
+    /**
+     * (function) clean map removing layers and controllers
+     */
+     function cleanSecondaryMap() {
+        if (timeController) {
+            mySecondaryMap.removeControl(timeController);
+        }
+    }
 
 </script>
 

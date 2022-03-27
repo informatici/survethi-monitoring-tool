@@ -14,8 +14,13 @@ with open('static/shapes/survethi-monitoring-tool.geojson', 'r') as f:
     # read the GeoJSON file
     gj = geojson.load(f)
 
+with open('static/shapes/survethi-monitoring-tool-woreda.geojson', 'r') as f:
+    # read the GeoJSON file
+    gj_zonal = geojson.load(f)
+
 print('==> working with', len(gj.features), 'features')
 gjmap = {str(x['properties']['RK_CODE']) : x for x in gj.features}
+gjmap_zonal = {str(x['properties']['W_CODE']) : x for x in gj_zonal.features}
 
 app = Flask(__name__)
 if app.config["ENV"] == "production":
@@ -233,14 +238,16 @@ def query_zonal_range():
     try:
         with open(zonal_csv_path, newline='') as csvfile:
             print('==> check already fetched data...', end='')
-            reader = csv.reader(csvfile, delimiter=',')
+            reader = csv.reader(csvfile, delimiter=';')
             next(reader, None)  # skip the headers
-            for sn, lab_name, patient_name, sex, age, region, zone, woreda, sub_location, date, result in reader:
-                if not zonal_range['min'] or date < zonal_range['min']:
-                    zonal_range['min'] = date
+            for sn, lab, sex, age, region, zone, woreda, facility, date_in, result, w_code, disease, desc, type, city, count in reader:
+                date = datetime.strptime(date_in, '%d/%m/%Y')
+                date_str = date.strftime('%Y-%m-%d')
+                if not zonal_range['min'] or date_str < zonal_range['min']:
+                    zonal_range['min'] = date_str
 
-                if not zonal_range['max'] or date > zonal_range['max']:
-                    zonal_range['max'] = date
+                if not zonal_range['max'] or date_str > zonal_range['max']:
+                    zonal_range['max'] = date_str
 
     except Exception:
         print('Warning: zonal parsing data: empty datasource (needs query)')
@@ -252,7 +259,6 @@ def query_zonal_range():
 def query_zonal_json(dateFrom=None, dateTo=None):
 
     data = []
-
     with open(zonal_csv_path, newline='') as csvfile:
         print('==> processing data...')
         reader = csv.DictReader(csvfile, delimiter=';')
@@ -268,7 +274,6 @@ def query_zonal_json(dateFrom=None, dateTo=None):
                 continue # skip dates out of range (if any)
 
             #print('processing : ', row)
-            key = row['S.N']
             data.append(row)
     
     print('zonal data : %d records' % len(data))
@@ -384,6 +389,72 @@ def query_epoch_geojson(dateFrom=None, dateTo=None):
         geojsonfile.write('%s' % collection)
 
     with open(epoch_json_path) as json_file:
+        json_data = json.load(json_file)
+    
+    return jsonify(json_data)
+
+@app.route('/query_zonal_geojson')
+@app.route('/query_zonal_geojson/<dateFrom>/<dateTo>')
+def query_zonal_geojson(dateFrom=None, dateTo=None):
+    # GeoJSON
+    features = []
+    print('zonal range : ', query_zonal_range())
+    try:
+        with open(zonal_csv_path, newline='') as csvfile:
+            print('==> processing zonal data...')
+            reader = csv.reader(csvfile, delimiter=';')
+            next(reader, None)  # skip the headers
+            for serial, lab, sex, age, region, zone, woreda, facility, date_in, result, w_code, disease, desc, type, city, count in reader:
+                date = datetime.strptime(date_in, '%d/%m/%Y')
+                date_str = date.strftime('%Y-%m-%d')
+                time_str = date.strftime('%Y-%m-%d %H:%I:%S')
+                
+                # if disease in ('2.1', '2.2'):
+                #     print('found : ', serial, lab, sex, age, region, zone, woreda, facility, date_str, result, w_code, disease, desc, type, city, count) 
+                #print('processing : ', disease, date, latitude, longitude, rk_code, w_code)
+                if dateFrom and dateTo and (date_str < dateFrom or date_str > dateTo):
+                    #print('date : ', date_str, dateFrom, dateTo, (date_str < dateFrom or date_str > dateTo))
+                    continue # skip dates out of range (if any)
+                # else:
+                #     print('date in range : ', date_str, dateFrom, dateTo, (date_str > dateFrom or date_str < dateTo))
+                # adding shapes - all, but in different count number
+                if w_code != '':
+                    gj_properties = gjmap_zonal.get(str(w_code))['properties']
+                    features.append(
+                        Feature(
+                            geometry = gjmap_zonal.get(str(w_code))['geometry'],
+                            properties = {
+                                'disease': disease,
+                                'epoch': date_str,
+                                'town' : city,
+                                'woreda' : woreda,
+                                'kebele' : '',
+                                'time': time_str.replace(" ", "T") + '.000Z', #ISO8601 format
+                                'W_NAME': gj_properties['W_NAME'],
+                                'RK_NAME': gj_properties['RK_NAME'],
+                                'Z_NAME': gj_properties['Z_NAME'],
+                                'RK_CODE': '',
+                                'W_CODE': w_code,
+                                'TYPE': type,
+                            }
+                        )
+                    )
+                    
+                else:
+                    print('unparsed : ', serial, lab, sex, age, region, zone, woreda, facility, date_in, result, w_code, disease, desc, type, city, count)
+                    pass #useful when log above is commented
+                
+    except Exception as e:
+        print (e)
+        print('Warning: Zonal GeoJSON parsing data: empty datasource (needs query)')
+        json_data = ""
+
+    collection = FeatureCollection(features)
+    print('==> parsed fatures', len(collection.features), 'features')
+    with open(zonal_json_path, "w") as geojsonfile:
+        geojsonfile.write('%s' % collection)
+
+    with open(zonal_json_path) as json_file:
         json_data = json.load(json_file)
     
     return jsonify(json_data)
