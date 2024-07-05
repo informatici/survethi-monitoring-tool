@@ -24,14 +24,14 @@
             linkedCalendars: false,
             alwaysShowCalendars: true,
             ranges: {
-                'Last 15 Days': [moment().subtract(14, 'days'), moment()],
-                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                'This Month': [moment().startOf('month'), moment().endOf('month')],
-                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
-                'Last 3 Months': [moment().subtract(2, 'month').startOf('month'), moment().endOf('month')],
-                'Last 6 Months': [moment().subtract(5, 'month').startOf('month'), moment().endOf('month')],
-                'This Year': [moment().startOf('year'), moment().endOf('year')],
-                'Last Year': [moment().subtract(1, 'year').startOf('year'), moment().subtract(1, 'year').endOf('year')],
+                'Last 15 Days': [toMoment(end).subtract(14, 'days'), toMoment(end)],
+                'Last 30 Days': [toMoment(end).subtract(29, 'days'), toMoment(end)],
+                'This Month': [toMoment(end).startOf('month'), toMoment(end).endOf('month')],
+                'Last Month': [toMoment(end).subtract(1, 'month').startOf('month'), toMoment(end).subtract(1, 'month').endOf('month')],
+                'Last 3 Months': [toMoment(end).subtract(2, 'month').startOf('month'), toMoment(end).endOf('month')],
+                'Last 6 Months': [toMoment(end).subtract(5, 'month').startOf('month'), toMoment(end).endOf('month')],
+                'This Year': [toMoment(end).startOf('year'), toMoment(end).endOf('year')],
+                'Last Year': [toMoment(end).subtract(1, 'year').startOf('year'), toMoment(end).subtract(1, 'year').endOf('year')],
             },
         }, function(start, end) {
             $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
