@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom PDF Template</title>
+    <style>
+        /* Define your custom styles for the PDF layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Custom PDF Report</h1>
+    </div>
+    <div class="content">
+        <h2>{{pageTitle}}</h2>
+        <p>This is a sample PDF report generated using Puppeteer.</p>
+        <di>{{mapContent}}</di>
+    </div>
+</body>
+</html>
