@@ -64,21 +64,21 @@ async function generatePDFWithInteractions(url, outputPath) {
             });
         });
 
-        // Extract data from the webpage (example)
+        // Extract data from the webpage
         const pageTitle = await page.title();
         const mapContent = await page.evaluate(() => {
             const mapElement = document.querySelector('#mapid');
             return mapElement ? mapElement.outerHTML : 'Map content not found';
         });
 
-        // Wait for the download to start (adjust as necessary)
+        // Wait for the download to start
         await page.evaluate(async () => {
             await new Promise(resolve => {
                 setTimeout(resolve, 3000); // Wait for 3 seconds
             });
         });
 
-        // Read the custom PDF template
+        // Read the PDF template
         const templatePath = './pdf_template.html';
         const htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
 
@@ -91,7 +91,7 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Create a new PDF file path for the generated PDF
         const generatedPath = 'generated.pdf';
 
-        // Generate PDF with template and overlay mapContent
+        // Generate PDF
         await page.pdf({ path: generatedPath, format: 'A4' });
         logger.info(`PDF generated successfully at ${generatedPath}`);
 
@@ -135,12 +135,12 @@ async function sendEmailWithAttachments(filePath) {
             ]
         };
 
-        // Send email and await its completion
+        // Send email and await completion
         logger.info(`Sending email... `);
         let info = await transporter.sendMail(mailOptions);
         logger.info('Email sent:', info.response);
 
-        return info; // Return information about the sent email if needed
+        return info;
 
     } catch (error) {
         logger.error('Error sending email:', error);
@@ -150,7 +150,7 @@ async function sendEmailWithAttachments(filePath) {
 
 app.get('/generate-pdf', async (req, res) => {
     const { url } = req.query;
-    const outputPath = 'generated.pdf'; // Change as needed
+    const outputPath = 'generated.pdf';
 
     // Generate PDF
     await generatePDFWithInteractions(url, outputPath);
@@ -164,9 +164,9 @@ app.get('/generate-pdf', async (req, res) => {
         return;
     }
 
-    // Send email with attachments and await its completion
+    // Send email with attachments and await completion
     try {
-        await sendEmailWithAttachments(outputPath); // Ensure this function properly awaits internal operations
+        await sendEmailWithAttachments(outputPath);
 
         // Delete the file after sending email
         try {
