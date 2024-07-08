@@ -1,6 +1,10 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const path = require('path');
+const nodemailer = require('nodemailer');
+
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
@@ -69,6 +73,7 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Generate PDF with template and overlay mapContent
         await page.pdf({ path: generatedPath, format: 'A4' });
         console.log(`PDF generated successfully at ${generatedPath}`);
+
     } catch (error) {
         console.error('Error generating PDF:', error);
     } finally {
@@ -76,13 +81,57 @@ async function generatePDFWithInteractions(url, outputPath) {
     }
 }
 
+async function sendEmailWithAttachments(filePath) {
+    // Nodemailer configuration
+    let transporter = nodemailer.createTransport({
+        service: process.env.NODEMAIL_SERVICE,
+        host: process.env.NODEMAIL_HOST,
+        port: process.env.NODEMAIL_PORT,
+        secure: process.env.NODEMAIL_SECURE === 'true',
+        auth: {
+            user: process.env.NODEMAIL_EMAIL,
+            pass: process.env.NODEMAIL_APP_PASSWORD
+        },
+        debug: process.env.NODEMAIL_DEBUG === 'true',
+        logger: process.env.NODEMAIL_LOGGER === 'true'
+    });
+
+    // Email content
+    console.log(`Configure email server... `);
+    let mailOptions = {
+        from: process.env.NODEMAIL_EMAIL,
+        to: [process.env.NODEMAIL_RECIPIENTS],
+        subject: 'PDF and CSV Report',
+        text: 'Please find attached the PDF and CSV report.',
+        attachments: [
+            {   // Attach PDF file
+                filename: 'generated.pdf',
+                path: path.join(__dirname, 'generated.pdf')
+            },
+            // {   // Attach CSV file
+            //     filename: 'downloaded.csv',
+            //     path: csvFilePath
+            // }
+        ]
+    };
+
+    // Send email
+    console.log(`Sending email... `);
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log('Error sending email:', error);
+        }
+        console.log('Email sent:', info.response);
+    });
+}
+
 app.get('/generate-pdf', async (req, res) => {
     const { url } = req.query;
     const outputPath = 'generated.pdf'; // Change as needed
 
     try {
-        //await generatePDF(url, outputPath);
         await generatePDFWithInteractions(url, outputPath);
+        await sendEmailWithAttachments(outputPath);
         console.log(`Downloading: ${outputPath}`);
         res.download(outputPath);
     } catch (error) {
