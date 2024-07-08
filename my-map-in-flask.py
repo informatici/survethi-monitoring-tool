@@ -541,6 +541,6 @@ def generate_pdf():
     
     response = requests.get(puppeteer_url)
     if response.status_code == 200:
-        return send_file('puppeteer/generated_pdf.pdf', as_attachment=True)
+        return send_file('puppeteer/generated.pdf', as_attachment=True)
     else:
         return 'Failed to generate PDF'
