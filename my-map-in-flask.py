@@ -11,8 +11,6 @@ import json
 import os.path
 import requests
 
-puppeteer_server_url = 'http://localhost:3000'
-
 with open('static/shapes/survethi-monitoring-tool.geojson', 'r') as f:
     # read the GeoJSON file
     gj = geojson.load(f)
@@ -536,6 +534,7 @@ def get_file(filename):  # pragma: no cover
 
 @app.route('/generate_pdf')
 def generate_pdf():
+    puppeteer_server_url = 'http://localhost:3000'
     url = 'http://localhost:5000'
     puppeteer_url = f'{puppeteer_server_url}/generate-pdf?url={url}'
     
