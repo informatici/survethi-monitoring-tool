@@ -1,12 +1,29 @@
 const cron = require('node-cron');
 const axios = require('axios');
+const winston = require('winston');
 
 require('dotenv').config();
 
 const url = 'http://localhost:3000/generate-pdf';
 const cronSchedule = process.env.CRON_SCHEDULE || '* * * * *'; // Default to run every minute if not set
+const logLevel = process.env.SCHEDULER_LOGLEVEL
 
-console.log(`Scheduler started.`);
+// Configure logging
+const logger = winston.createLogger({
+    level: logLevel,
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.printf(({ timestamp, level, message }) => {
+            return `${timestamp} [${level}]: ${message}`;
+        })
+    ),
+    transports: [
+        new winston.transports.File({ filename: 'scheduler.log' }),
+        new winston.transports.Console() // Log to console as well
+    ]
+});
+
+logger.info(`Scheduler started.`);
 
 // * * * * * command_to_execute
 // | | | | |
@@ -22,14 +39,14 @@ console.log(`Scheduler started.`);
 //  -: Specifies a range of values (e.g., 1-5 in the day of the week field means "Monday through Friday")
 //  /: Specifies a step value (e.g., */5 in the minute field means "every 5 minutes")
 cron.schedule(cronSchedule, async () => {
-    console.log(`Scheduler running...`);
+    logger.info(`Scheduler running...`);
     try {
         const response = await axios.get(url, { timeout: 10000 }); // 10 seconds
-        console.log('Scheduled task response:', response.data);
+        logger.info('Scheduled task response:', response.data);
     } catch (error) {
-        console.error('Error in scheduled task:', error);
+        logger.error('Error in scheduled task:', error);
     }
-    console.log(`Scheduler ended.`);
+    logger.info(`Scheduler ended.`);
 });
 
 // Keep the script running

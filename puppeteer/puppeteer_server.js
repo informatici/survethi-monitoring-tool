@@ -6,14 +6,31 @@ const nodemailer = require('nodemailer');
 const { promisify } = require('util');
 const stat = promisify(fs.stat);
 const unlink = promisify(fs.unlink);
+const winston = require('winston');
 
 require('dotenv').config();
 
 const app = express();
 const port = 3000;
+const logLevel = process.env.PUPPETEER_LOGLEVEL
+
+// Configure logging
+const logger = winston.createLogger({
+    level: logLevel,
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.printf(({ timestamp, level, message }) => {
+            return `${timestamp} [${level}]: ${message}`;
+        })
+    ),
+    transports: [
+        new winston.transports.File({ filename: 'puppeteer.log' }),
+        new winston.transports.Console() // Log to console as well
+    ]
+});
 
 async function generatePDFWithInteractions(url, outputPath) {
-    console.log(`Generate PDF with interactions from ${url}...`);
+    logger.info(`Generate PDF with interactions from ${url}...`);
     const browser = await puppeteer.launch({
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -24,20 +41,20 @@ async function generatePDFWithInteractions(url, outputPath) {
 
     try {
         // Navigate to the webpage
-        console.log(`Accessing: ${url}`);
+        logger.info(`Accessing: ${url}`);
         await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
 
-        console.log(`Select week1 button...`);
+        logger.info(`Select week1 button...`);
         await page.waitForSelector('button#week1', { timeout: 60000 });
 
-        console.log(`Clicking week1 button...`);
+        logger.info(`Clicking week1 button...`);
         await page.click('button#week1');
 
-        // console.log(`Select leaflet-control-fullscreen...`);
+        // logger.info(`Select leaflet-control-fullscreen...`);
         // const mapFullScreenSelector = "#mapid > div.leaflet-control-container > div.leaflet-top.leaflet-left > div.leaflet-control-fullscreen.leaflet-bar.leaflet-control > a"
         // await page.waitForSelector(mapFullScreenSelector, { timeout: 60000 });
 
-        // console.log(`Clicking leaflet-control-fullscreen...`);
+        // logger.info(`Clicking leaflet-control-fullscreen...`);
         // await page.click(mapFullScreenSelector);
 
         // Wait for any resulting actions to complete if necessary
@@ -76,17 +93,17 @@ async function generatePDFWithInteractions(url, outputPath) {
 
         // Generate PDF with template and overlay mapContent
         await page.pdf({ path: generatedPath, format: 'A4' });
-        console.log(`PDF generated successfully at ${generatedPath}`);
+        logger.info(`PDF generated successfully at ${generatedPath}`);
 
     } catch (error) {
-        console.error('Error generating PDF:', error);
+        logger.error('Error generating PDF:', error);
     } finally {
         await browser.close();
     }
 }
 
 async function sendEmailWithAttachments(filePath) {
-    console.log(`Send Email with attachments...`);
+    logger.info(`Send Email with attachments...`);
     
     try {
         // Nodemailer configuration
@@ -104,7 +121,7 @@ async function sendEmailWithAttachments(filePath) {
         });
 
         // Email content
-        console.log(`Configure email server... `);
+        logger.info(`Configure email server... `);
         let mailOptions = {
             from: process.env.NODEMAIL_EMAIL,
             to: [process.env.NODEMAIL_RECIPIENTS],
@@ -119,14 +136,14 @@ async function sendEmailWithAttachments(filePath) {
         };
 
         // Send email and await its completion
-        console.log(`Sending email... `);
+        logger.info(`Sending email... `);
         let info = await transporter.sendMail(mailOptions);
-        console.log('Email sent:', info.response);
+        logger.info('Email sent:', info.response);
 
         return info; // Return information about the sent email if needed
 
     } catch (error) {
-        console.error('Error sending email:', error);
+        logger.error('Error sending email:', error);
         throw error; // Propagate the error up if needed
     }
 }
@@ -142,7 +159,7 @@ app.get('/generate-pdf', async (req, res) => {
     try {
         await stat(outputPath);
     } catch (err) {
-        console.error('Error checking file:', err);
+        logger.error('Error checking file:', err);
         res.status(500).send('Error checking file');
         return;
     }
@@ -155,7 +172,7 @@ app.get('/generate-pdf', async (req, res) => {
         try {
             await unlink(outputPath);
         } catch (err) {
-            console.error('Error deleting file:', err);
+            logger.error('Error deleting file:', err);
             res.status(500).send('Error deleting file');
             return;
         }
@@ -164,11 +181,11 @@ app.get('/generate-pdf', async (req, res) => {
         res.status(200).send('PDF generated and email sent successfully');
         
     } catch (error) {
-        console.error('Error sending email:', error);
+        logger.error('Error sending email:', error);
         res.status(500).send('Error sending email');
     }
 });
 
 app.listen(port, () => {
-    console.log(`Puppeteer server listening at http://localhost:${port}`);
+    logger.info(`Puppeteer server listening at http://localhost:${port}`);
 });

@@ -3,6 +3,7 @@
         "dotenv": "^16.4.5",
         "express": "^4.17.2",
         "nodemailer": "^6.9.14",
-        "puppeteer": "^22.12.1"
+        "puppeteer": "^22.12.1",
+        "winston": "^3.13.0"
     }
 }
