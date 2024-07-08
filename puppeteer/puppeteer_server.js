@@ -3,6 +3,9 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const { promisify } = require('util');
+const stat = promisify(fs.stat);
+const unlink = promisify(fs.unlink);
 
 require('dotenv').config();
 
@@ -10,6 +13,7 @@ const app = express();
 const port = 3000;
 
 async function generatePDFWithInteractions(url, outputPath) {
+    console.log(`Generate PDF with interactions from ${url}...`);
     const browser = await puppeteer.launch({
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -82,61 +86,86 @@ async function generatePDFWithInteractions(url, outputPath) {
 }
 
 async function sendEmailWithAttachments(filePath) {
-    // Nodemailer configuration
-    let transporter = nodemailer.createTransport({
-        service: process.env.NODEMAIL_SERVICE,
-        host: process.env.NODEMAIL_HOST,
-        port: process.env.NODEMAIL_PORT,
-        secure: process.env.NODEMAIL_SECURE === 'true',
-        auth: {
-            user: process.env.NODEMAIL_EMAIL,
-            pass: process.env.NODEMAIL_APP_PASSWORD
-        },
-        debug: process.env.NODEMAIL_DEBUG === 'true',
-        logger: process.env.NODEMAIL_LOGGER === 'true'
-    });
-
-    // Email content
-    console.log(`Configure email server... `);
-    let mailOptions = {
-        from: process.env.NODEMAIL_EMAIL,
-        to: [process.env.NODEMAIL_RECIPIENTS],
-        subject: 'PDF and CSV Report',
-        text: 'Please find attached the PDF and CSV report.',
-        attachments: [
-            {   // Attach PDF file
-                filename: 'generated.pdf',
-                path: path.join(__dirname, 'generated.pdf')
+    console.log(`Send Email with attachments...`);
+    
+    try {
+        // Nodemailer configuration
+        let transporter = nodemailer.createTransport({
+            service: process.env.NODEMAIL_SERVICE,
+            host: process.env.NODEMAIL_HOST,
+            port: process.env.NODEMAIL_PORT,
+            secure: process.env.NODEMAIL_SECURE === 'true',
+            auth: {
+                user: process.env.NODEMAIL_EMAIL,
+                pass: process.env.NODEMAIL_APP_PASSWORD
             },
-            // {   // Attach CSV file
-            //     filename: 'downloaded.csv',
-            //     path: csvFilePath
-            // }
-        ]
-    };
+            debug: process.env.NODEMAIL_DEBUG === 'true',
+            logger: process.env.NODEMAIL_LOGGER === 'true'
+        });
 
-    // Send email
-    console.log(`Sending email... `);
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log('Error sending email:', error);
-        }
+        // Email content
+        console.log(`Configure email server... `);
+        let mailOptions = {
+            from: process.env.NODEMAIL_EMAIL,
+            to: [process.env.NODEMAIL_RECIPIENTS],
+            subject: 'PDF Report',
+            text: 'Please find attached the PDF report.',
+            attachments: [
+                {   // Attach PDF file
+                    filename: 'generated.pdf',
+                    path: path.join(__dirname, filePath)
+                }
+            ]
+        };
+
+        // Send email and await its completion
+        console.log(`Sending email... `);
+        let info = await transporter.sendMail(mailOptions);
         console.log('Email sent:', info.response);
-    });
+
+        return info; // Return information about the sent email if needed
+
+    } catch (error) {
+        console.error('Error sending email:', error);
+        throw error; // Propagate the error up if needed
+    }
 }
 
 app.get('/generate-pdf', async (req, res) => {
     const { url } = req.query;
     const outputPath = 'generated.pdf'; // Change as needed
 
+    // Generate PDF
+    await generatePDFWithInteractions(url, outputPath);
+
+    // Check if the outputPath file exists
     try {
-        await generatePDFWithInteractions(url, outputPath);
-        await sendEmailWithAttachments(outputPath);
-        console.log(`Downloading: ${outputPath}`);
-        res.download(outputPath);
+        await stat(outputPath);
+    } catch (err) {
+        console.error('Error checking file:', err);
+        res.status(500).send('Error checking file');
+        return;
+    }
+
+    // Send email with attachments and await its completion
+    try {
+        await sendEmailWithAttachments(outputPath); // Ensure this function properly awaits internal operations
+
+        // Delete the file after sending email
+        try {
+            await unlink(outputPath);
+        } catch (err) {
+            console.error('Error deleting file:', err);
+            res.status(500).send('Error deleting file');
+            return;
+        }
+
+        // If everything is successful, send a success response
+        res.status(200).send('PDF generated and email sent successfully');
+        
     } catch (error) {
-        console.error('Error generating PDF:', error);
-        res.status(500).send('Error generating PDF');
+        console.error('Error sending email:', error);
+        res.status(500).send('Error sending email');
     }
 });
 
