@@ -1,6 +1,14 @@
 version: '3.4'
 
 services:
+
+  puppeteer-server:
+    build:
+      context: ./puppeteer
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
   tool:
     image: tool
     build:
