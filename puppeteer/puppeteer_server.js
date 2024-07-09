@@ -50,33 +50,30 @@ async function generatePDFWithInteractions(url, outputPath) {
         logger.info(`Clicking week1 button...`);
         await page.click('button#week1');
 
-        // logger.info(`Select leaflet-control-fullscreen...`);
-        // const mapFullScreenSelector = "#mapid > div.leaflet-control-container > div.leaflet-top.leaflet-left > div.leaflet-control-fullscreen.leaflet-bar.leaflet-control > a"
-        // await page.waitForSelector(mapFullScreenSelector, { timeout: 60000 });
+        // Wait for the Map loading indicator to disappear
+        logger.info(`Waiting for map to load...`);
+        await page.waitForFunction(() => {
+            const loadingIndicator = document.querySelector('#map-loading-indicator');
+            return loadingIndicator && !loadingIndicator.classList.contains('loading');
+        }, { timeout: 60000 });
 
-        // logger.info(`Clicking leaflet-control-fullscreen...`);
-        // await page.click(mapFullScreenSelector);
-
-        // Wait for any resulting actions to complete if necessary
-        await page.evaluate(async () => {
-            await new Promise(resolve => {
-                setTimeout(resolve, 15000); // Wait for 15 seconds
+        // Hide Map Leaflet controllers
+        await page.evaluate(() => {
+            const controllers = document.querySelectorAll('.leaflet-control'); // Adjust the selector as needed
+            controllers.forEach(controller => {
+                controller.style.display = 'none';
             });
         });
 
         // Extract data from the webpage
         const pageTitle = await page.title();
-        const mapContent = await page.evaluate(() => {
-            const mapElement = document.querySelector('#mapid');
-            return mapElement ? mapElement.outerHTML : 'Map content not found';
-        });
-
-        // Wait for the download to start
-        await page.evaluate(async () => {
-            await new Promise(resolve => {
-                setTimeout(resolve, 3000); // Wait for 3 seconds
-            });
-        });
+        const mapElement = await page.$('#mapid');
+        const mapImagePath = path.join(__dirname, 'map.png');
+        // Take a screenshot of the map
+        await mapElement.screenshot({ path: 'map.png' });
+        // Convert the map image to a base64 data URL
+        const mapImageBase64 = fs.readFileSync(mapImagePath, { encoding: 'base64' });
+        const mapImageUrl = `data:image/png;base64,${mapImageBase64}`;
 
         // Read the PDF template
         const templatePath = './pdf_template.html';
@@ -85,7 +82,8 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Replace placeholders in the template with extracted data
         const renderedHTML = htmlTemplate
             .replace('{{pageTitle}}', pageTitle)
-            .replace('{{mapContent}}', mapContent);
+            .replace('{{mapImage}}', mapImageUrl);
+        
         await page.setContent(renderedHTML);
         
         // Generate PDF
