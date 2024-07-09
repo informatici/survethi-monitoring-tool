@@ -13,7 +13,7 @@ require('dotenv').config();
 const app = express();
 const port = 3000;
 const logLevel = process.env.PUPPETEER_LOGLEVEL
-const templatePath = 'pdf_template.html';
+const templatePath = process.env.PUPPETEER_TEMPLATE + '.html';
 
 // Function to convert an image to a base64 data URL
 function imageToBase64(imagePath) {
@@ -108,12 +108,12 @@ async function generatePDFWithInteractions(url, outputPath) {
         const htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
         const baseDir = path.dirname(templatePath);
 
-        // Replace image paths with base64 data URLs
+        // Replace local images paths with base64 data URLs
         const updatedHtmlTemplate = replaceImagePathsWithBase64(htmlTemplate, baseDir);
 
         // Replace placeholders in the template with extracted data
         const renderedHTML = updatedHtmlTemplate
-            .replace('{{pageTitle}}', pageTitle)
+            .replace('{{title}}', pageTitle)
             .replace('{{mapImage}}', mapImageUrl);
         
         await page.setContent(renderedHTML);

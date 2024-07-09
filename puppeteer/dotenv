@@ -9,3 +9,4 @@ NODEMAIL_DEBUG=false|true
 NODEMAIL_LOGGER=false|true
 NODEMAIL_RECIPIENTS=email1@gmail.com,email2@gmail.com
 PUPPETEER_LOGLEVEL=info
+PUPPETEER_TEMPLATE=pdf_template
