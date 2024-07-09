@@ -542,6 +542,8 @@ def generate_pdf():
         response = requests.get(puppeteer_url)
         if response.status_code == 200:
             return Response('PDF generated and sent to the distribution list.', status=200)
+        elif response.status_code == 201:
+            return Response('PDF generated.', status=200)
         else:
             return Response('Failed to generate PDF.', status=response.status_code)
     except requests.exceptions.RequestException as e:

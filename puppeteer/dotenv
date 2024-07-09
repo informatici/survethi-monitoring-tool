@@ -1,3 +1,4 @@
+NODEMAIL_ACTIVE=true
 NODEMAIL_SERVICE=gmail|yahoo
 NODEMAIL_HOST=smtp.gmail.com|smtp.mail.yahoo.com
 NODEMAIL_PORT=465

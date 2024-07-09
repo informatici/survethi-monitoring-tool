@@ -88,15 +88,13 @@ async function generatePDFWithInteractions(url, outputPath) {
             .replace('{{mapContent}}', mapContent);
         await page.setContent(renderedHTML);
         
-        // Create a new PDF file path for the generated PDF
-        const generatedPath = 'generated.pdf';
-
         // Generate PDF
-        await page.pdf({ path: generatedPath, format: 'A4' });
-        logger.info(`PDF generated successfully at ${generatedPath}`);
+        await page.pdf({ path: outputPath, format: 'A4' });
+        logger.info(`PDF generated successfully at ${outputPath}`);
 
     } catch (error) {
         logger.error('Error generating PDF:', error);
+        throw error; // Propagate the error up
     } finally {
         await browser.close();
     }
@@ -144,7 +142,7 @@ async function sendEmailWithAttachments(filePath) {
 
     } catch (error) {
         logger.error('Error sending email:', error);
-        throw error; // Propagate the error up if needed
+        throw error; // Propagate the error up
     }
 }
 
@@ -153,8 +151,13 @@ app.get('/generate-pdf', async (req, res) => {
     const outputPath = 'generated.pdf';
 
     // Generate PDF
-    await generatePDFWithInteractions(url, outputPath);
-
+    try {
+        await generatePDFWithInteractions(url, outputPath);
+    } catch (err) {
+        logger.error('Error generating PDF file:', err);
+        res.status(500).send('Error generating PDF file');
+        return;
+    }
     // Check if the outputPath file exists
     try {
         await stat(outputPath);
@@ -164,25 +167,29 @@ app.get('/generate-pdf', async (req, res) => {
         return;
     }
 
-    // Send email with attachments and await completion
-    try {
-        await sendEmailWithAttachments(outputPath);
-
-        // Delete the file after sending email
+    if (process.env.NODEMAIL_ACTIVE === 'true') {
+        // Send email with attachments and await completion
         try {
-            await unlink(outputPath);
-        } catch (err) {
-            logger.error('Error deleting file:', err);
-            res.status(500).send('Error deleting file');
-            return;
-        }
+            await sendEmailWithAttachments(outputPath);
 
-        // If everything is successful, send a success response
-        res.status(200).send('PDF generated and email sent successfully');
-        
-    } catch (error) {
-        logger.error('Error sending email:', error);
-        res.status(500).send('Error sending email');
+            // Delete the file after sending email
+            try {
+                await unlink(outputPath);
+            } catch (err) {
+                logger.error('Error deleting file:', err);
+                res.status(500).send('Error deleting file');
+                return;
+            }
+
+            // If everything is successful, send a success response
+            res.status(200).send('PDF generated and email sent successfully');
+            
+        } catch (error) {
+            logger.error('Error sending email:', error);
+            res.status(500).send('Error sending email');
+        }
+    } else {
+        res.status(201).send('PDF generated successfully');
     }
 });
 
