@@ -83,11 +83,13 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Delay 3 seconds
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 3000)));
 
-        // Hide Map Leaflet controllers
+        // Hide all leaflet-control elements except the legenda
         await page.evaluate(() => {
-            const controllers = document.querySelectorAll('.leaflet-control');
-            controllers.forEach(controller => {
-                controller.style.display = 'none';
+            const controls = document.querySelectorAll('.leaflet-control');
+            controls.forEach(control => {
+            if (!control.classList.contains('info') || !control.classList.contains('legenda')) {
+                control.style.display = 'none';
+            }
             });
         });
 
