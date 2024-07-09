@@ -13,6 +13,28 @@ require('dotenv').config();
 const app = express();
 const port = 3000;
 const logLevel = process.env.PUPPETEER_LOGLEVEL
+const templatePath = 'pdf_template.html';
+
+// Function to convert an image to a base64 data URL
+function imageToBase64(imagePath) {
+    const imageData = fs.readFileSync(imagePath);
+    const base64Data = imageData.toString('base64');
+    const mimeType = path.extname(imagePath).slice(1) === 'svg' ? 'svg+xml' : path.extname(imagePath).slice(1);
+    return `data:image/${mimeType};base64,${base64Data}`;
+}
+
+// Function to replace image paths in the HTML template with base64 data URLs
+function replaceImagePathsWithBase64(htmlTemplate, baseDir) {
+    const imageTagRegex = /<img[^>]+src="([^">]+)"/g;
+    return htmlTemplate.replace(imageTagRegex, (match, imagePath) => {
+        const absoluteImagePath = path.resolve(baseDir, imagePath);
+        if (fs.existsSync(absoluteImagePath)) {
+            const base64Image = imageToBase64(absoluteImagePath);
+            return match.replace(imagePath, base64Image);
+        }
+        return match;
+    });
+}
 
 // Configure logging
 const logger = winston.createLogger({
@@ -31,6 +53,7 @@ const logger = winston.createLogger({
 
 async function generatePDFWithInteractions(url, outputPath) {
     logger.info(`Generate PDF with interactions from ${url}...`);
+
     const browser = await puppeteer.launch({
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -57,13 +80,19 @@ async function generatePDFWithInteractions(url, outputPath) {
             return loadingIndicator && !loadingIndicator.classList.contains('loading');
         }, { timeout: 60000 });
 
+        // Delay 3 seconds
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 3000)));
+
         // Hide Map Leaflet controllers
         await page.evaluate(() => {
-            const controllers = document.querySelectorAll('.leaflet-control'); // Adjust the selector as needed
+            const controllers = document.querySelectorAll('.leaflet-control');
             controllers.forEach(controller => {
                 controller.style.display = 'none';
             });
         });
+
+        // Delay 3 seconds
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 3000)));
 
         // Extract data from the webpage
         const pageTitle = await page.title();
@@ -73,21 +102,35 @@ async function generatePDFWithInteractions(url, outputPath) {
         await mapElement.screenshot({ path: 'map.png' });
         // Convert the map image to a base64 data URL
         const mapImageBase64 = fs.readFileSync(mapImagePath, { encoding: 'base64' });
-        const mapImageUrl = `data:image/png;base64,${mapImageBase64}`;
+        const mapImageUrl = `<img src="data:image/png;base64,${mapImageBase64}" alt="Map">`;
 
         // Read the PDF template
-        const templatePath = './pdf_template.html';
         const htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
+        const baseDir = path.dirname(templatePath);
+
+        // Replace image paths with base64 data URLs
+        const updatedHtmlTemplate = replaceImagePathsWithBase64(htmlTemplate, baseDir);
 
         // Replace placeholders in the template with extracted data
-        const renderedHTML = htmlTemplate
+        const renderedHTML = updatedHtmlTemplate
             .replace('{{pageTitle}}', pageTitle)
             .replace('{{mapImage}}', mapImageUrl);
         
         await page.setContent(renderedHTML);
         
         // Generate PDF
-        await page.pdf({ path: outputPath, format: 'A4' });
+        await page.pdf({
+            path: outputPath,
+            format: 'A4',
+            displayHeaderFooter: true,
+            printBackground: true,
+            margin: {
+                top: '50px',
+                bottom: '50px',
+                left: '50px',
+                right: '50px'
+            }
+        });
         logger.info(`PDF generated successfully at ${outputPath}`);
 
     } catch (error) {

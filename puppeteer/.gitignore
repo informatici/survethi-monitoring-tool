@@ -2,3 +2,6 @@
 *.pdf
 .env
 *.log
+*.png
+*.jpg
+*.html
