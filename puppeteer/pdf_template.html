@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Custom PDF Template</title>
+    <title>{{title}}</title>
     <style>
         /* Define your custom styles for the PDF layout */
         body {
@@ -22,12 +22,16 @@
 </head>
 <body>
     <div class="header">
-        <h1>Custom PDF Report</h1>
+        <h1>{{title}}</h1>
     </div>
     <div class="content">
-        <h2>{{pageTitle}}</h2>
-        <p>This is a sample PDF report generated using Puppeteer.</p>
-        <img src="{{mapImage}}" alt="Map">
+        <p>This is a sample PDF report generated using Puppeteer and can be customized using the following placeholders.</p>
+		<p>It can include a map:</p>
+        <div>{{mapImage}}</div>
+		<p>It can include a table:</p>
+		<div>{{table}}</div>
+		<p>It can include a graph:</p>
+		<div>{{graphImage}}</div>
     </div>
 </body>
 </html>
