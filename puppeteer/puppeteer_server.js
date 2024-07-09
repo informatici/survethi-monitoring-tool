@@ -67,9 +67,20 @@ async function generatePDFWithInteractions(url, outputPath) {
         logger.info(`Accessing: ${url}`);
         await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
 
+        // Click the disease filters
+        logger.info(`Select disease filter...`);
+        await page.waitForSelector('button[data-id="main_filter"]');
+        await page.click('button[data-id="main_filter"]');
+        await page.waitForSelector('.dropdown-menu.show');
+        await page.select('select#main_filter', 'TB');
+
+        // Click outside the dropdown to trigger the map update and wait 5 seconds
+        await page.click('body');
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
+
+        // Click the week1 button
         logger.info(`Select week1 button...`);
         await page.waitForSelector('button#week1', { timeout: 60000 });
-
         logger.info(`Clicking week1 button...`);
         await page.click('button#week1');
 
@@ -115,7 +126,7 @@ async function generatePDFWithInteractions(url, outputPath) {
 
         // Replace placeholders in the template with extracted data
         const renderedHTML = updatedHtmlTemplate
-            .replace('{{title}}', pageTitle)
+            .replaceAll('{{title}}', pageTitle)
             .replace('{{mapImage}}', mapImageUrl);
         
         await page.setContent(renderedHTML);
