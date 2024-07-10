@@ -1,5 +1,5 @@
 # Python modules needed for the application
-Flask==1.1.2
+Flask==2.2.5
 mysqlclient==2.0.1
 simplejson==3.17.2
 Flask-JSON==0.3.4
