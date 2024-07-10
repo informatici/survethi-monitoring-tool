@@ -4,7 +4,7 @@ const winston = require('winston');
 
 require('dotenv').config();
 
-const url = 'http://localhost:3000/generate-pdf';
+const url = 'http://puppeteer:3000/generate-pdf?url=http://tool:5000';
 const cronSchedule = process.env.CRON_SCHEDULE || '* * * * *'; // Default to run every minute if not set
 const logLevel = process.env.SCHEDULER_LOGLEVEL
 
@@ -18,7 +18,7 @@ const logger = winston.createLogger({
         })
     ),
     transports: [
-        new winston.transports.File({ filename: 'scheduler.log' }),
+        //new winston.transports.File({ filename: 'scheduler.log' }),
         new winston.transports.Console() // Log to console as well
     ]
 });

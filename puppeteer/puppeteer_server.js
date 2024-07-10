@@ -48,7 +48,7 @@ const logger = winston.createLogger({
         })
     ),
     transports: [
-        new winston.transports.File({ filename: 'puppeteer.log' }),
+        //new winston.transports.File({ filename: 'puppeteer.log' }),
         new winston.transports.Console() // Log to console as well
     ]
 });
