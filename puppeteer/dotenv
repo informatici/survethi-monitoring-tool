@@ -10,3 +10,5 @@ NODEMAIL_LOGGER=false|true
 NODEMAIL_RECIPIENTS=email1@gmail.com,email2@gmail.com
 PUPPETEER_LOGLEVEL=info
 PUPPETEER_TEMPLATE=pdf_template
+REPORT_DISEASE_FILTER=TB # WHO, COVID, TB
+REPORT_TEMPORAL_FILTER=week1 # today, yesterday, days3, week1, weeks2, month1, months3
