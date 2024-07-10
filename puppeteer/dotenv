@@ -1,0 +1,14 @@
+NODEMAIL_ACTIVE=true
+NODEMAIL_SERVICE=gmail|yahoo
+NODEMAIL_HOST=smtp.gmail.com|smtp.mail.yahoo.com
+NODEMAIL_PORT=465
+NODEMAIL_SECURE=true|false
+NODEMAIL_EMAIL=your_email@gmail.com|your_email@yaoo.it
+NODEMAIL_APP_PASSWORD=your_app_password
+NODEMAIL_DEBUG=false|true
+NODEMAIL_LOGGER=false|true
+NODEMAIL_RECIPIENTS=email1@gmail.com,email2@gmail.com
+PUPPETEER_LOGLEVEL=info
+PUPPETEER_TEMPLATE=pdf_template
+REPORT_DISEASE_FILTER=TB # WHO, COVID, TB
+REPORT_TEMPORAL_FILTER=week1 # today, yesterday, days3, week1, weeks2, month1, months3

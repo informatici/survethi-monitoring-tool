@@ -166,9 +166,11 @@
         all_diseases_count = diseases.length;
         who_diseases_count = who_diseases_list.length;
         covid_diseases_count = covid_diseases_list.length;
+        tuberculosis_diseases_count = tuberculosis_disease_list.length;
 
         secondary_filter.append(secondary_filter_make_option('WHO','WHO Priority Diseases ('+who_diseases_count+')'));
         secondary_filter.append(secondary_filter_make_option('COVID','SARS-CoV-2 ('+covid_diseases_count+')'));
+        secondary_filter.append(secondary_filter_make_option('TB','Tuberculosis ('+tuberculosis_diseases_count+')'));
         secondary_filter.append('<option id="data-divider" data-divider="true"></option>');
         
         diseases.forEach(function (item, index) {
@@ -187,6 +189,7 @@
         var selected = $('#secondary_filter').val();
         if (selected == "WHO") secondary_disease_list_filter = who_diseases_list
         else if (selected == "COVID") secondary_disease_list_filter = covid_diseases_list
+        else if (selected == "TB") secondary_disease_list_filter = tuberculosis_disease_list
         
         else secondary_disease_list_filter = selected;
         //console.log('secondary_disease_list_filter : ' + secondary_disease_list_filter);
