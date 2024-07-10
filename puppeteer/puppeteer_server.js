@@ -54,7 +54,7 @@ const logger = winston.createLogger({
 });
 
 async function generatePDFWithInteractions(url, outputPath) {
-    logger.info(`Generate PDF with interactions from ${url}...`);
+    logger.info(`Start generating PDF with interactions from ${url}...`);
 
     const browser = await puppeteer.launch({
         headless: true,
@@ -67,7 +67,7 @@ async function generatePDFWithInteractions(url, outputPath) {
     try {
         // Navigate to the webpage
         logger.info(`Accessing: ${url}`);
-        await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
+        await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
 
         // Perform interactions (disease filter, week1 button, etc.)
         await performInteractions(page);
@@ -131,7 +131,9 @@ async function generatePDFWithInteractions(url, outputPath) {
         logger.error('Error generating PDF:', error);
         throw error; // Propagate the error up
     } finally {
+        logger.info('Closing the browser...');
         await browser.close();
+        logger.info('Browser closed.');
     }
 }
 

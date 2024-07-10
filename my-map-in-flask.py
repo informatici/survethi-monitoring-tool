@@ -534,8 +534,8 @@ def get_file(filename):  # pragma: no cover
 
 @app.route('/generate_pdf')
 def generate_pdf():
-    puppeteer_server_url = 'http://localhost:3000'
-    url = 'http://localhost:5000'
+    puppeteer_server_url = 'http://puppeteer:3000'
+    url = 'http://tool:5000'
     puppeteer_url = f'{puppeteer_server_url}/generate-pdf?url={url}'
     
     try:
