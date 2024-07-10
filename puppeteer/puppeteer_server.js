@@ -68,6 +68,7 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Navigate to the webpage
         logger.info(`Accessing: ${url}`);
         await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+        logger.info('Page accessed.');
 
         // Perform interactions (disease filter, week1 button, etc.)
         await performInteractions(page);
@@ -138,13 +139,19 @@ async function generatePDFWithInteractions(url, outputPath) {
 }
 
 async function performInteractions(page) {
+
     // Click the disease filters
     if (disease_filter != "") {
+        
+        logger.info('Waiting for disease filter button...');
+        await page.waitForSelector('button[data-id="main_filter"]', { timeout: 60000 });
+        logger.info('Disease filter button found.');
+
         logger.info(`Select disease filter ${disease_filter}...`);
-        await page.waitForSelector('button[data-id="main_filter"]');
         await page.click('button[data-id="main_filter"]');
-        await page.waitForSelector('.dropdown-menu.show');
+        await page.waitForSelector('.dropdown-menu.show', { timeout: 60000 });
         await page.select('select#main_filter', disease_filter);
+        logger.info('Disease filter selected.');
     } else {
         logger.info(`No disease filter selected.`);
     }
