@@ -1,14 +1,15 @@
 from flask_cors import CORS
-from flask import Flask, escape, request, render_template, Response
+from flask import Flask, render_template, Response
+from markupsafe import escape
 from flask import jsonify
 import MySQLdb
 import csv
 import geojson
 from geojson import Feature, FeatureCollection, Point
 from datetime import datetime
-from decimal import Decimal
 import json
 import os.path
+import requests
 
 with open('static/shapes/survethi-monitoring-tool.geojson', 'r') as f:
     # read the GeoJSON file
@@ -530,3 +531,20 @@ def get_file(filename):  # pragma: no cover
         return open(src).read()
     except IOError as exc:
         return str(exc)
+
+@app.route('/generate_pdf')
+def generate_pdf():
+    puppeteer_server_url = 'http://localhost:3000'
+    url = 'http://localhost:5000'
+    puppeteer_url = f'{puppeteer_server_url}/generate-pdf?url={url}'
+    
+    try:
+        response = requests.get(puppeteer_url)
+        if response.status_code == 200:
+            return Response('PDF generated and sent to the distribution list.', status=200)
+        elif response.status_code == 201:
+            return Response('PDF generated.', status=200)
+        else:
+            return Response('Failed to generate PDF.', status=response.status_code)
+    except requests.exceptions.RequestException as e:
+        return Response(f'Error: {str(e)}', status=500)

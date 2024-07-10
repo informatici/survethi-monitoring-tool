@@ -1,12 +1,23 @@
-version: '3.4'
-
 services:
+
+  scheduler:
+    build:
+      context: ./scheduler
+      dockerfile: Dockerfile.scheduler
+
+  puppeteer:
+    build:
+      context: ./puppeteer
+      dockerfile: Dockerfile.puppeteer
+    ports:
+      - 3000:3000
+
   tool:
     image: tool
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 5000
+      - 5000:5000
 
-    network_mode: "host"
+    #network_mode: "host"

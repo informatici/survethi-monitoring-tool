@@ -60,6 +60,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>  
     <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>  
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
     <!-- Shapes -->
     <script src="https://unpkg.com/shpjs@3.6.3/dist/shp.js"></script>
@@ -73,6 +74,16 @@
 <!-- statuses of the page -->
 <script type="text/javascript">
 
+    function toDate(dateStr) {
+        var parts = dateStr.split("-");
+        return new Date(parts[2], parts[1] - 1, parts[0],23,59,59,999);
+    }
+
+    function toMoment(dateStr) {
+        return moment(dateStr, 'DD-MM-YYYY')
+    }
+
+    start_date = '31-03-2022'
     var parameters = {
         dateFrom: new Date(),
         dateTo: new Date(),
@@ -202,6 +213,11 @@
     <hr>
     <hr>
     <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
 
     <footer id="bottom" class="row text-center fixed-bottom">
         <div class="col-12">
@@ -214,10 +230,12 @@
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <link href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css" rel="stylesheet">
-<link href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css" rel="stylesheet">
+<link href="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.css" rel="stylesheet">
+<script src="https://cdn.sheetjs.com/xlsx-0.18.9/package/dist/xlsx.full.min.js"></script>
 <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.18.2/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.20.2/dist/extensions/export/bootstrap-table-export.min.js"></script>
+
 
 <style type="text/css">
     #mapid { position: relative; }
