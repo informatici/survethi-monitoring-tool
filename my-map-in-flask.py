@@ -36,20 +36,6 @@ CORS(app)
 db = MySQLdb
 
 default_position = [8.55611, 38.9741666] #WolisoTown, Kebele 01
-#
-# Non clinical diseases - filtered out from resultset
-# 
-# 1.1 - Surgical Consultation
-# 1.2 - Orthopedic Consultation
-# 1.3 - Gynecologic Consultation
-# 1.4 - ENT Consultation
-# 1.5 - Ophtalmic Consultation
-# 1.6 - Psychiatric Consultation
-# 1.7 - Dental Consultation
-# 1.8 - OPD Consultaiton
-# 1.9 - Admitted Patient
-#
-non_clinical_opd_diseases = "('1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8', '1.9')"
 epoch_csv_path = 'datasource/epoch.csv'
 epoch_json_path = 'datasource/epoch.geojson'
 zonal_csv_path = 'datasource/zonal_data.csv'
@@ -76,11 +62,10 @@ def get_refresh_intervals():
 def get_diseases():
     create_db_connection()
     default_query = "SELECT * FROM DISEASE \
-                    WHERE DIS_ID_A NOT IN %s \
                     ORDER BY DIS_DESC"
     #print(default_query)                
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
-    cursor.execute(default_query % non_clinical_opd_diseases)
+    cursor.execute(default_query)
     result = cursor.fetchall()
     cursor.close()
     return jsonify(result)
@@ -159,7 +144,6 @@ def query_group(dateFrom=None, dateTo=None):
                             LEFT JOIN DISEASE ON DIS_ID_A = OPD_DIS_ID_A \
                             LEFT JOIN LOCATION ON(PAT_CITY = LOC_CITY AND PAT_ADDR = LOC_ADDRESS) \
                         WHERE OPD_DATE_VIS BETWEEN '%s' AND '%s' \
-                            AND OPD_DIS_ID_A NOT IN %s \
                     ) OPD \
                     GROUP BY DIS_ID_A, PAT_CITY, LOC_CITY, PAT_ADDR \
                     UNION \
@@ -177,7 +161,7 @@ def query_group(dateFrom=None, dateTo=None):
 							ADM_DATE_DIS BETWEEN '%s' AND '%s' \
                     ) IPD \
                     GROUP BY DIS_ID_A, PAT_CITY, LOC_CITY, PAT_ADDR \
-                    ORDER BY TYPE, COUNT DESC" % (escape(dateFrom), escape(dateTo), non_clinical_opd_diseases, escape(dateFrom), escape(dateTo))
+                    ORDER BY TYPE, COUNT DESC" % (escape(dateFrom), escape(dateTo), escape(dateFrom), escape(dateTo))
     #print(default_query)                
     cursor = db.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute(default_query)
