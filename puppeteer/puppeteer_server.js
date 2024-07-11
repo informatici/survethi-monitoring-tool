@@ -17,6 +17,69 @@ const templatePath = process.env.PUPPETEER_TEMPLATE + '.html' || "pdf_template.h
 const disease_filter = process.env.REPORT_DISEASE_FILTER || ""
 const temporal_filter = process.env.REPORT_TEMPORAL_FILTER || ""
 
+// Configure logging
+const logger = winston.createLogger({
+    level: logLevel,
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.printf(({ timestamp, level, message }) => {
+            return `${timestamp} [${level}]: ${message}`;
+        })
+    ),
+    transports: [
+        //new winston.transports.File({ filename: 'puppeteer.log' }),
+        new winston.transports.Console() // Log to console as well
+    ]
+});
+
+function getFormattedDate() {
+    logger.debug(`Calculating fromDate, toDate, month, year for '${temporal_filter}' selector...`)
+    const now = new Date();
+    let toDate = now;
+    let fromDate = new Date(toDate);
+
+    switch (temporal_filter) {
+        case 'today':
+            fromDate = toDate;
+            break;
+        case 'yesterday':
+            fromDate.setDate(toDate.getDate() - 1);
+            toDate = fromDate;
+            break;
+        case 'days3':
+            toDate.setDate(toDate.getDate() - 1);
+            fromDate.setDate(toDate.getDate() - 3);
+            break;
+        case 'week1':
+            toDate.setDate(toDate.getDate() - 1);
+            fromDate.setDate(toDate.getDate() - 7);
+            break;
+        case 'weeks2':
+            toDate.setDate(toDate.getDate() - 1);
+            fromDate.setDate(toDate.getDate() - 14);
+            break;
+        case 'month1':
+            toDate.setDate(toDate.getDate() - 1);
+            fromDate.setMonth(toDate.getMonth() - 1);
+            break;
+        case 'months3':
+            toDate.setDate(toDate.getDate() - 1);
+            fromDate.setMonth(toDate.getMonth() - 3);
+            break;
+        default:
+            fromDate = toDate;
+    }
+
+    const fromDateStr = fromDate.toISOString().split('T')[0];
+    const toDateStr = toDate.toISOString().split('T')[0];
+    const month = String(toDate.getMonth() + 1).padStart(2, '0');
+    const year = String(toDate.getFullYear());
+
+    logger.debug(`==> ${fromDateStr}, ${toDateStr}, ${month}, ${year}.`)
+
+    return { fromDate: fromDateStr, toDate: toDateStr, month, year };
+}
+
 // Function to convert an image to a base64 data URL
 function imageToBase64(imagePath) {
     const imageData = fs.readFileSync(imagePath);
@@ -37,21 +100,6 @@ function replaceImagePathsWithBase64(htmlTemplate, baseDir) {
         return match;
     });
 }
-
-// Configure logging
-const logger = winston.createLogger({
-    level: logLevel,
-    format: winston.format.combine(
-        winston.format.timestamp(),
-        winston.format.printf(({ timestamp, level, message }) => {
-            return `${timestamp} [${level}]: ${message}`;
-        })
-    ),
-    transports: [
-        //new winston.transports.File({ filename: 'puppeteer.log' }),
-        new winston.transports.Console() // Log to console as well
-    ]
-});
 
 async function generatePDFWithInteractions(url, outputPath) {
     logger.info(`Start generating PDF from interactions with ${url}...`);
@@ -105,9 +153,16 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Replace local images paths (if any) with base64 data URLs
         const updatedHtmlTemplate = replaceImagePathsWithBase64(htmlTemplate, baseDir);
 
+        // Get temporal placeholders
+        const { fromDate, toDate, month, year } = getFormattedDate(disease_filter);
+
         // Replace placeholders in the template with extracted data
         const renderedHTML = updatedHtmlTemplate
             .replaceAll('{{title}}', pageTitle)
+            .replace('{{fromDate}}', fromDate)
+            .replace('{{toDate}}', toDate)
+            .replace('{{month}}', month)
+            .replace('{{year}}', year)
             .replace('{{mapImage}}', mapImageUrl)
             .replace('{{table}}', tableHtml || 'Table data not available');
         
@@ -154,7 +209,7 @@ async function performInteractions(page) {
         await page.waitForSelector('button[data-id="main_filter"]', { timeout: 60000 });
         logger.info('Disease filter button found.');
 
-        logger.info(`Select disease filter ${disease_filter}...`);
+        logger.info(`Select disease filter '${disease_filter}'...`);
         await page.click('button[data-id="main_filter"]');
         await page.waitForSelector('.dropdown-menu.show', { timeout: 60000 });
         await page.select('select#main_filter', disease_filter);
@@ -169,7 +224,7 @@ async function performInteractions(page) {
 
     // Click the week1 button
     if (temporal_filter != "") {
-        logger.info(`Select ${temporal_filter} button...`);
+        logger.info(`Select '${temporal_filter}' button...`);
         await page.waitForSelector(`button#${temporal_filter}`, { timeout: 60000 });
         logger.info(`Clicking ${temporal_filter} button...`);
         await page.click(`button#${temporal_filter}`);
