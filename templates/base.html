@@ -337,7 +337,7 @@
     /*
      * (function) get shape file with Ethiopian regions
      */ 
-     function load_shapefile_zonal(resolve, reject) {
+    function load_shapefile_zonal(resolve, reject) {
         shpfile_zonal = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
 			onEachFeature: function(feature, layer) {
                 //console.log(feature);
@@ -412,7 +412,7 @@
     /*
      * (function) filter OPD/IPD cases
      */ 
-     function filterOpdIpd(data) {
+    function filterOpdIpd(data) {
         let checkbox_opd_selected = document.getElementById("filterOPD").checked;
         let checkbox_ipd_selected = document.getElementById("filterIPD").checked;
         if (checkbox_ipd_selected && checkbox_opd_selected) return data;
@@ -426,7 +426,7 @@
      * (function) fast filter, thanks to:
      * https://stackoverflow.com/a/32377529/5309541
      */ 
-     function filterFast(data, ids, field) {
+    function filterFast(data, ids, field) {
         if (ids.length == 0) return data; 
         var index = ids.reduce(function(a,b) {a[b] = 1; return a;}, {});
         return data.filter(function(item) {
@@ -603,7 +603,7 @@
     /**
      * (sync) fetch data from URL
      */
-     function fetch_data_zonal(newUrl) {
+    function fetch_data_zonal(newUrl) {
         setLoading(true);
         $.ajax({
             url: newUrl,
@@ -642,7 +642,7 @@
      * (function) sum up 'count' with the same disease 'id'
      * and return sorted totals (reverse)
      */ 
-     function aggregate_zonal_data(data) {
+    function aggregate_zonal_data(data) {
         //console.log(data);
         unique_list = _.uniqBy(data, 'LOC_W_CODE');
         unique_list.forEach(function(item, index) {
@@ -694,7 +694,7 @@
     /**
      * (function) update map adding layers and controllers
      */
-     function show_markers_zonal(data) {
+    function show_markers_zonal(data) {
         cleanMap();
         disease_list = [];
 
@@ -823,7 +823,7 @@
             //console.log('promise: some error occurred');
         })
 
-        function show_marker(item, index) {
+       function show_marker(item, index) {
             //console.log(item);
 
             if (item.LOC_W_CODE > 0) {
@@ -882,7 +882,7 @@
             } */
         }
 
-        function getMarkerDescription(item) {
+       function getMarkerDescription(item) {
             if (item.COUNT) 
                 return item.COUNT + "<br>" + item.LOC_CITY + "<br>" + item.LOC_ADDRESS + "<br>" + item.DIS_DESC
             else 
@@ -1083,7 +1083,7 @@
     /*
      * (function) color opacity for Geoshapes 
      */
-     function getOpacity(d) {
+    function getOpacity(d) {
         return d > 0 ? 0.5 : 0.1;
     }
 
@@ -1109,7 +1109,7 @@
     /*
      * (function) style for feature
      */
-     function getStyleZonal(count, colors) {
+    function getStyleZonal(count, colors) {
         // console.log("in getStyle");
         // console.log("   count: " + count);
         // console.log("   colors: " + colors);
@@ -1128,7 +1128,7 @@
     /*
      * (function) style sequence for geoshapes
      */
-     function emptyStyle(feature) {
+    function emptyStyle(feature) {
         return {
             fillColor: getColor(),
             weight: 0.5,
@@ -1143,7 +1143,7 @@
      * (function) color sequence for empty geoshapes (kebele levels)
      * https://colorbrewer2.org 
      */
-     function getColor() {
+    function getColor() {
         return getColorsFor(0, kebeleColors);
      }
 
