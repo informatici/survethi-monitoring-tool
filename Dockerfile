@@ -29,4 +29,4 @@ RUN useradd appuser && chown -R appuser /app
 USER appuser
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "my-map-in-flask:app"]
+CMD ["gunicorn", "--timeout", "600", "--log-level", "debugging", "--log-file", "-", "-w", "4", "-b", "0.0.0.0:5000", "my-map-in-flask:app"]

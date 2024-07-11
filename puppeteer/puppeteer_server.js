@@ -54,7 +54,7 @@ const logger = winston.createLogger({
 });
 
 async function generatePDFWithInteractions(url, outputPath) {
-    logger.info(`Start generating PDF with interactions from ${url}...`);
+    logger.info(`Start generating PDF from interactions with ${url}...`);
 
     const browser = await puppeteer.launch({
         headless: true,
@@ -112,6 +112,9 @@ async function generatePDFWithInteractions(url, outputPath) {
             .replace('{{table}}', tableHtml || 'Table data not available');
         
         await page.setContent(renderedHTML);
+
+        // Delay 2 seconds
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 2000)));
         
         // Generate PDF
         await page.pdf({
@@ -126,6 +129,10 @@ async function generatePDFWithInteractions(url, outputPath) {
                 right: '50px'
             }
         });
+
+        // Delay 5 seconds
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
+
         logger.info(`PDF generated successfully at ${outputPath}`);
 
     } catch (error) {
@@ -327,43 +334,45 @@ app.get('/generate-pdf', async (req, res) => {
     // Generate PDF
     try {
         await generatePDFWithInteractions(url, outputPath);
+    
+        // Check if the outputPath file exists
+        try {
+            await stat(outputPath);
+        } catch (err) {
+            logger.error('Error checking file:', err);
+            res.status(500).send('Error checking file');
+            return;
+        }
+
+        if (process.env.NODEMAIL_ACTIVE === 'true') {
+            // Send email with attachments and await completion
+            try {
+                await sendEmailWithAttachments(outputPath);
+
+                // Delete the file after sending email
+                try {
+                    await unlink(outputPath);
+                } catch (err) {
+                    logger.error('Error deleting file:', err);
+                    res.status(500).send('Error deleting file');
+                    return;
+                }
+
+                // If everything is successful, send a success response
+                res.status(200).send('PDF generated and email sent successfully');
+                
+            } catch (error) {
+                logger.error('Error sending email:', error);
+                res.status(500).send('Error sending email');
+            }
+        } else {
+            logger.info('PDF (only) generated successfully, sending status=201...');
+            res.status(201).send('PDF generated successfully');
+        }
     } catch (err) {
         logger.error('Error generating PDF file:', err);
         res.status(500).send('Error generating PDF file');
         return;
-    }
-    // Check if the outputPath file exists
-    try {
-        await stat(outputPath);
-    } catch (err) {
-        logger.error('Error checking file:', err);
-        res.status(500).send('Error checking file');
-        return;
-    }
-
-    if (process.env.NODEMAIL_ACTIVE === 'true') {
-        // Send email with attachments and await completion
-        try {
-            await sendEmailWithAttachments(outputPath);
-
-            // Delete the file after sending email
-            try {
-                await unlink(outputPath);
-            } catch (err) {
-                logger.error('Error deleting file:', err);
-                res.status(500).send('Error deleting file');
-                return;
-            }
-
-            // If everything is successful, send a success response
-            res.status(200).send('PDF generated and email sent successfully');
-            
-        } catch (error) {
-            logger.error('Error sending email:', error);
-            res.status(500).send('Error sending email');
-        }
-    } else {
-        res.status(201).send('PDF generated successfully');
     }
 });
 

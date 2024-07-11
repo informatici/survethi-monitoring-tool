@@ -6,6 +6,8 @@ services:
     build:
       context: ./scheduler
       dockerfile: Dockerfile.scheduler
+    env_file:
+      - .env
     networks:
       - survethi-net
 
@@ -15,6 +17,8 @@ services:
       dockerfile: Dockerfile.puppeteer
     ports:
       - 3000:3000
+    env_file:
+      - .env
     networks:
       - survethi-net
 
@@ -27,6 +31,7 @@ services:
       - 5000:5000
     networks:
       - survethi-net
+
 networks:
   survethi-net:
     driver: bridge
