@@ -17,6 +17,8 @@ const templatePath = process.env.PUPPETEER_TEMPLATE + '.html' || "pdf_template.h
 const disease_filter = process.env.REPORT_DISEASE_FILTER || ""
 const temporal_filter = process.env.REPORT_TEMPORAL_FILTER || ""
 
+var selectedDiseases = []
+
 // Configure logging
 const logger = winston.createLogger({
     level: logLevel,
@@ -142,6 +144,11 @@ async function generatePDFWithInteractions(url, outputPath) {
             logger.info('No data available in the table.');
         }
 
+        var selectedDiseasesHtml = "No disease selected."
+        if (selectedDiseases.length > 0) {
+            selectedDiseasesHtml = generateHtmlDiseaseList(selectedDiseases);
+        }
+
         // Extract data from the webpage
         const pageTitle = await page.title();
         const mapImageUrl = await extractMapImage(page);
@@ -164,7 +171,8 @@ async function generatePDFWithInteractions(url, outputPath) {
             .replace('{{month}}', month)
             .replace('{{year}}', year)
             .replace('{{mapImage}}', mapImageUrl)
-            .replace('{{table}}', tableHtml || 'Table data not available');
+            .replace('{{table}}', tableHtml)
+            .replace('{{diseaseList}}', selectedDiseasesHtml);
         
         await page.setContent(renderedHTML);
 
@@ -204,9 +212,8 @@ async function performInteractions(page) {
 
     // Click the disease filters
     if (disease_filter != "") {
-        
         logger.info('Waiting for disease filter button...');
-        await page.waitForSelector('button[data-id="main_filter"]', { timeout: 60000 });
+        await page.waitForSelector(`button[data-id="main_filter"]`, { timeout: 60000 });
         logger.info('Disease filter button found.');
 
         logger.info(`Select disease filter '${disease_filter}'...`);
@@ -214,13 +221,26 @@ async function performInteractions(page) {
         await page.waitForSelector('.dropdown-menu.show', { timeout: 60000 });
         await page.select('select#main_filter', disease_filter);
         logger.info('Disease filter selected.');
+
+        // Click outside the dropdown to trigger the map update and wait 5 seconds
+        await page.click('body');
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
+
+        // Get the list of selected diseases as effect 
+        logger.info(`Retrieving the list of selected diseases for '${disease_filter}...`);
+        await page.click('button[data-id="main_filter"]');
+        selectedDiseases = await page.evaluate(() => {
+            const options = document.querySelectorAll('.dropdown-item.selected');
+            return Array.from(options).map(option => option.innerText.trim());
+        });
+        // Click outside the dropdown (it should not trigger reload)
+        await page.click('body');
+        console.log('Selected diseases size : ' + selectedDiseases.length);
+        selectedDiseases.forEach(disease => logger.debug('==> ' + disease));
+
     } else {
         logger.info(`No disease filter selected.`);
     }
-
-    // Click outside the dropdown to trigger the map update and wait 5 seconds
-    await page.click('body');
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
 
     // Click the week1 button
     if (temporal_filter != "") {
@@ -295,6 +315,26 @@ async function extractTableData(page) {
         });
     });
     return tableData;
+}
+
+function generateHtmlDiseaseList(diseaseList) {
+    const tableHtml = `
+        <table border="1" style="border-collapse: collapse; border: 1px solid #000; width: 100%; text-align: left;">
+        <thead>
+            <tr>
+                <th style="border: 1px solid #000; padding: 8px; text-align: left;">Code - Disease</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${diseaseList.map(disease => `
+            <tr>
+                <td style="border: 1px solid #000; padding: 8px; text-align: left;">${disease}</td>
+            </tr>
+            `).join('')}
+        </tbody>
+        </table>
+    `;
+    return tableHtml;
 }
 
 function generateHtmlTable(tableData) {
