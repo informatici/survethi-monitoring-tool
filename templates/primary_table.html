@@ -2,11 +2,11 @@
 
 <div id="toolbar">
     <input id="filterOPD" type="checkbox" class="btn btn-primary" checked>
-    <label id="laberlForFilterOPD" for="filterOPD" class="badge">OPD</label>
+    <label id="labelForFilterOPD" for="filterOPD" class="badge">OPD</label>
     <input id="filterIPD" type="checkbox" class="btn btn-primary" checked>
-    <label id="laberlForFilterIPD" for="filterIPD" class="badge">IPD</label>
+    <label id="labelForFilterIPD" for="filterIPD" class="badge">IPD</label>
     <input id="filterZONAL" type="checkbox" class="btn btn-primary" unchecked>
-    <label id="laberlForFilterZONAL" for="filterZONAL" class="badge">Covid Zonal</label>
+    <label id="labelForFilterZONAL" for="filterZONAL" class="badge">Covid Zonal</label>
 </div>
 <table
     id="table_primary"
@@ -43,9 +43,9 @@
     var cellKebeleOPDcolor;
     var cellKebeleIPDcolor;
 
-    var filter_opd = document.getElementById("laberlForFilterOPD");
-    var filter_ipd = document.getElementById("laberlForFilterIPD");
-    var filter_ZONAL = document.getElementById("laberlForFilterZONAL");
+    var filter_opd = document.getElementById("labelForFilterOPD");
+    var filter_ipd = document.getElementById("labelForFilterIPD");
+    var filter_ZONAL = document.getElementById("labelForFilterZONAL");
     filter_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
     filter_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
     filter_ZONAL.setAttribute('style',"color:#fff;background-color:" + woredaZONALcolor);

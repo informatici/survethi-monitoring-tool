@@ -10,17 +10,17 @@
 </div>
 <div id="toolbar2">
     <input id="filterOPD2" type="checkbox" class="btn btn-primary" checked>
-    <label id="laberlForFilterOPD2" for="filterOPD" class="badge">OPD</label>
+    <label id="labelForFilterOPD2" for="filterOPD" class="badge">OPD</label>
     <input id="filterIPD2" type="checkbox" class="btn btn-primary" checked>
-    <label id="laberlForFilterIPD2" for="filterIPD" class="badge">IPD</label>
+    <label id="labelForFilterIPD2" for="filterIPD" class="badge">IPD</label>
     <input id="filterZONAL2" type="checkbox" class="btn btn-primary">
-    <label id="laberlForFilterZONAL2" for="filterIPD" class="badge">Covid Zonal</label>
+    <label id="labelForFilterZONAL2" for="filterIPD" class="badge">Covid Zonal</label>
 </div>
 <script>
 
-    var filter_opd2 = document.getElementById("laberlForFilterOPD2");
-    var filter_ipd2 = document.getElementById("laberlForFilterIPD2");
-    var filter_zonal2 = document.getElementById("laberlForFilterZONAL2");
+    var filter_opd2 = document.getElementById("labelForFilterOPD2");
+    var filter_ipd2 = document.getElementById("labelForFilterIPD2");
+    var filter_zonal2 = document.getElementById("labelForFilterZONAL2");
     filter_opd2.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
     filter_ipd2.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
     filter_zonal2.setAttribute('style',"color:#fff;background-color:" + woredaZONALcolor);
@@ -75,7 +75,7 @@
     /*
      * (function) get shape file with Ethiopian's regions
      */ 
-     function load_secondaryShapefile() {
+    function load_secondaryShapefile() {
         secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
             style: baseStyle,
 			onEachFeature: function(feature, layer) {
@@ -141,7 +141,7 @@
     /**
      * (sync) fetch data from URL
      */
-     function getRangeLimitFromDatasource() {
+    function getRangeLimitFromDatasource() {
         setLoadingReportRange(true);
         $.ajax({
             url: 'query_epoch_range',
@@ -255,7 +255,7 @@
     /**
      * (function) show loading indicators
      */
-     function setLoadingReportRange(loading) {
+    function setLoadingReportRange(loading) {
         if (loading) {
             console.log('Loading range...');
         } else {
@@ -428,7 +428,7 @@
     /*
      * (function) style sequence for geoshapes
      */
-     function style2(feature) {
+    function style2(feature) {
         let checkbox_zonal_selected = document.getElementById("filterZONAL2").checked;
         let kebeleColor = blue_shades[5];
         let woredaColor = blue_shades[3];
@@ -466,7 +466,7 @@
     /**
      * (function) clean map removing layers and controllers
      */
-     function cleanSecondaryMap() {
+    function cleanSecondaryMap() {
         if (timeController) {
             mySecondaryMap.removeControl(timeController);
         }
