@@ -10,51 +10,48 @@
 </div>
 <div id="toolbar2">
     <input id="filterOPD2" type="checkbox" class="btn btn-primary" checked>
-    <label id="laberlForFilterOPD2" for="filterOPD" class="badge">OPD</label>
+    <label id="labelForFilterOPD2" for="filterOPD" class="badge">OPD</label>
     <input id="filterIPD2" type="checkbox" class="btn btn-primary" checked>
-    <label id="laberlForFilterIPD2" for="filterIPD" class="badge">IPD</label>
+    <label id="labelForFilterIPD2" for="filterIPD" class="badge">IPD</label>
     <input id="filterZONAL2" type="checkbox" class="btn btn-primary">
-    <label id="laberlForFilterZONAL2" for="filterIPD" class="badge">Covid Zonal</label>
+    <label id="labelForFilterZONAL2" for="filterIPD" class="badge">Covid Zonal</label>
 </div>
 <script>
 
-    var filter_opd2 = document.getElementById("laberlForFilterOPD2");
-    var filter_ipd2 = document.getElementById("laberlForFilterIPD2");
-    var filter_zonal2 = document.getElementById("laberlForFilterZONAL2");
+    var filter_opd2 = document.getElementById("labelForFilterOPD2");
+    var filter_ipd2 = document.getElementById("labelForFilterIPD2");
+    var filter_zonal2 = document.getElementById("labelForFilterZONAL2");
     filter_opd2.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
     filter_ipd2.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
     filter_zonal2.setAttribute('style',"color:#fff;background-color:" + woredaZONALcolor);
 
-    $('#filterOPD2').on('click', function () {
-        console.log("clicked OPD");
-        if ($('#filterOPD2').prop('checked') && $('#filterZONAL2').prop('checked')) {
-            $('#filterIPD2').prop('checked', true);
-            $('#filterZONAL2').prop('checked', false);
-        }
-        refresh_second_map();
-    })
-    
-    $('#filterIPD2').on('click', function () {
-        console.log("clicked IPD");
-        if ($('#filterIPD2').prop('checked') && $('#filterZONAL2').prop('checked')) {
-            $('#filterOPD2').prop('checked', true);
-            $('#filterZONAL2').prop('checked', false);
-        }
-        refresh_second_map();
-    })
+    function handleCheckboxChange(checkboxId) {
+        const opdCheckbox = $('#filterOPD2');
+        const ipdCheckbox = $('#filterIPD2');
+        const zonalCheckbox = $('#filterZONAL2');
 
-    $('#filterZONAL2').on('click', function () {
-        console.log("clicked ZONAL");
-        if ($('#filterZONAL2').prop('checked')) {
-            $('#filterIPD2').prop('checked', false);
-            $('#filterOPD2').prop('checked', false);
+        console.log(`clicked ${checkboxId}`);
+        if (checkboxId === 'filterOPD2' || checkboxId === 'filterIPD2') {
+            if (opdCheckbox.prop('checked') && zonalCheckbox.prop('checked')) {
+                ipdCheckbox.prop('checked', true);
+                zonalCheckbox.prop('checked', false);
+            }
+        } else if (checkboxId === 'filterZONAL2') {
+            if (zonalCheckbox.prop('checked')) {
+                ipdCheckbox.prop('checked', false);
+                opdCheckbox.prop('checked', false);
+            }
         }
         refresh_second_map();
-    })
+    }
+
+    $('#filterOPD2').on('click', () => handleCheckboxChange('filterOPD2'));
+    $('#filterIPD2').on('click', () => handleCheckboxChange('filterIPD2'));
+    $('#filterZONAL2').on('click', () => handleCheckboxChange('filterZONAL2'));
 
     var parametersSecondMap = {
-        dateFrom: moment(),
-        dateTo: moment(),
+        dateFrom: toMoment(start_date),
+        dateTo: toMoment(start_date),
         center: [8.55611, 38.9741666],
         max_zoom: 18,
         initial_zoom: 1,
@@ -75,7 +72,7 @@
     /*
      * (function) get shape file with Ethiopian's regions
      */ 
-     function load_secondaryShapefile() {
+    function load_secondaryShapefile() {
         secondaryShpfile = new L.Shapefile("{{url_for('static', filename='shapes/survethi-monitoring-tool.zip') }}", {
             style: baseStyle,
 			onEachFeature: function(feature, layer) {
@@ -141,7 +138,7 @@
     /**
      * (sync) fetch data from URL
      */
-     function getRangeLimitFromDatasource() {
+    function getRangeLimitFromDatasource() {
         setLoadingReportRange(true);
         $.ajax({
             url: 'query_epoch_range',
@@ -255,7 +252,7 @@
     /**
      * (function) show loading indicators
      */
-     function setLoadingReportRange(loading) {
+    function setLoadingReportRange(loading) {
         if (loading) {
             console.log('Loading range...');
         } else {
@@ -428,7 +425,7 @@
     /*
      * (function) style sequence for geoshapes
      */
-     function style2(feature) {
+    function style2(feature) {
         let checkbox_zonal_selected = document.getElementById("filterZONAL2").checked;
         let kebeleColor = blue_shades[5];
         let woredaColor = blue_shades[3];

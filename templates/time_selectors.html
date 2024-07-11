@@ -34,17 +34,24 @@
 </div>
 
 <script type="text/javascript">
-    
+
     /**
      * (event) Refresh button click event
      */
     $('#time-range-selector button').click(function() {
         $(this).addClass('btn-primary').siblings().removeClass('btn-primary');
-        // "today"
-        parameters.dateFrom = new Date();
-        parameters.dateTo = new Date();
+        var start_date = "04-07-2024"; // e.g. "15-05-2018"
+        //var start_date = "today";
+        if (start_date == "today") {
+            date = new Date();
+            parameters.dateFrom = new Date();
+            parameters.dateTo = new Date();
+        } else {
+            date = toDate(start_date);
+            parameters.dateFrom = toDate(start_date);
+            parameters.dateTo = toDate(start_date);
+        }
         if (this.id == "yesterday") {
-            var date = new Date();
             parameters.dateTo.setDate(date.getDate() - 1);
             parameters.dateFrom.setDate(date.getDate() - 1);
         }

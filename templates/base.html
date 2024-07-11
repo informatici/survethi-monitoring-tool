@@ -83,10 +83,10 @@
         return moment(dateStr, 'DD-MM-YYYY')
     }
 
-    start_date = '31-03-2022'
+    start_date = '04-07-2024'
     var parameters = {
-        dateFrom: new Date(),
-        dateTo: new Date(),
+        dateFrom: toDate(start_date),
+        dateTo: toDate(start_date),
         center: [8.55611, 38.9741666],
         max_zoom: 18,
         initial_zoom: 11,

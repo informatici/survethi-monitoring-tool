@@ -2,11 +2,11 @@
 
 <div id="toolbar">
     <input id="filterOPD" type="checkbox" class="btn btn-primary" checked>
-    <label id="laberlForFilterOPD" for="filterOPD" class="badge">OPD</label>
+    <label id="labelForFilterOPD" for="filterOPD" class="badge">OPD</label>
     <input id="filterIPD" type="checkbox" class="btn btn-primary" checked>
-    <label id="laberlForFilterIPD" for="filterIPD" class="badge">IPD</label>
+    <label id="labelForFilterIPD" for="filterIPD" class="badge">IPD</label>
     <input id="filterZONAL" type="checkbox" class="btn btn-primary" unchecked>
-    <label id="laberlForFilterZONAL" for="filterZONAL" class="badge">Covid Zonal</label>
+    <label id="labelForFilterZONAL" for="filterZONAL" class="badge">Covid Zonal 2021</label>
 </div>
 <table
     id="table_primary"
@@ -43,9 +43,9 @@
     var cellKebeleOPDcolor;
     var cellKebeleIPDcolor;
 
-    var filter_opd = document.getElementById("laberlForFilterOPD");
-    var filter_ipd = document.getElementById("laberlForFilterIPD");
-    var filter_ZONAL = document.getElementById("laberlForFilterZONAL");
+    var filter_opd = document.getElementById("labelForFilterOPD");
+    var filter_ipd = document.getElementById("labelForFilterIPD");
+    var filter_ZONAL = document.getElementById("labelForFilterZONAL");
     filter_opd.setAttribute('style',"color:#fff;background-color:" + kebeleOPDcolor);
     filter_ipd.setAttribute('style',"color:#fff;background-color:" + kebeleIPDcolor);
     filter_ZONAL.setAttribute('style',"color:#fff;background-color:" + woredaZONALcolor);
@@ -56,32 +56,39 @@
         setLoading(false);
     })
 
+    function fetchDataAndUpdate() {
+        const opdCheckbox = $('#filterOPD');
+        const ipdCheckbox = $('#filterIPD');
+        const zonalCheckbox = $('#filterZONAL');
+        
+        if (opdCheckbox.prop('checked') && zonalCheckbox.prop('checked')) {
+            ipdCheckbox.prop('checked', true);
+            zonalCheckbox.prop('checked', false);
+        } else if (ipdCheckbox.prop('checked') && zonalCheckbox.prop('checked')) {
+            opdCheckbox.prop('checked', true);
+            zonalCheckbox.prop('checked', false);
+        } else if (zonalCheckbox.prop('checked')) {
+            ipdCheckbox.prop('checked', false);
+            opdCheckbox.prop('checked', false);
+        }
+        
+        refresh(true); // Assuming refresh function exists and needs to be called
+    }
+
     $('#filterOPD').on('click', function () {
         console.log("clicked OPD");
-        if ($('#filterOPD').prop('checked') && $('#filterZONAL').prop('checked')) {
-            $('#filterIPD').prop('checked', true);
-            $('#filterZONAL').prop('checked', false);
-            refresh(true);
-        }
-    })
-    
+        fetchDataAndUpdate();
+    });
+
     $('#filterIPD').on('click', function () {
         console.log("clicked IPD");
-        if ($('#filterIPD').prop('checked') && $('#filterZONAL').prop('checked')) {
-            $('#filterOPD').prop('checked', true);
-            $('#filterZONAL').prop('checked', false);
-            refresh(true);
-        }
-    })
+        fetchDataAndUpdate();
+    });
 
     $('#filterZONAL').on('click', function () {
         console.log("clicked ZONAL");
-        if ($('#filterZONAL').prop('checked')) {
-            $('#filterIPD').prop('checked', false);
-            $('#filterOPD').prop('checked', false);
-            refresh(true);
-        }
-    })
+        fetchDataAndUpdate();
+    });
 
     function click_on_table(record) {
         //console.log(record);
