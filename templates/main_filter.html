@@ -300,14 +300,14 @@
      * (function) Make option item for the filter
      */
     function main_filter_make_option(value, text) {
-        return '<option value="'+value+'">'+text.substring(0, 50)+'</option>';
+        return '<option value="'+value+'">'+text+'</option>';
     }
 
     /*
      * (function) Make option 'disabled' item (title) for the filter
      */
     function main_filter_make_option_selected(value, text) {
-        return '<option selected value="'+value+'">'+text.substring(0, 50)+'</option>';
+        return '<option selected value="'+value+'">'+text+'</option>';
     }
 
     /*
@@ -394,3 +394,10 @@
         } 
     }
 </script>
+
+<style>
+    /* Custom CSS to set max-width for Selectpicker dropdown menu */
+    .dropdown-menu.show {
+        max-width: 600px; /* Adjust max-width as needed */
+    }
+</style>

@@ -227,7 +227,7 @@ async function performInteractions(page) {
         await page.click('body');
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
 
-        // Get the list of selected diseases as effect 
+        // Get the list of selected diseases as effect of disease_filter
         logger.info(`Retrieving the list of selected diseases for '${disease_filter}...`);
         await page.click('button[data-id="main_filter"]');
         selectedDiseases = await page.evaluate(() => {
@@ -288,13 +288,13 @@ async function extractTableData(page) {
     if (pageListDisplayed) {
         logger.debug(`Expanding and sorting table...`);
         // Click on the "Cases" column header twice to sort descending
-        await page.click('#table_primary thead th:nth-child(2)'); // Adjust nth-child index as needed
+        await page.click('#table_primary thead th:nth-child(2)'); // Click to sort (ascending)
         await page.click('#table_primary thead th:nth-child(2)'); // Click twice to sort descending
     
         // Select the dropdown menu for page size and click on 'All'
         await page.click('.page-size'); 
         await page.waitForSelector('.dropdown-menu.show .dropdown-item'); // Wait for dropdown items to appear
-        await page.click('.dropdown-menu.show .dropdown-item:last-child'); // Click on the last item (All)
+        await page.click('.dropdown-menu.show .dropdown-item:last-child'); // Click on the last item 'All'
     
         // Delay 1 seconds
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));
