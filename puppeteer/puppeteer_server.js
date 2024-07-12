@@ -291,10 +291,10 @@ async function extractTableData(page) {
         await page.click('#table_primary thead th:nth-child(2)'); // Adjust nth-child index as needed
         await page.click('#table_primary thead th:nth-child(2)'); // Click twice to sort descending
     
-        // Select the dropdown menu for page size and click on 10
+        // Select the dropdown menu for page size and click on 'All'
         await page.click('.page-size'); 
         await page.waitForSelector('.dropdown-menu.show .dropdown-item'); // Wait for dropdown items to appear
-        await page.click('.dropdown-menu.show .dropdown-item:nth-child(5)'); // Click on the 5th item (All)
+        await page.click('.dropdown-menu.show .dropdown-item:last-child'); // Click on the last item (All)
     
         // Delay 1 seconds
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));
