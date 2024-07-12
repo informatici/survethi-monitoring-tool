@@ -7,6 +7,7 @@ const { promisify } = require('util');
 const stat = promisify(fs.stat);
 const unlink = promisify(fs.unlink);
 const winston = require('winston');
+const XLSX = require('xlsx');
 
 require('dotenv').config();
 
@@ -138,7 +139,7 @@ async function generatePDFWithInteractions(url, outputPath) {
         if (tableHasData) {
             // Extract table data
             const tableData = await extractTableData(page);
-            // Generate HTML table
+            // Generate HTML table for the top 10 only
             tableHtml = generateHtmlTable(tableData);
         } else {
             logger.info('No data available in the table.');
@@ -171,7 +172,7 @@ async function generatePDFWithInteractions(url, outputPath) {
             .replace('{{month}}', month)
             .replace('{{year}}', year)
             .replace('{{mapImage}}', mapImageUrl)
-            .replace('{{table}}', tableHtml)
+            .replace('{{dataTable}}', tableHtml)
             .replace('{{diseaseList}}', selectedDiseasesHtml);
         
         await page.setContent(renderedHTML);
@@ -235,7 +236,7 @@ async function performInteractions(page) {
         });
         // Click outside the dropdown (it should not trigger reload)
         await page.click('body');
-        console.log('Selected diseases size : ' + selectedDiseases.length);
+        logger.debug('Selected diseases size : ' + selectedDiseases.length);
         selectedDiseases.forEach(disease => logger.debug('==> ' + disease));
 
     } else {
@@ -285,7 +286,7 @@ async function extractTableData(page) {
     logger.debug(`Table rows > 5: ${pageListDisplayed}.`);
 
     if (pageListDisplayed) {
-        logger.debug(`Expanding table for top 10...`);
+        logger.debug(`Expanding and sorting table...`);
         // Click on the "Cases" column header twice to sort descending
         await page.click('#table_primary thead th:nth-child(2)'); // Adjust nth-child index as needed
         await page.click('#table_primary thead th:nth-child(2)'); // Click twice to sort descending
@@ -293,28 +294,46 @@ async function extractTableData(page) {
         // Select the dropdown menu for page size and click on 10
         await page.click('.page-size'); 
         await page.waitForSelector('.dropdown-menu.show .dropdown-item'); // Wait for dropdown items to appear
-        await page.click('.dropdown-menu.show .dropdown-item:nth-child(2)'); // Click on the 2nd item
+        await page.click('.dropdown-menu.show .dropdown-item:nth-child(5)'); // Click on the 5th item (All)
     
         // Delay 1 seconds
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));
     }
 
     // Extract specific columns from the table
-    logger.info(`Extracting table...`);
+    logger.info(`Extracting relevant data...`);
     const tableData = await page.evaluate(() => {
         const tableRows = Array.from(document.querySelectorAll('#table_primary tbody tr'));
         return tableRows.map(row => {
-        const columns = row.querySelectorAll('td');
-        return {
-            type: columns[0].textContent.trim(),        // Type
-            cases: columns[1].textContent.trim(),       // Cases
-            disease: columns[2].textContent.trim(),     // Disease
-            woredaTown: columns[3].textContent.trim(),  // Woreda/Town
-            kebele: columns[4].textContent.trim()       // Kebele
-        };
+            const columns = row.querySelectorAll('td');
+            return {
+                type: columns[0].textContent.trim(),        // Type
+                cases: columns[1].textContent.trim(),       // Cases
+                disease: columns[2].textContent.trim(),     // Disease
+                woredaTown: columns[3].textContent.trim(),  // Woreda/Town
+                kebele: columns[4].textContent.trim()       // Kebele
+            };
         });
     });
+
+    await exportToExcel(tableData)
+
     return tableData;
+}
+
+async function exportToExcel(tableData) {
+    logger.info(`Exporting to Excel file...`);
+    // Create a new workbook and a new sheet
+    const workbook = XLSX.utils.book_new();
+    const worksheet = XLSX.utils.json_to_sheet(tableData);
+
+    // Append the sheet to the workbook
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Table Data');
+
+    // Write the workbook to a file
+    XLSX.writeFile(workbook, 'tableData.xlsx');
+
+    logger.info(`Excel file saved to ${'tableData.xlsx'}`);
 }
 
 function generateHtmlDiseaseList(diseaseList) {
@@ -338,6 +357,14 @@ function generateHtmlDiseaseList(diseaseList) {
 }
 
 function generateHtmlTable(tableData) {
+    logger.info(`Generate HTML for TOP 10 table with total...`);
+
+    // Slice the table data to get the first 10 rows
+    const rowsToDisplay = tableData.slice(0, 10);
+
+    // Calculate the total cases
+    const totalCases = tableData.reduce((sum, row) => sum + parseInt(row.cases, 10), 0);
+
     const tableHtml = `
         <table border="1" style="border-collapse: collapse; border: 1px solid #000; width: 100%; text-align: left;">
         <thead>
@@ -350,7 +377,7 @@ function generateHtmlTable(tableData) {
             </tr>
         </thead>
         <tbody>
-            ${tableData.map(row => `
+            ${rowsToDisplay.map(row => `
             <tr>
                 <td style="border: 1px solid #000; padding: 8px; text-align: left;">${row.type}</td>
                 <td style="border: 1px solid #000; padding: 8px; text-align: left;">${row.woredaTown}</td>
@@ -359,6 +386,19 @@ function generateHtmlTable(tableData) {
                 <td style="border: 1px solid #000; padding: 8px; text-align: right;">${row.cases}</td>
             </tr>
             `).join('')}
+            ${tableData.length > 10 ? `
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">...</td>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">...</td>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">...</td>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">...</td>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: right;">...</td>
+                </tr>
+                ` : ''}
+            <tr>
+                <td style="border: 1px solid #000; padding: 8px; text-align: right;" colspan="4">Total:</td>
+                <td style="border: 1px solid #000; padding: 8px; text-align: right;"><strong>${totalCases}</strong></td>
+            </tr>    
         </tbody>
         </table>
     `;
@@ -404,6 +444,10 @@ async function sendEmailWithAttachments(filePath) {
             attachments: [
                 {   // Attach PDF file
                     filename: 'generated.pdf',
+                    path: path.join(__dirname, filePath)
+                },
+                {   // Attach PDF file
+                    filename: 'tableData.xlsx',
                     path: path.join(__dirname, filePath)
                 }
             ]
