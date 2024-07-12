@@ -228,7 +228,7 @@ async function performInteractions(page) {
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
 
         // Get the list of selected diseases as effect of disease_filter
-        logger.info(`Retrieving the list of selected diseases for '${disease_filter}...`);
+        logger.info(`Retrieving the list of selected diseases for '${disease_filter}'...`);
         await page.click('button[data-id="main_filter"]');
         selectedDiseases = await page.evaluate(() => {
             const options = document.querySelectorAll('.dropdown-item.selected');
