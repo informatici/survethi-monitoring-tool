@@ -8,6 +8,8 @@ const stat = promisify(fs.stat);
 const unlink = promisify(fs.unlink);
 const winston = require('winston');
 const XLSX = require('xlsx');
+const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
+
 
 require('dotenv').config();
 
@@ -17,6 +19,7 @@ const logLevel = process.env.PUPPETEER_LOGLEVEL || "info"
 const templatePath = process.env.PUPPETEER_TEMPLATE + '.html' || "pdf_template.html"
 const disease_filter = process.env.REPORT_DISEASE_FILTER || ""
 const temporal_filter = process.env.REPORT_TEMPORAL_FILTER || ""
+const graphImageOutputPath = "chart.png"
 
 var selectedDiseases = []
 
@@ -141,6 +144,9 @@ async function generatePDFWithInteractions(url, outputPath) {
             const tableData = await extractTableData(page);
             // Generate HTML table for the top 10 only
             tableHtml = generateHtmlTable(tableData);
+            // Generate graph from tableData
+            generateBarChart(tableData, graphImageOutputPath);
+
         } else {
             logger.info('No data available in the table.');
         }
@@ -153,6 +159,7 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Extract data from the webpage
         const pageTitle = await page.title();
         const mapImageUrl = await extractMapImage(page);
+        const mapGraphUrl = await extractGraphImage(graphImageOutputPath);
 
         // Read the PDF template
         const htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
@@ -173,6 +180,7 @@ async function generatePDFWithInteractions(url, outputPath) {
             .replace('{{year}}', year)
             .replace('{{mapImage}}', mapImageUrl)
             .replace('{{dataTable}}', tableHtml)
+            .replace('{{graphImage}}', mapGraphUrl)
             .replace('{{diseaseList}}', selectedDiseasesHtml);
         
         await page.setContent(renderedHTML);
@@ -207,6 +215,68 @@ async function generatePDFWithInteractions(url, outputPath) {
         await browser.close();
         logger.info('Browser closed.');
     }
+}
+
+async function generateBarChart(tableData, outputPath) {
+    logger.info(`Generating chart...`);
+    // Prepare the data
+    const groupedData = tableData.reduce((acc, row) => {
+        if (!acc[row.disease]) {
+            acc[row.disease] = {};
+        }
+        if (!acc[row.disease][row.woreda]) {
+            acc[row.disease][row.woreda] = 0;
+        }
+        acc[row.disease][row.woreda] += parseInt(row.cases, 10);
+        return acc;
+    }, {});
+
+    const diseases = Object.keys(groupedData);
+    const woredas = [...new Set(tableData.map(row => row.woreda))];
+
+    const datasets = diseases.map(disease => ({
+        label: disease,
+        data: woredas.map(woreda => groupedData[disease][woreda] || 0),
+        backgroundColor: `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`,
+        borderColor: `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1)`,
+        borderWidth: 1
+    }));
+
+    // Create the chart
+    const width = 800; // width of the canvas
+    const height = 600; // height of the canvas
+    const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
+
+    const configuration = {
+        type: 'bar',
+        data: {
+            labels: woredas,
+            datasets: datasets
+        },
+        options: {
+            scales: {
+                x: {
+                    beginAtZero: true
+                },
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            }
+        }
+    };
+
+    const image = await chartJSNodeCanvas.renderToBuffer(configuration);
+
+    // Save the chart as an image
+    fs.writeFileSync(outputPath, image);
+    logger.info(`Chart saved as ${outputPath}`);
 }
 
 async function performInteractions(page) {
@@ -429,6 +499,13 @@ function generateHtmlTable(tableData) {
         </table>
     `;
     return tableHtml;
+}
+
+async function extractGraphImage(graphImagePath) {
+    // Convert the graph image to a base64 data URL
+    const graphImageBase64 = fs.readFileSync(graphImagePath, { encoding: 'base64' });
+    const grahpImageUrl = `<img src="data:image/png;base64,${graphImageBase64}" alt="Map">`;
+    return grahpImageUrl
 }
 
 async function extractMapImage(page) {

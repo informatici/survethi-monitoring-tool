@@ -17,6 +17,12 @@
         .content {
             margin-bottom: 20px;
         }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
         /* Add more styles as needed */
     </style>
 </head>
@@ -30,13 +36,13 @@
     <div class="content">
         <p>This is a sample PDF report generated using Puppeteer and can be customized using the following placeholders.</p>
 		<p>It can include a map:</p>
-        <div>{{mapImage}}</div>
-		<p>It can include a table:</p>
-		<div>{{dataTable}}</div>
-		<p>It can include a graph:</p>
-		<div>{{graphImage}}</div>
+        <div class="image-container">{{mapImage}}</div>
+        <p>It can include a table:</p>
+        <div>{{dataTable}}</div>
+        <p>It can include a graph:</p>
+        <div class="image-container">{{graphImage}}</div>
         <p>It can include a list:</p>
-		<div>{{diseaseList}}</div>
+        <div>{{diseaseList}}</div>
     </div>
 </body>
 </html>

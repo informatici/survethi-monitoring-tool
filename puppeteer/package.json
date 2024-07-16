@@ -1,5 +1,8 @@
 {
     "dependencies": {
+        "canvas": "^2.11.2",
+        "chart.js": "^3.9.1",
+        "chartjs-node-canvas": "^4.1.6",
         "dotenv": "^16.4.5",
         "express": "^4.17.2",
         "nodemailer": "^6.9.14",
