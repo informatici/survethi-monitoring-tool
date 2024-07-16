@@ -145,7 +145,7 @@ async function generatePDFWithInteractions(url, outputPath) {
             logger.info('No data available in the table.');
         }
 
-        var selectedDiseasesHtml = "No disease selected."
+        var selectedDiseasesHtml = "No (or all) disease selected."
         if (selectedDiseases.length > 0) {
             selectedDiseasesHtml = generateHtmlDiseaseList(selectedDiseases);
         }
@@ -225,6 +225,10 @@ async function performInteractions(page) {
 
         // Click outside the dropdown to trigger the map update and wait 5 seconds
         await page.click('body');
+        await page.waitForFunction(() => {
+            const loadingIndicator = document.querySelector('#map-loading-indicator');
+            return loadingIndicator && !loadingIndicator.classList.contains('loading');
+        }, { timeout: 60000 });
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
 
         // Get the list of selected diseases as effect of disease_filter
@@ -236,6 +240,8 @@ async function performInteractions(page) {
         });
         // Click outside the dropdown (it should not trigger reload)
         await page.click('body');
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
+        
         logger.debug('Selected diseases size : ' + selectedDiseases.length);
         selectedDiseases.forEach(disease => logger.debug('==> ' + disease));
 
@@ -290,14 +296,34 @@ async function extractTableData(page) {
         // Click on the "Cases" column header twice to sort descending
         await page.click('#table_primary thead th:nth-child(2)'); // Click to sort (ascending)
         await page.click('#table_primary thead th:nth-child(2)'); // Click twice to sort descending
+
+        // Delay 3 seconds
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 3000)));
     
         // Select the dropdown menu for page size and click on 'All'
         await page.click('.page-size'); 
         await page.waitForSelector('.dropdown-menu.show .dropdown-item'); // Wait for dropdown items to appear
-        await page.click('.dropdown-menu.show .dropdown-item:last-child'); // Click on the last item 'All'
-    
-        // Delay 1 seconds
-        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 1000)));
+
+        // Find the dropdown item with the text "All" and click it
+        logger.debug('==> Finding the "All" dropdown item...');
+        const allItemClicked = await page.evaluate(() => {
+            const items = Array.from(document.querySelectorAll('.dropdown-menu.show .dropdown-item'));
+            const allItem = items.find(item => item.textContent.trim() === 'All');
+            if (allItem) {
+                allItem.click();
+                return true;
+            }
+            return false;
+        });
+
+        if (!allItemClicked) {
+            throw new Error('Dropdown item "All" not found');
+        }
+
+        logger.debug('==> "All" dropdown item clicked');
+
+        // Delay 5 seconds
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
     }
 
     // Extract specific columns from the table
@@ -310,7 +336,7 @@ async function extractTableData(page) {
                 type: columns[0].textContent.trim(),        // Type
                 cases: columns[1].textContent.trim(),       // Cases
                 disease: columns[2].textContent.trim(),     // Disease
-                woredaTown: columns[3].textContent.trim(),  // Woreda/Town
+                woreda: columns[3].textContent.trim(),      // Woreda
                 kebele: columns[4].textContent.trim()       // Kebele
             };
         });
@@ -370,7 +396,7 @@ function generateHtmlTable(tableData) {
         <thead>
             <tr>
                 <th style="border: 1px solid #000; padding: 8px; text-align: left;">Type</th>
-                <th style="border: 1px solid #000; padding: 8px; text-align: left;">Woreda/Town</th>
+                <th style="border: 1px solid #000; padding: 8px; text-align: left;">Woreda</th>
                 <th style="border: 1px solid #000; padding: 8px; text-align: left;">Kebele</th>
                 <th style="border: 1px solid #000; padding: 8px; text-align: left;">Disease</th>
                 <th style="border: 1px solid #000; padding: 8px; text-align: right;">Cases</th>
@@ -380,7 +406,7 @@ function generateHtmlTable(tableData) {
             ${rowsToDisplay.map(row => `
             <tr>
                 <td style="border: 1px solid #000; padding: 8px; text-align: left;">${row.type}</td>
-                <td style="border: 1px solid #000; padding: 8px; text-align: left;">${row.woredaTown}</td>
+                <td style="border: 1px solid #000; padding: 8px; text-align: left;">${row.woreda}</td>
                 <td style="border: 1px solid #000; padding: 8px; text-align: left;">${row.kebele}</td>
                 <td style="border: 1px solid #000; padding: 8px; text-align: left;">${row.disease}</td>
                 <td style="border: 1px solid #000; padding: 8px; text-align: right;">${row.cases}</td>
