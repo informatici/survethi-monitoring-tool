@@ -9,6 +9,7 @@ const unlink = promisify(fs.unlink);
 const winston = require('winston');
 const XLSX = require('xlsx');
 const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
+const { v4: uuidv4 } = require('uuid');
 
 
 require('dotenv').config();
@@ -19,7 +20,18 @@ const logLevel = process.env.PUPPETEER_LOGLEVEL || "info"
 const templatePath = process.env.PUPPETEER_TEMPLATE + '.html' || "pdf_template.html"
 const disease_filter = process.env.REPORT_DISEASE_FILTER || ""
 const temporal_filter = process.env.REPORT_TEMPORAL_FILTER || ""
-const graphImageOutputPath = "chart.png"
+
+// Generate random filenames with timestamp
+const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
+const pdfFilename = `pdf_${timestamp}_${uuidv4()}.pdf`;
+const xlsxFilename = `xls_${timestamp}_${uuidv4()}.xlsx`;
+const mapFilename = `map_${timestamp}_${uuidv4()}.png`;
+const graphFilename = `chart_${timestamp}_${uuidv4()}.png`;
+
+// Create attachment filenames
+const date = timestamp.slice(0,8);
+const pdfAttachment = `report_${date}_${disease_filter}_${temporal_filter}.pdf`;
+const xlsxAttachment = `data_${date}_${disease_filter}_${temporal_filter}.xlsx`;
 
 var selectedDiseases = []
 
@@ -107,7 +119,7 @@ function replaceImagePathsWithBase64(htmlTemplate, baseDir) {
     });
 }
 
-async function generatePDFWithInteractions(url, outputPath) {
+async function generatePDFWithInteractions(url) {
     logger.info(`Start generating PDF from interactions with ${url}...`);
 
     const browser = await puppeteer.launch({
@@ -145,7 +157,7 @@ async function generatePDFWithInteractions(url, outputPath) {
             // Generate HTML table for the top 10 only
             tableHtml = generateHtmlTable(tableData);
             // Generate graph from tableData
-            generateBarChart(tableData, graphImageOutputPath);
+            generateBarChart(tableData);
 
         } else {
             logger.info('No data available in the table.');
@@ -159,7 +171,7 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Extract data from the webpage
         const pageTitle = await page.title();
         const mapImageUrl = await extractMapImage(page);
-        const mapGraphUrl = await extractGraphImage(graphImageOutputPath);
+        const mapGraphUrl = await extractGraphImage(graphFilename);
 
         // Read the PDF template
         const htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
@@ -190,7 +202,7 @@ async function generatePDFWithInteractions(url, outputPath) {
         
         // Generate PDF
         await page.pdf({
-            path: outputPath,
+            path: pdfFilename,
             format: 'A4',
             displayHeaderFooter: true,
             printBackground: true,
@@ -205,7 +217,7 @@ async function generatePDFWithInteractions(url, outputPath) {
         // Delay 5 seconds
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
 
-        logger.info(`PDF generated successfully at ${outputPath}`);
+        logger.info(`PDF generated successfully at ${pdfFilename}`);
 
     } catch (error) {
         logger.error('Error generating PDF:', error);
@@ -217,7 +229,7 @@ async function generatePDFWithInteractions(url, outputPath) {
     }
 }
 
-async function generateBarChart(tableData, outputPath) {
+async function generateBarChart(tableData) {
     logger.info(`Generating chart...`);
     // Prepare the data
     const groupedData = tableData.reduce((acc, row) => {
@@ -275,8 +287,8 @@ async function generateBarChart(tableData, outputPath) {
     const image = await chartJSNodeCanvas.renderToBuffer(configuration);
 
     // Save the chart as an image
-    fs.writeFileSync(outputPath, image);
-    logger.info(`Chart saved as ${outputPath}`);
+    fs.writeFileSync(graphFilename, image);
+    logger.info(`Chart saved as ${graphFilename}`);
 }
 
 async function performInteractions(page) {
@@ -427,9 +439,9 @@ async function exportToExcel(tableData) {
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Table Data');
 
     // Write the workbook to a file
-    XLSX.writeFile(workbook, 'tableData.xlsx');
+    XLSX.writeFile(workbook, xlsxFilename);
 
-    logger.info(`Excel file saved to ${'tableData.xlsx'}`);
+    logger.info(`Excel file saved to ${xlsxFilename}`);
 }
 
 function generateHtmlDiseaseList(diseaseList) {
@@ -510,9 +522,9 @@ async function extractGraphImage(graphImagePath) {
 
 async function extractMapImage(page) {
     const mapElement = await page.$('#mapid');
-    const mapImagePath = path.join(__dirname, 'map.png');
+    const mapImagePath = path.join(__dirname, mapFilename);
     // Take a screenshot of the map
-    await mapElement.screenshot({ path: 'map.png' });
+    await mapElement.screenshot({ path: mapFilename });
     // Convert the map image to a base64 data URL
     const mapImageBase64 = fs.readFileSync(mapImagePath, { encoding: 'base64' });
     const mapImageUrl = `<img src="data:image/png;base64,${mapImageBase64}" alt="Map">`;
@@ -546,12 +558,12 @@ async function sendEmailWithAttachments() {
             text: process.env.NODEMAIL_BODY || 'Please find attached the PDF report.',
             attachments: [
                 {   // Attach PDF file
-                    filename: 'generated.pdf',
-                    path: path.join(__dirname, 'generated.pdf')
+                    filename: pdfAttachment,
+                    path: path.join(__dirname, pdfFilename)
                 },
                 {   // Attach PDF file
-                    filename: 'tableData.xlsx',
-                    path: path.join(__dirname, 'tableData.xlsx'),
+                    filename: xlsxAttachment,
+                    path: path.join(__dirname, xlsxFilename),
                 }
             ]
         };
@@ -572,15 +584,14 @@ async function sendEmailWithAttachments() {
 
 app.get('/generate-pdf', async (req, res) => {
     const { url } = req.query;
-    const outputPath = 'generated.pdf';
 
     // Generate PDF
     try {
-        await generatePDFWithInteractions(url, outputPath);
+        await generatePDFWithInteractions(url);
     
-        // Check if the outputPath file exists
+        // Check if the pdfFilename file exists
         try {
-            await stat(outputPath);
+            await stat(pdfFilename);
         } catch (err) {
             logger.error('Error checking file:', err);
             res.status(500).send('Error checking file');
@@ -592,9 +603,12 @@ app.get('/generate-pdf', async (req, res) => {
             try {
                 await sendEmailWithAttachments();
 
-                // Delete the file after sending email
+                // Delete generated files after sending email
                 try {
-                    await unlink(outputPath);
+                    await unlink(pdfFilename);
+                    await unlink(xlsxFilename);
+                    await unlink(mapFilename);
+                    await unlink(graphFilename);
                 } catch (err) {
                     logger.error('Error deleting file:', err);
                     res.status(500).send('Error deleting file');
