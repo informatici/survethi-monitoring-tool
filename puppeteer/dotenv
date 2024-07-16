@@ -8,6 +8,8 @@ NODEMAIL_APP_PASSWORD=your_app_password
 NODEMAIL_DEBUG=false|true
 NODEMAIL_LOGGER=false|true
 NODEMAIL_RECIPIENTS=email1@gmail.com,email2@gmail.com
+NODEMAIL_SUBJECT=Weekly TB report
+NODEMAIL_BODY=Please find attached the PDF report.
 PUPPETEER_LOGLEVEL=info
 PUPPETEER_TEMPLATE=pdf_template
 # REPORT_DISEASE_FILTER possible values:

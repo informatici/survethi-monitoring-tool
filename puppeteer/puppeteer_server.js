@@ -519,7 +519,7 @@ async function extractMapImage(page) {
     return mapImageUrl
 }
 
-async function sendEmailWithAttachments(filePath) {
+async function sendEmailWithAttachments() {
     logger.info(`Send Email with attachments...`);
     
     try {
@@ -542,16 +542,16 @@ async function sendEmailWithAttachments(filePath) {
         let mailOptions = {
             from: process.env.NODEMAIL_EMAIL,
             to: [process.env.NODEMAIL_RECIPIENTS],
-            subject: 'PDF Report',
-            text: 'Please find attached the PDF report.',
+            subject: process.env.NODEMAIL_SUBJECT || 'PDF report',
+            text: process.env.NODEMAIL_BODY || 'Please find attached the PDF report.',
             attachments: [
                 {   // Attach PDF file
                     filename: 'generated.pdf',
-                    path: path.join(__dirname, filePath)
+                    path: path.join(__dirname, 'generated.pdf')
                 },
                 {   // Attach PDF file
                     filename: 'tableData.xlsx',
-                    path: path.join(__dirname, filePath)
+                    path: path.join(__dirname, 'tableData.xlsx'),
                 }
             ]
         };
@@ -559,7 +559,8 @@ async function sendEmailWithAttachments(filePath) {
         // Send email and await completion
         logger.info(`Sending email... `);
         let info = await transporter.sendMail(mailOptions);
-        logger.info('Email sent:', info.response);
+        logger.info('Email sent successfully.');
+        logger.debug('Email response:', info);
 
         return info;
 
@@ -589,7 +590,7 @@ app.get('/generate-pdf', async (req, res) => {
         if (process.env.NODEMAIL_ACTIVE === 'true') {
             // Send email with attachments and await completion
             try {
-                await sendEmailWithAttachments(outputPath);
+                await sendEmailWithAttachments();
 
                 // Delete the file after sending email
                 try {
