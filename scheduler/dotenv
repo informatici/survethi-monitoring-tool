@@ -13,3 +13,9 @@ CRON_SCHEDULE=0 8 * * 1
 #  -: Specifies a range of values (e.g., 1-5 in the day of the week field means "Monday through Friday")
 #  /: Specifies a step value (e.g., */5 in the minute field means "every 5 minutes")
 SCHEDULER_LOGLEVEL=info
+
+PUPPETEER_TEMPLATE=pdf_template_tb_monthly
+NODEMAIL_SUBJECT=Monthly TB report
+NODEMAIL_BODY=Please find attached the PDF report.
+REPORT_DISEASE_FILTER=TB # WHO, COVID, TB
+REPORT_TEMPORAL_FILTER=month1 # today, yesterday, days3, week1, weeks2, month1, months3
