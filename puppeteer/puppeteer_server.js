@@ -16,10 +16,14 @@ require('dotenv').config();
 
 const app = express();
 const port = 3000;
-const logLevel = process.env.PUPPETEER_LOGLEVEL || "info"
-const templatePath = process.env.PUPPETEER_TEMPLATE + '.html' || "pdf_template.html"
-const disease_filter = process.env.REPORT_DISEASE_FILTER || ""
-const temporal_filter = process.env.REPORT_TEMPORAL_FILTER || ""
+
+// Global default values
+let logLevel = process.env.PUPPETEER_LOGLEVEL || "info";
+let templatePath = process.env.PUPPETEER_TEMPLATE + '.html' || "pdf_template.html";
+let diseaseFilter = process.env.REPORT_DISEASE_FILTER || "";
+let temporalFilter = process.env.REPORT_TEMPORAL_FILTER || "";
+let emailSubject = process.env.NODEMAIL_SUBJECT || 'PDF report';
+let emailBody = process.env.NODEMAIL_BODY || 'Please find attached the PDF report.';
 
 // Generate random filenames with timestamp
 const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
@@ -30,8 +34,8 @@ const graphFilename = `chart_${timestamp}_${uuidv4()}.png`;
 
 // Create attachment filenames
 const date = timestamp.slice(0,8);
-const pdfAttachment = `report_${date}_${disease_filter}_${temporal_filter}.pdf`;
-const xlsxAttachment = `data_${date}_${disease_filter}_${temporal_filter}.xlsx`;
+let pdfAttachment = `report_${date}_${diseaseFilter}_${temporalFilter}.pdf`;
+let xlsxAttachment = `data_${date}_${diseaseFilter}_${temporalFilter}.xlsx`;
 
 var selectedDiseases = []
 
@@ -51,12 +55,12 @@ const logger = winston.createLogger({
 });
 
 function getFormattedDate() {
-    logger.debug(`Calculating fromDate, toDate, month, year for '${temporal_filter}' selector...`)
+    logger.debug(`Calculating fromDate, toDate, month, year for '${temporalFilter}' selector...`)
     const now = new Date();
     let toDate = now;
     let fromDate = new Date(toDate);
 
-    switch (temporal_filter) {
+    switch (temporalFilter) {
         case 'today':
             fromDate = toDate;
             break;
@@ -181,7 +185,7 @@ async function generatePDFWithInteractions(url) {
         const updatedHtmlTemplate = replaceImagePathsWithBase64(htmlTemplate, baseDir);
 
         // Get temporal placeholders
-        const { fromDate, toDate, month, year } = getFormattedDate(disease_filter);
+        const { fromDate, toDate, month, year } = getFormattedDate(diseaseFilter);
 
         // Replace placeholders in the template with extracted data
         const renderedHTML = updatedHtmlTemplate
@@ -294,15 +298,15 @@ async function generateBarChart(tableData) {
 async function performInteractions(page) {
 
     // Click the disease filters
-    if (disease_filter != "") {
+    if (diseaseFilter != "") {
         logger.info('Waiting for disease filter button...');
         await page.waitForSelector(`button[data-id="main_filter"]`, { timeout: 60000 });
         logger.info('Disease filter button found.');
 
-        logger.info(`Select disease filter '${disease_filter}'...`);
+        logger.info(`Select disease filter '${diseaseFilter}'...`);
         await page.click('button[data-id="main_filter"]');
         await page.waitForSelector('.dropdown-menu.show', { timeout: 60000 });
-        await page.select('select#main_filter', disease_filter);
+        await page.select('select#main_filter', diseaseFilter);
         logger.info('Disease filter selected.');
 
         // Click outside the dropdown to trigger the map update and wait 5 seconds
@@ -313,8 +317,8 @@ async function performInteractions(page) {
         }, { timeout: 60000 });
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
 
-        // Get the list of selected diseases as effect of disease_filter
-        logger.info(`Retrieving the list of selected diseases for '${disease_filter}'...`);
+        // Get the list of selected diseases as effect of diseaseFilter
+        logger.info(`Retrieving the list of selected diseases for '${diseaseFilter}'...`);
         await page.click('button[data-id="main_filter"]');
         selectedDiseases = await page.evaluate(() => {
             const options = document.querySelectorAll('.dropdown-item.selected');
@@ -332,11 +336,11 @@ async function performInteractions(page) {
     }
 
     // Click the week1 button
-    if (temporal_filter != "") {
-        logger.info(`Select '${temporal_filter}' button...`);
-        await page.waitForSelector(`button#${temporal_filter}`, { timeout: 60000 });
-        logger.info(`Clicking ${temporal_filter} button...`);
-        await page.click(`button#${temporal_filter}`);
+    if (temporalFilter != "") {
+        logger.info(`Select '${temporalFilter}' button...`);
+        await page.waitForSelector(`button#${temporalFilter}`, { timeout: 60000 });
+        logger.info(`Clicking ${temporalFilter} button...`);
+        await page.click(`button#${temporalFilter}`);
     }else {
         logger.info(`No temporal filter selected.`);
     }
@@ -554,8 +558,8 @@ async function sendEmailWithAttachments() {
         let mailOptions = {
             from: process.env.NODEMAIL_EMAIL,
             to: [process.env.NODEMAIL_RECIPIENTS],
-            subject: process.env.NODEMAIL_SUBJECT || 'PDF report',
-            text: process.env.NODEMAIL_BODY || 'Please find attached the PDF report.',
+            subject: emailSubject,
+            text: emailBody,
             attachments: [
                 {   // Attach PDF file
                     filename: pdfAttachment,
@@ -585,9 +589,20 @@ async function sendEmailWithAttachments() {
 app.get('/generate-pdf', async (req, res) => {
     const { url } = req.query;
 
+    // Override global values with query parameters if provided
+    if (req.query.templatePath) templatePath = req.query.templatePath;
+    if (req.query.diseaseFilter) diseaseFilter = req.query.diseaseFilter;
+    if (req.query.temporalFilter) temporalFilter = req.query.temporalFilter;
+    if (req.query.emailSubject) emailSubject = req.query.emailSubject;
+    if (req.query.emailBody) emailBody = req.query.emailBody;
+    if (req.query.diseaseFilter || req.query.temporalFilter) {
+        pdfAttachment = `report_${date}_${diseaseFilter}_${temporalFilter}.pdf`;
+        xlsxAttachment = `data_${date}_${diseaseFilter}_${temporalFilter}.xlsx`;
+    }
+    
     // Generate PDF
     try {
-        await generatePDFWithInteractions(url);
+        await generatePDFWithInteractions(req.query.url);
     
         // Check if the pdfFilename file exists
         try {
