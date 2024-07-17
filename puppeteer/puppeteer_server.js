@@ -618,18 +618,6 @@ app.get('/generate-pdf', async (req, res) => {
             try {
                 await sendEmailWithAttachments();
 
-                // Delete generated files after sending email
-                try {
-                    await unlink(pdfFilename);
-                    await unlink(xlsxFilename);
-                    await unlink(mapFilename);
-                    await unlink(graphFilename);
-                } catch (err) {
-                    logger.error('Error deleting file:', err);
-                    res.status(500).send('Error deleting file');
-                    return;
-                }
-
                 // If everything is successful, send a success response
                 res.status(200).send('PDF generated and email sent successfully');
                 
@@ -645,6 +633,16 @@ app.get('/generate-pdf', async (req, res) => {
         logger.error('Error generating PDF file:', err);
         res.status(500).send('Error generating PDF file');
         return;
+    } finally {
+        // Delete generated files
+        const files = [pdfFilename, xlsxFilename, mapFilename, graphFilename];
+        for (const file of files) {
+            try {
+                await unlink(file);
+            } catch (err) {
+                logger.error(`Error deleting file ${file}:`, err);
+            }
+        }
     }
 });
 
