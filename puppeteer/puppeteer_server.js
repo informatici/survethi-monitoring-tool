@@ -518,10 +518,18 @@ function generateHtmlTable(tableData) {
 }
 
 async function extractGraphImage(graphImagePath) {
-    // Convert the graph image to a base64 data URL
-    const graphImageBase64 = fs.readFileSync(graphImagePath, { encoding: 'base64' });
-    const grahpImageUrl = `<img src="data:image/png;base64,${graphImageBase64}" alt="Map">`;
-    return grahpImageUrl
+    let graphImageUrl = 'No data.';
+    try {
+        await stat(graphImagePath); // Check if the file exists
+        const graphImageBase64 = fs.readFileSync(graphImagePath, { encoding: 'base64' });
+        graphImageUrl = `<img src="data:image/png;base64,${graphImageBase64}" alt="Graph">`;
+    } catch (err) {
+        if (err.code !== 'ENOENT') {
+            // Log other errors
+            console.error(`Error accessing file ${graphImagePath}:`, err);
+        }
+    }
+    return graphImageUrl;
 }
 
 async function extractMapImage(page) {
@@ -555,7 +563,7 @@ async function sendEmailWithAttachments() {
 
         // Email content
         logger.info(`Configure email server... `);
-        let mailOptions = {
+        const mailOptions = {
             from: process.env.NODEMAIL_EMAIL,
             to: [process.env.NODEMAIL_RECIPIENTS],
             subject: emailSubject,
@@ -564,13 +572,25 @@ async function sendEmailWithAttachments() {
                 {   // Attach PDF file
                     filename: pdfAttachment,
                     path: path.join(__dirname, pdfFilename)
-                },
-                {   // Attach PDF file
-                    filename: xlsxAttachment,
-                    path: path.join(__dirname, xlsxFilename),
                 }
             ]
         };
+        
+        // Check if xlsx file exists and add to attachments if it does
+        try {
+            await stat(path.join(__dirname, xlsxFilename));
+            mailOptions.attachments.push({
+                filename: xlsxAttachment,
+                path: path.join(__dirname, xlsxFilename)
+            });
+        } catch (err) {
+            if (err.code !== 'ENOENT') {
+                // Log other errors
+                console.error(`Error accessing file ${xlsxFilename}:`, err);
+            } else {
+                logger.info('xlsx file does not exist, skipping attachment.');
+            }
+        }
 
         // Send email and await completion
         logger.info(`Sending email... `);
@@ -640,7 +660,7 @@ app.get('/generate-pdf', async (req, res) => {
             try {
                 await unlink(file);
             } catch (err) {
-                logger.error(`Error deleting file ${file}:`, err);
+                logger.debug(`File ${file} was not created: nothing to delete.`);
             }
         }
     }
