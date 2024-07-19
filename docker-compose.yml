@@ -2,12 +2,21 @@ version: '3.4'
 
 services:
 
-  scheduler:
+  scheduler-week:
     build:
       context: ./scheduler
       dockerfile: Dockerfile.scheduler
     env_file:
-      - .env
+      - ./scheduler/.env-week
+    networks:
+      - survethi-net
+
+  scheduler-month:
+    build:
+      context: ./scheduler
+      dockerfile: Dockerfile.scheduler
+    env_file:
+      - ./scheduler/.env-month
     networks:
       - survethi-net
 
@@ -18,7 +27,7 @@ services:
     ports:
       - 3000:3000
     env_file:
-      - .env
+      - ./puppeteer/.env
     networks:
       - survethi-net
 
