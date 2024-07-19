@@ -11,7 +11,6 @@ const XLSX = require('xlsx');
 const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
 const { v4: uuidv4 } = require('uuid');
 
-
 require('dotenv').config();
 
 const app = express();
@@ -130,7 +129,7 @@ async function generatePDFWithInteractions(url) {
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
         defaultViewport: null,
-        protocolTimeout: 60000 // Set the protocol timeout to 60 seconds
+        protocolTimeout: 120000 // Set the protocol timeout to 120 seconds
     });
     const page = await browser.newPage();
 
@@ -319,11 +318,14 @@ async function performInteractions(page) {
 
         // Get the list of selected diseases as effect of diseaseFilter
         logger.info(`Retrieving the list of selected diseases for '${diseaseFilter}'...`);
+        await page.waitForSelector('button[data-id="main_filter"]', { visible: true });
         await page.click('button[data-id="main_filter"]');
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
         selectedDiseases = await page.evaluate(() => {
             const options = document.querySelectorAll('.dropdown-item.selected');
             return Array.from(options).map(option => option.innerText.trim());
         });
+
         // Click outside the dropdown (it should not trigger reload)
         await page.click('body');
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
@@ -338,7 +340,7 @@ async function performInteractions(page) {
     // Click the week1 button
     if (temporalFilter != "") {
         logger.info(`Select '${temporalFilter}' button...`);
-        await page.waitForSelector(`button#${temporalFilter}`, { timeout: 60000 });
+        await page.waitForSelector(`button#${temporalFilter}`, { timeout: 120000 });
         logger.info(`Clicking ${temporalFilter} button...`);
         await page.click(`button#${temporalFilter}`);
     }else {
