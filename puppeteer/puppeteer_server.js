@@ -127,9 +127,13 @@ async function generatePDFWithInteractions(url) {
 
     const browser = await puppeteer.launch({
         headless: true,
+        defaultViewport: {
+            width: 1920,
+            height: 1080,
+            deviceScaleFactor: 1
+        },
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        defaultViewport: null,
-        protocolTimeout: 120000 // Set the protocol timeout to 120 seconds
+        timeout: 120000 // 120 seconds
     });
     const page = await browser.newPage();
 
@@ -319,12 +323,17 @@ async function performInteractions(page) {
         // Get the list of selected diseases as effect of diseaseFilter
         logger.info(`Retrieving the list of selected diseases for '${diseaseFilter}'...`);
         await page.waitForSelector('button[data-id="main_filter"]', { visible: true });
+
+        // Zoom out before clicking the filter to be sure to show the full list of selected diseases
+        await page.setViewport({ width: 1920, height: 1080, deviceScaleFactor: 0.1 });
         await page.click('button[data-id="main_filter"]');
         await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 5000)));
         selectedDiseases = await page.evaluate(() => {
             const options = document.querySelectorAll('.dropdown-item.selected');
             return Array.from(options).map(option => option.innerText.trim());
         });
+        // Zoom back in after selecting the diseases
+        await page.setViewport({ width: 1920, height: 1080, deviceScaleFactor: 1 });
 
         // Click outside the dropdown (it should not trigger reload)
         await page.click('body');
