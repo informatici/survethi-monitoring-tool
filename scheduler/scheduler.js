@@ -38,6 +38,7 @@ logger.info(`Scheduler started.`);
 cron.schedule(cronSchedule, async () => {
     logger.info(`Scheduler running...`);
     try {
+        logger.debug(`fullURL: ${fullURL}`);
         const response = await axios.get(fullURL, { timeout: 120000 }); // 120 seconds
         logger.info('Scheduled task response:', response.data);
     } catch (error) {

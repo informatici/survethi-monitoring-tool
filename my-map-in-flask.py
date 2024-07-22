@@ -1,5 +1,5 @@
 from flask_cors import CORS
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, request, Response
 from markupsafe import escape
 from flask import jsonify
 import MySQLdb
@@ -516,14 +516,25 @@ def get_file(filename):  # pragma: no cover
     except IOError as exc:
         return str(exc)
 
-@app.route('/generate_pdf')
+@app.route('/generate-pdf')
 def generate_pdf():
     puppeteer_server_url = 'http://puppeteer:3000'
-    url = 'http://tool:5000'
-    puppeteer_url = f'{puppeteer_server_url}/generate-pdf?url={url}'
+    default_url = 'http://tool:5000'
+
+    # Get the base URL (default or provided)
+    base_url = request.args.get('url', default_url)
+
+    # Extract all other query parameters
+    params = request.args.to_dict()
+    
+    # Ensure the 'url' parameter is present
+    params['url'] = base_url
+
+    # Construct the Puppeteer URL with the parameters
+    puppeteer_url = f"{puppeteer_server_url}/generate-pdf"
     
     try:
-        response = requests.get(puppeteer_url)
+        response = requests.get(puppeteer_url, params=params)
         if response.status_code == 200:
             return Response('PDF generated and sent to the distribution list.', status=200)
         elif response.status_code == 201:
