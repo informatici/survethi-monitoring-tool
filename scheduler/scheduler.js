@@ -11,11 +11,12 @@ const logLevel = process.env.SCHEDULER_LOGLEVEL
 const templatePath = process.env.PUPPETEER_TEMPLATE + '.html' || "pdf_template.html";
 const diseaseFilter = process.env.REPORT_DISEASE_FILTER || "";
 const temporalFilter = process.env.REPORT_TEMPORAL_FILTER || "";
+const woredaFilter = process.env.REPORT_WOREDA_FILTER ? process.env.REPORT_WOREDA_FILTER.split(',') : [];
 const emailSubject = process.env.NODEMAIL_SUBJECT || 'Scheduled PDF report';
 const emailBody = process.env.NODEMAIL_BODY || 'Please find attached the scheduled PDF report.';
 
 // Construct the full URL with query parameters
-const fullURL = `${baseURL}&templatePath=${encodeURIComponent(templatePath)}&diseaseFilter=${encodeURIComponent(diseaseFilter)}&temporalFilter=${encodeURIComponent(temporalFilter)}&emailSubject=${encodeURIComponent(emailSubject)}&emailBody=${encodeURIComponent(emailBody)}`;
+const fullURL = `${baseURL}&templatePath=${encodeURIComponent(templatePath)}&diseaseFilter=${encodeURIComponent(diseaseFilter)}&temporalFilter=${encodeURIComponent(temporalFilter)}&woredaFilter=${encodeURIComponent(woredaFilter)}&emailSubject=${encodeURIComponent(emailSubject)}&emailBody=${encodeURIComponent(emailBody)}`;
 
 
 // Configure logging

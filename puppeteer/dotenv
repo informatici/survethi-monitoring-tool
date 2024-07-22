@@ -18,3 +18,5 @@ REPORT_DISEASE_FILTER=TB
 # REPORT_TEMPORAL_FILTER possible values: 
 # today, yesterday, days3, week1, weeks2, month1, months3
 REPORT_TEMPORAL_FILTER=week1
+# REPORT_WOREDA_FILTER any list of values as in the OpenHospital DB
+REPORT_WOREDA_FILTER=Wolisso Town,Wolisso Rural

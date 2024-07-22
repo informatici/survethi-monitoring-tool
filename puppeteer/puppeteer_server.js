@@ -23,6 +23,7 @@ let diseaseFilter = process.env.REPORT_DISEASE_FILTER || "";
 let temporalFilter = process.env.REPORT_TEMPORAL_FILTER || "";
 let emailSubject = process.env.NODEMAIL_SUBJECT || 'PDF report';
 let emailBody = process.env.NODEMAIL_BODY || 'Please find attached the PDF report.';
+let woredaFilter = process.env.REPORT_WOREDA_FILTER ? process.env.REPORT_WOREDA_FILTER.split(',') : [];
 
 // Generate random filenames with timestamp
 const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
@@ -425,7 +426,10 @@ async function extractTableData(page) {
 
     // Extract specific columns from the table
     logger.info(`Extracting relevant data...`);
-    const tableData = await page.evaluate(() => {
+    if (woredaFilter != '' || woredaFilter != []) {
+        logger.info(`Filtering only ${woredaFilter}...`);
+    }
+    const tableData = await page.evaluate((woredaFilter) => {
         const tableRows = Array.from(document.querySelectorAll('#table_primary tbody tr'));
         return tableRows.map(row => {
             const columns = row.querySelectorAll('td');
@@ -436,8 +440,8 @@ async function extractTableData(page) {
                 woreda: columns[3].textContent.trim(),      // Woreda
                 kebele: columns[4].textContent.trim()       // Kebele
             };
-        });
-    });
+        }).filter(row => woredaFilter.includes(row.woreda));
+    }, woredaFilter);
 
     await exportToExcel(tableData)
 
@@ -626,6 +630,7 @@ app.get('/generate-pdf', async (req, res) => {
     if (req.query.temporalFilter) temporalFilter = req.query.temporalFilter;
     if (req.query.emailSubject) emailSubject = req.query.emailSubject;
     if (req.query.emailBody) emailBody = req.query.emailBody;
+    if (req.query.woredaFilter) woredaFilter = req.query.woredaFilter.split(',');
     if (req.query.diseaseFilter || req.query.temporalFilter) {
         pdfAttachment = `report_${date}_${diseaseFilter}_${temporalFilter}.pdf`;
         xlsxAttachment = `data_${date}_${diseaseFilter}_${temporalFilter}.xlsx`;
