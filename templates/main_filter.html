@@ -33,14 +33,11 @@
      * WHO Priority Diseases
      *
      * Missing codes for:
-     * - Chikungunya
-     * - Plague
      * - Rift Valley Fever
      * - Marburg
      * - Buruli Ulcer
      * - Noma
      * - Adverse events following immunization (AEFI)
-     * - Trypanosomiasis
      * 
      * Arbitrary Excluded (there are multiple definitions):
      * - All type of Diabetes
@@ -56,88 +53,95 @@
      * - All type of Tuberculosis
      * 
      * current resultset:
-     * 1 - Cholera
-     * 8 - Diarrhea (Shigellosis due to Shigella dysenteriae)
-     * 55 - Anthrax
-     * 56 - Leprosy (Tuberculoid leprosy)
-     * 57 - Leprosy (Borderline leprosy)
-     * 58 - Leprosy (Lepromatous leprosy)
-     * 59 - Leprosy (Leprosy, unspecified)
-     * 61 - Tetanus (Tetanus neonatorum)
-     * 64 - Meningitis (Meningococcal meningitis)
-     * 110 - Typhus fever
-     * 111 - Typhus fever (Epidemic louse-borne typhus fever due to Rickettsia prowazekii)
-     * 112 - Typhus fever, unspecified
-     * 113 - Poliomyelitis (Acute poliomyelitis)
-     * 114 - Poliomyelitis (Acute paralytic poliomyelitis, vaccine-associated)
-     * 115 - Acute paralytic poliomyelitis, wild virus, imported
-     * 116 - Acute paralytic poliomyelitis, wild virus, indigenous
-     * 117 - Poliomyelitis (Acute nonparalytic poliomyelitis)
-     * 118 - Acute poliomyelitis, unspecified
-     * 119 - Rabies (Rabies, unspecified)
-     * 120 - Haemorrhagic Fevers (Dengue fever [classical dengue])
-     * 122 - Haemorrhagic Fevers (Yellow fever)
-     * 125 - Ebola (Other specified viral haemorrhagic fevers)
-     * 137 - Smallpox
-     * 138 - Measles
-     * 139 - Measles (Measles with other complications)
-     * 140 - Measles (Measles without complication)
-     * 146 - Hepatitis (Acute viral hepatitis, unspecified)
-     * 147 - Hepatitis (Chronic viral hepatitis)
-     * 148 - Hepatitis C (Other chronic viral hepatitis)
-     * 205 - Dracunculiasis (Guinea worm)
-     * 206 - Onchocerciasis
-     * 207 - Filariasis
-     * 208 - Elephantiasis (Filariasis due to Wuchereria bancrofti)
-     * 228 - Poliomyelitis (Sequelae of poliomyelitis)
-     * 229 - Leprosy (Sequelae of leprosy)
-     * 634 - Avian influenza-h5n1 (Other acute upper respiratory infections)
-     * 635 - Pandemic influenza A-h1n1 (Other acute upper respiratory infections of multiple sites)
-     * 636 - Respiratory Infection (Acute upper respiratory infection, unspecified)
-     * 637 - Influenza (Influenza, virus not identified)
-     * 1848 - Severe acute respiratory syndrome [SARS]
+     * 1A00 - Cholera
+     * 1B11.0 - Tuberculous meningitis
+     * 1B20.0 - Paucibacillary leprosy
+     * 1B20.1 - Multibacillary leprosy
+     * 1B20.2 - Leprosy reactions
+     * 1B20.20 - Type I leprosy reaction
+     * 1B20.21 - Type II leprosy reaction
+     * 1B20.Z - Leprosy, unspecified
+     * 1B53 - Meningitis due to Streptococcus
+     * 1B93.Z - Plague, unspecified
+     * 1B97 - Anthrax
+     * 1C13 - Tetanus
+     * 1C14 - Obstetrical tetanus
+     * 1C15 - Tetanus neonatorum
+     * 1C1C.0 - Meningococcal meningitis
+     * 1C30.Z - Typhus fever, unspecified
+     * 1C81 - Acute poliomyelitis
+     * 1C82 - Rabies
+     * 1D01.0 - Bacterial meningitis
+     * 1D01.10 - Meningitis due to Cryptococcus neoformans
+     * 1D01.1Z - Fungal meningitis, unspecified
+     * 1D01.Z - Infectious meningitis not elsewhere classified, unspecified
+     * 1D22 - Severe dengue
+     * 1D2Z - Dengue fever, unspecified
+     * 1D40 - Chikungunya virus disease
+     * 1D47 - Yellow fever
+     * 1D60.0 - Ebola disease
+     * 1D64 - Middle East respiratory syndrome
+     * 1D65 - Severe acute respiratory syndrome
+     * 1D86 - Viral haemorrhagic fever, not elsewhere classified
+     * 1E50 - Acute viral hepatitis
+     * 1E50.0 - Acute hepatitis A
+     * 1E50.1 - Acute hepatitis B
+     * 1E50.2 - Acute hepatitis C
+     * 1E50.4 - Acute hepatitis E
+     * 1E51 - Chronic viral hepatitis
+     * 1E51.Y - Other specified chronic viral hepatitis
+     * 1F03 - Measles
+     * 1F03.Y - Measles with other complications
+     * 1F51 - African trypanosomiasis
+     * 1F64 - Dracunculiasis
+     * 1F66.3 - Lymphatic filariasis
+     * 1F66.Z - Filariasis, unspecified
+     * 1F6A - Onchocerciasis
+     * 8E62 - Postprocedural meningitis
+     * DD91.2 - Functional diarrhoea
+     * ME05.1 - Diarrhoea
      */ 
-    var who_diseases_list = [55,1,120,8,138,139,140,64,634,635,636,637,110,111,112,122,125,205,229,56,57,58,59,207,208,61,206,113,114,115,116,117,118,228,137,1848,146,147,148,119];
+    var who_diseases_list = ['1D40', '1B93.Z', '1A00', '1F51', 'DD91.2', 'ME05.1', '1B97', '1B20.0', '1B20.1', '1B20.2', '1B20.20', '1B20.21', '1B20.Z', '1C13', '1C14', '1C15', '1B11.0', '1B53', '1C1C.0', '1D01.0', '1D01.10', '1D01.1Z', '1D01.Z', '8E62', '1C30.Z', '1C81', '1C82', '1D86', '1D47', '1D22', '1D2Z', '1D60.0', '1F03', '1F03.Y', '1E50', '1E50.0', '1E50.1', '1E50.2', '1E50.4', '1E51', '1E51.Y', '1F64', '1F6A', '1F66.3', '1F66.Z', '1D64', '1D65'];
 
     /**
      * SARS-CoV-2 (and similar)
      *
      * current resultset:
-     * 2.1 - Covid Suspect
-     * 2.2 - Covid Positive
-     * 634 - Avian influenza-h5n1 (Other acute upper respiratory infections)
-     * 635 - Pandemic influenza A-h1n1 (Other acute upper respiratory infections of multiple sites)
-     * 636 - Respiratory Infection (Acute upper respiratory infection, unspecified)
-     * 637 - Influenza (Influenza, virus not identified)
-     * 638 - Pneumonia (Bacterial pneumonia, unspecified)
-     * 639 - Pneumonia (Bronchopneumonia, unspecified)
-     * 640 - Pneumonia (Lobar pneumonia, unspecified)
-     * 641 - severe pneumonia (Other pneumonia, organism unspecified)
-     * 642 - Pneumonia (Pneumonia, unspecified)
-     * 643 - Bronchitis (Acute bronchitis)
-     * 644 - Respiratory Infections (Unspecified acute lower respiratory infection)
-     * 645 - Tonsillitis & Adenoiditis (Chronic tonsillitis)
-     * 646 - Peritonsillar abscess
-     * 647 - Bronchitis, not specified as acute or chronic
-     * 648 - Emphysema
-     * 649 - Asthma
-     * 650 - Bronchiectasis
-     * 651 - Adult respiratory distress syndrome
-     * 652 - Pulmonary oedema
-     * 654 - Pneumonia (Pneumothorax)
-     * 657 - Respiratory Failure (Respiratory failure, unspecified)
-     * Y2016-066.1 - Asthma
-     * Y2016-088 - Influenza
-     * Y2016-089 - Lobar pneumonia
-     * Y2016-090 - Bronchopneumonia
-     * Y2016-091 - Other pneumonia
-     * Y2016-091.01 - PCP
-     * Y2016-092 - acute bronchitis
-     * Y2016-093 - chronic bronchitis
-     * Y2016-093.01 - COPD
-     * Y2016-093.02 - Pulmonary fibrosis
+     * 1B10.0 - Respiratory tuberculosis, confirmed
+     * 1B10.1 - Respiratory tuberculosis, not confirmed
+     * 1D64 - Middle East respiratory syndrome
+     * 1D65 - Severe acute respiratory syndrome
+     * 5C73.0 - Acute respiratory acidosis
+     * 5C73.1 - Chronic respiratory acidosis
+     * CA03.Z - Acute tonsillitis, unspecified
+     * CA0K.1 - Peritonsillar abscess
+     * CA0Z - Upper respiratory tract disorders, unspecified
+     * CA20.1 - Chronic bronchitis
+     * CA21 - Emphysema
+     * CA23 - Asthma
+     * CA23.30 - Unspecified asthma with exacerbation
+     * CA23.31 - Unspecified asthma with status asthmaticus
+     * CA24 - Bronchiectasis
+     * CA27 - Tracheobronchitis
+     * CA40 - Pneumonia
+     * CA40.0 - Bacterial pneumonia
+     * CA40.1 - Viral pneumonia
+     * CA40.2 - Fungal pneumonia
+     * CA40.20 - Pneumonia due to pneumocystis
+     * CA42 - Acute bronchitis
+     * CA81 - Respiratory conditions due to inhalation of chemicals, gases, fumes or vapours
+     * CA82 - Respiratory conditions due to other external agents
+     * CB00 - Acute respiratory distress syndrome
+     * CB01 - Pulmonary oedema
+     * CB40.Y - Other specified diseases of the respiratory system
+     * CB41.0 - Acute respiratory failure
+     * CB41.1 - Chronic respiratory failure
+     * KB23.0 - Respiratory distress syndrome of newborn
+     * KB2D - Respiratory failure of newborn
+     * KB2E - Respiratory arrest of newborn
+     * MD33 - Respiratory arrest
      */
-    var covid_diseases_list = [2.1,2.2,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,654,657,'Y2016-066.1','Y2016-088','Y2016-089','Y2016-090','Y2016-091','Y2016-091.01','Y2016-092','Y2016-093','Y2016-093.01','Y2016-093.02'];
+    var covid_diseases_list = ['1B10.0', '1B10.1', '1D64', '1D65', '5C73.0', '5C73.1', 'CA0Z', 'CA81', 'CA82', 'CB00', 'CB40.Y', 'CB41.0', 'CB41.1', 'KB23.0', 'KB2D', 'KB2E', 'MD33', 'CA40', 'CA40.0', 'CA40.1', 'CA40.2', 'CA40.20', 'CA20.1', 'CA27', 'CA42', 'CA03.Z', 'CA0K.1', 'CA21', 'CA23', 'CA23.30', 'CA23.31', 'CA24', 'CB01'];
 
     /**
      * 1B10.0 - Respiratory tuberculosis, confirmed
