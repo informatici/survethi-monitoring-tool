@@ -3,7 +3,7 @@ Flask==1.1.2
 mysqlclient==2.0.1
 simplejson==3.17.2
 Flask-JSON==0.3.4
-flask_cors==3.0.8
+flask_cors==5.0.0
 geojson==2.5.0
 gunicorn==20.0.4
 Jinja2==2.11.3
